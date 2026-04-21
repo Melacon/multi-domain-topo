@@ -1,0 +1,13 @@
+# YANG model repositories are NOT tracked in this repo due to:
+# - Size (~4.6 GB, exceeds GitHub limits)
+# - License restrictions (3GPP, O-RAN Alliance, OpenROADM)
+#
+# Run ./setup-yang-repos.sh to populate this folder.
+yang-repos/MnS/
+yang-repos/yang/
+yang-repos/OpenROADM_MSA_Public/
+yang-repos/O-RAN.WG4.CTI-TMP-YANG-v03.00/
+yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/
+yang-repos/O-RAN.WG5.O-CU-O1.1-R003-v07.00/
+yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/
+yang-repos/O-RAN.WG9.XTRP-SYN.1-R004-v06.00_YANG/

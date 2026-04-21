@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1880" height="1120" viewBox="0 0 1880 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Transport Inclusion Network Topology</title>
+  <desc id="desc">DWDM-ROADM ring with 3 nodes, connected RAN branches, wireless transport segment, 5G core, and Internet.</desc>
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, Helvetica, sans-serif; fill: #1f2937; }
+      .subtitle { font: 400 15px Arial, Helvetica, sans-serif; fill: #4b5563; }
+      .label { font: 700 15px Arial, Helvetica, sans-serif; fill: #111827; }
+      .small { font: 400 12px Arial, Helvetica, sans-serif; fill: #374151; }
+      .tiny { font: 400 11px Arial, Helvetica, sans-serif; fill: #4b5563; }
+      .transport { fill: #dbeafe; stroke: #2563eb; stroke-width: 2.5; }
+      .ran { fill: #dcfce7; stroke: #16a34a; stroke-width: 2.2; }
+      .road { fill: #fef3c7; stroke: #d97706; stroke-width: 2.2; }
+      .core { fill: #f3e8ff; stroke: #9333ea; stroke-width: 2.2; }
+      .ue { fill: #fee2e2; stroke: #dc2626; stroke-width: 2; }
+      .internet { fill: #e0f2fe; stroke: #0891b2; stroke-width: 2.2; }
+      .box { rx: 16; ry: 16; }
+      .link { stroke: #374151; stroke-width: 3.2; fill: none; }
+      .optical { stroke: #2563eb; stroke-width: 5; fill: none; }
+      .wireless { stroke: #d97706; stroke-width: 3.5; fill: none; stroke-dasharray: 10 7; }
+      .fronthaul { stroke: #16a34a; stroke-width: 2.8; fill: none; }
+      .backhaul { stroke: #4b5563; stroke-width: 2.8; fill: none; }
+      .ring-label { font: 700 14px Arial, Helvetica, sans-serif; fill: #1d4ed8; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1880" height="1120" fill="#ffffff"/>
+  <text x="60" y="55" class="title">Transport Inclusion Discussion Topology</text>
+  <text x="60" y="82" class="subtitle">DWDM-ROADM ring with RAN, wireless transport, 5G Core, and Internet domains</text>
+
+  <!-- ============ DWDM / ROADM Ring (circle through 3 ROADMs) ============ -->
+  <!-- Circle center (1344, 450), r=176 — circumscribes ROADM-1 (1300,280), ROADM-2 (1520,450), ROADM-3 (1300,620) -->
+  <circle cx="1344" cy="450" r="176" class="optical" fill="none"/>
+  <text x="1300" y="455" text-anchor="middle" class="ring-label">DWDM-ROADM Ring</text>
+
+  <!-- ============ ROADM Nodes ============ -->
+  <!-- ROADM-1: top, same x as ROADM-3 -->
+  <rect x="1230" y="240" width="140" height="80" class="transport box"/>
+  <text x="1300" y="274" text-anchor="middle" class="label">ROADM-1</text>
+  <text x="1300" y="296" text-anchor="middle" class="small">DWDM Node</text>
+
+  <!-- ROADM-2: to the right of ROADM-1 and ROADM-3 -->
+  <rect x="1450" y="410" width="140" height="80" class="transport box"/>
+  <text x="1520" y="444" text-anchor="middle" class="label">ROADM-2</text>
+  <text x="1520" y="466" text-anchor="middle" class="small">DWDM Node</text>
+
+  <!-- ROADM-3: bottom, same x as ROADM-1 -->
+  <rect x="1230" y="580" width="140" height="80" class="transport box"/>
+  <text x="1300" y="614" text-anchor="middle" class="label">ROADM-3</text>
+  <text x="1300" y="636" text-anchor="middle" class="small">DWDM Node</text>
+
+  <!-- ============ Branch 1 (top): ROADM-1 → O-CU-1 → O-DU-1 → O-RU-1 → UEs ============ -->
+  <!-- O-CU-1 -->
+  <path class="backhaul" d="M1230 280 L1215 280"/>
+  <rect x="1095" y="242" width="120" height="76" class="ran box"/>
+  <text x="1155" y="274" text-anchor="middle" class="label">O-CU-1</text>
+  <text x="1155" y="296" text-anchor="middle" class="small">Central Unit</text>
+
+  <!-- O-DU-1 -->
+  <path class="backhaul" d="M1095 280 L655 280"/>
+  <rect x="535" y="242" width="120" height="76" class="ran box"/>
+  <text x="600" y="274" text-anchor="middle" class="label">O-DU-1</text>
+  <text x="600" y="296" text-anchor="middle" class="small">Distributed Unit</text>
+
+  <!-- O-RU-1 -->
+  <path class="fronthaul" d="M535 280 L290 280"/>
+  <rect x="170" y="242" width="120" height="76" class="ran box"/>
+  <text x="230" y="274" text-anchor="middle" class="label">O-RU-1</text>
+  <text x="230" y="296" text-anchor="middle" class="small">Radio Unit</text>
+
+  <!-- UE-1 and UE-2 (above O-RU-1) -->
+  <path class="fronthaul" d="M210 242 L205 190"/>
+  <path class="fronthaul" d="M250 242 L255 190"/>
+
+  <circle cx="203" cy="162" r="28" class="ue"/>
+  <text x="203" y="158" text-anchor="middle" class="small">UE-1</text>
+  <text x="203" y="175" text-anchor="middle" class="tiny">User</text>
+
+  <circle cx="257" cy="162" r="28" class="ue"/>
+  <text x="257" y="158" text-anchor="middle" class="small">UE-2</text>
+  <text x="257" y="175" text-anchor="middle" class="tiny">User</text>
+
+  <!-- ============ Branch 2 (bottom): ROADM-3 → O-CU-2 → WT-1 → WT-2 → O-DU-2 → OFH-SW → O-RUs → UEs ============ -->
+  <!-- O-CU-2 -->
+  <path class="backhaul" d="M1230 620 L1215 620"/>
+  <rect x="1095" y="582" width="120" height="76" class="ran box"/>
+  <text x="1155" y="614" text-anchor="middle" class="label">O-CU-2</text>
+  <text x="1155" y="636" text-anchor="middle" class="small">Central Unit</text>
+
+  <!-- WT-1 -->
+  <path class="backhaul" d="M1095 620 L1045 620"/>
+  <rect x="905" y="582" width="140" height="76" class="transport box"/>
+  <text x="975" y="614" text-anchor="middle" class="label">WT-1</text>
+  <text x="975" y="636" text-anchor="middle" class="small">Wireless Transport</text>
+
+  <!-- WT-2 -->
+  <path class="wireless" d="M905 620 L855 620"/>
+  <rect x="715" y="582" width="140" height="76" class="transport box"/>
+  <text x="785" y="614" text-anchor="middle" class="label">WT-2</text>
+  <text x="785" y="636" text-anchor="middle" class="small">Wireless Transport</text>
+
+  <!-- O-DU-2 -->
+  <path class="backhaul" d="M715 620 L665 620"/>
+  <rect x="535" y="582" width="130" height="76" class="ran box"/>
+  <text x="600" y="614" text-anchor="middle" class="label">O-DU-2</text>
+  <text x="600" y="636" text-anchor="middle" class="small">Distributed Unit</text>
+
+  <!-- OFH-SW-1 -->
+  <path class="fronthaul" d="M535 620 L485 620"/>
+  <rect x="325" y="582" width="160" height="76" class="transport box"/>
+  <text x="405" y="614" text-anchor="middle" class="label">OFH-SW-1</text>
+  <text x="405" y="636" text-anchor="middle" class="small">Open Fronthaul Switch</text>
+
+  <!-- RU fanout from OFH switch -->
+  <path class="fronthaul" d="M365 658 L245 752"/>
+  <path class="fronthaul" d="M405 658 L385 752"/>
+  <path class="fronthaul" d="M445 658 L525 752"/>
+
+  <rect x="185" y="752" width="120" height="76" class="ran box"/>
+  <text x="245" y="784" text-anchor="middle" class="label">O-RU-2</text>
+  <text x="245" y="806" text-anchor="middle" class="small">Radio Unit</text>
+
+  <rect x="325" y="752" width="120" height="76" class="ran box"/>
+  <text x="385" y="784" text-anchor="middle" class="label">O-RU-3</text>
+  <text x="385" y="806" text-anchor="middle" class="small">Radio Unit</text>
+
+  <rect x="465" y="752" width="120" height="76" class="ran box"/>
+  <text x="525" y="784" text-anchor="middle" class="label">O-RU-4</text>
+  <text x="525" y="806" text-anchor="middle" class="small">Radio Unit</text>
+
+  <!-- UEs from O-RU-2 -->
+  <path class="fronthaul" d="M225 828 L215 908"/>
+  <path class="fronthaul" d="M265 828 L275 908"/>
+  <circle cx="213" cy="936" r="28" class="ue"/>
+  <text x="213" y="932" text-anchor="middle" class="small">UE-3</text>
+  <text x="213" y="948" text-anchor="middle" class="tiny">User</text>
+  <circle cx="277" cy="936" r="28" class="ue"/>
+  <text x="277" y="932" text-anchor="middle" class="small">UE-4</text>
+  <text x="277" y="948" text-anchor="middle" class="tiny">User</text>
+
+  <!-- UEs from O-RU-3 -->
+  <path class="fronthaul" d="M365 828 L355 908"/>
+  <path class="fronthaul" d="M405 828 L415 908"/>
+  <circle cx="353" cy="936" r="28" class="ue"/>
+  <text x="353" y="932" text-anchor="middle" class="small">UE-5</text>
+  <text x="353" y="948" text-anchor="middle" class="tiny">User</text>
+  <circle cx="417" cy="936" r="28" class="ue"/>
+  <text x="417" y="932" text-anchor="middle" class="small">UE-6</text>
+  <text x="417" y="948" text-anchor="middle" class="tiny">User</text>
+
+  <!-- UEs from O-RU-4 -->
+  <path class="fronthaul" d="M505 828 L497 908"/>
+  <path class="fronthaul" d="M545 828 L553 908"/>
+  <circle cx="495" cy="936" r="28" class="ue"/>
+  <text x="495" y="932" text-anchor="middle" class="small">UE-7</text>
+  <text x="495" y="948" text-anchor="middle" class="tiny">User</text>
+  <circle cx="555" cy="936" r="28" class="ue"/>
+  <text x="555" y="932" text-anchor="middle" class="small">UE-8</text>
+  <text x="555" y="948" text-anchor="middle" class="tiny">User</text>
+
+  <!-- ============ Core: ROADM-2 → 5GC → Internet ============ -->
+  <path class="link" d="M1590 450 L1620 450"/>
+  <rect x="1620" y="410" width="140" height="80" class="core box"/>
+  <text x="1690" y="444" text-anchor="middle" class="label">5GC-1</text>
+  <text x="1690" y="466" text-anchor="middle" class="small">5G Core</text>
+
+  <path class="link" d="M1760 450 L1778 450"/>
+  <ellipse cx="1820" cy="450" rx="42" ry="28" class="internet"/>
+  <text x="1820" y="446" text-anchor="middle" class="label">NET-1</text>
+  <text x="1820" y="464" text-anchor="middle" class="small">Internet</text>
+
+  <!-- ============ Link labels ============ -->
+  <!-- Branch 1 -->
+  <text x="370" y="268" class="tiny">Open Fronthaul</text>
+  <text x="840" y="268" class="tiny">Midhaul</text>
+  <text x="1200" y="230" class="tiny">Backhaul</text>
+
+  <!-- Branch 2 -->
+  <text x="490" y="572" class="tiny">Open Fronthaul</text>
+  <text x="670" y="572" class="tiny">Midhaul</text>
+  <text x="860" y="572" class="tiny">Wireless Transport Link</text>
+
+  <!-- ============ Legend ============ -->
+  <g transform="translate(60,1000)">
+    <rect x="0" y="0" width="620" height="110" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5" rx="18" ry="18"/>
+    <text x="20" y="28" class="label">Legend</text>
+
+    <rect x="20" y="42" width="34" height="22" class="roadm box"/>
+    <text x="66" y="58" class="small">DWDM / ROADM node</text>
+
+    <rect x="20" y="72" width="34" height="22" class="ran box"/>
+    <text x="66" y="88" class="small">RAN node (O-CU, O-DU, O-RU)</text>
+
+    <rect x="250" y="42" width="34" height="22" class="transport box"/>
+    <text x="296" y="58" class="small">Transport node (WT, OFH switch)</text>
+
+    <rect x="250" y="72" width="34" height="22" class="core box"/>
+    <text x="296" y="88" class="small">Core network node</text>
+
+    <circle cx="480" cy="53" r="14" class="ue"/>
+    <text x="505" y="58" class="small">UE</text>
+
+    <line x1="430" y1="83" x2="475" y2="83" class="wireless"/>
+    <text x="485" y="88" class="small">Wireless transport</text>
+  </g>
+
+  <text x="1640" y="1095" text-anchor="end" class="tiny">Version 1.4 — ROADM-2 right of ring, ring shown as circle</text>
+</svg>
