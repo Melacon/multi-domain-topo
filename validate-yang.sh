@@ -136,6 +136,8 @@ else
   # Fail only if errors originate from our own (non-vendor) modules
   OWN_ERRORS=$(echo "$LINT_ERRORS" \
     | grep -v '/ietf-' \
+    | grep -v '/iana-' \
+    | grep -v '/ieee-' \
     | grep -v '/org-openroadm-' \
     | grep -v '/org-3gpp-' \
     | grep -v '/o-ran-' \
@@ -164,9 +166,29 @@ if [ "$STEP1_OK" -eq 1 ]; then
     echo "[SKIP] yanglint not found in PATH"
     STEP3_OK=1
   else
+    # When every file in the folder is an IETF/IANA/IEEE standard module
+    # (toplevel_files is empty after the vendor-filter), fall back to the
+    # structurally non-imported set and add -i -i so that all modules
+    # loaded via --path are also marked implemented. This resolves cross-
+    # module identityref defaults that libyang 2.x validates strictly.
+    yanglint_files=("${toplevel_files[@]}")
+    yanglint_extra_flags=()
+    if [ ${#yanglint_files[@]} -eq 0 ]; then
+      for f in "${YANG_FILES[@]}"; do
+        mod="$(basename "$f" .yang | sed 's/@[0-9-]*$//')"
+        is_imported=0
+        for imp in "${imported_modules[@]}"; do
+          [[ "$imp" == "$mod" ]] && is_imported=1 && break
+        done
+        [ "$is_imported" -eq 0 ] && yanglint_files+=("$f")
+      done
+      yanglint_extra_flags=(-i -i)
+    fi
+
     if "$YANGLINT" \
+         "${yanglint_extra_flags[@]}" \
          --path "$NF_DIR" \
-         "${toplevel_files[@]}" \
+         "${yanglint_files[@]}" \
        2>&1; then
       echo "[PASS] yanglint"
       STEP3_OK=1
