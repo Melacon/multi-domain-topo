@@ -124,6 +124,8 @@ else
     | grep -v '/org-openroadm-' \
     | grep -v '/org-3gpp-' \
     | grep -v '/o-ran-' \
+    | grep -v '/o-ran_' \
+    | grep -v '/_3gpp-' \
     || true)
 
   if [ -n "$OWN_ERRORS" ]; then
@@ -167,6 +169,8 @@ else
     | grep -v '/org-openroadm-' \
     | grep -v '/org-3gpp-' \
     | grep -v '/o-ran-' \
+    | grep -v '/o-ran_' \
+    | grep -v '/_3gpp-' \
     || true)
 
   if [ -n "$OWN_ERRORS" ]; then
@@ -231,6 +235,8 @@ if [ "$STEP1_OK" -eq 1 ]; then
         | grep -v 'org-openroadm-' \
         | grep -v 'org-3gpp-' \
         | grep -v 'o-ran-' \
+        | grep -v 'o-ran_' \
+        | grep -v '_3gpp-' \
         || true)
 
       if [ -n "$OWN_YL_ERRORS" ]; then
