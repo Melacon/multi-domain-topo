@@ -49,13 +49,15 @@ fi
 # O-RAN Alliance specifications require registration at https://specifications.o-ran.org
 # Download the following ZIP archives and extract them into yang-repos/:
 #
-#   Spec                                  | Target folder
-#   --------------------------------------|--------------------------------------------------
-#   O-RAN.WG4.TS.MP-YANGs-R005-v20.00   | yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/
-#   O-RAN.WG4.CTI-TMP-YANG-v03.00        | yang-repos/O-RAN.WG4.CTI-TMP-YANG-v03.00/
-#   O-RAN.WG5.O-DU-O1.1-R003-v09.00     | yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/
-#   O-RAN.WG5.O-CU-O1.1-R003-v07.00     | yang-repos/O-RAN.WG5.O-CU-O1.1-R003-v07.00/
-#   O-RAN.WG9.XTRP-SYN.1-R004-v06.00    | yang-repos/O-RAN.WG9.XTRP-SYN.1-R004-v06.00_YANG/
+#   Spec                                                          | Target folder
+#   --------------------------------------------------------------|----------------------------------------------------------------------
+#   O-RAN.WG4.TS.MP-YANGs-R005-v20.00                           | yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/
+#   O-RAN.WG4.CTI-TMP-YANG-v03.00                                | yang-repos/O-RAN.WG4.CTI-TMP-YANG-v03.00/
+#   O-RAN.WG5.O-DU-O1.1-R003-v09.00                             | yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/
+#   O-RAN.WG5.O-CU-O1.1-R003-v07.00                             | yang-repos/O-RAN.WG5.O-CU-O1.1-R003-v07.00/
+#   O-RAN.WG9.XTRP-SYN.1-R004-v06.00                            | yang-repos/O-RAN.WG9.XTRP-SYN.1-R004-v06.00_YANG/
+#   O-RAN.WG10.TS.Information Model and Data Models.1-R005-v13.00 | yang-repos/O-RAN.WG10.TS.Information Model and Data Models.1-R005-v13.00/
+#   O-RAN.WG10.TS.O1NRM.1-R004-v04.00                           | yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/
 #
 # Steps:
 #   1. Go to https://specifications.o-ran.org
@@ -69,7 +71,9 @@ for dir in \
   "O-RAN.WG4.CTI-TMP-YANG-v03.00" \
   "O-RAN.WG5.O-DU-O1.1-R003-v09.00" \
   "O-RAN.WG5.O-CU-O1.1-R003-v07.00" \
-  "O-RAN.WG9.XTRP-SYN.1-R004-v06.00_YANG"; do
+  "O-RAN.WG9.XTRP-SYN.1-R004-v06.00_YANG" \
+  "O-RAN.WG10.TS.Information Model and Data Models.1-R005-v13.00" \
+  "O-RAN.WG10.TS.O1NRM.1-R004-v04.00"; do
   if [ ! -d "$YANG_REPOS/$dir" ]; then
     MISSING_ORAN+=("$dir")
   fi

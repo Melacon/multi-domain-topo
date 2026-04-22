@@ -77,6 +77,8 @@ The script will:
 | `yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/` | O-RAN Alliance | manual download (see below) |
 | `yang-repos/O-RAN.WG5.O-CU-O1.1-R003-v07.00/` | O-RAN Alliance | manual download (see below) |
 | `yang-repos/O-RAN.WG9.XTRP-SYN.1-R004-v06.00_YANG/` | O-RAN Alliance | manual download (see below) |
+| `yang-repos/O-RAN.WG10.TS.Information Model and Data Models.1-R005-v13.00/` | O-RAN Alliance | manual download (see below) |
+| `yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/` | O-RAN Alliance | manual download (see below) |
 
 ### Manual download — O-RAN Alliance spec packages
 
