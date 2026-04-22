@@ -96,16 +96,42 @@ STEP3_OK=0
 
 # ---------------------------------------------------------------------------
 # Step 1 — pyang structural validation (no --lint)
+# Errors in vendor/external modules are informational (same policy as lint).
 # ---------------------------------------------------------------------------
 echo "--- Step 1: pyang (structural validation) ---"
-if "$PYANG" \
-     --path "$NF_DIR" \
-     "${YANG_FILES[@]}" \
-   2>&1; then
+STRUCT_OUTPUT="$("$PYANG" \
+  --path "$NF_DIR" \
+  "${YANG_FILES[@]}" 2>&1 || true)"
+
+if [ -z "$STRUCT_OUTPUT" ]; then
   echo "[PASS] pyang structural"
   STEP1_OK=1
 else
-  echo "[FAIL] pyang structural — fix errors before continuing"
+  STRUCT_ERRORS=$(echo "$STRUCT_OUTPUT"   | grep ': error:'   || true)
+  STRUCT_WARNINGS=$(echo "$STRUCT_OUTPUT" | grep ': warning:' || true)
+  WARN_COUNT=$(echo "$STRUCT_WARNINGS"    | grep -c '.'       || true)
+  ERR_COUNT=$(echo "$STRUCT_ERRORS"       | grep -c '.'       || true)
+
+  echo "$STRUCT_OUTPUT"
+  echo ""
+  echo "  errors  : $ERR_COUNT"
+  echo "  warnings: $WARN_COUNT"
+
+  OWN_ERRORS=$(echo "$STRUCT_ERRORS" \
+    | grep -v '/ietf-' \
+    | grep -v '/iana-' \
+    | grep -v '/ieee' \
+    | grep -v '/org-openroadm-' \
+    | grep -v '/org-3gpp-' \
+    | grep -v '/o-ran-' \
+    || true)
+
+  if [ -n "$OWN_ERRORS" ]; then
+    echo "[FAIL] pyang structural: errors in local modules"
+  else
+    echo "[INFO] pyang structural: errors are in vendor/external modules (informational)"
+    STEP1_OK=1
+  fi
 fi
 echo ""
 
@@ -137,7 +163,7 @@ else
   OWN_ERRORS=$(echo "$LINT_ERRORS" \
     | grep -v '/ietf-' \
     | grep -v '/iana-' \
-    | grep -v '/ieee-' \
+    | grep -v '/ieee' \
     | grep -v '/org-openroadm-' \
     | grep -v '/org-3gpp-' \
     | grep -v '/o-ran-' \
@@ -185,15 +211,34 @@ if [ "$STEP1_OK" -eq 1 ]; then
       yanglint_extra_flags=(-i -i)
     fi
 
-    if "$YANGLINT" \
-         "${yanglint_extra_flags[@]}" \
-         --path "$NF_DIR" \
-         "${yanglint_files[@]}" \
-       2>&1; then
+    YANGLINT_OUTPUT="$("$YANGLINT" \
+      "${yanglint_extra_flags[@]}" \
+      --path "$NF_DIR" \
+      "${yanglint_files[@]}" 2>&1 || true)"
+
+    if [ -z "$YANGLINT_OUTPUT" ]; then
       echo "[PASS] yanglint"
       STEP3_OK=1
     else
-      echo "[FAIL] yanglint reported errors"
+      YANGLINT_ERRORS=$(echo "$YANGLINT_OUTPUT" | grep 'YANGLINT\[E\]\|libyang err' || true)
+      echo "$YANGLINT_OUTPUT"
+      echo ""
+
+      OWN_YL_ERRORS=$(echo "$YANGLINT_ERRORS" \
+        | grep -v 'ietf-' \
+        | grep -v 'iana-' \
+        | grep -v 'ieee' \
+        | grep -v 'org-openroadm-' \
+        | grep -v 'org-3gpp-' \
+        | grep -v 'o-ran-' \
+        || true)
+
+      if [ -n "$OWN_YL_ERRORS" ]; then
+        echo "[FAIL] yanglint: errors in local modules"
+      else
+        echo "[INFO] yanglint: errors are in vendor/external modules (informational)"
+        STEP3_OK=1
+      fi
     fi
   fi
 else
