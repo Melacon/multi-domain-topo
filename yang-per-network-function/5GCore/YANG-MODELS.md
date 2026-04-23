@@ -8,6 +8,35 @@ module is the pivotal hub: it imports all 17 5GC function modules so that all en
 objects are defined in a single module, which causes the full 5GC NRM to be transitively required.
 O-RAN WG10 O1NRM overlays provide SMO integration for subscription control, EPE, and Near-RT RIC.
 
+## Disaggregated NF Subfolders
+
+For containerized/disaggregated 5GC deployment each NF is modeled independently in its own
+subfolder. `_3gpp-5gc-nrm-ep` is excluded from the per-NF folders (it imports all 17 NF
+modules, defeating disaggregation); it is present only in this combined folder.
+
+| NF | Folder | Function | Modules |
+|----|--------|----------|---------|
+| AMF | [AMF/](AMF/YANG-MODELS.md) | Access and Mobility Management | 28 |
+| SMF | [SMF/](SMF/YANG-MODELS.md) | Session Management | 27 |
+| UPF | [UPF/](UPF/YANG-MODELS.md) | User Plane Function | 27 |
+| AUSF | [AUSF/](AUSF/YANG-MODELS.md) | Authentication Server | 27 |
+| UDM | [UDM/](UDM/YANG-MODELS.md) | Unified Data Management | 27 |
+| UDSF | [UDSF/](UDSF/YANG-MODELS.md) | Unstructured Data Storage | 27 |
+| NRF | [NRF/](NRF/YANG-MODELS.md) | NF Repository | 26 |
+| NSSF | [NSSF/](NSSF/YANG-MODELS.md) | Network Slice Selection | 27 |
+| PCF | [PCF/](PCF/YANG-MODELS.md) | Policy Control | 27 |
+| NEF | [NEF/](NEF/YANG-MODELS.md) | Network Exposure | 27 |
+| AF | [AF/](AF/YANG-MODELS.md) | Application Function | 24 |
+| DN | [DN/](DN/YANG-MODELS.md) | Data Network | 24 |
+| LMF | [LMF/](LMF/YANG-MODELS.md) | Location Management | 27 |
+| N3IWF | [N3IWF/](N3IWF/YANG-MODELS.md) | Non-3GPP Interworking | 24 |
+| NGEIR | [NGEIR/](NGEIR/YANG-MODELS.md) | Equipment Identity Register | 27 |
+| SEPP | [SEPP/](SEPP/YANG-MODELS.md) | Security Edge Protection Proxy | 24 |
+| SMSF | [SMSF/](SMSF/YANG-MODELS.md) | SMS Function | 27 |
+
+This folder (combined view, 47 modules including `_3gpp-5gc-nrm-ep`) produces an 8,834-line
+YANG tree. Each per-NF subfolder produces a focused ~1,300-line tree.
+
 ## YANG Tree Entry Points
 
 | Module | Role |
