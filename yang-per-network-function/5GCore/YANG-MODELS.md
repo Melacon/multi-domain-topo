@@ -133,6 +133,10 @@ transitive dependencies from the search path automatically.
 
 The following table lists only the 5G Core network functions which are "managed" according to [3GPP TS 23.501 V18 12.0 (2025-12)](https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-ic0.zip).
 
+A reference 5G Core Topology for 5G Core managed functions is shown in the next figure. 
+
+![image](./../../topology/5gc.svg)
+
 <a id="nf-table"></a>
 
 | Function (Abbreviation) | Name (short description)                              | Description |

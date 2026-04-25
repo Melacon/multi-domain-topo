@@ -18,6 +18,9 @@ The following figure shows a reference topology to guide discussion and implemen
 ![image](./topology/usecase.svg)
 
 
+The 5G Core internal managed functions are shown in the next figure:
+![image](./topology/5gc.svg)
+
 ## Prerequisites
 
 `yang-repos/` is **not in git** (size + license restrictions). Populate it before doing any YANG work:
