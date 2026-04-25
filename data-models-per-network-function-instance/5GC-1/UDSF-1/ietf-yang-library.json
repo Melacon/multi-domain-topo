@@ -1,0 +1,439 @@
+{
+  "ietf-yang-library:yang-library": {
+    "module-set": [
+      {
+        "name": "udsf-1-modules",
+        "module": [
+          {
+            "name": "_3gpp-5gc-nrm-configurable5qiset",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-configurable5qiset"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-dnfunction",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5_3gpp-5gc-nrm-dnfunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-ecmconnectioninfo",
+            "revision": "2024-01-29",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ecmconnectioninfo"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-ep",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:tsg:sa5:nrm:_3gpp-5gc-nrm-ep"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-managed-nfprofile",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-managed-nfprofile"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-n3iwffunction",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-n3iwffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-nfprofile",
+            "revision": "2025-08-25",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-nfprofile"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-nfservice",
+            "revision": "2025-08-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-nfservice"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-udsffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-udsffunction"
+          },
+          {
+            "name": "_3gpp-common-files",
+            "revision": "2025-07-01",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-files"
+          },
+          {
+            "name": "_3gpp-common-fm",
+            "revision": "2026-01-24",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-fm",
+            "feature": [
+              "AcknowledgeByConsumer"
+            ]
+          },
+          {
+            "name": "_3gpp-common-managed-element",
+            "revision": "2025-03-24",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-managed-element",
+            "feature": [
+              "ECMappingRuleUnderManagedElement",
+              "EcmConnectionInfoUnderManagedElement",
+              "Configurable5QISetUnderManagedElement",
+              "FilesUnderManagedElement",
+              "MeasurementsUnderManagedElement",
+              "SubscriptionControlUnderManagedElement",
+              "SupportedNotificationsUnderManagedElement",
+              "FmUnderManagedElement",
+              "TraceUnderManagedElement",
+              "DESManagementFunction",
+              "DMROFunction",
+              "DRACHOptimizationFunction",
+              "DPCIConfigurationFunction",
+              "CPCIConfigurationFunction",
+              "CESManagementFunction"
+            ]
+          },
+          {
+            "name": "_3gpp-common-managed-function",
+            "revision": "2025-08-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-managed-function",
+            "feature": [
+              "MeasurementsUnderManagedFunction",
+              "TraceUnderManagedFunction"
+            ]
+          },
+          {
+            "name": "_3gpp-common-measurements",
+            "revision": "2025-08-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-measurements",
+            "feature": [
+              "FilesUnderPerfMetricJob"
+            ]
+          },
+          {
+            "name": "_3gpp-common-subnetwork",
+            "revision": "2025-03-24",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-subnetwork",
+            "feature": [
+              "ECMappingRuleUnderSubNetwork",
+              "EcmConnectionInfoUnderSubNetwork",
+              "Configurable5QISetUnderSubNetwork",
+              "FilesUnderSubNetwork",
+              "ExternalsUnderSubNetwork",
+              "MeasurementsUnderSubNetwork",
+              "SubscriptionControlUnderSubNetwork",
+              "SupportedNotificationsUnderSubNetwork",
+              "FmUnderSubNetwork",
+              "TraceUnderSubNetwork",
+              "DESManagementFunction",
+              "DMROFunction",
+              "DRACHOptimizationFunction",
+              "DPCIConfigurationFunction",
+              "CPCIConfigurationFunction",
+              "CESManagementFunction"
+            ]
+          },
+          {
+            "name": "_3gpp-common-subscription-control",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-subscription-control"
+          },
+          {
+            "name": "_3gpp-common-top",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-top"
+          },
+          {
+            "name": "_3gpp-common-trace",
+            "revision": "2025-08-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-trace",
+            "feature": [
+              "FilesUnderTraceJob"
+            ]
+          },
+          {
+            "name": "_3gpp-nr-nrm-ecmappingrule",
+            "revision": "2025-05-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-ecmappingrule"
+          },
+          {
+            "name": "_3gpp-nr-nrm-gnbcuupfunction",
+            "revision": "2024-05-24",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcuupfunction",
+            "feature": [
+              "Configurable5QISetUnderGNBCUUPFunction"
+            ]
+          },
+          {
+            "name": "ietf-factory-default",
+            "revision": "2020-08-31",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-factory-default",
+            "feature": [
+              "factory-default-datastore"
+            ]
+          },
+          {
+            "name": "ietf-keystore",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-keystore",
+            "feature": [
+              "central-keystore-supported",
+              "inline-definitions-supported",
+              "asymmetric-keys",
+              "symmetric-keys"
+            ]
+          },
+          {
+            "name": "ietf-netconf-acm",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-acm"
+          },
+          {
+            "name": "ietf-netconf-client",
+            "revision": "2024-08-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-client",
+            "feature": [
+              "ssh-initiate",
+              "tls-initiate",
+              "ssh-listen",
+              "tls-listen",
+              "central-netconf-client-supported"
+            ]
+          },
+          {
+            "name": "ietf-netconf-monitoring",
+            "revision": "2010-10-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"
+          },
+          {
+            "name": "ietf-netconf-nmda",
+            "revision": "2019-01-07",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-nmda",
+            "feature": [
+              "origin",
+              "with-defaults",
+              "must"
+            ]
+          },
+          {
+            "name": "ietf-netconf-server",
+            "revision": "2024-08-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-server",
+            "feature": [
+              "ssh-listen",
+              "tls-listen",
+              "ssh-call-home",
+              "tls-call-home",
+              "central-netconf-server-supported"
+            ]
+          },
+          {
+            "name": "ietf-netconf",
+            "revision": "2011-06-01",
+            "namespace": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "feature": [
+              "writable-running",
+              "candidate",
+              "confirmed-commit",
+              "rollback-on-error",
+              "validate",
+              "startup",
+              "url",
+              "xpath",
+              "is"
+            ]
+          },
+          {
+            "name": "ietf-origin",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-origin"
+          },
+          {
+            "name": "ietf-ssh-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ssh-server",
+            "feature": [
+              "ssh-server-keepalives",
+              "local-users-supported",
+              "local-user-auth-publickey",
+              "local-user-auth-password",
+              "local-user-auth-hostbased",
+              "local-user-auth-none"
+            ]
+          },
+          {
+            "name": "ietf-subscribed-notifications",
+            "revision": "2019-09-09",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications",
+            "feature": [
+              "configured",
+              "dscp",
+              "encode-json",
+              "encode-xml",
+              "interface-designation",
+              "qos",
+              "replay",
+              "subtree",
+              "supports-vrf",
+              "xpath"
+            ]
+          },
+          {
+            "name": "ietf-system",
+            "revision": "2014-08-06",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-system",
+            "feature": [
+              "radius",
+              "authentication",
+              "local-users",
+              "radius-authentication",
+              "ntp",
+              "ntp-udp-port",
+              "timezone-name",
+              "dns-udp-tcp-port"
+            ]
+          },
+          {
+            "name": "ietf-tcp-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tcp-server",
+            "feature": [
+              "tcp-server-keepalives"
+            ]
+          },
+          {
+            "name": "ietf-tls-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tls-server",
+            "feature": [
+              "tls-server-keepalives",
+              "server-ident-x509-cert",
+              "server-ident-raw-public-key",
+              "server-ident-tls12-psk",
+              "server-ident-tls13-epsk",
+              "client-auth-supported",
+              "client-auth-x509-cert",
+              "client-auth-raw-public-key",
+              "client-auth-tls12-psk",
+              "client-auth-tls13-epsk"
+            ]
+          },
+          {
+            "name": "ietf-truststore",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-truststore",
+            "feature": [
+              "central-truststore-supported",
+              "inline-definitions-supported",
+              "certificates",
+              "public-keys"
+            ]
+          },
+          {
+            "name": "ietf-yang-library",
+            "revision": "2019-01-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-library"
+          },
+          {
+            "name": "ietf-yang-push",
+            "revision": "2019-09-09",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-push",
+            "feature": [
+              "on-change"
+            ]
+          },
+          {
+            "name": "ietf-yang-schema-mount",
+            "revision": "2019-01-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-schema-mount"
+          }
+        ],
+        "import-only-module": [
+          {
+            "name": "_3gpp-5g-common-yang-types",
+            "revision": "2025-08-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-5g-common-yang-types"
+          },
+          {
+            "name": "_3gpp-common-ep-rp",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-ep-rp"
+          },
+          {
+            "name": "_3gpp-common-yang-extensions",
+            "revision": "2025-02-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-yang-extensions"
+          },
+          {
+            "name": "_3gpp-common-yang-types",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-common-yang-types"
+          },
+          {
+            "name": "ietf-crypto-types",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-crypto-types"
+          },
+          {
+            "name": "ietf-datastores",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-datastores"
+          },
+          {
+            "name": "ietf-inet-types",
+            "revision": "2025-12-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-inet-types"
+          },
+          {
+            "name": "ietf-ssh-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ssh-common"
+          },
+          {
+            "name": "ietf-tcp-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tcp-common"
+          },
+          {
+            "name": "ietf-tls-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tls-common"
+          },
+          {
+            "name": "ietf-yang-metadata",
+            "revision": "2016-08-05",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-metadata"
+          },
+          {
+            "name": "ietf-yang-patch",
+            "revision": "2017-02-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-patch"
+          },
+          {
+            "name": "ietf-yang-types",
+            "revision": "2025-12-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-types"
+          }
+        ]
+      }
+    ],
+    "schema": [
+      {
+        "name": "udsf-1-schema",
+        "module-set": [
+          "udsf-1-modules"
+        ]
+      }
+    ],
+    "datastore": [
+      {
+        "name": "ietf-datastores:running",
+        "schema": "udsf-1-schema"
+      },
+      {
+        "name": "ietf-datastores:startup",
+        "schema": "udsf-1-schema"
+      },
+      {
+        "name": "ietf-datastores:candidate",
+        "schema": "udsf-1-schema"
+      },
+      {
+        "name": "ietf-datastores:operational",
+        "schema": "udsf-1-schema"
+      }
+    ],
+    "content-id": "udsf-1-yanglib-2026-04-25"
+  }
+}

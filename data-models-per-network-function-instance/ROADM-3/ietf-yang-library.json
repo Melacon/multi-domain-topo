@@ -1,0 +1,433 @@
+{
+  "ietf-yang-library:yang-library": {
+    "module-set": [
+      {
+        "name": "roadm-3-modules",
+        "module": [
+          {
+            "name": "ietf-factory-default",
+            "revision": "2020-08-31",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-factory-default",
+            "feature": [
+              "factory-default-datastore"
+            ]
+          },
+          {
+            "name": "ietf-keystore",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-keystore",
+            "feature": [
+              "central-keystore-supported",
+              "inline-definitions-supported",
+              "asymmetric-keys",
+              "symmetric-keys"
+            ]
+          },
+          {
+            "name": "ietf-netconf-acm",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-acm"
+          },
+          {
+            "name": "ietf-netconf-client",
+            "revision": "2024-08-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-client",
+            "feature": [
+              "ssh-initiate",
+              "tls-initiate",
+              "ssh-listen",
+              "tls-listen",
+              "central-netconf-client-supported"
+            ]
+          },
+          {
+            "name": "ietf-netconf-monitoring",
+            "revision": "2010-10-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"
+          },
+          {
+            "name": "ietf-netconf-nmda",
+            "revision": "2019-01-07",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-nmda",
+            "feature": [
+              "origin",
+              "with-defaults",
+              "must"
+            ]
+          },
+          {
+            "name": "ietf-netconf-server",
+            "revision": "2024-08-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-server",
+            "feature": [
+              "ssh-listen",
+              "tls-listen",
+              "ssh-call-home",
+              "tls-call-home",
+              "central-netconf-server-supported"
+            ]
+          },
+          {
+            "name": "ietf-netconf",
+            "revision": "2011-06-01",
+            "namespace": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "feature": [
+              "writable-running",
+              "candidate",
+              "confirmed-commit",
+              "rollback-on-error",
+              "validate",
+              "startup",
+              "url",
+              "xpath",
+              "is"
+            ]
+          },
+          {
+            "name": "ietf-network-topology",
+            "revision": "2018-02-26",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-network-topology"
+          },
+          {
+            "name": "ietf-network",
+            "revision": "2018-02-26",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-network"
+          },
+          {
+            "name": "ietf-origin",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-origin"
+          },
+          {
+            "name": "ietf-ssh-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ssh-server",
+            "feature": [
+              "ssh-server-keepalives",
+              "local-users-supported",
+              "local-user-auth-publickey",
+              "local-user-auth-password",
+              "local-user-auth-hostbased",
+              "local-user-auth-none"
+            ]
+          },
+          {
+            "name": "ietf-subscribed-notifications",
+            "revision": "2019-09-09",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications",
+            "feature": [
+              "configured",
+              "dscp",
+              "encode-json",
+              "encode-xml",
+              "interface-designation",
+              "qos",
+              "replay",
+              "subtree",
+              "supports-vrf",
+              "xpath"
+            ]
+          },
+          {
+            "name": "ietf-system",
+            "revision": "2014-08-06",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-system",
+            "feature": [
+              "radius",
+              "authentication",
+              "local-users",
+              "radius-authentication",
+              "ntp",
+              "ntp-udp-port",
+              "timezone-name",
+              "dns-udp-tcp-port"
+            ]
+          },
+          {
+            "name": "ietf-tcp-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tcp-server",
+            "feature": [
+              "tcp-server-keepalives"
+            ]
+          },
+          {
+            "name": "ietf-te-topology",
+            "revision": "2020-08-06",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-te-topology",
+            "feature": [
+              "nsrlg",
+              "te-topology-hierarchy",
+              "template"
+            ]
+          },
+          {
+            "name": "ietf-tls-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tls-server",
+            "feature": [
+              "tls-server-keepalives",
+              "server-ident-x509-cert",
+              "server-ident-raw-public-key",
+              "server-ident-tls12-psk",
+              "server-ident-tls13-epsk",
+              "client-auth-supported",
+              "client-auth-x509-cert",
+              "client-auth-raw-public-key",
+              "client-auth-tls12-psk",
+              "client-auth-tls13-epsk"
+            ]
+          },
+          {
+            "name": "ietf-truststore",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-truststore",
+            "feature": [
+              "central-truststore-supported",
+              "inline-definitions-supported",
+              "certificates",
+              "public-keys"
+            ]
+          },
+          {
+            "name": "ietf-yang-library",
+            "revision": "2019-01-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-library"
+          },
+          {
+            "name": "ietf-yang-push",
+            "revision": "2019-09-09",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-push",
+            "feature": [
+              "on-change"
+            ]
+          },
+          {
+            "name": "ietf-yang-schema-mount",
+            "revision": "2019-01-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-schema-mount"
+          },
+          {
+            "name": "org-openroadm-amplifier",
+            "revision": "2025-03-28",
+            "namespace": "http://org/openroadm/amplifier"
+          },
+          {
+            "name": "org-openroadm-clli-network",
+            "revision": "2019-11-29",
+            "namespace": "http://org/openroadm/clli/network"
+          },
+          {
+            "name": "org-openroadm-common-amplifier-types",
+            "revision": "2025-03-28",
+            "namespace": "http://org/openroadm/common-amplifier-types"
+          },
+          {
+            "name": "org-openroadm-common-equipment-types",
+            "revision": "2019-11-29",
+            "namespace": "http://org/openroadm/common-equipment-types"
+          },
+          {
+            "name": "org-openroadm-common-link-types",
+            "revision": "2024-12-13",
+            "namespace": "http://org/openroadm/common-link-types"
+          },
+          {
+            "name": "org-openroadm-common-network",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/common/network"
+          },
+          {
+            "name": "org-openroadm-common-node-types",
+            "revision": "2021-05-28",
+            "namespace": "http://org/openroadm/common-node-types"
+          },
+          {
+            "name": "org-openroadm-common-optical-channel-types",
+            "revision": "2025-03-28",
+            "namespace": "http://org/openroadm/common-optical-channel-types"
+          },
+          {
+            "name": "org-openroadm-common-state-types",
+            "revision": "2019-11-29",
+            "namespace": "http://org/openroadm/common-state-types"
+          },
+          {
+            "name": "org-openroadm-common-types",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/common-types"
+          },
+          {
+            "name": "org-openroadm-degree",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/degree"
+          },
+          {
+            "name": "org-openroadm-equipment-states-types",
+            "revision": "2019-11-29",
+            "namespace": "http://org/openroadm/equipment/states/types"
+          },
+          {
+            "name": "org-openroadm-external-pluggable",
+            "revision": "2025-03-28",
+            "namespace": "http://org/openroadm/external/pluggable"
+          },
+          {
+            "name": "org-openroadm-link",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/link"
+          },
+          {
+            "name": "org-openroadm-network-resource",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/network-resource"
+          },
+          {
+            "name": "org-openroadm-network-topology-types",
+            "revision": "2025-05-30",
+            "namespace": "http://org/openroadm/network/topology/types"
+          },
+          {
+            "name": "org-openroadm-network-topology",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/network/topology"
+          },
+          {
+            "name": "org-openroadm-network-types",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/network/types"
+          },
+          {
+            "name": "org-openroadm-network",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/network"
+          },
+          {
+            "name": "org-openroadm-otn-common-types",
+            "revision": "2021-09-24",
+            "namespace": "http://org/openroadm/otn-common-types"
+          },
+          {
+            "name": "org-openroadm-otn-network-topology",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/otn/network/topology"
+          },
+          {
+            "name": "org-openroadm-port-types",
+            "revision": "2025-05-30",
+            "namespace": "http://org/openroadm/port/types"
+          },
+          {
+            "name": "org-openroadm-roadm",
+            "revision": "2019-11-29",
+            "namespace": "http://org/openroadm/roadm"
+          },
+          {
+            "name": "org-openroadm-service-format",
+            "revision": "2025-05-30",
+            "namespace": "http://org/openroadm/service-format"
+          },
+          {
+            "name": "org-openroadm-srg",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/srg"
+          },
+          {
+            "name": "org-openroadm-switching-pool-types",
+            "revision": "2019-11-29",
+            "namespace": "http://org/openroadm/switching-pool-types"
+          },
+          {
+            "name": "org-openroadm-xponder",
+            "revision": "2025-12-12",
+            "namespace": "http://org/openroadm/xponder"
+          }
+        ],
+        "import-only-module": [
+          {
+            "name": "ietf-crypto-types",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-crypto-types"
+          },
+          {
+            "name": "ietf-datastores",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-datastores"
+          },
+          {
+            "name": "ietf-inet-types",
+            "revision": "2025-12-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-inet-types"
+          },
+          {
+            "name": "ietf-routing-types",
+            "revision": "2017-12-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-routing-types"
+          },
+          {
+            "name": "ietf-ssh-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ssh-common"
+          },
+          {
+            "name": "ietf-tcp-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tcp-common"
+          },
+          {
+            "name": "ietf-te-types",
+            "revision": "2020-06-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-te-types"
+          },
+          {
+            "name": "ietf-tls-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tls-common"
+          },
+          {
+            "name": "ietf-yang-metadata",
+            "revision": "2016-08-05",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-metadata"
+          },
+          {
+            "name": "ietf-yang-patch",
+            "revision": "2017-02-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-patch"
+          },
+          {
+            "name": "ietf-yang-types",
+            "revision": "2025-12-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-types"
+          }
+        ]
+      }
+    ],
+    "schema": [
+      {
+        "name": "roadm-3-schema",
+        "module-set": [
+          "roadm-3-modules"
+        ]
+      }
+    ],
+    "datastore": [
+      {
+        "name": "ietf-datastores:running",
+        "schema": "roadm-3-schema"
+      },
+      {
+        "name": "ietf-datastores:startup",
+        "schema": "roadm-3-schema"
+      },
+      {
+        "name": "ietf-datastores:candidate",
+        "schema": "roadm-3-schema"
+      },
+      {
+        "name": "ietf-datastores:operational",
+        "schema": "roadm-3-schema"
+      }
+    ],
+    "content-id": "roadm-3-yanglib-2026-04-25"
+  }
+}

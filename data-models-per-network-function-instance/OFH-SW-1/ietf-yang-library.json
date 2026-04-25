@@ -1,0 +1,325 @@
+{
+  "ietf-yang-library:yang-library": {
+    "module-set": [
+      {
+        "name": "ofh-sw-1-modules",
+        "module": [
+          {
+            "name": "ieee802-dot1ab-lldp",
+            "revision": "2022-03-15",
+            "namespace": "urn:ieee:std:802.1AB:yang:ieee802-dot1ab-lldp"
+          },
+          {
+            "name": "ieee802-dot1ab-types",
+            "revision": "2022-03-15",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-dot1ab-types"
+          },
+          {
+            "name": "ieee802-dot1q-bridge",
+            "revision": "2023-10-26",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-dot1q-bridge",
+            "feature": [
+              "ingress-filtering",
+              "extended-filtering-services",
+              "port-and-protocol-based-vlan",
+              "flow-filtering",
+              "simple-bridge-port",
+              "flexible-bridge-port"
+            ]
+          },
+          {
+            "name": "ieee802-dot1q-types",
+            "revision": "2023-10-26",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-dot1q-types"
+          },
+          {
+            "name": "ieee802-dot1q-vlan-bridge",
+            "revision": "2018-03-07",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-dot1q-vlan-bridge"
+          },
+          {
+            "name": "ieee802-types",
+            "revision": "2023-10-22",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-types"
+          },
+          {
+            "name": "ietf-factory-default",
+            "revision": "2020-08-31",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-factory-default",
+            "feature": [
+              "factory-default-datastore"
+            ]
+          },
+          {
+            "name": "ietf-interfaces",
+            "revision": "2018-02-20",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-interfaces",
+            "feature": [
+              "arbitrary-names",
+              "pre-provisioning",
+              "if-mib"
+            ]
+          },
+          {
+            "name": "ietf-keystore",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-keystore",
+            "feature": [
+              "central-keystore-supported",
+              "inline-definitions-supported",
+              "asymmetric-keys",
+              "symmetric-keys"
+            ]
+          },
+          {
+            "name": "ietf-netconf-acm",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-acm"
+          },
+          {
+            "name": "ietf-netconf-client",
+            "revision": "2024-08-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-client",
+            "feature": [
+              "ssh-initiate",
+              "tls-initiate",
+              "ssh-listen",
+              "tls-listen",
+              "central-netconf-client-supported"
+            ]
+          },
+          {
+            "name": "ietf-netconf-monitoring",
+            "revision": "2010-10-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"
+          },
+          {
+            "name": "ietf-netconf-nmda",
+            "revision": "2019-01-07",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-nmda",
+            "feature": [
+              "origin",
+              "with-defaults",
+              "must"
+            ]
+          },
+          {
+            "name": "ietf-netconf-server",
+            "revision": "2024-08-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-server",
+            "feature": [
+              "ssh-listen",
+              "tls-listen",
+              "ssh-call-home",
+              "tls-call-home",
+              "central-netconf-server-supported"
+            ]
+          },
+          {
+            "name": "ietf-netconf",
+            "revision": "2011-06-01",
+            "namespace": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "feature": [
+              "writable-running",
+              "candidate",
+              "confirmed-commit",
+              "rollback-on-error",
+              "validate",
+              "startup",
+              "url",
+              "xpath",
+              "is"
+            ]
+          },
+          {
+            "name": "ietf-origin",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-origin"
+          },
+          {
+            "name": "ietf-routing",
+            "revision": "2018-03-13",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-routing",
+            "feature": [
+              "multiple-ribs",
+              "router-id"
+            ]
+          },
+          {
+            "name": "ietf-ssh-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ssh-server",
+            "feature": [
+              "ssh-server-keepalives",
+              "local-users-supported",
+              "local-user-auth-publickey",
+              "local-user-auth-password",
+              "local-user-auth-hostbased",
+              "local-user-auth-none"
+            ]
+          },
+          {
+            "name": "ietf-subscribed-notifications",
+            "revision": "2019-09-09",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications",
+            "feature": [
+              "configured",
+              "dscp",
+              "encode-json",
+              "encode-xml",
+              "interface-designation",
+              "qos",
+              "replay",
+              "subtree",
+              "supports-vrf",
+              "xpath"
+            ]
+          },
+          {
+            "name": "ietf-system",
+            "revision": "2014-08-06",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-system",
+            "feature": [
+              "radius",
+              "authentication",
+              "local-users",
+              "radius-authentication",
+              "ntp",
+              "ntp-udp-port",
+              "timezone-name",
+              "dns-udp-tcp-port"
+            ]
+          },
+          {
+            "name": "ietf-tcp-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tcp-server",
+            "feature": [
+              "tcp-server-keepalives"
+            ]
+          },
+          {
+            "name": "ietf-tls-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tls-server",
+            "feature": [
+              "tls-server-keepalives",
+              "server-ident-x509-cert",
+              "server-ident-raw-public-key",
+              "server-ident-tls12-psk",
+              "server-ident-tls13-epsk",
+              "client-auth-supported",
+              "client-auth-x509-cert",
+              "client-auth-raw-public-key",
+              "client-auth-tls12-psk",
+              "client-auth-tls13-epsk"
+            ]
+          },
+          {
+            "name": "ietf-truststore",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-truststore",
+            "feature": [
+              "central-truststore-supported",
+              "inline-definitions-supported",
+              "certificates",
+              "public-keys"
+            ]
+          },
+          {
+            "name": "ietf-yang-library",
+            "revision": "2019-01-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-library"
+          },
+          {
+            "name": "ietf-yang-push",
+            "revision": "2019-09-09",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-push",
+            "feature": [
+              "on-change"
+            ]
+          },
+          {
+            "name": "ietf-yang-schema-mount",
+            "revision": "2019-01-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-schema-mount"
+          }
+        ],
+        "import-only-module": [
+          {
+            "name": "iana-if-type",
+            "revision": "2014-05-08",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-if-type"
+          },
+          {
+            "name": "ietf-crypto-types",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-crypto-types"
+          },
+          {
+            "name": "ietf-datastores",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-datastores"
+          },
+          {
+            "name": "ietf-ssh-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ssh-common"
+          },
+          {
+            "name": "ietf-tcp-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tcp-common"
+          },
+          {
+            "name": "ietf-tls-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tls-common"
+          },
+          {
+            "name": "ietf-yang-metadata",
+            "revision": "2016-08-05",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-metadata"
+          },
+          {
+            "name": "ietf-yang-patch",
+            "revision": "2017-02-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-patch"
+          },
+          {
+            "name": "ietf-yang-types",
+            "revision": "2025-12-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-types"
+          }
+        ]
+      }
+    ],
+    "schema": [
+      {
+        "name": "ofh-sw-1-schema",
+        "module-set": [
+          "ofh-sw-1-modules"
+        ]
+      }
+    ],
+    "datastore": [
+      {
+        "name": "ietf-datastores:running",
+        "schema": "ofh-sw-1-schema"
+      },
+      {
+        "name": "ietf-datastores:startup",
+        "schema": "ofh-sw-1-schema"
+      },
+      {
+        "name": "ietf-datastores:candidate",
+        "schema": "ofh-sw-1-schema"
+      },
+      {
+        "name": "ietf-datastores:operational",
+        "schema": "ofh-sw-1-schema"
+      }
+    ],
+    "content-id": "ofh-sw-1-yanglib-2026-04-25"
+  }
+}

@@ -1,0 +1,713 @@
+{
+  "ietf-yang-library:yang-library": {
+    "module-set": [
+      {
+        "name": "o-ru-3-modules",
+        "module": [
+          {
+            "name": "iana-ssh-encryption-algs",
+            "revision": "2024-10-16",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-ssh-encryption-algs"
+          },
+          {
+            "name": "iana-ssh-key-exchange-algs",
+            "revision": "2024-10-16",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-ssh-key-exchange-algs"
+          },
+          {
+            "name": "iana-ssh-mac-algs",
+            "revision": "2024-10-16",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-ssh-mac-algs"
+          },
+          {
+            "name": "iana-ssh-public-key-algs",
+            "revision": "2024-10-16",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-ssh-public-key-algs"
+          },
+          {
+            "name": "iana-tls-cipher-suite-algs",
+            "revision": "2024-10-16",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-tls-cipher-suite-algs"
+          },
+          {
+            "name": "ieee802-dot1q-cfm-types",
+            "revision": "2022-10-29",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-dot1q-cfm-types"
+          },
+          {
+            "name": "ieee802-dot1q-cfm",
+            "revision": "2022-01-19",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-dot1q-cfm"
+          },
+          {
+            "name": "ieee802-dot1q-types",
+            "revision": "2023-10-26",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-dot1q-types"
+          },
+          {
+            "name": "ieee802-dot1x-types",
+            "revision": "2020-02-18",
+            "namespace": "urn:ieee:std:802.1X:yang:ieee802-dot1x-types"
+          },
+          {
+            "name": "ieee802-dot1x",
+            "revision": "2020-02-18",
+            "namespace": "urn:ieee:std:802.1X:yang:ieee802-dot1x"
+          },
+          {
+            "name": "ieee802-types",
+            "revision": "2023-10-22",
+            "namespace": "urn:ieee:std:802.1Q:yang:ieee802-types"
+          },
+          {
+            "name": "ietf-factory-default",
+            "revision": "2020-08-31",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-factory-default",
+            "feature": [
+              "factory-default-datastore"
+            ]
+          },
+          {
+            "name": "ietf-hardware",
+            "revision": "2018-03-13",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-hardware",
+            "feature": [
+              "entity-mib",
+              "hardware-state",
+              "hardware-sensor"
+            ]
+          },
+          {
+            "name": "ietf-interfaces",
+            "revision": "2018-02-20",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-interfaces",
+            "feature": [
+              "arbitrary-names",
+              "pre-provisioning",
+              "if-mib"
+            ]
+          },
+          {
+            "name": "ietf-ip",
+            "revision": "2018-02-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ip",
+            "feature": [
+              "ipv4-non-contiguous-netmasks",
+              "ipv6-privacy-autoconf"
+            ]
+          },
+          {
+            "name": "ietf-keystore",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-keystore",
+            "feature": [
+              "central-keystore-supported",
+              "inline-definitions-supported",
+              "asymmetric-keys",
+              "symmetric-keys"
+            ]
+          },
+          {
+            "name": "ietf-netconf-acm",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-acm"
+          },
+          {
+            "name": "ietf-netconf-client",
+            "revision": "2024-08-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-client",
+            "feature": [
+              "ssh-initiate",
+              "tls-initiate",
+              "ssh-listen",
+              "tls-listen",
+              "central-netconf-client-supported"
+            ]
+          },
+          {
+            "name": "ietf-netconf-monitoring",
+            "revision": "2010-10-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"
+          },
+          {
+            "name": "ietf-netconf-nmda",
+            "revision": "2019-01-07",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-nmda",
+            "feature": [
+              "origin",
+              "with-defaults",
+              "must"
+            ]
+          },
+          {
+            "name": "ietf-netconf-server",
+            "revision": "2024-08-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-netconf-server",
+            "feature": [
+              "ssh-listen",
+              "tls-listen",
+              "ssh-call-home",
+              "tls-call-home",
+              "central-netconf-server-supported"
+            ]
+          },
+          {
+            "name": "ietf-netconf",
+            "revision": "2011-06-01",
+            "namespace": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "feature": [
+              "writable-running",
+              "candidate",
+              "confirmed-commit",
+              "rollback-on-error",
+              "validate",
+              "startup",
+              "url",
+              "xpath",
+              "is"
+            ]
+          },
+          {
+            "name": "ietf-network-instance",
+            "revision": "2019-01-21",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-network-instance"
+          },
+          {
+            "name": "ietf-origin",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-origin"
+          },
+          {
+            "name": "ietf-restconf",
+            "revision": "2017-01-26",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-restconf"
+          },
+          {
+            "name": "ietf-ssh-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ssh-server",
+            "feature": [
+              "ssh-server-keepalives",
+              "local-users-supported",
+              "local-user-auth-publickey",
+              "local-user-auth-password",
+              "local-user-auth-hostbased",
+              "local-user-auth-none"
+            ]
+          },
+          {
+            "name": "ietf-subscribed-notifications",
+            "revision": "2019-09-09",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-subscribed-notifications",
+            "feature": [
+              "configured",
+              "dscp",
+              "encode-json",
+              "encode-xml",
+              "interface-designation",
+              "qos",
+              "replay",
+              "subtree",
+              "supports-vrf",
+              "xpath"
+            ]
+          },
+          {
+            "name": "ietf-system",
+            "revision": "2014-08-06",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-system",
+            "feature": [
+              "radius",
+              "authentication",
+              "local-users",
+              "radius-authentication",
+              "ntp",
+              "ntp-udp-port",
+              "timezone-name",
+              "dns-udp-tcp-port"
+            ]
+          },
+          {
+            "name": "ietf-tcp-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tcp-server",
+            "feature": [
+              "tcp-server-keepalives"
+            ]
+          },
+          {
+            "name": "ietf-tls-server",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tls-server",
+            "feature": [
+              "tls-server-keepalives",
+              "server-ident-x509-cert",
+              "server-ident-raw-public-key",
+              "server-ident-tls12-psk",
+              "server-ident-tls13-epsk",
+              "client-auth-supported",
+              "client-auth-x509-cert",
+              "client-auth-raw-public-key",
+              "client-auth-tls12-psk",
+              "client-auth-tls13-epsk"
+            ]
+          },
+          {
+            "name": "ietf-truststore",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-truststore",
+            "feature": [
+              "central-truststore-supported",
+              "inline-definitions-supported",
+              "certificates",
+              "public-keys"
+            ]
+          },
+          {
+            "name": "ietf-yang-library",
+            "revision": "2019-01-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-library"
+          },
+          {
+            "name": "ietf-yang-push",
+            "revision": "2019-09-09",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-push",
+            "feature": [
+              "on-change"
+            ]
+          },
+          {
+            "name": "ietf-yang-schema-mount",
+            "revision": "2019-01-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-schema-mount"
+          },
+          {
+            "name": "o-ran-ald-port",
+            "revision": "2025-04-14",
+            "namespace": "urn:o-ran:ald-port:1.0",
+            "feature": [
+              "OVERCURRENT-SUPPORTED"
+            ]
+          },
+          {
+            "name": "o-ran-ald",
+            "revision": "2021-12-01",
+            "namespace": "urn:o-ran:ald:1.0"
+          },
+          {
+            "name": "o-ran-antenna-calibration",
+            "revision": "2024-04-15",
+            "namespace": "urn:o-ran:antcal:1.0",
+            "feature": [
+              "O-RU-COORDINATED-ANT-CAL",
+              "O-RU-COORDINATED-ANT-CAL-MULTIPLE-TIME-RESOURCE"
+            ]
+          },
+          {
+            "name": "o-ran-beamforming",
+            "revision": "2025-04-14",
+            "namespace": "urn:o-ran:beamforming:1.0",
+            "feature": [
+              "MODIFY-BF-CONFIG",
+              "BEAM-TILT"
+            ]
+          },
+          {
+            "name": "o-ran-certificates",
+            "revision": "2025-12-22",
+            "namespace": "urn:o-ran:certificates:1.0"
+          },
+          {
+            "name": "o-ran-common-identity-refs",
+            "revision": "2022-08-15",
+            "namespace": "urn:o-ran:wg1identityref:1.0"
+          },
+          {
+            "name": "o-ran-common-yang-types",
+            "revision": "2025-04-14",
+            "namespace": "urn:o-ran:common-yang-types:1.0"
+          },
+          {
+            "name": "o-ran-compression-factors",
+            "revision": "2025-04-14",
+            "namespace": "urn:o-ran:compression-factors:1.0",
+            "feature": [
+              "CONFIGURABLE-FS-OFFSET"
+            ]
+          },
+          {
+            "name": "o-ran-delay-management",
+            "revision": "2025-04-14",
+            "namespace": "urn:o-ran:delay:1.0",
+            "feature": [
+              "ADAPTIVE-RU-PROFILE"
+            ]
+          },
+          {
+            "name": "o-ran-dhcp",
+            "revision": "2024-08-12",
+            "namespace": "urn:o-ran:dhcp:1.0"
+          },
+          {
+            "name": "o-ran-ecpri-delay",
+            "revision": "2023-12-23",
+            "namespace": "urn:o-ran:message5:1.0"
+          },
+          {
+            "name": "o-ran-ethernet-forwarding",
+            "revision": "2021-12-01",
+            "namespace": "urn:o-ran:ethernet-fwd:1.0"
+          },
+          {
+            "name": "o-ran-externalio",
+            "revision": "2023-08-14",
+            "namespace": "urn:o-ran:external-io:1.0"
+          },
+          {
+            "name": "o-ran-fan",
+            "revision": "2025-08-11",
+            "namespace": "urn:o-ran:fan:1.0"
+          },
+          {
+            "name": "o-ran-file-management",
+            "revision": "2024-12-23",
+            "namespace": "urn:o-ran:file-management:1.0"
+          },
+          {
+            "name": "o-ran-fm",
+            "revision": "2024-08-12",
+            "namespace": "urn:o-ran:fm:1.0",
+            "feature": [
+              "HISTORICAL-ALARM-LIST"
+            ]
+          },
+          {
+            "name": "o-ran-frequency-band-measurement",
+            "revision": "2024-08-12",
+            "namespace": "urn:o-ran:frequency-band-measurement:1.0"
+          },
+          {
+            "name": "o-ran-hardware",
+            "revision": "2025-04-14",
+            "namespace": "urn:o-ran:hardware:1.0",
+            "feature": [
+              "ENERGYSAVING"
+            ]
+          },
+          {
+            "name": "o-ran-ieee802-dot1q-cfm",
+            "revision": "2023-04-10",
+            "namespace": "urn:o-ran:o-ran-ieee802-dot1q-cfm:1.0"
+          },
+          {
+            "name": "o-ran-interfaces",
+            "revision": "2025-12-22",
+            "namespace": "urn:o-ran:interfaces:1.0",
+            "feature": [
+              "UDPIP-BASED-CU-PLANE",
+              "ALIASMAC-BASED-CU-PLANE"
+            ]
+          },
+          {
+            "name": "o-ran-laa-operations",
+            "revision": "2021-12-01",
+            "namespace": "urn:o-ran:laa-operations:1.0"
+          },
+          {
+            "name": "o-ran-laa",
+            "revision": "2022-08-15",
+            "namespace": "urn:o-ran:laa:1.0"
+          },
+          {
+            "name": "o-ran-lbm",
+            "revision": "2024-08-12",
+            "namespace": "urn:o-ran:lbm:1.0"
+          },
+          {
+            "name": "o-ran-module-cap",
+            "revision": "2025-04-14",
+            "namespace": "urn:o-ran:module-cap:1.0",
+            "feature": [
+              "LAA",
+              "EAXC-ID-GROUP-SUPPORTED",
+              "TRANSPORT-FRAGMENTATION",
+              "DSS_LTE_NR",
+              "PRACH-STATIC-CONFIGURATION-SUPPORTED",
+              "SRS-STATIC-CONFIGURATION-SUPPORTED",
+              "CONFIGURABLE-TDD-PATTERN-SUPPORTED"
+            ]
+          },
+          {
+            "name": "o-ran-mplane-int",
+            "revision": "2025-12-22",
+            "namespace": "urn:o-ran:mplane-interfaces:1.0"
+          },
+          {
+            "name": "o-ran-operations",
+            "revision": "2025-12-22",
+            "namespace": "urn:o-ran:operations:1.0"
+          },
+          {
+            "name": "o-ran-performance-management",
+            "revision": "2025-12-22",
+            "namespace": "urn:o-ran:performance-management:1.0"
+          },
+          {
+            "name": "o-ran-processing-element",
+            "revision": "2024-12-23",
+            "namespace": "urn:o-ran:processing-element:1.0",
+            "feature": [
+              "SHARED_CELL"
+            ]
+          },
+          {
+            "name": "o-ran-shared-cell",
+            "revision": "2024-12-23",
+            "namespace": "urn:o-ran:shared-cell:1.0",
+            "feature": [
+              "FHM",
+              "SELECTIVE-BEAM-ID"
+            ]
+          },
+          {
+            "name": "o-ran-software-management",
+            "revision": "2025-08-11",
+            "namespace": "urn:o-ran:software-management:1.0"
+          },
+          {
+            "name": "o-ran-supervision",
+            "revision": "2022-12-05",
+            "namespace": "urn:o-ran:supervision:1.0"
+          },
+          {
+            "name": "o-ran-sync",
+            "revision": "2025-08-11",
+            "namespace": "urn:o-ran:sync:1.0",
+            "feature": [
+              "GNSS",
+              "ANTI-JAM"
+            ]
+          },
+          {
+            "name": "o-ran-trace",
+            "revision": "2022-08-15",
+            "namespace": "urn:o-ran:trace:1.0"
+          },
+          {
+            "name": "o-ran-transceiver",
+            "revision": "2025-12-22",
+            "namespace": "urn:o-ran:transceiver:1.0"
+          },
+          {
+            "name": "o-ran-troubleshooting",
+            "revision": "2025-04-14",
+            "namespace": "urn:o-ran:troubleshooting:1.0"
+          },
+          {
+            "name": "o-ran-udp-echo",
+            "revision": "2019-02-04",
+            "namespace": "urn:o-ran:udpecho:1.0"
+          },
+          {
+            "name": "o-ran-uplane-conf",
+            "revision": "2025-12-22",
+            "namespace": "urn:o-ran:uplane-conf:1.0",
+            "feature": [
+              "EAXC-GAIN-CORRECTION",
+              "TX-REFERENCE-LEVEL"
+            ]
+          },
+          {
+            "name": "o-ran-usermgmt",
+            "revision": "2024-08-12",
+            "namespace": "urn:o-ran:user-mgmt:1.0"
+          },
+          {
+            "name": "o-ran-ves-subscribed-notifications",
+            "revision": "2020-12-10",
+            "namespace": "urn:o-ran:ves-sn:1.0"
+          },
+          {
+            "name": "o-ran-wg4-features",
+            "revision": "2025-12-22",
+            "namespace": "urn:o-ran:wg4feat:1.0",
+            "feature": [
+              "NON-PERSISTENT-MPLANE",
+              "STATIC-TRANSMISSION-WINDOW-CONTROL",
+              "DYNAMIC-TRANSMISSION-WINDOW-CONTROL",
+              "UNIFORMLY-DISTRIBUTED-TRANSMISSION",
+              "ORDERED-TRANSMISSION",
+              "INDEPENDENT-TRANSMISSION-WINDOW-CONTROL",
+              "EXT-ANT-DELAY-CONTROL",
+              "CPLANE-MESSAGE-PROCESSING-LIMITS",
+              "CHANNEL-INFORMATION-COMPRESSION",
+              "CHANNEL-INFORMATION-PRB-GROUP",
+              "BEAM-UPDATE-CONTENTION-CONTROL",
+              "MULTIPLE-SCS-IN-EAXC",
+              "MULTIPLE-TRANSPORT-SESSION-TYPE",
+              "ENHANCED-T-COMBINE",
+              "SHARED-ORU-MULTI-OPERATOR",
+              "SHARED-ORU-MULTI-ODU",
+              "INTEGRITY-CHECK-AT-SW-DOWNLOAD",
+              "SUPERVISION-WITH-SESSION-ID",
+              "UPLANE-ONLY-DL-MODE",
+              "ST4-SLOT-CONFIG-MSG-SUPPORT",
+              "NON-SCHEDULED-UEID",
+              "EXTENDED-PRACH-CONFIGURATION",
+              "SE11-WITH-CONTINUITY-BIT-SUPPORT",
+              "UPLANE-MESSAGE-PROCESSING-LIMITS",
+              "CALL-HOME-REACTIVATION-SUPPORTED",
+              "SEQ-ID-CHECKING-CONFIGURABLE",
+              "TRX-CONTROL",
+              "ADVANCED-SLEEP-MODE",
+              "SE23-PRB-BLOCK-MODE-SUPPORT",
+              "MPLANE-DATA-LAYER-CONTROL",
+              "SHARED-CELL-STATS",
+              "PER-PORT-PTP-CONFIG",
+              "PER-PORT-SYNCE-CONFIG",
+              "PER-INT-TCP-MSS",
+              "MULTIPLE-BEAMID-TABLES-SUPPORTED",
+              "MPLANE-TRX-CONTROL",
+              "DEEP-HIBERNATE",
+              "PRG-SIZE-SUPP-SE-21-WITH-ST6",
+              "PRG-SIZE-SUPP-SE-21-WITH-ST5",
+              "USER-GROUP-OPTIMIZATION",
+              "BF-DELAY-PROFILE",
+              "DMRS-BF-EQ",
+              "DMRS-BF-NEQ",
+              "RRM-MEAS-REPORTING",
+              "USER-GROUP-SELF-ASSEMBLY",
+              "UEID-PERSISTENCE",
+              "CONTINUITY-BLOCK-SIZE",
+              "SELECTED-BF-METHOD-CONFIGURATION",
+              "DMRS-BF-NEQ-UNALTERED-FREQ-OFFSET",
+              "DMRS-BF-NEQ-UNALTERED-TAE",
+              "SE10-MEMBER-CANDIDATE-LIST",
+              "MACSEC-BYPASS-POLICY",
+              "SE27-ODU-CONTROLLED-DIMENSIONALITY-REDUCTION",
+              "SE20-MULTI-SD-PUNC-PATTERN-SUPPORT",
+              "CONFIGURABLE-VSWR-THRESHOLDS",
+              "CLIENT-AUTH-SSH-PUBLIC-KEY",
+              "POINT-A-OFFSET-TO-ABSOLUTE-FREQUENCY-CENTER",
+              "SECURITY-LOGGING",
+              "ORU-CONTROL-SINR-TIME-RESOLUTION",
+              "DYNAMIC-SINR-PER-PRB",
+              "TRANSCEIVER-PRESENCE-CHANGE-SUPPORTED",
+              "LOG-FILTER",
+              "TRANSCEIVER-ALARM-WARNING-SUPPORTED",
+              "FAN-PRESENT-AND-OPERATING-CHANGE-SUPPORTED",
+              "MAX-POWER-CONTROL",
+              "CYCLIC-DELAY-SUPPORTED",
+              "POINT-A-OFFSET-TO-ABSOLUTE-FREQUENCY-CENTER-TX",
+              "PNF-REGISTRATION-ATTEMPTS"
+            ]
+          }
+        ],
+        "import-only-module": [
+          {
+            "name": "iana-crypt-hash",
+            "revision": "2014-08-06",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-crypt-hash"
+          },
+          {
+            "name": "iana-hardware",
+            "revision": "2018-03-13",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-hardware"
+          },
+          {
+            "name": "iana-if-type",
+            "revision": "2014-05-08",
+            "namespace": "urn:ietf:params:xml:ns:yang:iana-if-type"
+          },
+          {
+            "name": "ietf-crypto-types",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-crypto-types"
+          },
+          {
+            "name": "ietf-datastores",
+            "revision": "2018-02-14",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-datastores"
+          },
+          {
+            "name": "ietf-dhcpv6-common",
+            "revision": "2022-06-20",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-dhcpv6-common"
+          },
+          {
+            "name": "ietf-dhcpv6-types",
+            "revision": "2018-09-04",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-dhcpv6-types"
+          },
+          {
+            "name": "ietf-inet-types",
+            "revision": "2025-12-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-inet-types"
+          },
+          {
+            "name": "ietf-ssh-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-ssh-common"
+          },
+          {
+            "name": "ietf-tcp-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tcp-common"
+          },
+          {
+            "name": "ietf-tls-common",
+            "revision": "2024-10-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-tls-common"
+          },
+          {
+            "name": "ietf-x509-cert-to-name",
+            "revision": "2014-12-10",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-x509-cert-to-name"
+          },
+          {
+            "name": "ietf-yang-metadata",
+            "revision": "2016-08-05",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-metadata"
+          },
+          {
+            "name": "ietf-yang-patch",
+            "revision": "2017-02-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-patch"
+          },
+          {
+            "name": "ietf-yang-types",
+            "revision": "2025-12-22",
+            "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-types"
+          }
+        ]
+      }
+    ],
+    "schema": [
+      {
+        "name": "o-ru-3-schema",
+        "module-set": [
+          "o-ru-3-modules"
+        ]
+      }
+    ],
+    "datastore": [
+      {
+        "name": "ietf-datastores:running",
+        "schema": "o-ru-3-schema"
+      },
+      {
+        "name": "ietf-datastores:startup",
+        "schema": "o-ru-3-schema"
+      },
+      {
+        "name": "ietf-datastores:candidate",
+        "schema": "o-ru-3-schema"
+      },
+      {
+        "name": "ietf-datastores:operational",
+        "schema": "o-ru-3-schema"
+      }
+    ],
+    "content-id": "o-ru-3-yanglib-2026-04-25"
+  }
+}
