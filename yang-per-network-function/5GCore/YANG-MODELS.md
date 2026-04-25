@@ -41,7 +41,6 @@ transitive dependencies from the search path automatically.
 | PCF | `PCF → yang-models/` | Policy Control |
 | NEF | `NEF → yang-models/` | Network Exposure |
 | AF | `AF → yang-models/` | Application Function |
-| DN | `DN → yang-models/` | Data Network |
 | LMF | `LMF → yang-models/` | Location Management |
 | N3IWF | `N3IWF → yang-models/` | Non-3GPP Interworking |
 | NGEIR | `NGEIR → yang-models/` | Equipment Identity Register |
@@ -129,3 +128,66 @@ transitive dependencies from the search path automatically.
 | `ietf-yang-schema-mount` | 2019-01-14 | 🌳 RFC 8528 schema mount |
 | `ietf-inet-types` | 2025-12-22 | RFC 6991 IP address / FQDN types |
 | `ietf-yang-types` | 2025-12-22 | RFC 6991 base YANG types |
+
+## 5G Core managed Network Function 
+
+The following table lists only the 5G Core network functions which are "managed" according to [3GPP TS 23.501 V18 12.0 (2025-12)](https://www.3gpp.org/ftp/Specs/archive/23_series/23.501/23501-ic0.zip).
+
+<a id="nf-table"></a>
+
+| Function (Abbreviation) | Name (short description)                              | Description |
+|-------------------------|--------------------------------------------------------|-------------|
+| AF                      | Application Function                                   | Application-layer function that interacts with the 5G Core, typically via NEF and/or PCF, to influence traffic routing, QoS, and policy based on service needs (e.g., video, IoT, enterprise apps). [[7]](#ref-7)[[2]](#ref-2) |
+| AMF                     | Access and Mobility Management Function                | Control-plane NF handling UE registration, connection and mobility management, reachability, and access authentication orchestration; it terminates N1/N2 and coordinates with SMF, AUSF, UDM, NSSF, and others. [[1]](#ref-1)[[2]](#ref-2) |
+| AUSF                    | Authentication Server Function                         | Central authentication NF that performs 5G AKA/EAP-AKA’ procedures, validates credentials from UDM/ARPF, and provides authentication results to AMF during UE registration and access. [[1]](#ref-1)[[2]](#ref-2) |
+| LMF                     | Location Management Function                           | Function in the 5G location services architecture responsible for coordinating positioning procedures, obtaining UE location estimates from RAN/UE and providing location information to consumers (e.g., emergency services, apps). [[8]](#ref-8) |
+| NEF                     | Network Exposure Function                              | Exposure and mediation NF that securely exposes 3GPP network capabilities and events to external AFs, performs protocol and information translation, and enforces access and throttling policies for northbound APIs. [[3]](#ref-3)[[5]](#ref-5)[[7]](#ref-7) |
+| NGEIR                   | Next-Generation Equipment Identity Register            | 5G evolution of the equipment identity register (5G-EIR) that stores and manages IMEI/PEI status (e.g., white/grey/black lists) and provides device identity checks to the 5GC for fraud and theft prevention. [[8]](#ref-8)[[10]](#ref-10) |
+| NRF                     | NF Repository Function                                 | Service registry and discovery NF that stores NF profiles and available service instances, allowing NFs to register/deregister and discover each other dynamically in the service-based architecture. [[1]](#ref-1)[[3]](#ref-3)[[2]](#ref-2) |
+| NSSF                    | Network Slice Selection Function                       | NF that assists AMF in selecting appropriate network slice instances and allowed NSSAI for a UE, based on subscription data, slice availability, and operator policies. [[4]](#ref-4)[[2]](#ref-2) |
+| PCF                     | Policy Control Function                                | Central policy engine that provides unified policy rules, including QoS and some charging aspects, to control-plane NFs like SMF and AMF, replacing and extending the PCRF role from EPC. [[1]](#ref-1)[[3]](#ref-3)[[2]](#ref-2) |
+| SEPP                    | Security Edge Protection Proxy                         | Per-PLMN security gateway for inter-PLMN control-plane traffic, e.g., N32, that provides topology hiding, message filtering, integrity and confidentiality protection for roaming scenarios. [[8]](#ref-8) |
+| SMF                     | Session Management Function                            | Control-plane NF that manages PDU sessions, including establishment, modification, and release, allocates IP addresses, selects and controls UPF(s), and enforces session-related policy and charging instructions. [[1]](#ref-1)[[3]](#ref-3)[[2]](#ref-2) |
+| SMSF                    | SMS Function                                           | NF providing SMS over NAS support in 5GS, handling control and interworking aspects so that SMS can be delivered via 5G Core even without legacy CS domain. [[8]](#ref-8) |
+| UDM                     | Unified Data Management                                | Subscriber data management NF that holds subscription, identifiers (SUPI, SUCI), authentication data with ARPF, and access authorization information, supporting other NFs like AMF, SMF, and PCF. [[1]](#ref-1)[[3]](#ref-3)[[2]](#ref-2) |
+| UDSF                    | Unstructured Data Storage Function                     | Optional data-layer NF that stores and retrieves unstructured or semi-structured dynamic state, e.g., session context, so that control-plane NFs can become stateless and offload their internal state to a shared storage. [[6]](#ref-6)[[9]](#ref-9)[[11]](#ref-11) |
+| UPF                     | User Plane Function                                    | User-plane NF that anchors, routes, and forwards user traffic, enforces QoS and traffic steering, performs buffering and packet inspection, and connects the 5GC to data networks over N3/N6. [[1]](#ref-1)[[2]](#ref-2)[[3]](#ref-3) |
+
+### References
+
+<a id="ref-1"></a>
+[1] [5GC function descriptions (NXG Connect)](https://www.nxgconnect.com/post/5g-core-network-architecture-components-their-functional-descriptions) [↩](#nf-table)
+
+<a id="ref-2"></a>
+[2] [5G Core architecture overview (ShareTechnote)](https://www.sharetechnote.com/html/5G/5G_NetworkArchitecture.html) [↩](#nf-table)
+
+<a id="ref-3"></a>
+[3] [5G Core network functions (Grandmetric)](https://www.grandmetric.com/5g-core-network-functions/) [↩](#nf-table)
+
+<a id="ref-4"></a>
+[4] [5G Core Network Functions Explained (study doc)](https://studylib.net/doc/25879689/5g-core-network-functions) [↩](#nf-table)
+
+<a id="ref-5"></a>
+[5] [5GC API list (jdegre GitHub)](https://github.com/jdegre/5GC_APIs) [↩](#nf-table)
+
+<a id="ref-6"></a>
+[6] [UDSF explanation (Apis Training)](https://apistraining.com/5g-udsf/) [↩](#nf-table)
+
+<a id="ref-7"></a>
+[7] [5G Core introduction (NTIPRIT slide deck)](https://ntiprit.gov.in/pdf/imt20205g/5G_Core_Introduction.pdf) [↩](#nf-table)
+
+<a id="ref-8"></a>
+[8] [5G standardization overview (Erik Guttman, 3GPP/ITU slides)](https://www.itu.int/en/ITU-T/Workshops-and-Seminars/201807/Documents/3_Erik_Guttman.pdf) [↩](#nf-table)
+
+<a id="ref-9"></a>
+[9] [UDSF network data layer article (Enea)](https://www.enea.com/solutions/4g-5g-network-data-layer/unstructured-session-data-udsf/) [↩](#nf-table)
+
+<a id="ref-10"></a>
+[10] [3GPP NGEIR function YANG model](https://forge.3gpp.org/rep/sa5/MnS/blob/Rel-16/yang-models/_3gpp-5gc-nrm-ngeirfunction.yang) [↩](#nf-table)
+
+<a id="ref-11"></a>
+[11] [Patent background on unstructured data storage (UDSF-related)](https://patents.google.com/patent/WO2019015778A1) [↩](#nf-table)
+
+## Notes
+
+This document was developed with the support of AI-based tools for drafting, language refinement, structuring, and research assistance. Tools used included [OpenAI ChatGPT](https://chatgpt.com), [Anthropic Claude](https://claude.ai), [Perplexity](https://www.perplexity.ai), and a self-hosted [Ollama](https://ollama.com) model ([qwen3.5:35b](https://huggingface.co/Qwen/Qwen3.5-35B-A3B)). All AI-generated suggestions were reviewed, validated, and edited by the author. Responsibility for the accuracy, completeness, and final wording of this document remains with the author.
