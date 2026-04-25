@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1145" height="760" viewBox="0 0 1145 760" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1145" height="640" viewBox="0 0 1145 640" role="img" aria-labelledby="title desc">
   <title id="title">Simplified 5G Core Architecture with Service-Based Interfaces and Reference Points</title>
   <desc id="desc">A simplified 5G Core architecture diagram showing control-plane and managed network functions connected by the service-based interface bus and the user-plane function.</desc>
   <defs>
@@ -38,7 +38,7 @@
     </filter>
   </defs>
 
-  <rect class="bg" width="1145" height="760"/>
+  <rect class="bg" width="1145" height="640"/>
   <g transform="translate(-60,0)">
   <text x="600" y="52" class="title" text-anchor="middle">5G Core Architecture — Managed Functions (only) </text>
   <text x="600" y="82" class="subtitle" text-anchor="middle">Control-plane Network Functions via Service-Based Interfaces; user-plane connectivity shown below</text>
@@ -79,9 +79,24 @@
   
   <!-- CP Function Boxes Row 2 -->
   <g filter="url(#shadow)">
-    <rect x="210" y="365" width="130" height="70" class="box box-cp"/>
-    <text x="275" y="393" class="label">NRF-1</text><text x="275" y="419" class="small">NF Discovery</text>
+    <rect x="130" y="365" width="130" height="70" class="box box-cp"/>
+    <text x="195" y="393" class="label">NRF-1</text><text x="195" y="419" class="small">NF Discovery</text>
+    <g transform="translate(20,10)">
+    <rect x="280" y="365" width="130" height="70" class="box box-cp"/>
+    <text x="345" y="393" class="label">LMF-1</text><text x="345" y="419" class="small">Location Mgmt.</text>
 
+    <rect x="430" y="365" width="130" height="70" class="box box-cp"/>
+    <text x="495" y="393" class="label">NGEIR-1</text><text x="495" y="419" class="small">Loc. Exposure</text>
+
+    <rect x="580" y="365" width="130" height="70" class="box box-cp"/>
+    <text x="645" y="393" class="label">SEPP-1</text><text x="645" y="419" class="small">Sec. Edge Proxy</text>
+
+    <rect x="730" y="365" width="130" height="70" class="box box-cp"/>
+    <text x="795" y="393" class="label">SMSF-1</text><text x="795" y="419" class="small">SMS Function</text>
+
+    <rect x="880" y="365" width="130" height="70" class="box box-repo"/>
+    <text x="945" y="393" class="label">UDSF-1</text><text x="945" y="419" class="small">Unstr. Data Store</text>
+    </g>
     <rect x="1060" y="365" width="130" height="70" class="box box-ext"/>
     <text x="1125" y="393" class="label">AF-1</text><text x="1125" y="419" class="small">Application Fn.</text>
   </g>
@@ -91,26 +106,27 @@
     <path d="M195,260 L195,310"/><path d="M355,260 L355,310"/><path d="M515,260 L515,310"/>
     <path d="M675,260 L675,310"/><path d="M825,260 L825,310"/>
     <path d="M975,260 L975,310"/><path d="M1125,260 L1125,310"/>
-    <path d="M275,365 L275,310"/>
+    <path d="M195,365 L195,310"/>
     <path d="M1125,365 L1125,310"/>
   </g>
 </g>
 
   <!-- User Plane Area -->
-  <rect x="70" y="495" width="1120" height="150" fill="#f0fdf4" stroke="#86efac" stroke-width="2" rx="24" ry="24"/>
+  <rect x="70" y="495" width="620" height="130" fill="#f0fdf4" stroke="#86efac" stroke-width="2" rx="24" ry="24"/>
   <text x="105" y="528" class="section-title">User Plane</text>
 
   <g filter="url(#shadow)">
-    <rect x="450" y="525" width="150" height="85" class="box box-up"/>
-    <text x="525" y="555" class="label">UPF-1</text><text x="525" y="582" class="small">User Plane</text>
+    <rect x="345" y="525" width="150" height="85" class="box box-up"/>
+    <text x="420" y="555" class="label">UPF-1</text>
+    <text x="420" y="582" class="small">User Plane</text>
   </g>
 
   <!-- N4 control reference -->
-  <path d="M525,525 C525,390 365,390 365,260" class="n4"/>
-  <text x="390" y="390" class="iface">N4</text>
+  <path d="M420,525 C420,340 365,340 365,260" class="n4"/>
+  <text x="370" y="340" class="iface">N4</text>
 
   <!-- Legend -->
-  <g transform="translate(765,670)">
+  <g transform="translate(770,555)">
     <rect x="0" y="0" width="420" height="70" class="box" fill="#ffffff" stroke="#64748b"/>
     <line x1="25" y1="22" x2="85" y2="22" class="legend-line" stroke="#2563eb"/>
     <text x="100" y="27" class="note">Service-Based Interface connection to SBI bus</text>
