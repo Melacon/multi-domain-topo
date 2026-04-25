@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1120" viewBox="0 0 1960 1120" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="980" viewBox="0 0 1760 980" role="img" aria-labelledby="title desc">
   <title id="title">Transport Inclusion Network Topology</title>
   <desc id="desc">DWDM-ROADM ring with 3 nodes, transponders on client sides, connected RAN branches, IP router, wireless transport segment, 5G core, and Internet.</desc>
   <defs>
@@ -30,10 +30,12 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="1960" height="1120" fill="#ffffff"/>
-  <text x="60" y="55" class="title">Transport Inclusion Discussion Topology</text>
-  <text x="60" y="82" class="subtitle">DWDM-ROADM ring with RAN, transponders, IP router, wireless transport, 5G Core, and Internet domains</text>
+  <rect x="0" y="0" width="1760" height="980" fill="#ffffff"/>
+  <text x="10" y="55" class="title">Transport Inclusion Reference Topology</text>
+  <text x="10" y="82" class="subtitle">DWDM-ROADM ring with RAN, transponders, IP router, wireless transport, 5G Core, and Internet domains</text>
 
+  <!-- ============ Topology ============ -->
+  <g transform="translate(-170, 0)">
   <!-- ============ DWDM / ROADM Ring — two unidirectional rings ============ -->
   <!-- Ring center (1139, 450); outer r=183 CW, inner r=176 CCW (circumradius) -->
   <!-- Arrowhead gap at ~3 o'clock, ±15° either side of horizontal (30° total gap, 330° arcs). -->
@@ -228,9 +230,10 @@
   <!-- Branch 2 -->
   <text x="490" y="572" class="tiny">Open Fronthaul</text>
   <text x="700" y="438" text-anchor="middle" class="tiny">Wireless Transport Link</text>
+  </g>
 
   <!-- ============ Legend ============ -->
-  <g transform="translate(60,1000)">
+  <g transform="translate(930,860)">
     <rect x="0" y="0" width="820" height="110" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5" rx="18" ry="18"/>
     <text x="20" y="28" class="label">Legend</text>
 
@@ -252,6 +255,4 @@
     <line x1="590" y1="83" x2="635" y2="83" class="wireless"/>
     <text x="645" y="88" class="small">Wireless transport</text>
   </g>
-
-  <text x="1940" y="1095" text-anchor="end" class="tiny">Version 1.9 — inner ring r=176 (circumradius) so both rings enter ROADMs from same edge</text>
 </svg>
