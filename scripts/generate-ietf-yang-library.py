@@ -3,9 +3,14 @@
 Generate ietf-yang-library.json for NF instances (RFC 8525).
 
 Usage:
-  ./scripts/generate-ietf-yang-library.py              # all instances
-  ./scripts/generate-ietf-yang-library.py 5GC-1/AF-1   # one instance
-  ./scripts/generate-ietf-yang-library.py O-DU-1 WT-1  # multiple
+  ./scripts/generate-ietf-yang-library.py                    # all instances
+  ./scripts/generate-ietf-yang-library.py 5GC-1/AF-1         # one 5GC instance
+  ./scripts/generate-ietf-yang-library.py O-CU-1/O-CU-CP-1   # one O-CU sub-NF
+  ./scripts/generate-ietf-yang-library.py O-DU-1 WT-1        # multiple flat instances
+
+NF instance path patterns:
+  <parent>/<sub-NF>   for nested NFs: 5GC-N/<NF>-N  and  O-CU-N/<O-CU-CP|O-CU-UP>-N
+  <inst>              for flat NFs: O-DU-N, O-RU-N, ROADM-N, WT-N, OFH-SW-N
 """
 
 import json
@@ -27,12 +32,18 @@ EXP       = REPO_ROOT / "yang-repos/yang/experimental/ietf-extracted-YANG-module
 # ── NF instance folder → yang-per-network-function type folder ────────────────
 
 INSTANCE_TO_YANG_TYPE: dict[str, str] = {
-    "O-CU-1": "O-CU-CP", "O-CU-2": "O-CU-CP",
     "O-DU-1": "O-DU",    "O-DU-2": "O-DU",
     "O-RU-1": "O-RU",    "O-RU-2": "O-RU",    "O-RU-3": "O-RU",    "O-RU-4": "O-RU",
     "OFH-SW-1": "OpenFronthaul-Switch",
     "ROADM-1": "ROADM",  "ROADM-2": "ROADM",  "ROADM-3": "ROADM",
     "WT-1":  "WirelessTransport", "WT-2":  "WirelessTransport",
+}
+
+# ── O-CU sub-NF name prefix → yang-per-network-function type folder ───────────
+# O-CU-1/O-CU-CP-1 → "O-CU-CP",  O-CU-1/O-CU-UP-1 → "O-CU-UP"
+O_CU_SUB_NF_TO_YANG_TYPE: dict[str, str] = {
+    "O-CU-CP": "O-CU-CP",
+    "O-CU-UP": "O-CU-UP",
 }
 
 # ── 5GC NF name prefix → 3GPP NRM module (without @revision) ─────────────────
@@ -145,6 +156,15 @@ def yang_dir_for(instance_rel: str) -> tuple[Path | None, str | None, bool]:
         yang_dir = YANG_NF / "5GCore" / "yang-models"
         nf_prefix = re.sub(r"-\d+$", "", parts[1])   # "AF-1" → "AF"
         return yang_dir, NF_TO_NRM.get(nf_prefix), True
+
+    # O-CU is split into O-CU-CP and O-CU-UP sub-NFs under each O-CU-N parent.
+    # path: "O-CU-1/O-CU-CP-1" → strip trailing -N from parts[1] → "O-CU-CP"
+    if len(parts) == 2 and parts[0].startswith("O-CU"):
+        sub_type = re.sub(r"-\d+$", "", parts[1])   # "O-CU-CP-1" → "O-CU-CP"
+        yang_type = O_CU_SUB_NF_TO_YANG_TYPE.get(sub_type)
+        if not yang_type:
+            return None, None, False
+        return YANG_NF / yang_type, None, False
 
     inst_name = parts[0]
     yang_type = INSTANCE_TO_YANG_TYPE.get(inst_name)

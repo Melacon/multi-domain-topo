@@ -2,52 +2,17 @@
   "ietf-yang-library:yang-library": {
     "module-set": [
       {
-        "name": "ausf-1-modules",
+        "name": "o-cu-up-2-modules",
         "module": [
-          {
-            "name": "_3gpp-5gc-nrm-ausffunction",
-            "revision": "2025-11-06",
-            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ausffunction"
-          },
           {
             "name": "_3gpp-5gc-nrm-configurable5qiset",
             "revision": "2023-09-18",
             "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-configurable5qiset"
           },
           {
-            "name": "_3gpp-5gc-nrm-dnfunction",
-            "revision": "2023-09-18",
-            "namespace": "urn:3gpp:sa5_3gpp-5gc-nrm-dnfunction"
-          },
-          {
             "name": "_3gpp-5gc-nrm-ecmconnectioninfo",
             "revision": "2024-01-29",
             "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ecmconnectioninfo"
-          },
-          {
-            "name": "_3gpp-5gc-nrm-ep",
-            "revision": "2023-09-18",
-            "namespace": "urn:3gpp:tsg:sa5:nrm:_3gpp-5gc-nrm-ep"
-          },
-          {
-            "name": "_3gpp-5gc-nrm-managed-nfprofile",
-            "revision": "2025-11-06",
-            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-managed-nfprofile"
-          },
-          {
-            "name": "_3gpp-5gc-nrm-n3iwffunction",
-            "revision": "2023-09-18",
-            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-n3iwffunction"
-          },
-          {
-            "name": "_3gpp-5gc-nrm-nfprofile",
-            "revision": "2025-08-25",
-            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-nfprofile"
-          },
-          {
-            "name": "_3gpp-5gc-nrm-nfservice",
-            "revision": "2025-08-18",
-            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-nfservice"
           },
           {
             "name": "_3gpp-common-files",
@@ -148,12 +113,81 @@
             "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-ecmappingrule"
           },
           {
+            "name": "_3gpp-nr-nrm-ep",
+            "revision": "2025-05-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-ep",
+            "feature": [
+              "EPClassesUnderGNBCUCPFunction",
+              "EPClassesUnderGNBCUUPFunction",
+              "EPClassesUnderGNBDUFunction"
+            ]
+          },
+          {
+            "name": "_3gpp-nr-nrm-externalgnbcuupfunction",
+            "revision": "2025-04-25",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-externalgnbcuupfunction",
+            "feature": [
+              "ExternalGNBCUUPFunctionUnderNRNetwork",
+              "ExternalGNBCUUPFunctionUnderSubNetwork"
+            ]
+          },
+          {
+            "name": "_3gpp-nr-nrm-gnbcucpfunction",
+            "revision": "2024-08-12",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcucpfunction",
+            "feature": [
+              "Configurable5QISetUnderGNBCUCPFunction",
+              "DESManagementFunction",
+              "DANRManagementFunction",
+              "DMROFunction"
+            ]
+          },
+          {
             "name": "_3gpp-nr-nrm-gnbcuupfunction",
             "revision": "2024-05-24",
             "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcuupfunction",
             "feature": [
               "Configurable5QISetUnderGNBCUUPFunction"
             ]
+          },
+          {
+            "name": "_3gpp-nr-nrm-gnbdufunction",
+            "revision": "2024-02-24",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbdufunction",
+            "feature": [
+              "Configurable5QISetUnderGNBDUFunction",
+              "DRACHOptimizationFunction"
+            ]
+          },
+          {
+            "name": "_3gpp-nr-nrm-nrcellcu",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-nrcellcu",
+            "feature": [
+              "DPCIConfigurationFunction",
+              "DESManagementFunction",
+              "DMROFunction",
+              "CESManagementFunction"
+            ]
+          },
+          {
+            "name": "_3gpp-nr-nrm-nrcelldu",
+            "revision": "2024-05-24",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-nrcelldu",
+            "feature": [
+              "DRACHOptimizationFunction",
+              "CPCIConfigurationFunction"
+            ]
+          },
+          {
+            "name": "_3gpp-nr-nrm-nrnetwork",
+            "revision": "2025-04-25",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-nrnetwork"
+          },
+          {
+            "name": "_3gpp-nr-nrm-rrmpolicy",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-rrmpolicy"
           },
           {
             "name": "ietf-factory-default",
@@ -337,6 +371,36 @@
             "name": "ietf-yang-schema-mount",
             "revision": "2019-01-14",
             "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-schema-mount"
+          },
+          {
+            "name": "o-ran-o1-EPE2",
+            "revision": "2024-07-11",
+            "namespace": "urn:o-ran:o-ran-o1-EPE2"
+          },
+          {
+            "name": "o-ran-o1-NearRTRIC",
+            "revision": "2024-07-11",
+            "namespace": "urn:o-ran:o-ran-o1-NearRTRIC"
+          },
+          {
+            "name": "o-ran-o1-managed-application",
+            "revision": "2025-07-02",
+            "namespace": "urn:o-ran:o-ran-o1-managed-application"
+          },
+          {
+            "name": "o-ran-o1-subscription-control-me",
+            "revision": "2025-07-02",
+            "namespace": "urn:o-ran:o-ran-o1-subscription-control-me"
+          },
+          {
+            "name": "o-ran-o1-subscription-control-subnetwork",
+            "revision": "2025-07-02",
+            "namespace": "urn:o-ran:o-ran-o1-subscription-control-subnetwork"
+          },
+          {
+            "name": "o-ran-o1-subscription-control",
+            "revision": "2025-07-02",
+            "namespace": "urn:o-ran:o-ran-o1-subscription-control"
           }
         ],
         "import-only-module": [
@@ -410,30 +474,30 @@
     ],
     "schema": [
       {
-        "name": "ausf-1-schema",
+        "name": "o-cu-up-2-schema",
         "module-set": [
-          "ausf-1-modules"
+          "o-cu-up-2-modules"
         ]
       }
     ],
     "datastore": [
       {
         "name": "ietf-datastores:running",
-        "schema": "ausf-1-schema"
+        "schema": "o-cu-up-2-schema"
       },
       {
         "name": "ietf-datastores:startup",
-        "schema": "ausf-1-schema"
+        "schema": "o-cu-up-2-schema"
       },
       {
         "name": "ietf-datastores:candidate",
-        "schema": "ausf-1-schema"
+        "schema": "o-cu-up-2-schema"
       },
       {
         "name": "ietf-datastores:operational",
-        "schema": "ausf-1-schema"
+        "schema": "o-cu-up-2-schema"
       }
     ],
-    "content-id": "ausf-1-yanglib-2026-04-26"
+    "content-id": "o-cu-up-2-yanglib-2026-04-26"
   }
 }

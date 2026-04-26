@@ -2,7 +2,7 @@
   "ietf-yang-library:yang-library": {
     "module-set": [
       {
-        "name": "o-cu-1-modules",
+        "name": "o-cu-up-1-modules",
         "module": [
           {
             "name": "_3gpp-5gc-nrm-configurable5qiset",
@@ -123,15 +123,6 @@
             ]
           },
           {
-            "name": "_3gpp-nr-nrm-externalgnbcucpfunction",
-            "revision": "2025-04-25",
-            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-externalgnbcucpfunction",
-            "feature": [
-              "ExternalGNBCUCPFunctionUnderNRNetwork",
-              "ExternalGNBCUCPFunctionUnderSubNetwork"
-            ]
-          },
-          {
             "name": "_3gpp-nr-nrm-externalgnbcuupfunction",
             "revision": "2025-04-25",
             "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-externalgnbcuupfunction",
@@ -139,11 +130,6 @@
               "ExternalGNBCUUPFunctionUnderNRNetwork",
               "ExternalGNBCUUPFunctionUnderSubNetwork"
             ]
-          },
-          {
-            "name": "_3gpp-nr-nrm-externalnrcellcu",
-            "revision": "2025-04-25",
-            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-externalnrcellcu"
           },
           {
             "name": "_3gpp-nr-nrm-gnbcucpfunction",
@@ -387,16 +373,6 @@
             "namespace": "urn:ietf:params:xml:ns:yang:ietf-yang-schema-mount"
           },
           {
-            "name": "o-ran-cu-security-handling",
-            "revision": "2021-07-04",
-            "namespace": "urn:o-ran:cu-security-handling:1.0"
-          },
-          {
-            "name": "o-ran-cucountgroup",
-            "revision": "2023-03-17",
-            "namespace": "urn:o-ran:cucountgroup:1.0"
-          },
-          {
             "name": "o-ran-o1-EPE2",
             "revision": "2024-07-11",
             "namespace": "urn:o-ran:o-ran-o1-EPE2"
@@ -425,11 +401,6 @@
             "name": "o-ran-o1-subscription-control",
             "revision": "2025-07-02",
             "namespace": "urn:o-ran:o-ran-o1-subscription-control"
-          },
-          {
-            "name": "o-ran-pdcp",
-            "revision": "2023-11-14",
-            "namespace": "urn:o-ran:pdcp:1.0"
           }
         ],
         "import-only-module": [
@@ -503,30 +474,30 @@
     ],
     "schema": [
       {
-        "name": "o-cu-1-schema",
+        "name": "o-cu-up-1-schema",
         "module-set": [
-          "o-cu-1-modules"
+          "o-cu-up-1-modules"
         ]
       }
     ],
     "datastore": [
       {
         "name": "ietf-datastores:running",
-        "schema": "o-cu-1-schema"
+        "schema": "o-cu-up-1-schema"
       },
       {
         "name": "ietf-datastores:startup",
-        "schema": "o-cu-1-schema"
+        "schema": "o-cu-up-1-schema"
       },
       {
         "name": "ietf-datastores:candidate",
-        "schema": "o-cu-1-schema"
+        "schema": "o-cu-up-1-schema"
       },
       {
         "name": "ietf-datastores:operational",
-        "schema": "o-cu-1-schema"
+        "schema": "o-cu-up-1-schema"
       }
     ],
-    "content-id": "o-cu-1-yanglib-2026-04-25"
+    "content-id": "o-cu-up-1-yanglib-2026-04-26"
   }
 }

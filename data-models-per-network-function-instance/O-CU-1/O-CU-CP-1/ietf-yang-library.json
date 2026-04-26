@@ -2,7 +2,7 @@
   "ietf-yang-library:yang-library": {
     "module-set": [
       {
-        "name": "o-cu-2-modules",
+        "name": "o-cu-cp-1-modules",
         "module": [
           {
             "name": "_3gpp-5gc-nrm-configurable5qiset",
@@ -503,30 +503,30 @@
     ],
     "schema": [
       {
-        "name": "o-cu-2-schema",
+        "name": "o-cu-cp-1-schema",
         "module-set": [
-          "o-cu-2-modules"
+          "o-cu-cp-1-modules"
         ]
       }
     ],
     "datastore": [
       {
         "name": "ietf-datastores:running",
-        "schema": "o-cu-2-schema"
+        "schema": "o-cu-cp-1-schema"
       },
       {
         "name": "ietf-datastores:startup",
-        "schema": "o-cu-2-schema"
+        "schema": "o-cu-cp-1-schema"
       },
       {
         "name": "ietf-datastores:candidate",
-        "schema": "o-cu-2-schema"
+        "schema": "o-cu-cp-1-schema"
       },
       {
         "name": "ietf-datastores:operational",
-        "schema": "o-cu-2-schema"
+        "schema": "o-cu-cp-1-schema"
       }
     ],
-    "content-id": "o-cu-2-yanglib-2026-04-25"
+    "content-id": "o-cu-cp-1-yanglib-2026-04-26"
   }
 }

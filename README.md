@@ -21,6 +21,9 @@ The following figure shows a reference topology to guide discussion and implemen
 The 5G Core internal managed functions are shown in the next figure:
 ![image](./topology/5gc.svg)
 
+The O-CU internal architecture (O-CU-CP and O-CU-UP) with reference points is shown below:
+![image](./topology/o-cu.svg)
+
 ## Prerequisites
 
 `yang-repos/` is **not in git** (size + license restrictions). Populate it before doing any YANG work:
@@ -37,16 +40,30 @@ Tools required: `pyang` (≥ 2.7, installed at `~/.local/bin/pyang`) and `yangli
 
 ```
 multi-domain-topo/
-├── topology/                          # Epic specification and use-case diagram
+├── topology/                          # Epic specification and use-case diagrams
+│   ├── usecase.svg                    # Full reference topology
+│   ├── 5gc.svg                        # 5G Core managed functions
+│   └── o-cu.svg                       # O-CU: O-CU-CP and O-CU-UP architecture
 ├── yang-per-network-function/         # YANG model sets organised by NF type
 │   ├── O-RU/
 │   ├── O-DU/
-│   ├── O-CU-CP / O-CU-UP/
+│   ├── O-CU-CP/                       # O-CU Control Plane (gNB-CU-CP)
+│   ├── O-CU-UP/                       # O-CU User Plane (gNB-CU-UP)
 │   ├── OpenFronthaul-Switch/
 │   ├── WirelessTransport/
 │   ├── ROADM/
 │   └── 5GCore/
-├── data-models-per-network-function-instance/   # Per-instance data (O-RU-1 … 5GC-1)
+├── data-models-per-network-function-instance/   # Per-instance data
+│   ├── O-CU-1/                        # O-CU unit 1 (contains two sub-NFs)
+│   │   ├── O-CU-CP-1/                 #   Control Plane NF instance
+│   │   └── O-CU-UP-1/                 #   User Plane NF instance
+│   ├── O-CU-2/                        # O-CU unit 2
+│   │   ├── O-CU-CP-2/
+│   │   └── O-CU-UP-2/
+│   ├── 5GC-1/<NF>-1/                  # 5GC NF instances (same nested pattern)
+│   └── O-DU-1 … O-RU-4 … ROADM-3 …  # Flat single-NF instances
+├── scripts/
+│   └── generate-ietf-yang-library.py  # Generates ietf-yang-library.json per instance
 ├── yang-repos/                        # External YANG model repos — NOT in git (see below)
 ├── setup-yang-repos.sh                # Script to populate yang-repos/
 └── README.md
@@ -116,9 +133,11 @@ Symlinks follow the naming convention `module-name@revision.yang` and point to t
 | OpenFronthaul-Switch | IEEE 802.1Q/AB | `ieee802-dot1q-bridge`, `ieee802-dot1ab-lldp`, `ietf-interfaces`, `ietf-routing` |
 | O-RU | O-RAN WG4 MP-YANGs R005 v20.00 | 43 o-ran-* and ietf-* roots |
 | O-DU | O-RAN WG5 O-DU-O1 R003 v09.00 | `_3gpp-common-managed-element`, `o-ran-aggregation-base`, + 12 more |
-| O-CU-CP | O-RAN WG5 O-CU-O1 R003 v07.00 + 3GPP MnS | `_3gpp-common-managed-element`, `_3gpp-common-subnetwork` |
-| O-CU-UP | 3GPP MnS + O-RAN WG10 O1NRM | `_3gpp-common-managed-element`, `_3gpp-common-subnetwork` |
+| O-CU-CP | O-RAN WG5 O-CU-O1 R003 v07.00 + 3GPP MnS | `_3gpp-common-managed-element`, `_3gpp-common-subnetwork` (50 implemented modules) |
+| O-CU-UP | 3GPP MnS + O-RAN WG10 O1NRM | `_3gpp-common-managed-element`, `_3gpp-common-subnetwork` (45 implemented modules) |
 | 5GCore | 3GPP MnS TS 28.541 + O-RAN WG10 O1NRM | `_3gpp-common-managed-element`, `_3gpp-common-subnetwork` |
+
+> **O-CU note:** The O-CU is one logical unit (gNB-CU) but comprises two separately managed NFs — O-CU-CP and O-CU-UP — connected via the **E1** interface. In this repository they are modelled as sibling sub-directories under each `O-CU-N/` parent, each with its own `ietf-yang-library.json` reflecting the distinct YANG module set for that plane.
 
 ### 3GPP NRM augmentation pattern
 
@@ -128,7 +147,20 @@ The `_3gpp-5gc-nrm-ep` module imports all 17 5GC NF function modules — includi
 
 ### `data-models-per-network-function-instance/`
 
-Placeholder directories for per-NF-instance data (e.g. O-RU-1, ROADM-2). Currently empty; intended for instance-specific YANG data / config samples once the topology engine is built.
+Per-NF-instance data directories, each containing `ietf-system.json` (RFC 7317 system information) and `ietf-yang-library.json` (RFC 8525 YANG library). Intended for instance-specific YANG data and config samples used by the topology engine.
+
+Two nesting patterns are used:
+
+| Pattern | Example | When used |
+|---------|---------|-----------|
+| `<parent>/<sub-NF>-N/` | `O-CU-1/O-CU-CP-1/`, `5GC-1/AMF-1/` | NFs that are logically part of a larger unit (O-CU, 5GC cluster) |
+| `<inst>/` | `O-DU-1/`, `ROADM-2/`, `WT-1/` | Standalone single-NF instances |
+
+**O-CU** is modelled as a parent unit (`O-CU-1`, `O-CU-2`) that contains two separate NF instances:
+- `O-CU-CP-N/` — Control Plane (gNB-CU-CP): RRC, PDCP-C, F1-AP, NGAP, XnAP, E2AP
+- `O-CU-UP-N/` — User Plane (gNB-CU-UP): PDCP-U, SDAP, GTP-U forwarding
+
+This mirrors the 3GPP separation of O-CU-CP and O-CU-UP as distinct Managed Elements connected via the E1 interface.
 
 ### `yang-repos/` layout (not in git)
 

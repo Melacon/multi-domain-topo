@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="930" height="580" viewBox="170 0 930 580" role="img" aria-labelledby="title desc">
+  <title id="title">O-CU Architecture: O-CU-CP and O-CU-UP Network Functions</title>
+  <desc id="desc">O-RAN CU architecture diagram showing the O-CU-CP (Control Plane) and O-CU-UP (User Plane) network functions, their internal E1 interface, and external reference points to the 5G Core (NG-c/NG-u), O-DU (F1-c/F1-u), peer gNBs (Xn), and the Near-RT RIC (E2).</desc>
+  <defs>
+    <style>
+      .bg        { fill: #ffffff; }
+      .title     { font: 700 32px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .subtitle  { font: 400 17px Arial, Helvetica, sans-serif; fill: #475569; }
+      .sec-title { font: 700 17px Arial, Helvetica, sans-serif; fill: #1e293b; }
+      .box-cp    { fill: #e0f2fe; stroke: #0369a1; stroke-width: 2; rx: 14; ry: 14; }
+      .box-up    { fill: #dcfce7; stroke: #15803d; stroke-width: 2; rx: 14; ry: 14; }
+      .box-ext   { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; rx: 14; ry: 14; }
+      .box-ric   { fill: #fdf4ff; stroke: #9333ea; stroke-width: 2; rx: 14; ry: 14; }
+      .box-du    { fill: #fef9c3; stroke: #a16207; stroke-width: 2; rx: 14; ry: 14; }
+      .label     { font: 700 20px Arial, Helvetica, sans-serif; fill: #0f172a; text-anchor: middle; dominant-baseline: middle; }
+      .small     { font: 400 13px Arial, Helvetica, sans-serif; fill: #475569; text-anchor: middle; dominant-baseline: middle; }
+      .iface     { font: 700 14px Arial, Helvetica, sans-serif; fill: #0f172a; text-anchor: middle; dominant-baseline: middle; }
+      .note      { font: 400 13px Arial, Helvetica, sans-serif; fill: #475569; }
+      .e1        { stroke: #0f172a; stroke-width: 3.5; stroke-linecap: round; fill: none; }
+      .ngc       { stroke: #0369a1; stroke-width: 3; stroke-linecap: round; fill: none; marker-end: url(#arrowBlue); }
+      .ngu       { stroke: #15803d; stroke-width: 3; stroke-linecap: round; fill: none; marker-end: url(#arrowGreen); }
+      .f1c       { stroke: #a16207; stroke-width: 3; stroke-linecap: round; fill: none; marker-end: url(#arrowAmber); }
+      .f1u       { stroke: #15803d; stroke-width: 3; stroke-dasharray: 8 5; stroke-linecap: round; fill: none; marker-end: url(#arrowGreen); }
+      .xn        { stroke: #64748b; stroke-width: 2.5; stroke-dasharray: 10 6; stroke-linecap: round; fill: none; marker-end: url(#arrowGray); }
+      .e2        { stroke: #9333ea; stroke-width: 2.5; stroke-linecap: round; fill: none; marker-end: url(#arrowPurple); }
+      .legend-l  { stroke-width: 3; stroke-linecap: round; }
+    </style>
+    <marker id="arrowBlue"   markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L9,5.5 L1,10 Z" fill="#0369a1"/>
+    </marker>
+    <marker id="arrowGreen"  markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L9,5.5 L1,10 Z" fill="#15803d"/>
+    </marker>
+    <marker id="arrowAmber"  markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L9,5.5 L1,10 Z" fill="#a16207"/>
+    </marker>
+    <marker id="arrowGray"   markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L9,5.5 L1,10 Z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L9,5.5 L1,10 Z" fill="#9333ea"/>
+    </marker>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1100" height="580"/>
+
+  <!-- Title -->
+  <text x="550" y="46" class="title" text-anchor="middle">O-CU Architecture — O-CU-CP and O-CU-UP</text>
+  <text x="550" y="74" class="subtitle" text-anchor="middle">Control Plane (O-CU-CP) and User Plane (O-CU-UP) network functions with reference points</text>
+
+<g transform="translate(0, 100)">
+  <!-- ── O-CU boundary box ─────────────────────────────────────────── -->
+  <rect x="200" y="100" width="700" height="220"
+        fill="#f0f9ff" stroke="#0369a1" stroke-width="2.5" stroke-dasharray="14 7" rx="24" ry="24"/>
+  <text x="236" y="128" class="sec-title">O-CU</text>
+
+  <!-- ── O-CU-CP box ──────────────────────────────────────────────── -->
+  <g filter="url(#shadow)">
+    <rect x="230" y="150" width="260" height="140" class="box-cp" rx="14" ry="14"/>
+    <text x="360" y="178" class="label">O-CU-CP</text>
+    <text x="360" y="204" class="small">Control Plane Function</text>
+    <text x="360" y="225" class="small">(gNB-CU-CP)</text>
+    <text x="360" y="250" class="small">RRC · PDCP-C · F1-AP</text>
+    <text x="360" y="270" class="small">NGAP · XnAP · E2AP</text>
+  </g>
+
+  <!-- ── O-CU-UP box ──────────────────────────────────────────────── -->
+  <g filter="url(#shadow)">
+    <rect x="610" y="150" width="260" height="140" class="box-up" rx="14" ry="14"/>
+    <text x="740" y="178" class="label">O-CU-UP</text>
+    <text x="740" y="204" class="small">User Plane Function</text>
+    <text x="740" y="225" class="small">(gNB-CU-UP)</text>
+    <text x="740" y="250" class="small">PDCP-U · SDAP</text>
+    <text x="740" y="270" class="small">GTP-U forwarding</text>
+  </g>
+
+  <!-- ── E1 interface between CP and UP ─────────────────────────────── -->
+  <line x1="490" y1="220" x2="610" y2="220" class="e1"/>
+  <text x="550" y="240" class="iface">E1</text>
+
+  <!-- ── 5G Core boxes (top) ──────────────────────────────────────── -->
+  <g filter="url(#shadow)">
+    <rect x="345" y="10" width="145" height="60" class="box-ext" rx="14" ry="14"/>
+    <text x="417" y="37" class="label" style="font-size:17px;">AMF</text>
+    <text x="417" y="56" class="small">5G Core</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="610" y="10" width="145" height="60" class="box-ext" rx="14" ry="14"/>
+    <text x="682" y="37" class="label" style="font-size:17px;">UPF</text>
+    <text x="682" y="56" class="small">5G Core</text>
+  </g>
+  <!-- ── O-DU boxes (bottom) ──────────────────────────────────────── -->
+  <g filter="url(#shadow)">
+    <rect x="230" y="390" width="640" height="70" class="box-du" rx="14" ry="14"/>
+    <text x="360" y="418" class="label" style="font-size:18px;">O-DU</text>
+    <text x="360" y="440" class="small">Open Distributed Unit</text>
+  </g>
+
+  <!-- ── Peer gNB (right, for Xn) ──────────────────────────────────── -->
+  <g filter="url(#shadow)">
+    <rect x="960" y="218" width="115" height="70" class="box-ext" rx="14" ry="14"/>
+    <text x="1018" y="247" class="label" style="font-size:16px;">gNB-CU-CP</text>
+    <text x="1018" y="268" class="small">(peer)</text>
+  </g>
+
+  <!-- ── NG-c: O-CU-CP → AMF ───────────────────────────────────────── -->
+  <path d="M360,150 C360,100 418,150 418,70" class="ngc"/>
+  <text x="428" y="117" class="iface" style="fill:#0369a1;">NG-c</text>
+
+  <!-- ── NG-u: O-CU-UP → UPF ──────────────────────────────────────── -->
+  <path d="M740,150 C740,100 682,150 682,70" class="ngu"/>
+  <text x="670" y="117" class="iface" style="fill:#15803d;">NG-u</text>
+
+  <!-- ── F1-c: O-CU-CP → O-DU ─────────────────────────────────────── -->
+  <path d="M360,290 v100" class="f1c"/>
+  <text x="330" y="340" class="iface" style="fill:#a16207;" text-anchor="end">F1-c</text>
+
+  <!-- ── F1-u: O-CU-UP → O-DU ─────────────────────────────────────── -->
+  <path d="M740,290 v100" class="f1u"/>
+  <text x="774" y="340" class="iface" style="fill:#15803d;" text-anchor="start">F1-u</text>
+
+  <!-- ── Xn: O-CU-CP → peer gNB-CU-CP ─────────────────────────────── -->
+  <path d="M870,253 L960,253" class="xn"/>
+  <text x="920" y="243" class="iface" style="fill:#64748b;">Xn-c</text>
+
+</g>
+</svg>
