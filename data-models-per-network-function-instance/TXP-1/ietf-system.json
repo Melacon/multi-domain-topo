@@ -1,0 +1,33 @@
+{
+  "ietf-system:system": {
+    "contact": "network-functions@hqiq.utdallas.edu",
+    "hostname": "txp-1",
+    "location": "Richardson Innovation Quarter Headquarters (IQ HQ), 1302 E Collins Blvd, Richardson, TX 75081",
+    "clock": {
+      "timezone-name": "UTC"
+    },
+    "ntp": {
+      "enabled": true,
+      "server": [
+        {
+          "name": "time-c-b.nist.gov",
+          "udp": {
+            "address": "132.163.96.3"
+          },
+          "association-type": "server"
+        }
+      ]
+    },
+    "dns-resolver": {
+      "search": ["hqiq.udallas.edu"],
+      "server": [
+        {
+          "name": "Public DNS Server",
+          "udp-and-tcp": {
+            "address": "1.1.1.1"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -10,11 +10,6 @@
             "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-configurable5qiset"
           },
           {
-            "name": "_3gpp-5gc-nrm-ecmconnectioninfo",
-            "revision": "2024-01-29",
-            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ecmconnectioninfo"
-          },
-          {
             "name": "_3gpp-common-files",
             "revision": "2025-07-01",
             "namespace": "urn:3gpp:sa5:_3gpp-common-files"
@@ -108,27 +103,11 @@
             ]
           },
           {
-            "name": "_3gpp-nr-nrm-ecmappingrule",
-            "revision": "2025-05-06",
-            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-ecmappingrule"
-          },
-          {
             "name": "_3gpp-nr-nrm-ep",
             "revision": "2025-05-06",
             "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-ep",
             "feature": [
-              "EPClassesUnderGNBCUCPFunction",
-              "EPClassesUnderGNBCUUPFunction",
               "EPClassesUnderGNBDUFunction"
-            ]
-          },
-          {
-            "name": "_3gpp-nr-nrm-externalgnbcucpfunction",
-            "revision": "2025-04-25",
-            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-externalgnbcucpfunction",
-            "feature": [
-              "ExternalGNBCUCPFunctionUnderNRNetwork",
-              "ExternalGNBCUCPFunctionUnderSubNetwork"
             ]
           },
           {
@@ -144,25 +123,6 @@
             "name": "_3gpp-nr-nrm-externalnrcellcu",
             "revision": "2025-04-25",
             "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-externalnrcellcu"
-          },
-          {
-            "name": "_3gpp-nr-nrm-gnbcucpfunction",
-            "revision": "2024-08-12",
-            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcucpfunction",
-            "feature": [
-              "Configurable5QISetUnderGNBCUCPFunction",
-              "DESManagementFunction",
-              "DANRManagementFunction",
-              "DMROFunction"
-            ]
-          },
-          {
-            "name": "_3gpp-nr-nrm-gnbcuupfunction",
-            "revision": "2024-05-24",
-            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcuupfunction",
-            "feature": [
-              "Configurable5QISetUnderGNBCUUPFunction"
-            ]
           },
           {
             "name": "_3gpp-nr-nrm-gnbdufunction",
@@ -827,6 +787,11 @@
             "namespace": "urn:3gpp:sa5:_3gpp-5g-common-yang-types"
           },
           {
+            "name": "_3gpp-5gc-nrm-ecmconnectioninfo",
+            "revision": "2024-01-29",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ecmconnectioninfo"
+          },
+          {
             "name": "_3gpp-common-ep-rp",
             "revision": "2023-09-18",
             "namespace": "urn:3gpp:sa5:_3gpp-common-ep-rp"
@@ -840,6 +805,26 @@
             "name": "_3gpp-common-yang-types",
             "revision": "2025-11-06",
             "namespace": "urn:3gpp:sa5:_3gpp-common-yang-types"
+          },
+          {
+            "name": "_3gpp-nr-nrm-ecmappingrule",
+            "revision": "2025-05-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-ecmappingrule"
+          },
+          {
+            "name": "_3gpp-nr-nrm-externalgnbcucpfunction",
+            "revision": "2025-04-25",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-externalgnbcucpfunction"
+          },
+          {
+            "name": "_3gpp-nr-nrm-gnbcucpfunction",
+            "revision": "2024-08-12",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcucpfunction"
+          },
+          {
+            "name": "_3gpp-nr-nrm-gnbcuupfunction",
+            "revision": "2024-05-24",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcuupfunction"
           },
           {
             "name": "iana-hardware",

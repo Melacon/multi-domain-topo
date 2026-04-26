@@ -32,10 +32,12 @@ EXP       = REPO_ROOT / "yang-repos/yang/experimental/ietf-extracted-YANG-module
 # ── NF instance folder → yang-per-network-function type folder ────────────────
 
 INSTANCE_TO_YANG_TYPE: dict[str, str] = {
+    "IP-RTR-1": "IP-Router",
     "O-DU-1": "O-DU",    "O-DU-2": "O-DU",
     "O-RU-1": "O-RU",    "O-RU-2": "O-RU",    "O-RU-3": "O-RU",    "O-RU-4": "O-RU",
     "OFH-SW-1": "OpenFronthaul-Switch",
     "ROADM-1": "ROADM",  "ROADM-2": "ROADM",  "ROADM-3": "ROADM",
+    "TXP-1": "Xponder",  "TXP-2": "Xponder",  "TXP-3": "Xponder",
     "WT-1":  "WirelessTransport", "WT-2":  "WirelessTransport",
 }
 
@@ -118,6 +120,8 @@ IMPORT_ONLY: set[str] = {
     "ietf-ssh-common",
     "ietf-tls-common",
     "ietf-tcp-common",
+    "ietf-bfd-types",
+    "ietf-segment-routing-common",
     # 3GPP typedef / extension / grouping-only modules
     "_3gpp-common-yang-types",
     "_3gpp-common-yang-extensions",

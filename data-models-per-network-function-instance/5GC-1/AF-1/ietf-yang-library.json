@@ -15,16 +15,6 @@
             "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-configurable5qiset"
           },
           {
-            "name": "_3gpp-5gc-nrm-dnfunction",
-            "revision": "2023-09-18",
-            "namespace": "urn:3gpp:sa5_3gpp-5gc-nrm-dnfunction"
-          },
-          {
-            "name": "_3gpp-5gc-nrm-ecmconnectioninfo",
-            "revision": "2024-01-29",
-            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ecmconnectioninfo"
-          },
-          {
             "name": "_3gpp-5gc-nrm-ep",
             "revision": "2023-09-18",
             "namespace": "urn:3gpp:tsg:sa5:nrm:_3gpp-5gc-nrm-ep"
@@ -33,11 +23,6 @@
             "name": "_3gpp-5gc-nrm-managed-nfprofile",
             "revision": "2025-11-06",
             "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-managed-nfprofile"
-          },
-          {
-            "name": "_3gpp-5gc-nrm-n3iwffunction",
-            "revision": "2023-09-18",
-            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-n3iwffunction"
           },
           {
             "name": "_3gpp-5gc-nrm-nfprofile",
@@ -140,19 +125,6 @@
             "namespace": "urn:3gpp:sa5:_3gpp-common-trace",
             "feature": [
               "FilesUnderTraceJob"
-            ]
-          },
-          {
-            "name": "_3gpp-nr-nrm-ecmappingrule",
-            "revision": "2025-05-06",
-            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-ecmappingrule"
-          },
-          {
-            "name": "_3gpp-nr-nrm-gnbcuupfunction",
-            "revision": "2024-05-24",
-            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcuupfunction",
-            "feature": [
-              "Configurable5QISetUnderGNBCUUPFunction"
             ]
           },
           {
@@ -346,6 +318,91 @@
             "namespace": "urn:3gpp:sa5:_3gpp-5g-common-yang-types"
           },
           {
+            "name": "_3gpp-5gc-nrm-amffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-amffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-ausffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ausffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-dnfunction",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5_3gpp-5gc-nrm-dnfunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-ecmconnectioninfo",
+            "revision": "2024-01-29",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ecmconnectioninfo"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-lmffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-lmffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-n3iwffunction",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-n3iwffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-neffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-neffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-ngeirfunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-ngeirfunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-nrffunction",
+            "revision": "2025-08-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-nrffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-nssffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-nssffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-pcffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-pcffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-seppfunction",
+            "revision": "2023-09-18",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-seppfunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-smffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-smffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-smsffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-smsffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-udmfunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-udmfunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-udsffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-udsffunction"
+          },
+          {
+            "name": "_3gpp-5gc-nrm-upffunction",
+            "revision": "2025-11-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-5gc-nrm-upffunction"
+          },
+          {
             "name": "_3gpp-common-ep-rp",
             "revision": "2023-09-18",
             "namespace": "urn:3gpp:sa5:_3gpp-common-ep-rp"
@@ -359,6 +416,16 @@
             "name": "_3gpp-common-yang-types",
             "revision": "2025-11-06",
             "namespace": "urn:3gpp:sa5:_3gpp-common-yang-types"
+          },
+          {
+            "name": "_3gpp-nr-nrm-ecmappingrule",
+            "revision": "2025-05-06",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-ecmappingrule"
+          },
+          {
+            "name": "_3gpp-nr-nrm-gnbcuupfunction",
+            "revision": "2024-05-24",
+            "namespace": "urn:3gpp:sa5:_3gpp-nr-nrm-gnbcuupfunction"
           },
           {
             "name": "ietf-crypto-types",

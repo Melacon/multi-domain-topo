@@ -336,14 +336,14 @@
             "name": "org-openroadm-switching-pool-types",
             "revision": "2019-11-29",
             "namespace": "http://org/openroadm/switching-pool-types"
-          },
+          }
+        ],
+        "import-only-module": [
           {
             "name": "org-openroadm-xponder",
             "revision": "2025-12-12",
             "namespace": "http://org/openroadm/xponder"
-          }
-        ],
-        "import-only-module": [
+          },
           {
             "name": "ietf-crypto-types",
             "revision": "2024-10-10",

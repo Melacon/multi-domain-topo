@@ -49,9 +49,10 @@ NETWORK_FUNCTION_TYPES = [
     "O-DU",
     "O-RU",
     "OFH-Switch",
-    "Transponder",
     "ROADM",
     "WirelessTransport",
+    "Xponder",
+    "IP-Router",
     "AF",
     "AMF",
     "AUSF",
@@ -94,28 +95,48 @@ class DetectionRule:
     score: int
     description: str
     module_names_any: tuple[str, ...] = ()
+    module_names_all: tuple[str, ...] = ()
     module_prefixes_any: tuple[str, ...] = ()
     namespace_substrings_any: tuple[str, ...] = ()
 
     def match(self, modules: list[YangModule]) -> tuple[bool, list[str]]:
         matched: set[str] = set()
-        wanted_names = {n.lower() for n in self.module_names_any}
+
+        module_names = {m.name.lower(): m.name for m in modules}
+
+        wanted_names_any = {n.lower() for n in self.module_names_any}
+        wanted_names_all = {n.lower() for n in self.module_names_all}
         wanted_prefixes = tuple(p.lower() for p in self.module_prefixes_any)
         wanted_ns_parts = tuple(s.lower() for s in self.namespace_substrings_any)
 
+        # ALL condition:
+        # If module_names_all is set, all listed modules must be present.
+        if wanted_names_all:
+            if not wanted_names_all.issubset(set(module_names.keys())):
+                return False, []
+
+            for required_name in wanted_names_all:
+                matched.add(module_names[required_name])
+
+        # ANY condition:
+        # If module_names_any is set, at least one listed module may match.
         for module in modules:
             module_name = module.name.lower()
             namespace = (module.namespace or "").lower()
 
-            if module_name in wanted_names:
+            if module_name in wanted_names_any:
                 matched.add(module.name)
+
             if wanted_prefixes and module_name.startswith(wanted_prefixes):
                 matched.add(module.name)
+
             if wanted_ns_parts and any(s in namespace for s in wanted_ns_parts):
                 matched.add(module.name)
 
+        # A rule matches if:
+        # - module_names_all matched successfully, or
+        # - one of the "any" / prefix / namespace rules matched.
         return bool(matched), sorted(matched)
-
 
 # Important rule design:
 # - O-RU detection is intentionally strict and exact-name based.
@@ -205,24 +226,43 @@ DETECTION_RULES: list[DetectionRule] = [
             "ieee802-dot1ab-lldp",
         ),
     ),
+    DetectionRule(
+        nf_type="IP-Router",
+        score=90,
+        description="IETF IP router modules implemented",
+        module_names_all=(
+            "ietf-interfaces",
+            "ietf-ip",
+            "ietf-routing",
+        ),
+    ),
 
     # Transport functions. These may need refinement for your exact transport model set.
     DetectionRule(
         nf_type="ROADM",
         score=90,
-        description="OpenROADM ROADM/device modules implemented",
-        module_prefixes_any=("org-openroadm",),
-        namespace_substrings_any=("openroadm",),
+        description="OpenROADM ROADM-specific network-view module implemented",
+        module_names_any=(
+            "org-openroadm-roadm",
+        ),
     ),
     DetectionRule(
-        nf_type="Transponder",
+        nf_type="Xponder",
+        score=90,
+        description="OpenROADM Xponder-specific module implemented",
+        module_names_any=(
+            "org-openroadm-xponder",
+        ),
+    ),
+    DetectionRule(
+        nf_type="Xponder",
         score=80,
         description="Optical transponder / terminal device modules implemented",
         module_names_any=(
             "ietf-layer0-types",
             "ietf-optical-impairment-topology",
         ),
-        namespace_substrings_any=("transponder", "terminal-device", "otsi", "otn"),
+        namespace_substrings_any=("transponder", "terminal-device", "otsi"),
     ),
     DetectionRule(
         nf_type="WirelessTransport",
