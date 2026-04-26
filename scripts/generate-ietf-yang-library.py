@@ -46,6 +46,34 @@ O_CU_SUB_NF_TO_YANG_TYPE: dict[str, str] = {
     "O-CU-UP": "O-CU-UP",
 }
 
+# ── yang-per-network-function type → primary 3GPP NRM module ──────────────────
+# Needed for NF types that have a fixed NRM module (not derived from instance name)
+YANG_TYPE_TO_NRM: dict[str, str] = {
+    "O-CU-CP": "_3gpp-nr-nrm-gnbcucpfunction",
+    "O-CU-UP": "_3gpp-nr-nrm-gnbcuupfunction",
+    "O-DU":    "_3gpp-nr-nrm-gnbdufunction",
+}
+
+# ── Per-primary-NRM additional name-token exclusions ─────────────────────────
+# A module is moved to import-only if its name contains ANY of these tokens
+# (in addition to the general is_ep_import_only rules).
+# Use this to exclude modules that reference foreign NF types via name tokens
+# but are NOT caught by the *function pattern (e.g. external*function modules).
+_NRM_EXCLUDE_NAME_TOKENS: dict[str, set[str]] = {
+    # O-DU: exclude all modules whose name contains "gnbcucp" or "gnbcuup"
+    # (they augment under GNBCUCPFunction or GNBCUUPFunction, not GNBDUFunction)
+    "_3gpp-nr-nrm-gnbdufunction": {"gnbcucp", "gnbcuup"},
+}
+
+# ── Per-primary-NRM implemented overrides ────────────────────────────────────
+# Modules listed here are IMPLEMENTED for the given primary NRM module even if
+# they appear in the global IMPORT_ONLY set.
+# Example: nrcelldu is in IMPORT_ONLY to keep it out of O-CU-CP, but the O-DU
+# is the server that actually owns and exposes NRCellDU managed objects.
+_NRM_OVERRIDE_IMPLEMENTED: dict[str, set[str]] = {
+    "_3gpp-nr-nrm-gnbdufunction": {"_3gpp-nr-nrm-nrcelldu"},
+}
+
 # ── 5GC NF name prefix → 3GPP NRM module (without @revision) ─────────────────
 
 NF_TO_NRM: dict[str, str] = {
@@ -66,11 +94,8 @@ NF_TO_NRM: dict[str, str] = {
     "UPF":   "_3gpp-5gc-nrm-upffunction",
 }
 
-# All 5GC NRM module names (used to exclude other NFs' modules per instance)
-ALL_5GC_NRM = set(NF_TO_NRM.values())
-
 # ── Modules that only define types / identities / extensions ──────────────────
-# These have no top-level protocol-accessible data nodes → import-only.
+# These have no top-level protocol-accessible data nodes → always import-only.
 
 IMPORT_ONLY: set[str] = {
     # IETF typedef / identity / extension-only modules
@@ -98,7 +123,87 @@ IMPORT_ONLY: set[str] = {
     "_3gpp-common-yang-extensions",
     "_3gpp-5g-common-yang-types",
     "_3gpp-common-ep-rp",
+    # 3GPP NF-specific modules that only appear as EP-import dependencies
+    # (O-DU uses O-RAN YANG, not 3GPP NRM, so these are import-only in this repo)
+    "_3gpp-nr-nrm-nrcelldu",
+    "_3gpp-5gc-nrm-ecmconnectioninfo",
 }
+
+# ── EP import-only classification ─────────────────────────────────────────────
+# Modules matching these patterns have no top-level data of their own; they are
+# only present because they define endpoint (EP) groupings referenced by the
+# primary NF module.
+
+_EP_ALWAYS_PATTERNS = [
+    # ECM mapping rule: pure helper groupings, no top-level managed objects
+    re.compile(r"_3gpp-\w+-nrm-ecmappingrule"),
+    # NOTE: external* and nrm-ep$ are intentionally NOT here.
+    # _3gpp-nr-nrm-ep augments EP_E1/EP_XnC/… directly into GNBCUCPFunction →
+    # those are protocol-accessible managed objects → implemented.
+    # _3gpp-nr-nrm-external* augments ExternalGNBCUCP/ExternalNRCellCU/… into
+    # GNBCUCPFunction for neighbor management → implemented.
+]
+
+
+def is_ep_import_only(name: str, primary_nrm: str | None) -> bool:
+    """
+    Return True if the module should be import-only because it represents a
+    different NF type or is only imported for endpoint (EP) definitions.
+
+    Rules applied in order:
+      1. Matches a known always-import-only helper pattern (ecmappingrule, …)
+      2. Is an NRM *function module AND is not the primary NRM module for this NF
+         (covers all _3gpp-*-nrm-*function the server does not itself implement,
+          e.g. gnbcuupfunction / gnbdufunction when primary is gnbcucpfunction,
+          or amffunction / smffunction when primary is affunction)
+    """
+    for pat in _EP_ALWAYS_PATTERNS:
+        if pat.fullmatch(name):
+            return True
+
+    # Any NRM *function module that differs from the primary is EP-import-only —
+    # EXCEPT external*function modules: those define neighbor managed objects
+    # (ExternalGNBCUCPFunction, ExternalGNBCUUPFunction, …) that ARE accessible
+    # protocol data on the primary NF, so they stay in the implemented section.
+    if primary_nrm and name != primary_nrm:
+        if re.fullmatch(r"_3gpp-\w+-nrm-(?!external)\w+function", name):
+            return True
+
+    # Name-token exclusions: modules whose name contains a token associated with
+    # a foreign NF type (e.g. "gnbcucp" or "gnbcuup" when primary is gnbdufunction).
+    # This catches external*function modules that belong to a foreign NF type.
+    if primary_nrm:
+        for token in _NRM_EXCLUDE_NAME_TOKENS.get(primary_nrm, set()):
+            if token in name:
+                return True
+
+    return False
+
+
+def filter_ep_features(features: list[str], primary_nrm: str | None) -> list[str]:
+    """
+    Remove EPClassesUnder<X>Function features that reference other NF types.
+
+    Example: for O-CU-CP (primary = gnbcucpfunction) keep
+    EPClassesUnderGNBCUCPFunction but drop EPClassesUnderGNBCUUPFunction
+    and EPClassesUnderGNBDUFunction.
+    """
+    if not primary_nrm or not features:
+        return features
+
+    m = re.search(r"-nrm-(\w+function)$", primary_nrm, re.IGNORECASE)
+    if not m:
+        return features
+
+    primary_func = m.group(1).upper()   # e.g. "GNBCUCPFUNCTION" or "AFFUNCTION"
+
+    result = []
+    for feat in features:
+        ep_m = re.fullmatch(r"EPClassesUnder(\w+)", feat, re.IGNORECASE)
+        if ep_m and ep_m.group(1).upper() != primary_func:
+            continue   # drop EP-class feature for a different NF type
+        result.append(feat)
+    return result
 
 # ── YANG file parsing ─────────────────────────────────────────────────────────
 
@@ -164,23 +269,33 @@ def yang_dir_for(instance_rel: str) -> tuple[Path | None, str | None, bool]:
         yang_type = O_CU_SUB_NF_TO_YANG_TYPE.get(sub_type)
         if not yang_type:
             return None, None, False
-        return YANG_NF / yang_type, None, False
+        nrm = YANG_TYPE_TO_NRM.get(yang_type)
+        return YANG_NF / yang_type, nrm, False
 
     inst_name = parts[0]
     yang_type = INSTANCE_TO_YANG_TYPE.get(inst_name)
     if not yang_type:
         return None, None, False
-    return YANG_NF / yang_type, None, False
+    nrm = YANG_TYPE_TO_NRM.get(yang_type)
+    return YANG_NF / yang_type, nrm, False
 
 
 # ── Module set builder ────────────────────────────────────────────────────────
 
-def build_module_sets(yang_dir: Path, nrm_module: str | None, is_5gc: bool):
+def build_module_sets(yang_dir: Path, nrm_module: str | None):
     """
     Return (implemented, import_only) as lists of dicts ready for JSON.
+
+    Classification priority (first match wins):
+      1. In IMPORT_ONLY set → import-only-module
+      2. is_ep_import_only() → import-only-module (different NF type / EP-only)
+      3. Otherwise → module (implemented), with EP features stripped via
+         filter_ep_features()
     """
     implemented: list[dict] = []
     import_only_list: list[dict] = []
+
+    override_implemented = _NRM_OVERRIDE_IMPLEMENTED.get(nrm_module or "", set())
 
     for sym in sorted(yang_dir.glob("*.yang")):
         info = module_info(sym)
@@ -188,20 +303,25 @@ def build_module_sets(yang_dir: Path, nrm_module: str | None, is_5gc: bool):
             continue   # skip submodules
         name = info["name"]
 
-        # 5GC: skip NRM modules belonging to other NF types
-        if is_5gc and name in ALL_5GC_NRM and name != nrm_module:
-            continue
-
         entry: dict = {"name": name}
         if info["revision"]:
             entry["revision"] = info["revision"]
         entry["namespace"] = info["namespace"]
 
-        if name in IMPORT_ONLY:
+        # Override check first: some modules are always implemented for this NF
+        # even if they appear in the global IMPORT_ONLY set (e.g. nrcelldu for O-DU).
+        if name in override_implemented:
+            features = filter_ep_features(info["features"], nrm_module)
+            if features:
+                entry["feature"] = features
+            implemented.append(entry)
+        elif name in IMPORT_ONLY or is_ep_import_only(name, nrm_module):
+            # import-only: no features advertised
             import_only_list.append(entry)
         else:
-            if info["features"]:
-                entry["feature"] = info["features"]
+            features = filter_ep_features(info["features"], nrm_module)
+            if features:
+                entry["feature"] = features
             implemented.append(entry)
 
     return implemented, import_only_list
@@ -210,7 +330,7 @@ def build_module_sets(yang_dir: Path, nrm_module: str | None, is_5gc: bool):
 # ── JSON generation ───────────────────────────────────────────────────────────
 
 def generate(inst_dir: Path, inst_rel: str) -> bool:
-    yang_dir, nrm_module, is_5gc = yang_dir_for(inst_rel)
+    yang_dir, nrm_module, _is_5gc = yang_dir_for(inst_rel)
 
     if yang_dir is None or not yang_dir.exists():
         print(f"  SKIP  {inst_rel} — yang folder not found")
@@ -221,7 +341,7 @@ def generate(inst_dir: Path, inst_rel: str) -> bool:
     schema_name     = f"{hostname}-schema"
     content_id      = f"{hostname}-yanglib-{date.today().isoformat()}"
 
-    implemented, import_only_list = build_module_sets(yang_dir, nrm_module, is_5gc)
+    implemented, import_only_list = build_module_sets(yang_dir, nrm_module)
 
     doc = {
         "ietf-yang-library:yang-library": {
