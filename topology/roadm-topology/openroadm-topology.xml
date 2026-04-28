@@ -1,0 +1,1081 @@
+<?xml version="1.0" ?>
+<network xmlns="urn:ietf:params:xml:ns:yang:ietf-network">
+  <network-id>openroadm-topology</network-id>
+  <network-types>
+    <openroadm-common-network xmlns="http://org/openroadm/common/network"/>
+  </network-types>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-SRG3-SRG3-CP-TXRXtoROADM-A1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-SRG3</source-node>
+      <source-tp>SRG3-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG2-DEG2-CTP-TXRXtoROADM-A1-SRG3-SRG3-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-DEG2-DEG2-CTP-TXRXtoROADM-B1-SRG3-SRG3-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-SRG3-SRG3-CP-TXRXtoROADM-B1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG3-CP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-SRG3</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-DEG1-DEG1-CTP-TXRXtoROADM-A1-SRG3-SRG3-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-SRG3-SRG3-CP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG3-CP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-SRG3</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-SRG3-SRG3-CP-TXRXtoROADM-C1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-SRG3</source-node>
+      <source-tp>SRG3-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG2-DEG2-CTP-TXRXtoROADM-C1-SRG3-SRG3-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-SRG3-SRG3-CP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-SRG3</source-node>
+      <source-tp>SRG3-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG1-DEG1-CTP-TXRXtoROADM-C1-SRG3-SRG3-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-DEG2-DEG2-CTP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">EXPRESS-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG1-DEG1-CTP-TXRXtoROADM-C1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-DEG1-DEG1-CTP-TXRXtoROADM-B1-SRG1-SRG1-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-SRG1-SRG1-CP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG1-CP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-SRG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-DEG2-DEG2-CTP-TXRXtoROADM-C1-SRG1-SRG1-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-SRG1-SRG1-CP-TXRXtoROADM-C1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG1-CP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-SRG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-DEG2-DEG2-CTP-TXRXtoROADM-C1-SRG3-SRG3-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-SRG3-SRG3-CP-TXRXtoROADM-C1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG3-CP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-SRG3</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-DEG1-DEG1-CTP-TXRXtoROADM-B1-SRG3-SRG3-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-SRG3-SRG3-CP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG3-CP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-SRG3</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-DEG1-DEG1-TTP-TXRXtoROADM-B1-DEG2-DEG2-TTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+    <source>
+      <source-node>ROADM-A1-DEG1</source-node>
+      <source-tp>DEG1-TTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG2-DEG2-TTP-TXRXtoROADM-A1-DEG1-DEG1-TTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-TTP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-DEG2-DEG2-CTP-TXRXtoROADM-A1-SRG1-SRG1-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-SRG1-SRG1-CP-TXRXtoROADM-A1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG1-CP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-SRG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-DEG1-DEG1-CTP-TXRXtoROADM-C1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">EXPRESS-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG2-DEG2-CTP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-DEG2-DEG2-CTP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">EXPRESS-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG1-DEG1-CTP-TXRXtoROADM-A1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-SRG1-SRG1-CP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-SRG1</source-node>
+      <source-tp>SRG1-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG1-DEG1-CTP-TXRXtoROADM-A1-SRG1-SRG1-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-DEG2-DEG2-CTP-TXRXtoROADM-A1-SRG3-SRG3-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-SRG3-SRG3-CP-TXRXtoROADM-A1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG3-CP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-SRG3</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-DEG2-DEG2-TTP-TXRXtoROADM-A1-DEG1-DEG1-TTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+    <source>
+      <source-node>ROADM-B1-DEG2</source-node>
+      <source-tp>DEG2-TTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG1-DEG1-TTP-TXRXtoROADM-B1-DEG2-DEG2-TTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-TTP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-SRG1-SRG1-CP-TXRXtoROADM-A1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-SRG1</source-node>
+      <source-tp>SRG1-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG2-DEG2-CTP-TXRXtoROADM-A1-SRG1-SRG1-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-SRG1-SRG1-CP-TXRXtoROADM-C1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-SRG1</source-node>
+      <source-tp>SRG1-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG2-DEG2-CTP-TXRXtoROADM-C1-SRG1-SRG1-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-DEG1-DEG1-CTP-TXRXtoROADM-A1-SRG1-SRG1-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-SRG1-SRG1-CP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG1-CP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-SRG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-SRG1-SRG1-CP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-SRG1</source-node>
+      <source-tp>SRG1-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG1-DEG1-CTP-TXRXtoROADM-C1-SRG1-SRG1-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-A1-DEG1-DEG1-TTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+    <source>
+      <source-node>ROADM-C1-DEG1</source-node>
+      <source-tp>DEG1-TTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-TTP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-DEG2-DEG2-CTP-TXRXtoROADM-B1-SRG1-SRG1-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-SRG1-SRG1-CP-TXRXtoROADM-B1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG1-CP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-SRG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-DEG1-DEG1-CTP-TXRXtoROADM-A1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">EXPRESS-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG2-DEG2-CTP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-SRG3-SRG3-CP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-SRG3</source-node>
+      <source-tp>SRG3-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG1-DEG1-CTP-TXRXtoROADM-B1-SRG3-SRG3-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-SRG3-SRG3-CP-TXRXtoROADM-B1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-SRG3</source-node>
+      <source-tp>SRG3-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG2-DEG2-CTP-TXRXtoROADM-B1-SRG3-SRG3-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+    <source>
+      <source-node>ROADM-B1-DEG1</source-node>
+      <source-tp>DEG1-TTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-B1-DEG1-DEG1-TTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-TTP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+    <source>
+      <source-node>ROADM-A1-DEG1</source-node>
+      <source-tp>DEG1-TTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-A1-DEG1-DEG1-TTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-TTP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-DEG1-DEG1-CTP-TXRXtoROADM-C1-SRG1-SRG1-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-SRG1-SRG1-CP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG1-CP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-SRG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-SRG1-SRG1-CP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-SRG1</source-node>
+      <source-tp>SRG1-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG1-DEG1-CTP-TXRXtoROADM-B1-SRG1-SRG1-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-DEG2-DEG2-CTP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">EXPRESS-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-DEG2</source-node>
+      <source-tp>DEG2-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG1-DEG1-CTP-TXRXtoROADM-B1-DEG2-DEG2-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-DEG1-DEG1-CTP-TXRXtoROADM-C1-SRG3-SRG3-CP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">DROP-LINK</link-type>
+    <source>
+      <source-node>ROADM-C1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-SRG3-SRG3-CP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>SRG3-CP-TXRX</dest-tp>
+      <dest-node>ROADM-C1-SRG3</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-SRG1-SRG1-CP-TXRXtoROADM-B1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-SRG1</source-node>
+      <source-tp>SRG1-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG2-DEG2-CTP-TXRXtoROADM-B1-SRG1-SRG1-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-B1-DEG1-DEG1-TTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+    <source>
+      <source-node>ROADM-C1-DEG1</source-node>
+      <source-tp>DEG1-TTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-TTP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-A1-SRG3-SRG3-CP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">ADD-LINK</link-type>
+    <source>
+      <source-node>ROADM-A1-SRG3</source-node>
+      <source-tp>SRG3-CP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG1-DEG1-CTP-TXRXtoROADM-A1-SRG3-SRG3-CP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG1-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-A1-DEG1</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+    <link-id>ROADM-B1-DEG1-DEG1-CTP-TXRXtoROADM-B1-DEG2-DEG2-CTP-TXRX</link-id>
+    <link-type xmlns="http://org/openroadm/common/network">EXPRESS-LINK</link-type>
+    <source>
+      <source-node>ROADM-B1-DEG1</source-node>
+      <source-tp>DEG1-CTP-TXRX</source-tp>
+    </source>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG2-DEG2-CTP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX</opposite-link>
+    <destination>
+      <dest-tp>DEG2-CTP-TXRX</dest-tp>
+      <dest-node>ROADM-B1-DEG2</dest-node>
+    </destination>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+  </link>
+  <node>
+    <node-id>ROADM-B1-DEG1</node-id>
+    <degree-attributes xmlns="http://org/openroadm/network/topology">
+      <degree-number>1</degree-number>
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </degree-attributes>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG1-CTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-CTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG1-TTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-TTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-B1</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">DEGREE</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-A1-SRG3</node-id>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP3-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP4-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP2-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-CP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-CP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP1-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <srg-attributes xmlns="http://org/openroadm/network/topology">
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </srg-attributes>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-A1</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">SRG</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-B1-DEG2</node-id>
+    <degree-attributes xmlns="http://org/openroadm/network/topology">
+      <degree-number>2</degree-number>
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </degree-attributes>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG2-TTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-TTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG2-CTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-CTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-B1</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">DEGREE</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-C1-SRG3</node-id>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP3-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP4-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP2-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-CP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-CP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP1-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <srg-attributes xmlns="http://org/openroadm/network/topology">
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </srg-attributes>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-C1</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">SRG</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-C1-SRG1</node-id>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP4-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP1-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP2-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP3-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-CP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-CP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <srg-attributes xmlns="http://org/openroadm/network/topology">
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </srg-attributes>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-C1</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">SRG</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-A1-SRG1</node-id>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP4-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP1-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP2-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP3-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-CP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-CP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <srg-attributes xmlns="http://org/openroadm/network/topology">
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </srg-attributes>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-A1</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">SRG</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-B1-SRG3</node-id>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP3-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP4-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP2-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-CP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-CP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG3-PP1-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <srg-attributes xmlns="http://org/openroadm/network/topology">
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </srg-attributes>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-B1</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">SRG</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-A1-DEG1</node-id>
+    <degree-attributes xmlns="http://org/openroadm/network/topology">
+      <degree-number>1</degree-number>
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </degree-attributes>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG1-CTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-CTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG1-TTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-TTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-A1</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">DEGREE</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-A1-DEG2</node-id>
+    <degree-attributes xmlns="http://org/openroadm/network/topology">
+      <degree-number>2</degree-number>
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </degree-attributes>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG2-TTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-TTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG2-CTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-CTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-A1</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">DEGREE</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-C1-DEG2</node-id>
+    <degree-attributes xmlns="http://org/openroadm/network/topology">
+      <degree-number>2</degree-number>
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </degree-attributes>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG2-TTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-TTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG2-CTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-CTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-C1</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">DEGREE</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-C1-DEG1</node-id>
+    <degree-attributes xmlns="http://org/openroadm/network/topology">
+      <degree-number>1</degree-number>
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </degree-attributes>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG1-CTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-CTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>DEG1-TTP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">DEGREE-TXRX-TTP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-C1</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">DEGREE</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-B1-SRG1</node-id>
+    <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP4-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP1-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP2-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-PP3-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-PP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+      <tp-id>SRG1-CP-TXRX</tp-id>
+      <tp-type xmlns="http://org/openroadm/common/network">SRG-TXRX-CP</tp-type>
+      <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+      <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    </termination-point>
+    <srg-attributes xmlns="http://org/openroadm/network/topology">
+      <avail-freq-maps>
+        <map-name>cband</map-name>
+        <freq-map-granularity>6.25</freq-map-granularity>
+        <start-edge-freq>191.325</start-edge-freq>
+        <effective-bits>768</effective-bits>
+        <freq-map>////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</freq-map>
+      </avail-freq-maps>
+    </srg-attributes>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <supporting-node>
+      <network-ref>openroadm-network</network-ref>
+      <node-ref>ROADM-B1</node-ref>
+    </supporting-node>
+    <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+    <node-type xmlns="http://org/openroadm/common/network">SRG</node-type>
+  </node>
+</network>

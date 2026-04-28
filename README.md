@@ -61,7 +61,7 @@ multi-domain-topo/
 │   │   ├── O-CU-CP-2/
 │   │   └── O-CU-UP-2/
 │   ├── 5GC-1/<NF>-1/                  # 5GC NF instances (same nested pattern)
-│   └── O-DU-1 … O-RU-4 … ROADM-3 …  # Flat single-NF instances
+│   └── O-DU-1 … O-RU-4 … ROADM-C1 …  # Flat single-NF instances
 ├── scripts/
 │   └── generate-ietf-yang-library.py  # Generates ietf-yang-library.json per instance
 ├── yang-repos/                        # External YANG model repos — NOT in git (see below)
@@ -154,7 +154,7 @@ Two nesting patterns are used:
 | Pattern | Example | When used |
 |---------|---------|-----------|
 | `<parent>/<sub-NF>-N/` | `O-CU-1/O-CU-CP-1/`, `5GC-1/AMF-1/` | NFs that are logically part of a larger unit (O-CU, 5GC cluster) |
-| `<inst>/` | `O-DU-1/`, `ROADM-2/`, `WT-1/` | Standalone single-NF instances |
+| `<inst>/` | `O-DU-1/`, `ROADM-B1/`, `WT-1/` | Standalone single-NF instances |
 
 **O-CU** is modelled as a parent unit (`O-CU-1`, `O-CU-2`) that contains two separate NF instances:
 - `O-CU-CP-N/` — Control Plane (gNB-CU-CP): RRC, PDCP-C, F1-AP, NGAP, XnAP, E2AP

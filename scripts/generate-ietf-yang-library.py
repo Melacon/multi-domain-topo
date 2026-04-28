@@ -36,7 +36,7 @@ INSTANCE_TO_YANG_TYPE: dict[str, str] = {
     "O-DU-1": "O-DU",    "O-DU-2": "O-DU",
     "O-RU-1": "O-RU",    "O-RU-2": "O-RU",    "O-RU-3": "O-RU",    "O-RU-4": "O-RU",
     "OFH-SW-1": "OpenFronthaul-Switch",
-    "ROADM-1": "ROADM",  "ROADM-2": "ROADM",  "ROADM-3": "ROADM",
+    "ROADM-A1": "ROADM",  "ROADM-B1": "ROADM",  "ROADM-C1": "ROADM",
     "TXP-1": "Xponder",  "TXP-2": "Xponder",  "TXP-3": "Xponder",
     "WT-1":  "WirelessTransport", "WT-2":  "WirelessTransport",
 }

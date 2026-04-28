@@ -39,7 +39,7 @@
   <!-- ============ DWDM / ROADM Ring — two unidirectional rings ============ -->
   <!-- Ring center (1139, 450); outer r=183 CW, inner r=176 CCW (circumradius) -->
   <!-- Arrowhead gap at ~3 o'clock, ±15° either side of horizontal (30° total gap, 330° arcs). -->
-  <!-- r=176 is the exact circumradius — both rings enter ROADM-1/3 through their left edge. -->
+  <!-- r=176 is the exact circumradius — both rings enter ROADM-A1/3 through their left edge. -->
   <!-- Outer CW:  start (1316,497) at +15°, sweep CW 330° to end (1316,403) at −15° -->
   <path d="M 1316 497 A 183 183 0 1 1 1316 403"
         stroke="#2563eb" stroke-width="3.5" fill="none" marker-end="url(#ring-arrow)"/>
@@ -50,23 +50,29 @@
   <text x="1139" y="463" text-anchor="middle" class="tiny">2× unidirectional</text>
 
   <!-- ============ ROADM Nodes ============ -->
-  <!-- ROADM-1: top -->
+  <!-- ROADM-A1: top — DEG1→ROADM-B1 (ring east), DEG2→ROADM-C1 (ring west), SRG→TXP-1 (client) -->
   <rect x="1025" y="240" width="140" height="80" class="transport box"/>
-  <text x="1095" y="274" text-anchor="middle" class="label">ROADM-1</text>
-  <text x="1095" y="296" text-anchor="middle" class="small">DWDM Node</text>
+  <text x="1095" y="262" text-anchor="middle" class="label">ROADM-A1</text>
+  <text x="1095" y="280" text-anchor="middle" class="small">DWDM Node</text>
+  <text x="1033" y="311" text-anchor="start"  class="tiny">DEG2</text>
+  <text x="1157" y="311" text-anchor="end"    class="tiny">DEG1</text>
 
-  <!-- ROADM-2: right -->
+  <!-- ROADM-B1: right — DEG1→ROADM-A1 (ring north), DEG2→ROADM-C1 (ring south), SRG→TXP-2 (client) -->
   <rect x="1245" y="410" width="140" height="80" class="transport box"/>
-  <text x="1315" y="444" text-anchor="middle" class="label">ROADM-2</text>
-  <text x="1315" y="466" text-anchor="middle" class="small">DWDM Node</text>
+  <text x="1315" y="432" text-anchor="middle" class="label">ROADM-B1</text>
+  <text x="1315" y="450" text-anchor="middle" class="small">DWDM Node</text>
+  <text x="1253" y="466" text-anchor="start"  class="tiny">DEG2</text>
+  <text x="1313" y="481" text-anchor="start"  class="tiny">DEG1</text>
 
-  <!-- ROADM-3: bottom -->
+  <!-- ROADM-C1: bottom — DEG1→ROADM-A1 (ring west), DEG2→ROADM-B1 (ring east), SRG→TXP-3 (client) -->
   <rect x="1025" y="580" width="140" height="80" class="transport box"/>
-  <text x="1095" y="614" text-anchor="middle" class="label">ROADM-3</text>
-  <text x="1095" y="636" text-anchor="middle" class="small">DWDM Node</text>
+  <text x="1095" y="602" text-anchor="middle" class="label">ROADM-C1</text>
+  <text x="1095" y="620" text-anchor="middle" class="small">DWDM Node</text>
+  <text x="1033" y="651" text-anchor="start"  class="tiny">DEG1</text>
+  <text x="1157" y="651" text-anchor="end"    class="tiny">DEG2</text>
 
-  <!-- ============ Transponder-1: ROADM-1 client side → O-CU-1 ============ -->
-  <!-- TXP-1 right (1015) → ROADM-1 left (1025): 10 px optical stub -->
+  <!-- ============ Transponder-1: ROADM-A1 client side → O-CU-1 ============ -->
+  <!-- TXP-1 right (1015) → ROADM-A1 left (1025): 10 px optical stub -->
   <path class="optical" d="M1015 280 L1025 280"/>
   <rect x="910" y="252" width="105" height="56" class="transport box"/>
   <text x="962" y="273" text-anchor="middle" class="label">TXP-1</text>
@@ -104,8 +110,8 @@
   <text x="272" y="158" text-anchor="middle" class="small">UE-2</text>
   <text x="272" y="175" text-anchor="middle" class="tiny">User</text>
 
-  <!-- ============ Transponder-3: ROADM-3 client side → O-CU-2 ============ -->
-  <!-- TXP-3 right (1015) → ROADM-3 left (1025): 10 px optical stub -->
+  <!-- ============ Transponder-3: ROADM-C1 client side → O-CU-2 ============ -->
+  <!-- TXP-3 right (1015) → ROADM-C1 left (1025): 10 px optical stub -->
   <path class="optical" d="M1015 620 L1025 620"/>
   <rect x="910" y="592" width="105" height="56" class="transport box"/>
   <text x="962" y="613" text-anchor="middle" class="label">TXP-3</text>
@@ -195,9 +201,9 @@
   <text x="555" y="932" text-anchor="middle" class="small">UE-8</text>
   <text x="555" y="948" text-anchor="middle" class="tiny">User</text>
 
-  <!-- ============ Core: ROADM-2 → TXP-2 → IP-RTR-1 → 5GC-1 → Internet ============ -->
-  <!-- Transponder-2: ROADM-2 client side → IP-RTR-1 -->
-  <!-- ROADM-2 right (1385) → TXP-2 left (1395): 10 px optical stub -->
+  <!-- ============ Core: ROADM-B1 → TXP-2 → IP-RTR-1 → 5GC-1 → Internet ============ -->
+  <!-- Transponder-2: ROADM-B1 client side → IP-RTR-1 -->
+  <!-- ROADM-B1 right (1385) → TXP-2 left (1395): 10 px optical stub -->
   <path class="optical" d="M1385 450 L1395 450"/>
   <rect x="1395" y="425" width="105" height="50" class="transport box"/>
   <text x="1447" y="446" text-anchor="middle" class="label">TXP-2</text>

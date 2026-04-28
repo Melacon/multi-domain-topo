@@ -41,23 +41,23 @@ The reference topology (see `usecase.svg`) contains:
 
 ```
 Branch 1 (macro cell):
-  UE-1/2 → O-RU-1 → O-DU-1 → O-CU-1 → ROADM-1
+  UE-1/2 → O-RU-1 → O-DU-1 → O-CU-1 → ROADM-A1
 
 Branch 2 (small cells via wireless transport):
-  UE-3..8 → O-RU-2/3/4 → OFH-SW-1 → O-DU-2 → WT-2 ~~wireless~~ WT-1 → O-CU-2 → ROADM-3
+  UE-3..8 → O-RU-2/3/4 → OFH-SW-1 → O-DU-2 → WT-2 ~~wireless~~ WT-1 → O-CU-2 → ROADM-C1
 
 DWDM/ROADM Ring:
-  ROADM-1 — ROADM-2 — ROADM-3 — ROADM-1  (optical ring)
+  ROADM-A1 — ROADM-B1 — ROADM-C1 — ROADM-A1  (optical ring)
 
 Core:
-  ROADM-2 → 5GC-1 → NET-1 (Internet)
+  ROADM-B1 → 5GC-1 → NET-1 (Internet)
 ```
 
 ### Network layers (bottom → top)
 
 | Layer               | IETF Network ID               | Nodes                                             |
 | ------------------- | ----------------------------- | ------------------------------------------------- |
-| Physical / optical  | `ietf-photonic-topology`      | ROADM-1, ROADM-2, ROADM-3, fibre spans           |
+| Physical / optical  | `ietf-photonic-topology`      | ROADM-A1, ROADM-B1, ROADM-C1, fibre spans           |
 | Wireless transport  | `ietf-microwave-topology`     | WT-1, WT-2                                        |
 | Ethernet / IP       | `ietf-l2-topology` / `ietf-l3-unicast-topology` | OFH-SW-1, O-DU-*, O-CU-*, 5GC-1 |
 | O-RAN RAN           | `o-ran-sc-ran-topology`       | O-RU-*, O-DU-*, O-CU-*                           |
@@ -78,7 +78,7 @@ internal representations consumed by the topology engine.
 | O-RAN CU/DU           | `o-ran-sc-du-hello-world`, 3GPP NRM models  | O-DU-1/2, O-CU-1/2 |
 | Open Fronthaul Switch | `ietf-interfaces`, `ieee802-dot1q-bridge`   | OFH-SW-1         |
 | IETF Microwave        | `ietf-microwave-radio-link` (RFC 8561)      | WT-1, WT-2       |
-| OpenROADM / DWDM      | `org-openroadm-device`, `org-openroadm-network` | ROADM-1/2/3 |
+| OpenROADM / DWDM      | `org-openroadm-device`, `org-openroadm-network` | ROADM-A1/2/3 |
 | 5G Core               | 3GPP TS 28.541 NRM or vendor model          | 5GC-1            |
 
 **Acceptance criteria:**
@@ -98,7 +98,7 @@ persists it as RFC 8345 compliant YANG datastores.
 | # | Capability                              | Detail |
 |---|-----------------------------------------|--------|
 | 1 | **Layer construction**                  | Create `ietf-network` instances for each technology layer (photonic, microwave, Ethernet/IP, RAN). |
-| 2 | **Inter-layer stitching**               | Populate `supporting-network`, `supporting-node`, and `supporting-link` references to express vertical relationships (e.g., an O-CU-1 L3 node is supported by a ROADM-1 photonic node). |
+| 2 | **Inter-layer stitching**               | Populate `supporting-network`, `supporting-node`, and `supporting-link` references to express vertical relationships (e.g., an O-CU-1 L3 node is supported by a ROADM-A1 photonic node). |
 | 3 | **Intra-layer link discovery**          | Derive `ietf-network-topology:link` objects from adapter events (e.g., LLDP, OSPF-TE, OpenROADM XPDR-to-ROADM). |
 | 4 | **Ring detection**                      | Identify and tag the ROADM ring as a `te:topology` with protection type `ring`. |
 | 5 | **Change notification**                 | Publish YANG Push (`ietf-subscribed-notifications`) or SSE events when the topology changes. |
@@ -215,7 +215,7 @@ module: ietf-network-topology (augments ietf-network)
 | TI-011    | As a developer, I have mapping tables for every device model to RFC 8345 | F-5 | 5 SP |
 | TI-012    | As a developer, the topology service publishes Prometheus metrics | F-4 | 3 SP |
 | TI-013    | As an rApp developer, a sample rApp reads the topology and computes an optical path | F-4 | 5 SP |
-| TI-014    | As a developer, 5GC-1 is onboarded and the core layer connects to ROADM-2 | F-1, F-2 | 5 SP |
+| TI-014    | As a developer, 5GC-1 is onboarded and the core layer connects to ROADM-B1 | F-1, F-2 | 5 SP |
 
 ## 7  Architecture Overview
 

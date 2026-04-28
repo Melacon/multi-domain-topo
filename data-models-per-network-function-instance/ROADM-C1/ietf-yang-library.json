@@ -2,7 +2,7 @@
   "ietf-yang-library:yang-library": {
     "module-set": [
       {
-        "name": "roadm-1-modules",
+        "name": "roadm-c1-modules",
         "module": [
           {
             "name": "ietf-factory-default",
@@ -404,30 +404,30 @@
     ],
     "schema": [
       {
-        "name": "roadm-1-schema",
+        "name": "roadm-c1-schema",
         "module-set": [
-          "roadm-1-modules"
+          "roadm-c1-modules"
         ]
       }
     ],
     "datastore": [
       {
         "name": "ietf-datastores:running",
-        "schema": "roadm-1-schema"
+        "schema": "roadm-c1-schema"
       },
       {
         "name": "ietf-datastores:startup",
-        "schema": "roadm-1-schema"
+        "schema": "roadm-c1-schema"
       },
       {
         "name": "ietf-datastores:candidate",
-        "schema": "roadm-1-schema"
+        "schema": "roadm-c1-schema"
       },
       {
         "name": "ietf-datastores:operational",
-        "schema": "roadm-1-schema"
+        "schema": "roadm-c1-schema"
       }
     ],
-    "content-id": "roadm-1-yanglib-2026-04-26"
+    "content-id": "roadm-c1-yanglib-2026-04-26"
   }
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<network xmlns="urn:ietf:params:xml:ns:yang:ietf-network">
+  <network-id>openroadm-network</network-id>
+  <network-types>
+    <openroadm-common-network xmlns="http://org/openroadm/common/network"/>
+  </network-types>
+  <node>
+    <node-id>ROADM-A1</node-id>
+    <vendor xmlns="http://org/openroadm/network">vendorA</vendor>
+    <ip xmlns="http://org/openroadm/network">127.0.0.11</ip>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <model xmlns="http://org/openroadm/network">model2</model>
+    <node-type xmlns="http://org/openroadm/common/network">ROADM</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-C1</node-id>
+    <vendor xmlns="http://org/openroadm/network">vendorA</vendor>
+    <ip xmlns="http://org/openroadm/network">127.0.0.11</ip>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <model xmlns="http://org/openroadm/network">model2</model>
+    <node-type xmlns="http://org/openroadm/common/network">ROADM</node-type>
+  </node>
+  <node>
+    <node-id>ROADM-B1</node-id>
+    <vendor xmlns="http://org/openroadm/network">vendorA</vendor>
+    <ip xmlns="http://org/openroadm/network">127.0.0.11</ip>
+    <supporting-node>
+      <network-ref>clli-network</network-ref>
+      <node-ref>NodeA</node-ref>
+    </supporting-node>
+    <model xmlns="http://org/openroadm/network">model2</model>
+    <node-type xmlns="http://org/openroadm/common/network">ROADM</node-type>
+  </node>
+</network>

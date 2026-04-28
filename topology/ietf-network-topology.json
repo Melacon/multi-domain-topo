@@ -5,34 +5,35 @@
         "network-id": "transport-inclusion-reference",
         "node": [
           {
-            "node-id": "urn:node:roadm-1",
+            "node-id": "urn:node:roadm-a1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:roadm-1:line-east" },
-              { "tp-id": "urn:tp:roadm-1:line-west" },
-              { "tp-id": "urn:tp:roadm-1:client" }
+              { "tp-id": "urn:tp:roadm-a1:line-east" },
+              { "tp-id": "urn:tp:roadm-a1:line-west" },
+              { "tp-id": "urn:tp:roadm-a1:client" }
             ]
           },
           {
-            "node-id": "urn:node:roadm-2",
+            "node-id": "urn:node:roadm-b1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:roadm-2:line-north" },
-              { "tp-id": "urn:tp:roadm-2:line-south" },
-              { "tp-id": "urn:tp:roadm-2:client" }
+              { "tp-id": "urn:tp:roadm-b1:line-north" },
+              { "tp-id": "urn:tp:roadm-b1:line-south" },
+              { "tp-id": "urn:tp:roadm-b1:client" }
             ]
           },
           {
-            "node-id": "urn:node:roadm-3",
+            "node-id": "urn:node:roadm-c1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:roadm-3:line-north" },
-              { "tp-id": "urn:tp:roadm-3:line-east" },
-              { "tp-id": "urn:tp:roadm-3:client" }
+              { "tp-id": "urn:tp:roadm-c1:line-north" },
+              { "tp-id": "urn:tp:roadm-c1:line-east" },
+              { "tp-id": "urn:tp:roadm-c1:client" }
             ]
           },
           {
             "node-id": "urn:node:txp-1",
             "ietf-network-topology:termination-point": [
               { "tp-id": "urn:tp:txp-1:line" },
-              { "tp-id": "urn:tp:txp-1:client" }
+              { "tp-id": "urn:tp:txp-1:client-cp" },
+              { "tp-id": "urn:tp:txp-1:client-up" }
             ]
           },
           {
@@ -46,34 +47,55 @@
             "node-id": "urn:node:txp-3",
             "ietf-network-topology:termination-point": [
               { "tp-id": "urn:tp:txp-3:line" },
-              { "tp-id": "urn:tp:txp-3:client" }
+              { "tp-id": "urn:tp:txp-3:client-cp" },
+              { "tp-id": "urn:tp:txp-3:client-up" }
             ]
           },
           {
-            "node-id": "urn:node:o-cu-1",
+            "node-id": "urn:node:o-cu-cp-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:o-cu-1:backhaul" },
-              { "tp-id": "urn:tp:o-cu-1:midhaul" }
+              { "tp-id": "urn:tp:o-cu-cp-1:backhaul" },
+              { "tp-id": "urn:tp:o-cu-cp-1:f1-c" },
+              { "tp-id": "urn:tp:o-cu-cp-1:e1" }
             ]
           },
           {
-            "node-id": "urn:node:o-cu-2",
+            "node-id": "urn:node:o-cu-up-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:o-cu-2:backhaul" },
-              { "tp-id": "urn:tp:o-cu-2:wt" }
+              { "tp-id": "urn:tp:o-cu-up-1:backhaul" },
+              { "tp-id": "urn:tp:o-cu-up-1:f1-u" },
+              { "tp-id": "urn:tp:o-cu-up-1:e1" }
+            ]
+          },
+          {
+            "node-id": "urn:node:o-cu-cp-2",
+            "ietf-network-topology:termination-point": [
+              { "tp-id": "urn:tp:o-cu-cp-2:backhaul" },
+              { "tp-id": "urn:tp:o-cu-cp-2:f1-c" },
+              { "tp-id": "urn:tp:o-cu-cp-2:e1" }
+            ]
+          },
+          {
+            "node-id": "urn:node:o-cu-up-2",
+            "ietf-network-topology:termination-point": [
+              { "tp-id": "urn:tp:o-cu-up-2:backhaul" },
+              { "tp-id": "urn:tp:o-cu-up-2:f1-u" },
+              { "tp-id": "urn:tp:o-cu-up-2:e1" }
             ]
           },
           {
             "node-id": "urn:node:o-du-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:o-du-1:midhaul" },
+              { "tp-id": "urn:tp:o-du-1:f1-c" },
+              { "tp-id": "urn:tp:o-du-1:f1-u" },
               { "tp-id": "urn:tp:o-du-1:fronthaul" }
             ]
           },
           {
             "node-id": "urn:node:o-du-2",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:o-du-2:midhaul" },
+              { "tp-id": "urn:tp:o-du-2:f1-c" },
+              { "tp-id": "urn:tp:o-du-2:f1-u" },
               { "tp-id": "urn:tp:o-du-2:fronthaul" }
             ]
           },
@@ -121,7 +143,8 @@
           {
             "node-id": "urn:node:wt-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:wt-1:backhaul" },
+              { "tp-id": "urn:tp:wt-1:f1-c-south" },
+              { "tp-id": "urn:tp:wt-1:f1-u-south" },
               { "tp-id": "urn:tp:wt-1:wireless" }
             ]
           },
@@ -129,7 +152,8 @@
             "node-id": "urn:node:wt-2",
             "ietf-network-topology:termination-point": [
               { "tp-id": "urn:tp:wt-2:wireless" },
-              { "tp-id": "urn:tp:wt-2:midhaul" }
+              { "tp-id": "urn:tp:wt-2:f1-c-north" },
+              { "tp-id": "urn:tp:wt-2:f1-u-north" }
             ]
           },
           {
@@ -203,76 +227,76 @@
         ],
         "ietf-network-topology:link": [
           {
-            "link-id": "urn:link:ring-roadm-1-roadm-2",
+            "link-id": "urn:link:ring-roadm-a1-roadm-2",
             "source": {
-              "source-node": "urn:node:roadm-1",
-              "source-tp": "urn:tp:roadm-1:line-east"
+              "source-node": "urn:node:roadm-a1",
+              "source-tp": "urn:tp:roadm-a1:line-east"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-2",
-              "dest-tp": "urn:tp:roadm-2:line-north"
+              "dest-node": "urn:node:roadm-b1",
+              "dest-tp": "urn:tp:roadm-b1:line-north"
             }
           },
           {
-            "link-id": "urn:link:ring-roadm-2-roadm-1",
+            "link-id": "urn:link:ring-roadm-b1-roadm-1",
             "source": {
-              "source-node": "urn:node:roadm-2",
-              "source-tp": "urn:tp:roadm-2:line-north"
+              "source-node": "urn:node:roadm-b1",
+              "source-tp": "urn:tp:roadm-b1:line-north"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-1",
-              "dest-tp": "urn:tp:roadm-1:line-east"
+              "dest-node": "urn:node:roadm-a1",
+              "dest-tp": "urn:tp:roadm-a1:line-east"
             }
           },
           {
-            "link-id": "urn:link:ring-roadm-2-roadm-3",
+            "link-id": "urn:link:ring-roadm-b1-roadm-3",
             "source": {
-              "source-node": "urn:node:roadm-2",
-              "source-tp": "urn:tp:roadm-2:line-south"
+              "source-node": "urn:node:roadm-b1",
+              "source-tp": "urn:tp:roadm-b1:line-south"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-3",
-              "dest-tp": "urn:tp:roadm-3:line-east"
+              "dest-node": "urn:node:roadm-c1",
+              "dest-tp": "urn:tp:roadm-c1:line-east"
             }
           },
           {
-            "link-id": "urn:link:ring-roadm-3-roadm-2",
+            "link-id": "urn:link:ring-roadm-c1-roadm-2",
             "source": {
-              "source-node": "urn:node:roadm-3",
-              "source-tp": "urn:tp:roadm-3:line-east"
+              "source-node": "urn:node:roadm-c1",
+              "source-tp": "urn:tp:roadm-c1:line-east"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-2",
-              "dest-tp": "urn:tp:roadm-2:line-south"
+              "dest-node": "urn:node:roadm-b1",
+              "dest-tp": "urn:tp:roadm-b1:line-south"
             }
           },
           {
-            "link-id": "urn:link:ring-roadm-3-roadm-1",
+            "link-id": "urn:link:ring-roadm-c1-roadm-1",
             "source": {
-              "source-node": "urn:node:roadm-3",
-              "source-tp": "urn:tp:roadm-3:line-north"
+              "source-node": "urn:node:roadm-c1",
+              "source-tp": "urn:tp:roadm-c1:line-north"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-1",
-              "dest-tp": "urn:tp:roadm-1:line-west"
+              "dest-node": "urn:node:roadm-a1",
+              "dest-tp": "urn:tp:roadm-a1:line-west"
             }
           },
           {
-            "link-id": "urn:link:ring-roadm-1-roadm-3",
+            "link-id": "urn:link:ring-roadm-a1-roadm-3",
             "source": {
-              "source-node": "urn:node:roadm-1",
-              "source-tp": "urn:tp:roadm-1:line-west"
+              "source-node": "urn:node:roadm-a1",
+              "source-tp": "urn:tp:roadm-a1:line-west"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-3",
-              "dest-tp": "urn:tp:roadm-3:line-north"
+              "dest-node": "urn:node:roadm-c1",
+              "dest-tp": "urn:tp:roadm-c1:line-north"
             }
           },
           {
-            "link-id": "urn:link:optical-roadm-1-txp-1",
+            "link-id": "urn:link:optical-roadm-a1-txp-1",
             "source": {
-              "source-node": "urn:node:roadm-1",
-              "source-tp": "urn:tp:roadm-1:client"
+              "source-node": "urn:node:roadm-a1",
+              "source-tp": "urn:tp:roadm-a1:client"
             },
             "destination": {
               "dest-node": "urn:node:txp-1",
@@ -280,21 +304,21 @@
             }
           },
           {
-            "link-id": "urn:link:optical-txp-1-roadm-1",
+            "link-id": "urn:link:optical-txp-1-roadm-a1",
             "source": {
               "source-node": "urn:node:txp-1",
               "source-tp": "urn:tp:txp-1:line"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-1",
-              "dest-tp": "urn:tp:roadm-1:client"
+              "dest-node": "urn:node:roadm-a1",
+              "dest-tp": "urn:tp:roadm-a1:client"
             }
           },
           {
-            "link-id": "urn:link:optical-roadm-2-txp-2",
+            "link-id": "urn:link:optical-roadm-b1-txp-2",
             "source": {
-              "source-node": "urn:node:roadm-2",
-              "source-tp": "urn:tp:roadm-2:client"
+              "source-node": "urn:node:roadm-b1",
+              "source-tp": "urn:tp:roadm-b1:client"
             },
             "destination": {
               "dest-node": "urn:node:txp-2",
@@ -302,21 +326,21 @@
             }
           },
           {
-            "link-id": "urn:link:optical-txp-2-roadm-2",
+            "link-id": "urn:link:optical-txp-2-roadm-b1",
             "source": {
               "source-node": "urn:node:txp-2",
               "source-tp": "urn:tp:txp-2:line"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-2",
-              "dest-tp": "urn:tp:roadm-2:client"
+              "dest-node": "urn:node:roadm-b1",
+              "dest-tp": "urn:tp:roadm-b1:client"
             }
           },
           {
-            "link-id": "urn:link:optical-roadm-3-txp-3",
+            "link-id": "urn:link:optical-roadm-c1-txp-3",
             "source": {
-              "source-node": "urn:node:roadm-3",
-              "source-tp": "urn:tp:roadm-3:client"
+              "source-node": "urn:node:roadm-c1",
+              "source-tp": "urn:tp:roadm-c1:client"
             },
             "destination": {
               "dest-node": "urn:node:txp-3",
@@ -324,58 +348,124 @@
             }
           },
           {
-            "link-id": "urn:link:optical-txp-3-roadm-3",
+            "link-id": "urn:link:optical-txp-3-roadm-c1",
             "source": {
               "source-node": "urn:node:txp-3",
               "source-tp": "urn:tp:txp-3:line"
             },
             "destination": {
-              "dest-node": "urn:node:roadm-3",
-              "dest-tp": "urn:tp:roadm-3:client"
+              "dest-node": "urn:node:roadm-c1",
+              "dest-tp": "urn:tp:roadm-c1:client"
             }
           },
           {
-            "link-id": "urn:link:backhaul-txp-1-o-cu-1",
+            "link-id": "urn:link:backhaul-txp-1-o-cu-cp-1",
             "source": {
               "source-node": "urn:node:txp-1",
-              "source-tp": "urn:tp:txp-1:client"
+              "source-tp": "urn:tp:txp-1:client-cp"
             },
             "destination": {
-              "dest-node": "urn:node:o-cu-1",
-              "dest-tp": "urn:tp:o-cu-1:backhaul"
+              "dest-node": "urn:node:o-cu-cp-1",
+              "dest-tp": "urn:tp:o-cu-cp-1:backhaul"
             }
           },
           {
-            "link-id": "urn:link:backhaul-o-cu-1-txp-1",
+            "link-id": "urn:link:backhaul-o-cu-cp-1-txp-1",
             "source": {
-              "source-node": "urn:node:o-cu-1",
-              "source-tp": "urn:tp:o-cu-1:backhaul"
+              "source-node": "urn:node:o-cu-cp-1",
+              "source-tp": "urn:tp:o-cu-cp-1:backhaul"
             },
             "destination": {
               "dest-node": "urn:node:txp-1",
-              "dest-tp": "urn:tp:txp-1:client"
+              "dest-tp": "urn:tp:txp-1:client-cp"
             }
           },
           {
-            "link-id": "urn:link:midhaul-o-cu-1-o-du-1",
+            "link-id": "urn:link:backhaul-txp-1-o-cu-up-1",
             "source": {
-              "source-node": "urn:node:o-cu-1",
-              "source-tp": "urn:tp:o-cu-1:midhaul"
+              "source-node": "urn:node:txp-1",
+              "source-tp": "urn:tp:txp-1:client-up"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-up-1",
+              "dest-tp": "urn:tp:o-cu-up-1:backhaul"
+            }
+          },
+          {
+            "link-id": "urn:link:backhaul-o-cu-up-1-txp-1",
+            "source": {
+              "source-node": "urn:node:o-cu-up-1",
+              "source-tp": "urn:tp:o-cu-up-1:backhaul"
+            },
+            "destination": {
+              "dest-node": "urn:node:txp-1",
+              "dest-tp": "urn:tp:txp-1:client-up"
+            }
+          },
+          {
+            "link-id": "urn:link:e1-o-cu-cp-1-o-cu-up-1",
+            "source": {
+              "source-node": "urn:node:o-cu-cp-1",
+              "source-tp": "urn:tp:o-cu-cp-1:e1"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-up-1",
+              "dest-tp": "urn:tp:o-cu-up-1:e1"
+            }
+          },
+          {
+            "link-id": "urn:link:e1-o-cu-up-1-o-cu-cp-1",
+            "source": {
+              "source-node": "urn:node:o-cu-up-1",
+              "source-tp": "urn:tp:o-cu-up-1:e1"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-cp-1",
+              "dest-tp": "urn:tp:o-cu-cp-1:e1"
+            }
+          },
+          {
+            "link-id": "urn:link:f1-c-o-cu-cp-1-o-du-1",
+            "source": {
+              "source-node": "urn:node:o-cu-cp-1",
+              "source-tp": "urn:tp:o-cu-cp-1:f1-c"
             },
             "destination": {
               "dest-node": "urn:node:o-du-1",
-              "dest-tp": "urn:tp:o-du-1:midhaul"
+              "dest-tp": "urn:tp:o-du-1:f1-c"
             }
           },
           {
-            "link-id": "urn:link:midhaul-o-du-1-o-cu-1",
+            "link-id": "urn:link:f1-c-o-du-1-o-cu-cp-1",
             "source": {
               "source-node": "urn:node:o-du-1",
-              "source-tp": "urn:tp:o-du-1:midhaul"
+              "source-tp": "urn:tp:o-du-1:f1-c"
             },
             "destination": {
-              "dest-node": "urn:node:o-cu-1",
-              "dest-tp": "urn:tp:o-cu-1:midhaul"
+              "dest-node": "urn:node:o-cu-cp-1",
+              "dest-tp": "urn:tp:o-cu-cp-1:f1-c"
+            }
+          },
+          {
+            "link-id": "urn:link:f1-u-o-cu-up-1-o-du-1",
+            "source": {
+              "source-node": "urn:node:o-cu-up-1",
+              "source-tp": "urn:tp:o-cu-up-1:f1-u"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-du-1",
+              "dest-tp": "urn:tp:o-du-1:f1-u"
+            }
+          },
+          {
+            "link-id": "urn:link:f1-u-o-du-1-o-cu-up-1",
+            "source": {
+              "source-node": "urn:node:o-du-1",
+              "source-tp": "urn:tp:o-du-1:f1-u"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-up-1",
+              "dest-tp": "urn:tp:o-cu-up-1:f1-u"
             }
           },
           {
@@ -423,47 +513,179 @@
             }
           },
           {
-            "link-id": "urn:link:backhaul-txp-3-o-cu-2",
+            "link-id": "urn:link:txp-2-ip-rtr-1",
             "source": {
-              "source-node": "urn:node:txp-3",
-              "source-tp": "urn:tp:txp-3:client"
+              "source-node": "urn:node:txp-2",
+              "source-tp": "urn:tp:txp-2:client"
             },
             "destination": {
-              "dest-node": "urn:node:o-cu-2",
-              "dest-tp": "urn:tp:o-cu-2:backhaul"
+              "dest-node": "urn:node:ip-rtr-1",
+              "dest-tp": "urn:tp:ip-rtr-1:to-txp-2"
             }
           },
           {
-            "link-id": "urn:link:backhaul-o-cu-2-txp-3",
+            "link-id": "urn:link:ip-rtr-1-txp-2",
             "source": {
-              "source-node": "urn:node:o-cu-2",
-              "source-tp": "urn:tp:o-cu-2:backhaul"
+              "source-node": "urn:node:ip-rtr-1",
+              "source-tp": "urn:tp:ip-rtr-1:to-txp-2"
+            },
+            "destination": {
+              "dest-node": "urn:node:txp-2",
+              "dest-tp": "urn:tp:txp-2:client"
+            }
+          },
+          {
+            "link-id": "urn:link:ip-rtr-1-5gc-1",
+            "source": {
+              "source-node": "urn:node:ip-rtr-1",
+              "source-tp": "urn:tp:ip-rtr-1:to-5gc-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:5gc-1",
+              "dest-tp": "urn:tp:5gc-1:to-ip-rtr-1"
+            }
+          },
+          {
+            "link-id": "urn:link:5gc-1-ip-rtr-1",
+            "source": {
+              "source-node": "urn:node:5gc-1",
+              "source-tp": "urn:tp:5gc-1:to-ip-rtr-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:ip-rtr-1",
+              "dest-tp": "urn:tp:ip-rtr-1:to-5gc-1"
+            }
+          },
+          {
+            "link-id": "urn:link:5gc-1-net-1",
+            "source": {
+              "source-node": "urn:node:5gc-1",
+              "source-tp": "urn:tp:5gc-1:to-net-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:net-1",
+              "dest-tp": "urn:tp:net-1:to-5gc-1"
+            }
+          },
+          {
+            "link-id": "urn:link:net-1-5gc-1",
+            "source": {
+              "source-node": "urn:node:net-1",
+              "source-tp": "urn:tp:net-1:to-5gc-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:5gc-1",
+              "dest-tp": "urn:tp:5gc-1:to-net-1"
+            }
+          },
+          {
+            "link-id": "urn:link:backhaul-txp-3-o-cu-cp-2",
+            "source": {
+              "source-node": "urn:node:txp-3",
+              "source-tp": "urn:tp:txp-3:client-cp"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-cp-2",
+              "dest-tp": "urn:tp:o-cu-cp-2:backhaul"
+            }
+          },
+          {
+            "link-id": "urn:link:backhaul-o-cu-cp-2-txp-3",
+            "source": {
+              "source-node": "urn:node:o-cu-cp-2",
+              "source-tp": "urn:tp:o-cu-cp-2:backhaul"
             },
             "destination": {
               "dest-node": "urn:node:txp-3",
-              "dest-tp": "urn:tp:txp-3:client"
+              "dest-tp": "urn:tp:txp-3:client-cp"
             }
           },
           {
-            "link-id": "urn:link:backhaul-o-cu-2-wt-1",
+            "link-id": "urn:link:backhaul-txp-3-o-cu-up-2",
             "source": {
-              "source-node": "urn:node:o-cu-2",
-              "source-tp": "urn:tp:o-cu-2:wt"
+              "source-node": "urn:node:txp-3",
+              "source-tp": "urn:tp:txp-3:client-up"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-up-2",
+              "dest-tp": "urn:tp:o-cu-up-2:backhaul"
+            }
+          },
+          {
+            "link-id": "urn:link:backhaul-o-cu-up-2-txp-3",
+            "source": {
+              "source-node": "urn:node:o-cu-up-2",
+              "source-tp": "urn:tp:o-cu-up-2:backhaul"
+            },
+            "destination": {
+              "dest-node": "urn:node:txp-3",
+              "dest-tp": "urn:tp:txp-3:client-up"
+            }
+          },
+          {
+            "link-id": "urn:link:e1-o-cu-cp-2-o-cu-up-2",
+            "source": {
+              "source-node": "urn:node:o-cu-cp-2",
+              "source-tp": "urn:tp:o-cu-cp-2:e1"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-up-2",
+              "dest-tp": "urn:tp:o-cu-up-2:e1"
+            }
+          },
+          {
+            "link-id": "urn:link:e1-o-cu-up-2-o-cu-cp-2",
+            "source": {
+              "source-node": "urn:node:o-cu-up-2",
+              "source-tp": "urn:tp:o-cu-up-2:e1"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-cp-2",
+              "dest-tp": "urn:tp:o-cu-cp-2:e1"
+            }
+          },
+          {
+            "link-id": "urn:link:f1-c-o-cu-cp-2-wt-1",
+            "source": {
+              "source-node": "urn:node:o-cu-cp-2",
+              "source-tp": "urn:tp:o-cu-cp-2:f1-c"
             },
             "destination": {
               "dest-node": "urn:node:wt-1",
-              "dest-tp": "urn:tp:wt-1:backhaul"
+              "dest-tp": "urn:tp:wt-1:f1-c-south"
             }
           },
           {
-            "link-id": "urn:link:backhaul-wt-1-o-cu-2",
+            "link-id": "urn:link:f1-c-wt-1-o-cu-cp-2",
             "source": {
               "source-node": "urn:node:wt-1",
-              "source-tp": "urn:tp:wt-1:backhaul"
+              "source-tp": "urn:tp:wt-1:f1-c-south"
             },
             "destination": {
-              "dest-node": "urn:node:o-cu-2",
-              "dest-tp": "urn:tp:o-cu-2:wt"
+              "dest-node": "urn:node:o-cu-cp-2",
+              "dest-tp": "urn:tp:o-cu-cp-2:f1-c"
+            }
+          },
+          {
+            "link-id": "urn:link:f1-u-o-cu-up-2-wt-1",
+            "source": {
+              "source-node": "urn:node:o-cu-up-2",
+              "source-tp": "urn:tp:o-cu-up-2:f1-u"
+            },
+            "destination": {
+              "dest-node": "urn:node:wt-1",
+              "dest-tp": "urn:tp:wt-1:f1-u-south"
+            }
+          },
+          {
+            "link-id": "urn:link:f1-u-wt-1-o-cu-up-2",
+            "source": {
+              "source-node": "urn:node:wt-1",
+              "source-tp": "urn:tp:wt-1:f1-u-south"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-cu-up-2",
+              "dest-tp": "urn:tp:o-cu-up-2:f1-u"
             }
           },
           {
@@ -489,25 +711,47 @@
             }
           },
           {
-            "link-id": "urn:link:midhaul-wt-2-o-du-2",
+            "link-id": "urn:link:f1-c-wt-2-o-du-2",
             "source": {
               "source-node": "urn:node:wt-2",
-              "source-tp": "urn:tp:wt-2:midhaul"
+              "source-tp": "urn:tp:wt-2:f1-c-north"
             },
             "destination": {
               "dest-node": "urn:node:o-du-2",
-              "dest-tp": "urn:tp:o-du-2:midhaul"
+              "dest-tp": "urn:tp:o-du-2:f1-c"
             }
           },
           {
-            "link-id": "urn:link:midhaul-o-du-2-wt-2",
+            "link-id": "urn:link:f1-c-o-du-2-wt-2",
             "source": {
               "source-node": "urn:node:o-du-2",
-              "source-tp": "urn:tp:o-du-2:midhaul"
+              "source-tp": "urn:tp:o-du-2:f1-c"
             },
             "destination": {
               "dest-node": "urn:node:wt-2",
-              "dest-tp": "urn:tp:wt-2:midhaul"
+              "dest-tp": "urn:tp:wt-2:f1-c-north"
+            }
+          },
+          {
+            "link-id": "urn:link:f1-u-wt-2-o-du-2",
+            "source": {
+              "source-node": "urn:node:wt-2",
+              "source-tp": "urn:tp:wt-2:f1-u-north"
+            },
+            "destination": {
+              "dest-node": "urn:node:o-du-2",
+              "dest-tp": "urn:tp:o-du-2:f1-u"
+            }
+          },
+          {
+            "link-id": "urn:link:f1-u-o-du-2-wt-2",
+            "source": {
+              "source-node": "urn:node:o-du-2",
+              "source-tp": "urn:tp:o-du-2:f1-u"
+            },
+            "destination": {
+              "dest-node": "urn:node:wt-2",
+              "dest-tp": "urn:tp:wt-2:f1-u-north"
             }
           },
           {
@@ -662,72 +906,6 @@
             "destination": {
               "dest-node": "urn:node:ue-8",
               "dest-tp": "urn:tp:ue-8:air"
-            }
-          },
-          {
-            "link-id": "urn:link:txp-2-ip-rtr-1",
-            "source": {
-              "source-node": "urn:node:txp-2",
-              "source-tp": "urn:tp:txp-2:client"
-            },
-            "destination": {
-              "dest-node": "urn:node:ip-rtr-1",
-              "dest-tp": "urn:tp:ip-rtr-1:to-txp-2"
-            }
-          },
-          {
-            "link-id": "urn:link:ip-rtr-1-txp-2",
-            "source": {
-              "source-node": "urn:node:ip-rtr-1",
-              "source-tp": "urn:tp:ip-rtr-1:to-txp-2"
-            },
-            "destination": {
-              "dest-node": "urn:node:txp-2",
-              "dest-tp": "urn:tp:txp-2:client"
-            }
-          },
-          {
-            "link-id": "urn:link:ip-rtr-1-5gc-1",
-            "source": {
-              "source-node": "urn:node:ip-rtr-1",
-              "source-tp": "urn:tp:ip-rtr-1:to-5gc-1"
-            },
-            "destination": {
-              "dest-node": "urn:node:5gc-1",
-              "dest-tp": "urn:tp:5gc-1:to-ip-rtr-1"
-            }
-          },
-          {
-            "link-id": "urn:link:5gc-1-ip-rtr-1",
-            "source": {
-              "source-node": "urn:node:5gc-1",
-              "source-tp": "urn:tp:5gc-1:to-ip-rtr-1"
-            },
-            "destination": {
-              "dest-node": "urn:node:ip-rtr-1",
-              "dest-tp": "urn:tp:ip-rtr-1:to-5gc-1"
-            }
-          },
-          {
-            "link-id": "urn:link:5gc-1-net-1",
-            "source": {
-              "source-node": "urn:node:5gc-1",
-              "source-tp": "urn:tp:5gc-1:to-net-1"
-            },
-            "destination": {
-              "dest-node": "urn:node:net-1",
-              "dest-tp": "urn:tp:net-1:to-5gc-1"
-            }
-          },
-          {
-            "link-id": "urn:link:net-1-5gc-1",
-            "source": {
-              "source-node": "urn:node:net-1",
-              "source-tp": "urn:tp:net-1:to-5gc-1"
-            },
-            "destination": {
-              "dest-node": "urn:node:5gc-1",
-              "dest-tp": "urn:tp:5gc-1:to-net-1"
             }
           }
         ]

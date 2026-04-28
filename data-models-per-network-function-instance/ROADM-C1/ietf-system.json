@@ -1,7 +1,7 @@
 {
   "ietf-system:system": {
     "contact": "network-functions@hqiq.utdallas.edu",
-    "hostname": "roadm-3",
+    "hostname": "roadm-c1",
     "location": "Richardson Innovation Quarter Headquarters (IQ HQ), 1302 E Collins Blvd, Richardson, TX 75081",
     "clock": {
       "timezone-name": "UTC"
