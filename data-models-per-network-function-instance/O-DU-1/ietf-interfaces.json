@@ -1,0 +1,46 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      {
+        "name": "fiber-port-1",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "eth0",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "ofh-cplane-sep",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true
+      },
+      {
+        "name": "ofh-uplane-sep",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true
+      },
+      {
+        "name": "ofh-splane-sep",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "ofh-mplane-sep",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true
+      },
+      {
+        "name": "f1-c",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true
+      },
+      {
+        "name": "f1-u",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true
+      }
+    ]
+  }
+}
