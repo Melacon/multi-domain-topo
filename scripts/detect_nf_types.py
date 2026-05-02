@@ -48,7 +48,8 @@ NETWORK_FUNCTION_TYPES = [
     "O-CU-UP",
     "O-DU",
     "O-RU",
-    "OFH-Switch",
+    "SWITCH",
+    "OFH-SW",
     "ROADM",
     "WirelessTransport",
     "Xponder",
@@ -217,14 +218,10 @@ DETECTION_RULES: list[DetectionRule] = [
         ),
     ),
     DetectionRule(
-        nf_type="OFH-Switch",
-        score=70,
-        description="Open Fronthaul switch or Ethernet bridge modules implemented",
-        module_names_any=(
-            "o-ran-ethernet-forwarding",
-            "ieee802-dot1q-bridge",
-            "ieee802-dot1ab-lldp",
-        ),
+        nf_type="SWITCH",
+        score=90,
+        description="IEEE 802.1Q bridge module implemented",
+        module_names_any=("ieee802-dot1q-bridge",),
     ),
     DetectionRule(
         nf_type="IP-Router",
@@ -415,7 +412,19 @@ def normalize_results(
     # exposed to O-RAN architecture should be O-DU, not gNB-DU.
     if has_oran_modules(modules):
         suppressed = {"gNB-DU", "gNB-CU-CP", "gNB-CU-UP"}
-        return [r for r in results if r.network_function_type not in suppressed]
+        results = [r for r in results if r.network_function_type not in suppressed]
+
+        # Promote SWITCH → OFH-SW when O-RAN modules are also implemented.
+        results = [
+            MatchResult(
+                network_function_type="OFH-SW",
+                confidence=r.confidence,
+                score=r.score,
+                matched_rules=r.matched_rules,
+                matched_modules=r.matched_modules,
+            ) if r.network_function_type == "SWITCH" else r
+            for r in results
+        ]
 
     return results
 
