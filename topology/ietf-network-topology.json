@@ -8,185 +8,357 @@
           {
             "node-id": "urn:node:roadm-a1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "line-east" },
-              { "tp-id": "line-west" },
-              { "tp-id": "client" }
+              { "tp-id": "urn:if:roadm-a1:deg1" },
+              { "tp-id": "urn:if:roadm-a1:deg2" },
+              { "tp-id": "urn:if:roadm-a1:client-1" }
             ]
           },
           {
             "node-id": "urn:node:roadm-b1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "line-north" },
-              { "tp-id": "line-south" },
-              { "tp-id": "client" }
+              { "tp-id": "urn:if:roadm-b1:deg2" },
+              { "tp-id": "urn:if:roadm-b1:deg1" },
+              { "tp-id": "urn:if:roadm-b1:client-1" }
             ]
           },
           {
             "node-id": "urn:node:roadm-c1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "line-north" },
-              { "tp-id": "line-east" },
-              { "tp-id": "client" }
+              { "tp-id": "urn:if:roadm-c1:deg2" },
+              { "tp-id": "urn:if:roadm-c1:deg1" },
+              { "tp-id": "urn:if:roadm-c1:client-1" }
             ]
           },
           {
             "node-id": "urn:node:txp-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "line" },
-              { "tp-id": "client-cp" },
-              { "tp-id": "client-up" }
+              { "tp-id": "urn:if:txp-1:line" },
+              { "tp-id": "urn:if:txp-1:client-cp" },
+              { "tp-id": "urn:if:txp-1:client-up" }
             ]
           },
           {
             "node-id": "urn:node:txp-2",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "line" },
-              { "tp-id": "client" }
+              { "tp-id": "urn:if:txp-2:line" },
+              { "tp-id": "urn:if:txp-2:client-1" }
             ]
           },
           {
             "node-id": "urn:node:txp-3",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "line" },
-              { "tp-id": "client-cp" },
-              { "tp-id": "client-up" }
+              { "tp-id": "urn:if:txp-3:line" },
+              { "tp-id": "urn:if:txp-3:client-cp" },
+              { "tp-id": "urn:if:txp-3:client-up" }
             ]
           },
           {
             "node-id": "urn:node:o-cu-cp-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "backhaul" },
-              { "tp-id": "f1-c" },
-              { "tp-id": "e1" }
+              { "tp-id": "urn:if:o-cu-cp-1:backhaul" },
+              { "tp-id": "urn:if:o-cu-cp-1:f1-c" },
+              { "tp-id": "urn:if:o-cu-cp-1:e1" }
             ]
           },
           {
             "node-id": "urn:node:o-cu-up-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "backhaul" },
-              { "tp-id": "f1-u" },
-              { "tp-id": "e1" }
+              { "tp-id": "urn:if:o-cu-up-1:backhaul" },
+              { "tp-id": "urn:if:o-cu-up-1:f1-u" },
+              { "tp-id": "urn:if:o-cu-up-1:e1" }
             ]
           },
           {
             "node-id": "urn:node:o-cu-cp-2",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "backhaul" },
-              { "tp-id": "f1-c" },
-              { "tp-id": "e1" }
+              { "tp-id": "urn:if:o-cu-cp-2:backhaul" },
+              { "tp-id": "urn:if:o-cu-cp-2:f1-c" },
+              { "tp-id": "urn:if:o-cu-cp-2:e1" }
             ]
           },
           {
             "node-id": "urn:node:o-cu-up-2",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "backhaul" },
-              { "tp-id": "f1-u" },
-              { "tp-id": "e1" }
+              { "tp-id": "urn:if:o-cu-up-2:backhaul" },
+              { "tp-id": "urn:if:o-cu-up-2:f1-u" },
+              { "tp-id": "urn:if:o-cu-up-2:e1" }
             ]
           },
           {
             "node-id": "urn:node:o-du-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "fiber-port-1" },
-              { "tp-id": "f1-c" },
-              { "tp-id": "f1-u" },
-              { "tp-id": "ofh-cplane-sep" },
-              { "tp-id": "ofh-uplane-sep" },
-              { "tp-id": "ofh-splane-sep" },
-              { "tp-id": "ofh-mplane-sep" }
+              { "tp-id": "urn:if:o-du-1:fiber-port-1" },
+              { "tp-id": "urn:if:o-du-1:f1-c" },
+              { "tp-id": "urn:if:o-du-1:f1-u" },
+              { "tp-id": "urn:if:o-du-1:ofh-cplane-sep" },
+              { "tp-id": "urn:if:o-du-1:ofh-uplane-sep" },
+              { "tp-id": "urn:if:o-du-1:ofh-splane-sep" },
+              { "tp-id": "urn:if:o-du-1:ofh-mplane-sep" }
             ]
           },
           {
             "node-id": "urn:node:o-du-2",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "fiber-port-1" },
-              { "tp-id": "f1-c" },
-              { "tp-id": "f1-u" },
-              { "tp-id": "ofh-cplane-sep" },
-              { "tp-id": "ofh-uplane-sep" },
-              { "tp-id": "ofh-splane-sep" },
-              { "tp-id": "ofh-mplane-sep" }
+              { "tp-id": "urn:if:o-du-2:fiber-port-1" },
+              { "tp-id": "urn:if:o-du-2:f1-c" },
+              { "tp-id": "urn:if:o-du-2:f1-u" },
+              { "tp-id": "urn:if:o-du-2:ofh-cplane-sep" },
+              { "tp-id": "urn:if:o-du-2:ofh-uplane-sep" },
+              { "tp-id": "urn:if:o-du-2:ofh-splane-sep" },
+              { "tp-id": "urn:if:o-du-2:ofh-mplane-sep" }
             ]
           },
           {
             "node-id": "urn:node:o-ru-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "fiber-port-1" },
-              { "tp-id": "ofh-cplane-sep" },
-              { "tp-id": "ofh-uplane-sep" },
-              { "tp-id": "ofh-splane-sep" },
-              { "tp-id": "ofh-mplane-sep" }
+              { "tp-id": "urn:if:o-ru-1:fiber-port-1" },
+              { "tp-id": "urn:if:o-ru-1:ofh-cplane-sep" },
+              { "tp-id": "urn:if:o-ru-1:ofh-uplane-sep" },
+              { "tp-id": "urn:if:o-ru-1:ofh-splane-sep" },
+              { "tp-id": "urn:if:o-ru-1:ofh-mplane-sep" }
             ]
           },
           {
             "node-id": "urn:node:o-ru-2",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "fiber-port-1" },
-              { "tp-id": "ofh-cplane-sep" },
-              { "tp-id": "ofh-uplane-sep" },
-              { "tp-id": "ofh-splane-sep" },
-              { "tp-id": "ofh-mplane-sep" }
+              { "tp-id": "urn:if:o-ru-2:fiber-port-1" },
+              { "tp-id": "urn:if:o-ru-2:ofh-cplane-sep" },
+              { "tp-id": "urn:if:o-ru-2:ofh-uplane-sep" },
+              { "tp-id": "urn:if:o-ru-2:ofh-splane-sep" },
+              { "tp-id": "urn:if:o-ru-2:ofh-mplane-sep" }
             ]
           },
           {
             "node-id": "urn:node:o-ru-3",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "fiber-port-1" },
-              { "tp-id": "ofh-cplane-sep" },
-              { "tp-id": "ofh-uplane-sep" },
-              { "tp-id": "ofh-splane-sep" },
-              { "tp-id": "ofh-mplane-sep" }
+              { "tp-id": "urn:if:o-ru-3:fiber-port-1" },
+              { "tp-id": "urn:if:o-ru-3:ofh-cplane-sep" },
+              { "tp-id": "urn:if:o-ru-3:ofh-uplane-sep" },
+              { "tp-id": "urn:if:o-ru-3:ofh-splane-sep" },
+              { "tp-id": "urn:if:o-ru-3:ofh-mplane-sep" }
             ]
           },
           {
             "node-id": "urn:node:o-ru-4",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "fiber-port-1" },
-              { "tp-id": "ofh-cplane-sep" },
-              { "tp-id": "ofh-uplane-sep" },
-              { "tp-id": "ofh-splane-sep" },
-              { "tp-id": "ofh-mplane-sep" }
+              { "tp-id": "urn:if:o-ru-4:fiber-port-1" },
+              { "tp-id": "urn:if:o-ru-4:ofh-cplane-sep" },
+              { "tp-id": "urn:if:o-ru-4:ofh-uplane-sep" },
+              { "tp-id": "urn:if:o-ru-4:ofh-splane-sep" },
+              { "tp-id": "urn:if:o-ru-4:ofh-mplane-sep" }
             ]
           },
           {
             "node-id": "urn:node:ofh-sw-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "uplink" },
-              { "tp-id": "port-o-ru-2" },
-              { "tp-id": "port-o-ru-3" },
-              { "tp-id": "port-o-ru-4" }
+              { "tp-id": "urn:if:ofh-sw-1:uplink-1" },
+              { "tp-id": "urn:if:ofh-sw-1:port-2" },
+              { "tp-id": "urn:if:ofh-sw-1:port-3" },
+              { "tp-id": "urn:if:ofh-sw-1:port-4" }
             ]
           },
           {
             "node-id": "urn:node:wt-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "f1-c" },
-              { "tp-id": "f1-u" },
-              { "tp-id": "wireless" }
+              { "tp-id": "urn:if:wt-1:f1-c" },
+              { "tp-id": "urn:if:wt-1:f1-u" },
+              { "tp-id": "urn:if:wt-1:wireless" }
             ]
           },
           {
             "node-id": "urn:node:wt-2",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "wireless" },
-              { "tp-id": "f1-c" },
-              { "tp-id": "f1-u" }
+              { "tp-id": "urn:if:wt-2:wireless" },
+              { "tp-id": "urn:if:wt-2:f1-c" },
+              { "tp-id": "urn:if:wt-2:f1-u" }
             ]
           },
           {
             "node-id": "urn:node:ip-rtr-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "to-txp-2" },
-              { "tp-id": "to-5gc-1" }
+              { "tp-id": "urn:if:ip-rtr-1:to-txp-2" },
+              { "tp-id": "urn:if:ip-rtr-1:to-5gc-1" }
             ]
           },
           {
             "node-id": "urn:node:5gc-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "to-ip-rtr-1" },
-              { "tp-id": "to-net-1" }
+              { "tp-id": "urn:if:5gc-1:to-ip-rtr-1" },
+              { "tp-id": "urn:if:5gc-1:to-net-1" }
             ]
           }
+        ],
+        "ietf-network-topology:link": [
+
+          { "link-id": "urn:link:phys-ring-roadm-a1-roadm-b1",
+            "source":      { "source-node": "urn:node:roadm-a1", "source-tp": "urn:if:roadm-a1:line-east"  },
+            "destination": { "dest-node":   "urn:node:roadm-b1", "dest-tp":   "urn:if:roadm-b1:line-north" } },
+          { "link-id": "urn:link:phys-ring-roadm-b1-roadm-a1",
+            "source":      { "source-node": "urn:node:roadm-b1", "source-tp": "urn:if:roadm-b1:line-north" },
+            "destination": { "dest-node":   "urn:node:roadm-a1", "dest-tp":   "urn:if:roadm-a1:line-east"  } },
+          { "link-id": "urn:link:phys-ring-roadm-b1-roadm-c1",
+            "source":      { "source-node": "urn:node:roadm-b1", "source-tp": "urn:if:roadm-b1:line-south" },
+            "destination": { "dest-node":   "urn:node:roadm-c1", "dest-tp":   "urn:if:roadm-c1:line-east"  } },
+          { "link-id": "urn:link:phys-ring-roadm-c1-roadm-b1",
+            "source":      { "source-node": "urn:node:roadm-c1", "source-tp": "urn:if:roadm-c1:line-east"  },
+            "destination": { "dest-node":   "urn:node:roadm-b1", "dest-tp":   "urn:if:roadm-b1:line-south" } },
+          { "link-id": "urn:link:phys-ring-roadm-c1-roadm-a1",
+            "source":      { "source-node": "urn:node:roadm-c1", "source-tp": "urn:if:roadm-c1:line-north" },
+            "destination": { "dest-node":   "urn:node:roadm-a1", "dest-tp":   "urn:if:roadm-a1:line-west"  } },
+          { "link-id": "urn:link:phys-ring-roadm-a1-roadm-c1",
+            "source":      { "source-node": "urn:node:roadm-a1", "source-tp": "urn:if:roadm-a1:line-west"  },
+            "destination": { "dest-node":   "urn:node:roadm-c1", "dest-tp":   "urn:if:roadm-c1:line-north" } },
+
+          { "link-id": "urn:link:phys-optical-roadm-a1-txp-1",
+            "source":      { "source-node": "urn:node:roadm-a1", "source-tp": "urn:if:roadm-a1:client" },
+            "destination": { "dest-node":   "urn:node:txp-1",    "dest-tp":   "urn:if:txp-1:line"      } },
+          { "link-id": "urn:link:phys-optical-txp-1-roadm-a1",
+            "source":      { "source-node": "urn:node:txp-1",    "source-tp": "urn:if:txp-1:line"      },
+            "destination": { "dest-node":   "urn:node:roadm-a1", "dest-tp":   "urn:if:roadm-a1:client" } },
+          { "link-id": "urn:link:phys-optical-roadm-b1-txp-2",
+            "source":      { "source-node": "urn:node:roadm-b1", "source-tp": "urn:if:roadm-b1:client" },
+            "destination": { "dest-node":   "urn:node:txp-2",    "dest-tp":   "urn:if:txp-2:line"      } },
+          { "link-id": "urn:link:phys-optical-txp-2-roadm-b1",
+            "source":      { "source-node": "urn:node:txp-2",    "source-tp": "urn:if:txp-2:line"      },
+            "destination": { "dest-node":   "urn:node:roadm-b1", "dest-tp":   "urn:if:roadm-b1:client" } },
+          { "link-id": "urn:link:phys-optical-roadm-c1-txp-3",
+            "source":      { "source-node": "urn:node:roadm-c1", "source-tp": "urn:if:roadm-c1:client" },
+            "destination": { "dest-node":   "urn:node:txp-3",    "dest-tp":   "urn:if:txp-3:line"      } },
+          { "link-id": "urn:link:phys-optical-txp-3-roadm-c1",
+            "source":      { "source-node": "urn:node:txp-3",    "source-tp": "urn:if:txp-3:line"      },
+            "destination": { "dest-node":   "urn:node:roadm-c1", "dest-tp":   "urn:if:roadm-c1:client" } },
+
+          { "link-id": "urn:link:phys-backhaul-txp-1-o-cu-cp-1",
+            "source":      { "source-node": "urn:node:txp-1",      "source-tp": "urn:if:txp-1:client-cp"      },
+            "destination": { "dest-node":   "urn:node:o-cu-cp-1",  "dest-tp":   "urn:if:o-cu-cp-1:backhaul"   } },
+          { "link-id": "urn:link:phys-backhaul-o-cu-cp-1-txp-1",
+            "source":      { "source-node": "urn:node:o-cu-cp-1",  "source-tp": "urn:if:o-cu-cp-1:backhaul"   },
+            "destination": { "dest-node":   "urn:node:txp-1",      "dest-tp":   "urn:if:txp-1:client-cp"      } },
+          { "link-id": "urn:link:phys-backhaul-txp-1-o-cu-up-1",
+            "source":      { "source-node": "urn:node:txp-1",      "source-tp": "urn:if:txp-1:client-up"      },
+            "destination": { "dest-node":   "urn:node:o-cu-up-1",  "dest-tp":   "urn:if:o-cu-up-1:backhaul"   } },
+          { "link-id": "urn:link:phys-backhaul-o-cu-up-1-txp-1",
+            "source":      { "source-node": "urn:node:o-cu-up-1",  "source-tp": "urn:if:o-cu-up-1:backhaul"   },
+            "destination": { "dest-node":   "urn:node:txp-1",      "dest-tp":   "urn:if:txp-1:client-up"      } },
+
+          { "link-id": "urn:link:phys-e1-o-cu-cp-1-o-cu-up-1",
+            "source":      { "source-node": "urn:node:o-cu-cp-1",  "source-tp": "urn:if:o-cu-cp-1:e1"  },
+            "destination": { "dest-node":   "urn:node:o-cu-up-1",  "dest-tp":   "urn:if:o-cu-up-1:e1"  } },
+          { "link-id": "urn:link:phys-e1-o-cu-up-1-o-cu-cp-1",
+            "source":      { "source-node": "urn:node:o-cu-up-1",  "source-tp": "urn:if:o-cu-up-1:e1"  },
+            "destination": { "dest-node":   "urn:node:o-cu-cp-1",  "dest-tp":   "urn:if:o-cu-cp-1:e1"  } },
+
+          { "link-id": "urn:link:phys-f1-c-o-cu-cp-1-o-du-1",
+            "source":      { "source-node": "urn:node:o-cu-cp-1", "source-tp": "urn:if:o-cu-cp-1:f1-c" },
+            "destination": { "dest-node":   "urn:node:o-du-1",    "dest-tp":   "urn:if:o-du-1:f1-c"    } },
+          { "link-id": "urn:link:phys-f1-c-o-du-1-o-cu-cp-1",
+            "source":      { "source-node": "urn:node:o-du-1",    "source-tp": "urn:if:o-du-1:f1-c"    },
+            "destination": { "dest-node":   "urn:node:o-cu-cp-1", "dest-tp":   "urn:if:o-cu-cp-1:f1-c" } },
+          { "link-id": "urn:link:phys-f1-u-o-cu-up-1-o-du-1",
+            "source":      { "source-node": "urn:node:o-cu-up-1", "source-tp": "urn:if:o-cu-up-1:f1-u" },
+            "destination": { "dest-node":   "urn:node:o-du-1",    "dest-tp":   "urn:if:o-du-1:f1-u"    } },
+          { "link-id": "urn:link:phys-f1-u-o-du-1-o-cu-up-1",
+            "source":      { "source-node": "urn:node:o-du-1",    "source-tp": "urn:if:o-du-1:f1-u"    },
+            "destination": { "dest-node":   "urn:node:o-cu-up-1", "dest-tp":   "urn:if:o-cu-up-1:f1-u" } },
+
+          { "link-id": "urn:link:phys-fronthaul-o-du-1-o-ru-1",
+            "source":      { "source-node": "urn:node:o-du-1", "source-tp": "urn:if:o-du-1:fiber-port-1" },
+            "destination": { "dest-node":   "urn:node:o-ru-1", "dest-tp":   "urn:if:o-ru-1:fiber-port-1" } },
+          { "link-id": "urn:link:phys-fronthaul-o-ru-1-o-du-1",
+            "source":      { "source-node": "urn:node:o-ru-1", "source-tp": "urn:if:o-ru-1:fiber-port-1" },
+            "destination": { "dest-node":   "urn:node:o-du-1", "dest-tp":   "urn:if:o-du-1:fiber-port-1" } },
+
+          { "link-id": "urn:link:phys-backhaul-txp-3-o-cu-cp-2",
+            "source":      { "source-node": "urn:node:txp-3",      "source-tp": "urn:if:txp-3:client-cp"      },
+            "destination": { "dest-node":   "urn:node:o-cu-cp-2",  "dest-tp":   "urn:if:o-cu-cp-2:backhaul"   } },
+          { "link-id": "urn:link:phys-backhaul-o-cu-cp-2-txp-3",
+            "source":      { "source-node": "urn:node:o-cu-cp-2",  "source-tp": "urn:if:o-cu-cp-2:backhaul"   },
+            "destination": { "dest-node":   "urn:node:txp-3",      "dest-tp":   "urn:if:txp-3:client-cp"      } },
+          { "link-id": "urn:link:phys-backhaul-txp-3-o-cu-up-2",
+            "source":      { "source-node": "urn:node:txp-3",      "source-tp": "urn:if:txp-3:client-up"      },
+            "destination": { "dest-node":   "urn:node:o-cu-up-2",  "dest-tp":   "urn:if:o-cu-up-2:backhaul"   } },
+          { "link-id": "urn:link:phys-backhaul-o-cu-up-2-txp-3",
+            "source":      { "source-node": "urn:node:o-cu-up-2",  "source-tp": "urn:if:o-cu-up-2:backhaul"   },
+            "destination": { "dest-node":   "urn:node:txp-3",      "dest-tp":   "urn:if:txp-3:client-up"      } },
+
+          { "link-id": "urn:link:phys-e1-o-cu-cp-2-o-cu-up-2",
+            "source":      { "source-node": "urn:node:o-cu-cp-2",  "source-tp": "urn:if:o-cu-cp-2:e1"  },
+            "destination": { "dest-node":   "urn:node:o-cu-up-2",  "dest-tp":   "urn:if:o-cu-up-2:e1"  } },
+          { "link-id": "urn:link:phys-e1-o-cu-up-2-o-cu-cp-2",
+            "source":      { "source-node": "urn:node:o-cu-up-2",  "source-tp": "urn:if:o-cu-up-2:e1"  },
+            "destination": { "dest-node":   "urn:node:o-cu-cp-2",  "dest-tp":   "urn:if:o-cu-cp-2:e1"  } },
+
+          { "link-id": "urn:link:phys-f1-c-o-cu-cp-2-wt-1",
+            "source":      { "source-node": "urn:node:o-cu-cp-2", "source-tp": "urn:if:o-cu-cp-2:f1-c" },
+            "destination": { "dest-node":   "urn:node:wt-1",      "dest-tp":   "urn:if:wt-1:f1-c"      } },
+          { "link-id": "urn:link:phys-f1-c-wt-1-o-cu-cp-2",
+            "source":      { "source-node": "urn:node:wt-1",      "source-tp": "urn:if:wt-1:f1-c"      },
+            "destination": { "dest-node":   "urn:node:o-cu-cp-2", "dest-tp":   "urn:if:o-cu-cp-2:f1-c" } },
+          { "link-id": "urn:link:phys-f1-u-o-cu-up-2-wt-1",
+            "source":      { "source-node": "urn:node:o-cu-up-2", "source-tp": "urn:if:o-cu-up-2:f1-u" },
+            "destination": { "dest-node":   "urn:node:wt-1",      "dest-tp":   "urn:if:wt-1:f1-u"      } },
+          { "link-id": "urn:link:phys-f1-u-wt-1-o-cu-up-2",
+            "source":      { "source-node": "urn:node:wt-1",      "source-tp": "urn:if:wt-1:f1-u"      },
+            "destination": { "dest-node":   "urn:node:o-cu-up-2", "dest-tp":   "urn:if:o-cu-up-2:f1-u" } },
+
+          { "link-id": "urn:link:phys-wireless-wt-1-wt-2",
+            "source":      { "source-node": "urn:node:wt-1", "source-tp": "urn:if:wt-1:wireless" },
+            "destination": { "dest-node":   "urn:node:wt-2", "dest-tp":   "urn:if:wt-2:wireless" } },
+          { "link-id": "urn:link:phys-wireless-wt-2-wt-1",
+            "source":      { "source-node": "urn:node:wt-2", "source-tp": "urn:if:wt-2:wireless" },
+            "destination": { "dest-node":   "urn:node:wt-1", "dest-tp":   "urn:if:wt-1:wireless" } },
+
+          { "link-id": "urn:link:phys-f1-c-wt-2-o-du-2",
+            "source":      { "source-node": "urn:node:wt-2",   "source-tp": "urn:if:wt-2:f1-c"   },
+            "destination": { "dest-node":   "urn:node:o-du-2", "dest-tp":   "urn:if:o-du-2:f1-c" } },
+          { "link-id": "urn:link:phys-f1-c-o-du-2-wt-2",
+            "source":      { "source-node": "urn:node:o-du-2", "source-tp": "urn:if:o-du-2:f1-c" },
+            "destination": { "dest-node":   "urn:node:wt-2",   "dest-tp":   "urn:if:wt-2:f1-c"   } },
+          { "link-id": "urn:link:phys-f1-u-wt-2-o-du-2",
+            "source":      { "source-node": "urn:node:wt-2",   "source-tp": "urn:if:wt-2:f1-u"   },
+            "destination": { "dest-node":   "urn:node:o-du-2", "dest-tp":   "urn:if:o-du-2:f1-u" } },
+          { "link-id": "urn:link:phys-f1-u-o-du-2-wt-2",
+            "source":      { "source-node": "urn:node:o-du-2", "source-tp": "urn:if:o-du-2:f1-u" },
+            "destination": { "dest-node":   "urn:node:wt-2",   "dest-tp":   "urn:if:wt-2:f1-u"   } },
+
+          { "link-id": "urn:link:phys-fronthaul-o-du-2-ofh-sw-1",
+            "source":      { "source-node": "urn:node:o-du-2",    "source-tp": "urn:if:o-du-2:fiber-port-1"    },
+            "destination": { "dest-node":   "urn:node:ofh-sw-1",  "dest-tp":   "urn:if:ofh-sw-1:uplink-1"      } },
+          { "link-id": "urn:link:phys-fronthaul-ofh-sw-1-o-du-2",
+            "source":      { "source-node": "urn:node:ofh-sw-1",  "source-tp": "urn:if:ofh-sw-1:uplink-1"      },
+            "destination": { "dest-node":   "urn:node:o-du-2",    "dest-tp":   "urn:if:o-du-2:fiber-port-1"    } },
+
+          { "link-id": "urn:link:phys-fronthaul-ofh-sw-1-o-ru-2",
+            "source":      { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:if:ofh-sw-1:port-2"      },
+            "destination": { "dest-node":   "urn:node:o-ru-2",   "dest-tp":   "urn:if:o-ru-2:fiber-port-1"  } },
+          { "link-id": "urn:link:phys-fronthaul-o-ru-2-ofh-sw-1",
+            "source":      { "source-node": "urn:node:o-ru-2",   "source-tp": "urn:if:o-ru-2:fiber-port-1"  },
+            "destination": { "dest-node":   "urn:node:ofh-sw-1", "dest-tp":   "urn:if:ofh-sw-1:port-2"      } },
+          { "link-id": "urn:link:phys-fronthaul-ofh-sw-1-o-ru-3",
+            "source":      { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:if:ofh-sw-1:port-3"      },
+            "destination": { "dest-node":   "urn:node:o-ru-3",   "dest-tp":   "urn:if:o-ru-3:fiber-port-1"  } },
+          { "link-id": "urn:link:phys-fronthaul-o-ru-3-ofh-sw-1",
+            "source":      { "source-node": "urn:node:o-ru-3",   "source-tp": "urn:if:o-ru-3:fiber-port-1"  },
+            "destination": { "dest-node":   "urn:node:ofh-sw-1", "dest-tp":   "urn:if:ofh-sw-1:port-3"      } },
+          { "link-id": "urn:link:phys-fronthaul-ofh-sw-1-o-ru-4",
+            "source":      { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:if:ofh-sw-1:port-4"      },
+            "destination": { "dest-node":   "urn:node:o-ru-4",   "dest-tp":   "urn:if:o-ru-4:fiber-port-1"  } },
+          { "link-id": "urn:link:phys-fronthaul-o-ru-4-ofh-sw-1",
+            "source":      { "source-node": "urn:node:o-ru-4",   "source-tp": "urn:if:o-ru-4:fiber-port-1"  },
+            "destination": { "dest-node":   "urn:node:ofh-sw-1", "dest-tp":   "urn:if:ofh-sw-1:port-4"      } },
+
+          { "link-id": "urn:link:phys-txp-2-ip-rtr-1",
+            "source":      { "source-node": "urn:node:txp-2",     "source-tp": "urn:if:txp-2:client"          },
+            "destination": { "dest-node":   "urn:node:ip-rtr-1",  "dest-tp":   "urn:if:ip-rtr-1:to-txp-2"    } },
+          { "link-id": "urn:link:phys-ip-rtr-1-txp-2",
+            "source":      { "source-node": "urn:node:ip-rtr-1",  "source-tp": "urn:if:ip-rtr-1:to-txp-2"    },
+            "destination": { "dest-node":   "urn:node:txp-2",     "dest-tp":   "urn:if:txp-2:client"          } },
+          { "link-id": "urn:link:phys-ip-rtr-1-5gc-1",
+            "source":      { "source-node": "urn:node:ip-rtr-1",  "source-tp": "urn:if:ip-rtr-1:to-5gc-1"    },
+            "destination": { "dest-node":   "urn:node:5gc-1",     "dest-tp":   "urn:if:5gc-1:to-ip-rtr-1"    } },
+          { "link-id": "urn:link:phys-5gc-1-ip-rtr-1",
+            "source":      { "source-node": "urn:node:5gc-1",     "source-tp": "urn:if:5gc-1:to-ip-rtr-1"    },
+            "destination": { "dest-node":   "urn:node:ip-rtr-1",  "dest-tp":   "urn:if:ip-rtr-1:to-5gc-1"    } }
         ]
       },
 
@@ -203,21 +375,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:roadm-a1:line-east",
+                "tp-id": "urn:if:roadm-a1:deg1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-a1", "tp-ref": "line-east" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-a1", "tp-ref": "urn:if:roadm-a1:deg1" }
                 ]
               },
               {
-                "tp-id": "urn:tp:roadm-a1:line-west",
+                "tp-id": "urn:if:roadm-a1:deg2",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-a1", "tp-ref": "line-west" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-a1", "tp-ref": "urn:if:roadm-a1:deg2" }
                 ]
               },
               {
-                "tp-id": "urn:tp:roadm-a1:client",
+                "tp-id": "urn:if:roadm-a1:client-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-a1", "tp-ref": "client" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-a1", "tp-ref": "urn:if:roadm-a1:client-1" }
                 ]
               }
             ]
@@ -229,21 +401,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:roadm-b1:line-north",
+                "tp-id": "urn:if:roadm-b1:deg2",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-b1", "tp-ref": "line-north" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-b1", "tp-ref": "urn:if:roadm-b1:deg2" }
                 ]
               },
               {
-                "tp-id": "urn:tp:roadm-b1:line-south",
+                "tp-id": "urn:if:roadm-b1:deg1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-b1", "tp-ref": "line-south" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-b1", "tp-ref": "urn:if:roadm-b1:deg1" }
                 ]
               },
               {
-                "tp-id": "urn:tp:roadm-b1:client",
+                "tp-id": "urn:if:roadm-b1:client-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-b1", "tp-ref": "client" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-b1", "tp-ref": "urn:if:roadm-b1:client-1" }
                 ]
               }
             ]
@@ -255,21 +427,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:roadm-c1:line-north",
+                "tp-id": "urn:if:roadm-c1:deg2",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-c1", "tp-ref": "line-north" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-c1", "tp-ref": "urn:if:roadm-c1:deg2" }
                 ]
               },
               {
-                "tp-id": "urn:tp:roadm-c1:line-east",
+                "tp-id": "urn:if:roadm-c1:deg1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-c1", "tp-ref": "line-east" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-c1", "tp-ref": "urn:if:roadm-c1:deg1" }
                 ]
               },
               {
-                "tp-id": "urn:tp:roadm-c1:client",
+                "tp-id": "urn:if:roadm-c1:client-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-c1", "tp-ref": "client" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:roadm-c1", "tp-ref": "urn:if:roadm-c1:client-1" }
                 ]
               }
             ]
@@ -281,21 +453,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:txp-1:line",
+                "tp-id": "urn:if:txp-1:line",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-1", "tp-ref": "line" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-1", "tp-ref": "urn:if:txp-1:line" }
                 ]
               },
               {
-                "tp-id": "urn:tp:txp-1:client-cp",
+                "tp-id": "urn:if:txp-1:client-cp",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-1", "tp-ref": "client-cp" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-1", "tp-ref": "urn:if:txp-1:client-cp" }
                 ]
               },
               {
-                "tp-id": "urn:tp:txp-1:client-up",
+                "tp-id": "urn:if:txp-1:client-up",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-1", "tp-ref": "client-up" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-1", "tp-ref": "urn:if:txp-1:client-up" }
                 ]
               }
             ]
@@ -307,15 +479,15 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:txp-2:line",
+                "tp-id": "urn:if:txp-2:line",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-2", "tp-ref": "line" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-2", "tp-ref": "urn:if:txp-2:line" }
                 ]
               },
               {
-                "tp-id": "urn:tp:txp-2:client",
+                "tp-id": "urn:if:txp-2:client-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-2", "tp-ref": "client" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-2", "tp-ref": "urn:if:txp-2:client-1" }
                 ]
               }
             ]
@@ -327,21 +499,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:txp-3:line",
+                "tp-id": "urn:if:txp-3:line",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-3", "tp-ref": "line" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-3", "tp-ref": "urn:if:txp-3:line" }
                 ]
               },
               {
-                "tp-id": "urn:tp:txp-3:client-cp",
+                "tp-id": "urn:if:txp-3:client-cp",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-3", "tp-ref": "client-cp" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-3", "tp-ref": "urn:if:txp-3:client-cp" }
                 ]
               },
               {
-                "tp-id": "urn:tp:txp-3:client-up",
+                "tp-id": "urn:if:txp-3:client-up",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-3", "tp-ref": "client-up" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:txp-3", "tp-ref": "urn:if:txp-3:client-up" }
                 ]
               }
             ]
@@ -353,21 +525,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-cu-cp-1:backhaul",
+                "tp-id": "urn:if:o-cu-cp-1:backhaul",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-1", "tp-ref": "backhaul" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-1", "tp-ref": "urn:if:o-cu-cp-1:backhaul" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-cu-cp-1:f1-c",
+                "tp-id": "urn:if:o-cu-cp-1:f1-c",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-1", "tp-ref": "f1-c" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-1", "tp-ref": "urn:if:o-cu-cp-1:f1-c" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-cu-cp-1:e1",
+                "tp-id": "urn:if:o-cu-cp-1:e1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-1", "tp-ref": "e1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-1", "tp-ref": "urn:if:o-cu-cp-1:e1" }
                 ]
               }
             ]
@@ -379,21 +551,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-cu-up-1:backhaul",
+                "tp-id": "urn:if:o-cu-up-1:backhaul",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-1", "tp-ref": "backhaul" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-1", "tp-ref": "urn:if:o-cu-up-1:backhaul" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-cu-up-1:f1-u",
+                "tp-id": "urn:if:o-cu-up-1:f1-u",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-1", "tp-ref": "f1-u" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-1", "tp-ref": "urn:if:o-cu-up-1:f1-u" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-cu-up-1:e1",
+                "tp-id": "urn:if:o-cu-up-1:e1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-1", "tp-ref": "e1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-1", "tp-ref": "urn:if:o-cu-up-1:e1" }
                 ]
               }
             ]
@@ -405,21 +577,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-cu-cp-2:backhaul",
+                "tp-id": "urn:if:o-cu-cp-2:backhaul",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-2", "tp-ref": "backhaul" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-2", "tp-ref": "urn:if:o-cu-cp-2:backhaul" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-cu-cp-2:f1-c",
+                "tp-id": "urn:if:o-cu-cp-2:f1-c",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-2", "tp-ref": "f1-c" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-2", "tp-ref": "urn:if:o-cu-cp-2:f1-c" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-cu-cp-2:e1",
+                "tp-id": "urn:if:o-cu-cp-2:e1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-2", "tp-ref": "e1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-cp-2", "tp-ref": "urn:if:o-cu-cp-2:e1" }
                 ]
               }
             ]
@@ -431,21 +603,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-cu-up-2:backhaul",
+                "tp-id": "urn:if:o-cu-up-2:backhaul",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-2", "tp-ref": "backhaul" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-2", "tp-ref": "urn:if:o-cu-up-2:backhaul" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-cu-up-2:f1-u",
+                "tp-id": "urn:if:o-cu-up-2:f1-u",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-2", "tp-ref": "f1-u" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-2", "tp-ref": "urn:if:o-cu-up-2:f1-u" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-cu-up-2:e1",
+                "tp-id": "urn:if:o-cu-up-2:e1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-2", "tp-ref": "e1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-cu-up-2", "tp-ref": "urn:if:o-cu-up-2:e1" }
                 ]
               }
             ]
@@ -457,21 +629,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-du-1:f1-c",
+                "tp-id": "urn:if:o-du-1:f1-c",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-1", "tp-ref": "f1-c" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-1", "tp-ref": "urn:if:o-du-1:f1-c" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-du-1:f1-u",
+                "tp-id": "urn:if:o-du-1:f1-u",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-1", "tp-ref": "f1-u" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-1", "tp-ref": "urn:if:o-du-1:f1-u" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-du-1:fronthaul",
+                "tp-id": "urn:if:o-du-1:fiber-port-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-1", "tp-ref": "fiber-port-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-1", "tp-ref": "urn:if:o-du-1:fiber-port-1" }
                 ]
               }
             ]
@@ -483,21 +655,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-du-2:f1-c",
+                "tp-id": "urn:if:o-du-2:f1-c",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-2", "tp-ref": "f1-c" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-2", "tp-ref": "urn:if:o-du-2:f1-c" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-du-2:f1-u",
+                "tp-id": "urn:if:o-du-2:f1-u",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-2", "tp-ref": "f1-u" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-2", "tp-ref": "urn:if:o-du-2:f1-u" }
                 ]
               },
               {
-                "tp-id": "urn:tp:o-du-2:fronthaul",
+                "tp-id": "urn:if:o-du-2:fiber-port-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-2", "tp-ref": "fiber-port-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-du-2", "tp-ref": "urn:if:o-du-2:fiber-port-1" }
                 ]
               }
             ]
@@ -509,13 +681,13 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-ru-1:fronthaul",
+                "tp-id": "urn:if:o-ru-1:fiber-port-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-ru-1", "tp-ref": "fiber-port-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-ru-1", "tp-ref": "urn:if:o-ru-1:fiber-port-1" }
                 ]
               },
-              { "tp-id": "urn:tp:o-ru-1:air-ue-1" },
-              { "tp-id": "urn:tp:o-ru-1:air-ue-2" }
+              { "tp-id": "urn:if:o-ru-1:air-ue-1" },
+              { "tp-id": "urn:if:o-ru-1:air-ue-2" }
             ]
           },
           {
@@ -525,13 +697,13 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-ru-2:fronthaul",
+                "tp-id": "urn:if:o-ru-2:fiber-port-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-ru-2", "tp-ref": "fiber-port-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-ru-2", "tp-ref": "urn:if:o-ru-2:fiber-port-1" }
                 ]
               },
-              { "tp-id": "urn:tp:o-ru-2:air-ue-3" },
-              { "tp-id": "urn:tp:o-ru-2:air-ue-4" }
+              { "tp-id": "urn:if:o-ru-2:air-ue-3" },
+              { "tp-id": "urn:if:o-ru-2:air-ue-4" }
             ]
           },
           {
@@ -541,13 +713,13 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-ru-3:fronthaul",
+                "tp-id": "urn:if:o-ru-3:fiber-port-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-ru-3", "tp-ref": "fiber-port-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-ru-3", "tp-ref": "urn:if:o-ru-3:fiber-port-1" }
                 ]
               },
-              { "tp-id": "urn:tp:o-ru-3:air-ue-5" },
-              { "tp-id": "urn:tp:o-ru-3:air-ue-6" }
+              { "tp-id": "urn:if:o-ru-3:air-ue-5" },
+              { "tp-id": "urn:if:o-ru-3:air-ue-6" }
             ]
           },
           {
@@ -557,13 +729,13 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:o-ru-4:fronthaul",
+                "tp-id": "urn:if:o-ru-4:fiber-port-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-ru-4", "tp-ref": "fiber-port-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:o-ru-4", "tp-ref": "urn:if:o-ru-4:fiber-port-1" }
                 ]
               },
-              { "tp-id": "urn:tp:o-ru-4:air-ue-7" },
-              { "tp-id": "urn:tp:o-ru-4:air-ue-8" }
+              { "tp-id": "urn:if:o-ru-4:air-ue-7" },
+              { "tp-id": "urn:if:o-ru-4:air-ue-8" }
             ]
           },
           {
@@ -573,27 +745,27 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:ofh-sw-1:uplink",
+                "tp-id": "urn:if:ofh-sw-1:uplink-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "uplink" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:uplink-1" }
                 ]
               },
               {
-                "tp-id": "urn:tp:ofh-sw-1:port-o-ru-2",
+                "tp-id": "urn:if:ofh-sw-1:port-2",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "port-o-ru-2" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-2" }
                 ]
               },
               {
-                "tp-id": "urn:tp:ofh-sw-1:port-o-ru-3",
+                "tp-id": "urn:if:ofh-sw-1:port-3",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "port-o-ru-3" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-3" }
                 ]
               },
               {
-                "tp-id": "urn:tp:ofh-sw-1:port-o-ru-4",
+                "tp-id": "urn:if:ofh-sw-1:port-4",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "port-o-ru-4" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-4" }
                 ]
               }
             ]
@@ -605,21 +777,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:wt-1:f1-c-south",
+                "tp-id": "urn:if:wt-1:f1-c-south",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-1", "tp-ref": "f1-c" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-1", "tp-ref": "urn:if:wt-1:f1-c" }
                 ]
               },
               {
-                "tp-id": "urn:tp:wt-1:f1-u-south",
+                "tp-id": "urn:if:wt-1:f1-u-south",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-1", "tp-ref": "f1-u" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-1", "tp-ref": "urn:if:wt-1:f1-u" }
                 ]
               },
               {
-                "tp-id": "urn:tp:wt-1:wireless",
+                "tp-id": "urn:if:wt-1:wireless",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-1", "tp-ref": "wireless" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-1", "tp-ref": "urn:if:wt-1:wireless" }
                 ]
               }
             ]
@@ -631,21 +803,21 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:wt-2:wireless",
+                "tp-id": "urn:if:wt-2:wireless",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-2", "tp-ref": "wireless" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-2", "tp-ref": "urn:if:wt-2:wireless" }
                 ]
               },
               {
-                "tp-id": "urn:tp:wt-2:f1-c-north",
+                "tp-id": "urn:if:wt-2:f1-c-north",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-2", "tp-ref": "f1-c" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-2", "tp-ref": "urn:if:wt-2:f1-c" }
                 ]
               },
               {
-                "tp-id": "urn:tp:wt-2:f1-u-north",
+                "tp-id": "urn:if:wt-2:f1-u-north",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-2", "tp-ref": "f1-u" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:wt-2", "tp-ref": "urn:if:wt-2:f1-u" }
                 ]
               }
             ]
@@ -657,15 +829,15 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:ip-rtr-1:to-txp-2",
+                "tp-id": "urn:if:ip-rtr-1:to-txp-2",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ip-rtr-1", "tp-ref": "to-txp-2" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ip-rtr-1", "tp-ref": "urn:if:ip-rtr-1:to-txp-2" }
                 ]
               },
               {
-                "tp-id": "urn:tp:ip-rtr-1:to-5gc-1",
+                "tp-id": "urn:if:ip-rtr-1:to-5gc-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ip-rtr-1", "tp-ref": "to-5gc-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:ip-rtr-1", "tp-ref": "urn:if:ip-rtr-1:to-5gc-1" }
                 ]
               }
             ]
@@ -677,15 +849,15 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:tp:5gc-1:to-ip-rtr-1",
+                "tp-id": "urn:if:5gc-1:to-ip-rtr-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:5gc-1", "tp-ref": "to-ip-rtr-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:5gc-1", "tp-ref": "urn:if:5gc-1:to-ip-rtr-1" }
                 ]
               },
               {
-                "tp-id": "urn:tp:5gc-1:to-net-1",
+                "tp-id": "urn:if:5gc-1:to-net-1",
                 "supporting-termination-point": [
-                  { "network-ref": "device-interfaces", "node-ref": "urn:node:5gc-1", "tp-ref": "to-net-1" }
+                  { "network-ref": "device-interfaces", "node-ref": "urn:node:5gc-1", "tp-ref": "urn:if:5gc-1:to-net-1" }
                 ]
               }
             ]
@@ -693,368 +865,368 @@
           {
             "node-id": "urn:node:net-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:net-1:to-5gc-1" }
+              { "tp-id": "urn:if:net-1:to-5gc-1" }
             ]
           },
           {
             "node-id": "urn:node:ue-1",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:ue-1:air" }
+              { "tp-id": "urn:if:ue-1:air" }
             ]
           },
           {
             "node-id": "urn:node:ue-2",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:ue-2:air" }
+              { "tp-id": "urn:if:ue-2:air" }
             ]
           },
           {
             "node-id": "urn:node:ue-3",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:ue-3:air" }
+              { "tp-id": "urn:if:ue-3:air" }
             ]
           },
           {
             "node-id": "urn:node:ue-4",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:ue-4:air" }
+              { "tp-id": "urn:if:ue-4:air" }
             ]
           },
           {
             "node-id": "urn:node:ue-5",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:ue-5:air" }
+              { "tp-id": "urn:if:ue-5:air" }
             ]
           },
           {
             "node-id": "urn:node:ue-6",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:ue-6:air" }
+              { "tp-id": "urn:if:ue-6:air" }
             ]
           },
           {
             "node-id": "urn:node:ue-7",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:ue-7:air" }
+              { "tp-id": "urn:if:ue-7:air" }
             ]
           },
           {
             "node-id": "urn:node:ue-8",
             "ietf-network-topology:termination-point": [
-              { "tp-id": "urn:tp:ue-8:air" }
+              { "tp-id": "urn:if:ue-8:air" }
             ]
           }
         ],
         "ietf-network-topology:link": [
           {
             "link-id": "urn:link:ring-roadm-a1-roadm-2",
-            "source": { "source-node": "urn:node:roadm-a1", "source-tp": "urn:tp:roadm-a1:line-east" },
-            "destination": { "dest-node": "urn:node:roadm-b1", "dest-tp": "urn:tp:roadm-b1:line-north" }
+            "source": { "source-node": "urn:node:roadm-a1", "source-tp": "urn:if:roadm-a1:deg1" },
+            "destination": { "dest-node": "urn:node:roadm-b1", "dest-tp": "urn:if:roadm-b1:deg2" }
           },
           {
             "link-id": "urn:link:ring-roadm-b1-roadm-1",
-            "source": { "source-node": "urn:node:roadm-b1", "source-tp": "urn:tp:roadm-b1:line-north" },
-            "destination": { "dest-node": "urn:node:roadm-a1", "dest-tp": "urn:tp:roadm-a1:line-east" }
+            "source": { "source-node": "urn:node:roadm-b1", "source-tp": "urn:if:roadm-b1:deg2" },
+            "destination": { "dest-node": "urn:node:roadm-a1", "dest-tp": "urn:if:roadm-a1:deg1" }
           },
           {
             "link-id": "urn:link:ring-roadm-b1-roadm-3",
-            "source": { "source-node": "urn:node:roadm-b1", "source-tp": "urn:tp:roadm-b1:line-south" },
-            "destination": { "dest-node": "urn:node:roadm-c1", "dest-tp": "urn:tp:roadm-c1:line-east" }
+            "source": { "source-node": "urn:node:roadm-b1", "source-tp": "urn:if:roadm-b1:deg1" },
+            "destination": { "dest-node": "urn:node:roadm-c1", "dest-tp": "urn:if:roadm-c1:deg1" }
           },
           {
             "link-id": "urn:link:ring-roadm-c1-roadm-2",
-            "source": { "source-node": "urn:node:roadm-c1", "source-tp": "urn:tp:roadm-c1:line-east" },
-            "destination": { "dest-node": "urn:node:roadm-b1", "dest-tp": "urn:tp:roadm-b1:line-south" }
+            "source": { "source-node": "urn:node:roadm-c1", "source-tp": "urn:if:roadm-c1:deg1" },
+            "destination": { "dest-node": "urn:node:roadm-b1", "dest-tp": "urn:if:roadm-b1:deg1" }
           },
           {
             "link-id": "urn:link:ring-roadm-c1-roadm-1",
-            "source": { "source-node": "urn:node:roadm-c1", "source-tp": "urn:tp:roadm-c1:line-north" },
-            "destination": { "dest-node": "urn:node:roadm-a1", "dest-tp": "urn:tp:roadm-a1:line-west" }
+            "source": { "source-node": "urn:node:roadm-c1", "source-tp": "urn:if:roadm-c1:deg2" },
+            "destination": { "dest-node": "urn:node:roadm-a1", "dest-tp": "urn:if:roadm-a1:deg2" }
           },
           {
             "link-id": "urn:link:ring-roadm-a1-roadm-3",
-            "source": { "source-node": "urn:node:roadm-a1", "source-tp": "urn:tp:roadm-a1:line-west" },
-            "destination": { "dest-node": "urn:node:roadm-c1", "dest-tp": "urn:tp:roadm-c1:line-north" }
+            "source": { "source-node": "urn:node:roadm-a1", "source-tp": "urn:if:roadm-a1:deg2" },
+            "destination": { "dest-node": "urn:node:roadm-c1", "dest-tp": "urn:if:roadm-c1:deg2" }
           },
           {
             "link-id": "urn:link:optical-roadm-a1-txp-1",
-            "source": { "source-node": "urn:node:roadm-a1", "source-tp": "urn:tp:roadm-a1:client" },
-            "destination": { "dest-node": "urn:node:txp-1", "dest-tp": "urn:tp:txp-1:line" }
+            "source": { "source-node": "urn:node:roadm-a1", "source-tp": "urn:if:roadm-a1:client-1" },
+            "destination": { "dest-node": "urn:node:txp-1", "dest-tp": "urn:if:txp-1:line" }
           },
           {
             "link-id": "urn:link:optical-txp-1-roadm-a1",
-            "source": { "source-node": "urn:node:txp-1", "source-tp": "urn:tp:txp-1:line" },
-            "destination": { "dest-node": "urn:node:roadm-a1", "dest-tp": "urn:tp:roadm-a1:client" }
+            "source": { "source-node": "urn:node:txp-1", "source-tp": "urn:if:txp-1:line" },
+            "destination": { "dest-node": "urn:node:roadm-a1", "dest-tp": "urn:if:roadm-a1:client-1" }
           },
           {
             "link-id": "urn:link:optical-roadm-b1-txp-2",
-            "source": { "source-node": "urn:node:roadm-b1", "source-tp": "urn:tp:roadm-b1:client" },
-            "destination": { "dest-node": "urn:node:txp-2", "dest-tp": "urn:tp:txp-2:line" }
+            "source": { "source-node": "urn:node:roadm-b1", "source-tp": "urn:if:roadm-b1:client-1" },
+            "destination": { "dest-node": "urn:node:txp-2", "dest-tp": "urn:if:txp-2:line" }
           },
           {
             "link-id": "urn:link:optical-txp-2-roadm-b1",
-            "source": { "source-node": "urn:node:txp-2", "source-tp": "urn:tp:txp-2:line" },
-            "destination": { "dest-node": "urn:node:roadm-b1", "dest-tp": "urn:tp:roadm-b1:client" }
+            "source": { "source-node": "urn:node:txp-2", "source-tp": "urn:if:txp-2:line" },
+            "destination": { "dest-node": "urn:node:roadm-b1", "dest-tp": "urn:if:roadm-b1:client-1" }
           },
           {
             "link-id": "urn:link:optical-roadm-c1-txp-3",
-            "source": { "source-node": "urn:node:roadm-c1", "source-tp": "urn:tp:roadm-c1:client" },
-            "destination": { "dest-node": "urn:node:txp-3", "dest-tp": "urn:tp:txp-3:line" }
+            "source": { "source-node": "urn:node:roadm-c1", "source-tp": "urn:if:roadm-c1:client-1" },
+            "destination": { "dest-node": "urn:node:txp-3", "dest-tp": "urn:if:txp-3:line" }
           },
           {
             "link-id": "urn:link:optical-txp-3-roadm-c1",
-            "source": { "source-node": "urn:node:txp-3", "source-tp": "urn:tp:txp-3:line" },
-            "destination": { "dest-node": "urn:node:roadm-c1", "dest-tp": "urn:tp:roadm-c1:client" }
+            "source": { "source-node": "urn:node:txp-3", "source-tp": "urn:if:txp-3:line" },
+            "destination": { "dest-node": "urn:node:roadm-c1", "dest-tp": "urn:if:roadm-c1:client-1" }
           },
           {
             "link-id": "urn:link:backhaul-txp-1-o-cu-cp-1",
-            "source": { "source-node": "urn:node:txp-1", "source-tp": "urn:tp:txp-1:client-cp" },
-            "destination": { "dest-node": "urn:node:o-cu-cp-1", "dest-tp": "urn:tp:o-cu-cp-1:backhaul" }
+            "source": { "source-node": "urn:node:txp-1", "source-tp": "urn:if:txp-1:client-cp" },
+            "destination": { "dest-node": "urn:node:o-cu-cp-1", "dest-tp": "urn:if:o-cu-cp-1:backhaul" }
           },
           {
             "link-id": "urn:link:backhaul-o-cu-cp-1-txp-1",
-            "source": { "source-node": "urn:node:o-cu-cp-1", "source-tp": "urn:tp:o-cu-cp-1:backhaul" },
-            "destination": { "dest-node": "urn:node:txp-1", "dest-tp": "urn:tp:txp-1:client-cp" }
+            "source": { "source-node": "urn:node:o-cu-cp-1", "source-tp": "urn:if:o-cu-cp-1:backhaul" },
+            "destination": { "dest-node": "urn:node:txp-1", "dest-tp": "urn:if:txp-1:client-cp" }
           },
           {
             "link-id": "urn:link:backhaul-txp-1-o-cu-up-1",
-            "source": { "source-node": "urn:node:txp-1", "source-tp": "urn:tp:txp-1:client-up" },
-            "destination": { "dest-node": "urn:node:o-cu-up-1", "dest-tp": "urn:tp:o-cu-up-1:backhaul" }
+            "source": { "source-node": "urn:node:txp-1", "source-tp": "urn:if:txp-1:client-up" },
+            "destination": { "dest-node": "urn:node:o-cu-up-1", "dest-tp": "urn:if:o-cu-up-1:backhaul" }
           },
           {
             "link-id": "urn:link:backhaul-o-cu-up-1-txp-1",
-            "source": { "source-node": "urn:node:o-cu-up-1", "source-tp": "urn:tp:o-cu-up-1:backhaul" },
-            "destination": { "dest-node": "urn:node:txp-1", "dest-tp": "urn:tp:txp-1:client-up" }
+            "source": { "source-node": "urn:node:o-cu-up-1", "source-tp": "urn:if:o-cu-up-1:backhaul" },
+            "destination": { "dest-node": "urn:node:txp-1", "dest-tp": "urn:if:txp-1:client-up" }
           },
           {
             "link-id": "urn:link:e1-o-cu-cp-1-o-cu-up-1",
-            "source": { "source-node": "urn:node:o-cu-cp-1", "source-tp": "urn:tp:o-cu-cp-1:e1" },
-            "destination": { "dest-node": "urn:node:o-cu-up-1", "dest-tp": "urn:tp:o-cu-up-1:e1" }
+            "source": { "source-node": "urn:node:o-cu-cp-1", "source-tp": "urn:if:o-cu-cp-1:e1" },
+            "destination": { "dest-node": "urn:node:o-cu-up-1", "dest-tp": "urn:if:o-cu-up-1:e1" }
           },
           {
             "link-id": "urn:link:e1-o-cu-up-1-o-cu-cp-1",
-            "source": { "source-node": "urn:node:o-cu-up-1", "source-tp": "urn:tp:o-cu-up-1:e1" },
-            "destination": { "dest-node": "urn:node:o-cu-cp-1", "dest-tp": "urn:tp:o-cu-cp-1:e1" }
+            "source": { "source-node": "urn:node:o-cu-up-1", "source-tp": "urn:if:o-cu-up-1:e1" },
+            "destination": { "dest-node": "urn:node:o-cu-cp-1", "dest-tp": "urn:if:o-cu-cp-1:e1" }
           },
           {
             "link-id": "urn:link:f1-c-o-cu-cp-1-o-du-1",
-            "source": { "source-node": "urn:node:o-cu-cp-1", "source-tp": "urn:tp:o-cu-cp-1:f1-c" },
-            "destination": { "dest-node": "urn:node:o-du-1", "dest-tp": "urn:tp:o-du-1:f1-c" }
+            "source": { "source-node": "urn:node:o-cu-cp-1", "source-tp": "urn:if:o-cu-cp-1:f1-c" },
+            "destination": { "dest-node": "urn:node:o-du-1", "dest-tp": "urn:if:o-du-1:f1-c" }
           },
           {
             "link-id": "urn:link:f1-c-o-du-1-o-cu-cp-1",
-            "source": { "source-node": "urn:node:o-du-1", "source-tp": "urn:tp:o-du-1:f1-c" },
-            "destination": { "dest-node": "urn:node:o-cu-cp-1", "dest-tp": "urn:tp:o-cu-cp-1:f1-c" }
+            "source": { "source-node": "urn:node:o-du-1", "source-tp": "urn:if:o-du-1:f1-c" },
+            "destination": { "dest-node": "urn:node:o-cu-cp-1", "dest-tp": "urn:if:o-cu-cp-1:f1-c" }
           },
           {
             "link-id": "urn:link:f1-u-o-cu-up-1-o-du-1",
-            "source": { "source-node": "urn:node:o-cu-up-1", "source-tp": "urn:tp:o-cu-up-1:f1-u" },
-            "destination": { "dest-node": "urn:node:o-du-1", "dest-tp": "urn:tp:o-du-1:f1-u" }
+            "source": { "source-node": "urn:node:o-cu-up-1", "source-tp": "urn:if:o-cu-up-1:f1-u" },
+            "destination": { "dest-node": "urn:node:o-du-1", "dest-tp": "urn:if:o-du-1:f1-u" }
           },
           {
             "link-id": "urn:link:f1-u-o-du-1-o-cu-up-1",
-            "source": { "source-node": "urn:node:o-du-1", "source-tp": "urn:tp:o-du-1:f1-u" },
-            "destination": { "dest-node": "urn:node:o-cu-up-1", "dest-tp": "urn:tp:o-cu-up-1:f1-u" }
+            "source": { "source-node": "urn:node:o-du-1", "source-tp": "urn:if:o-du-1:f1-u" },
+            "destination": { "dest-node": "urn:node:o-cu-up-1", "dest-tp": "urn:if:o-cu-up-1:f1-u" }
           },
           {
             "link-id": "urn:link:fronthaul-o-du-1-o-ru-1",
-            "source": { "source-node": "urn:node:o-du-1", "source-tp": "urn:tp:o-du-1:fronthaul" },
-            "destination": { "dest-node": "urn:node:o-ru-1", "dest-tp": "urn:tp:o-ru-1:fronthaul" }
+            "source": { "source-node": "urn:node:o-du-1", "source-tp": "urn:if:o-du-1:fiber-port-1" },
+            "destination": { "dest-node": "urn:node:o-ru-1", "dest-tp": "urn:if:o-ru-1:fiber-port-1" }
           },
           {
             "link-id": "urn:link:fronthaul-o-ru-1-o-du-1",
-            "source": { "source-node": "urn:node:o-ru-1", "source-tp": "urn:tp:o-ru-1:fronthaul" },
-            "destination": { "dest-node": "urn:node:o-du-1", "dest-tp": "urn:tp:o-du-1:fronthaul" }
+            "source": { "source-node": "urn:node:o-ru-1", "source-tp": "urn:if:o-ru-1:fiber-port-1" },
+            "destination": { "dest-node": "urn:node:o-du-1", "dest-tp": "urn:if:o-du-1:fiber-port-1" }
           },
           {
             "link-id": "urn:link:air-o-ru-1-ue-1",
-            "source": { "source-node": "urn:node:o-ru-1", "source-tp": "urn:tp:o-ru-1:air-ue-1" },
-            "destination": { "dest-node": "urn:node:ue-1", "dest-tp": "urn:tp:ue-1:air" }
+            "source": { "source-node": "urn:node:o-ru-1", "source-tp": "urn:if:o-ru-1:air-ue-1" },
+            "destination": { "dest-node": "urn:node:ue-1", "dest-tp": "urn:if:ue-1:air" }
           },
           {
             "link-id": "urn:link:air-o-ru-1-ue-2",
-            "source": { "source-node": "urn:node:o-ru-1", "source-tp": "urn:tp:o-ru-1:air-ue-2" },
-            "destination": { "dest-node": "urn:node:ue-2", "dest-tp": "urn:tp:ue-2:air" }
+            "source": { "source-node": "urn:node:o-ru-1", "source-tp": "urn:if:o-ru-1:air-ue-2" },
+            "destination": { "dest-node": "urn:node:ue-2", "dest-tp": "urn:if:ue-2:air" }
           },
           {
             "link-id": "urn:link:txp-2-ip-rtr-1",
-            "source": { "source-node": "urn:node:txp-2", "source-tp": "urn:tp:txp-2:client" },
-            "destination": { "dest-node": "urn:node:ip-rtr-1", "dest-tp": "urn:tp:ip-rtr-1:to-txp-2" }
+            "source": { "source-node": "urn:node:txp-2", "source-tp": "urn:if:txp-2:client-1" },
+            "destination": { "dest-node": "urn:node:ip-rtr-1", "dest-tp": "urn:if:ip-rtr-1:to-txp-2" }
           },
           {
             "link-id": "urn:link:ip-rtr-1-txp-2",
-            "source": { "source-node": "urn:node:ip-rtr-1", "source-tp": "urn:tp:ip-rtr-1:to-txp-2" },
-            "destination": { "dest-node": "urn:node:txp-2", "dest-tp": "urn:tp:txp-2:client" }
+            "source": { "source-node": "urn:node:ip-rtr-1", "source-tp": "urn:if:ip-rtr-1:to-txp-2" },
+            "destination": { "dest-node": "urn:node:txp-2", "dest-tp": "urn:if:txp-2:client-1" }
           },
           {
             "link-id": "urn:link:ip-rtr-1-5gc-1",
-            "source": { "source-node": "urn:node:ip-rtr-1", "source-tp": "urn:tp:ip-rtr-1:to-5gc-1" },
-            "destination": { "dest-node": "urn:node:5gc-1", "dest-tp": "urn:tp:5gc-1:to-ip-rtr-1" }
+            "source": { "source-node": "urn:node:ip-rtr-1", "source-tp": "urn:if:ip-rtr-1:to-5gc-1" },
+            "destination": { "dest-node": "urn:node:5gc-1", "dest-tp": "urn:if:5gc-1:to-ip-rtr-1" }
           },
           {
             "link-id": "urn:link:5gc-1-ip-rtr-1",
-            "source": { "source-node": "urn:node:5gc-1", "source-tp": "urn:tp:5gc-1:to-ip-rtr-1" },
-            "destination": { "dest-node": "urn:node:ip-rtr-1", "dest-tp": "urn:tp:ip-rtr-1:to-5gc-1" }
+            "source": { "source-node": "urn:node:5gc-1", "source-tp": "urn:if:5gc-1:to-ip-rtr-1" },
+            "destination": { "dest-node": "urn:node:ip-rtr-1", "dest-tp": "urn:if:ip-rtr-1:to-5gc-1" }
           },
           {
             "link-id": "urn:link:5gc-1-net-1",
-            "source": { "source-node": "urn:node:5gc-1", "source-tp": "urn:tp:5gc-1:to-net-1" },
-            "destination": { "dest-node": "urn:node:net-1", "dest-tp": "urn:tp:net-1:to-5gc-1" }
+            "source": { "source-node": "urn:node:5gc-1", "source-tp": "urn:if:5gc-1:to-net-1" },
+            "destination": { "dest-node": "urn:node:net-1", "dest-tp": "urn:if:net-1:to-5gc-1" }
           },
           {
             "link-id": "urn:link:net-1-5gc-1",
-            "source": { "source-node": "urn:node:net-1", "source-tp": "urn:tp:net-1:to-5gc-1" },
-            "destination": { "dest-node": "urn:node:5gc-1", "dest-tp": "urn:tp:5gc-1:to-net-1" }
+            "source": { "source-node": "urn:node:net-1", "source-tp": "urn:if:net-1:to-5gc-1" },
+            "destination": { "dest-node": "urn:node:5gc-1", "dest-tp": "urn:if:5gc-1:to-net-1" }
           },
           {
             "link-id": "urn:link:backhaul-txp-3-o-cu-cp-2",
-            "source": { "source-node": "urn:node:txp-3", "source-tp": "urn:tp:txp-3:client-cp" },
-            "destination": { "dest-node": "urn:node:o-cu-cp-2", "dest-tp": "urn:tp:o-cu-cp-2:backhaul" }
+            "source": { "source-node": "urn:node:txp-3", "source-tp": "urn:if:txp-3:client-cp" },
+            "destination": { "dest-node": "urn:node:o-cu-cp-2", "dest-tp": "urn:if:o-cu-cp-2:backhaul" }
           },
           {
             "link-id": "urn:link:backhaul-o-cu-cp-2-txp-3",
-            "source": { "source-node": "urn:node:o-cu-cp-2", "source-tp": "urn:tp:o-cu-cp-2:backhaul" },
-            "destination": { "dest-node": "urn:node:txp-3", "dest-tp": "urn:tp:txp-3:client-cp" }
+            "source": { "source-node": "urn:node:o-cu-cp-2", "source-tp": "urn:if:o-cu-cp-2:backhaul" },
+            "destination": { "dest-node": "urn:node:txp-3", "dest-tp": "urn:if:txp-3:client-cp" }
           },
           {
             "link-id": "urn:link:backhaul-txp-3-o-cu-up-2",
-            "source": { "source-node": "urn:node:txp-3", "source-tp": "urn:tp:txp-3:client-up" },
-            "destination": { "dest-node": "urn:node:o-cu-up-2", "dest-tp": "urn:tp:o-cu-up-2:backhaul" }
+            "source": { "source-node": "urn:node:txp-3", "source-tp": "urn:if:txp-3:client-up" },
+            "destination": { "dest-node": "urn:node:o-cu-up-2", "dest-tp": "urn:if:o-cu-up-2:backhaul" }
           },
           {
             "link-id": "urn:link:backhaul-o-cu-up-2-txp-3",
-            "source": { "source-node": "urn:node:o-cu-up-2", "source-tp": "urn:tp:o-cu-up-2:backhaul" },
-            "destination": { "dest-node": "urn:node:txp-3", "dest-tp": "urn:tp:txp-3:client-up" }
+            "source": { "source-node": "urn:node:o-cu-up-2", "source-tp": "urn:if:o-cu-up-2:backhaul" },
+            "destination": { "dest-node": "urn:node:txp-3", "dest-tp": "urn:if:txp-3:client-up" }
           },
           {
             "link-id": "urn:link:e1-o-cu-cp-2-o-cu-up-2",
-            "source": { "source-node": "urn:node:o-cu-cp-2", "source-tp": "urn:tp:o-cu-cp-2:e1" },
-            "destination": { "dest-node": "urn:node:o-cu-up-2", "dest-tp": "urn:tp:o-cu-up-2:e1" }
+            "source": { "source-node": "urn:node:o-cu-cp-2", "source-tp": "urn:if:o-cu-cp-2:e1" },
+            "destination": { "dest-node": "urn:node:o-cu-up-2", "dest-tp": "urn:if:o-cu-up-2:e1" }
           },
           {
             "link-id": "urn:link:e1-o-cu-up-2-o-cu-cp-2",
-            "source": { "source-node": "urn:node:o-cu-up-2", "source-tp": "urn:tp:o-cu-up-2:e1" },
-            "destination": { "dest-node": "urn:node:o-cu-cp-2", "dest-tp": "urn:tp:o-cu-cp-2:e1" }
+            "source": { "source-node": "urn:node:o-cu-up-2", "source-tp": "urn:if:o-cu-up-2:e1" },
+            "destination": { "dest-node": "urn:node:o-cu-cp-2", "dest-tp": "urn:if:o-cu-cp-2:e1" }
           },
           {
             "link-id": "urn:link:f1-c-o-cu-cp-2-wt-1",
-            "source": { "source-node": "urn:node:o-cu-cp-2", "source-tp": "urn:tp:o-cu-cp-2:f1-c" },
-            "destination": { "dest-node": "urn:node:wt-1", "dest-tp": "urn:tp:wt-1:f1-c-south" }
+            "source": { "source-node": "urn:node:o-cu-cp-2", "source-tp": "urn:if:o-cu-cp-2:f1-c" },
+            "destination": { "dest-node": "urn:node:wt-1", "dest-tp": "urn:if:wt-1:f1-c-south" }
           },
           {
             "link-id": "urn:link:f1-c-wt-1-o-cu-cp-2",
-            "source": { "source-node": "urn:node:wt-1", "source-tp": "urn:tp:wt-1:f1-c-south" },
-            "destination": { "dest-node": "urn:node:o-cu-cp-2", "dest-tp": "urn:tp:o-cu-cp-2:f1-c" }
+            "source": { "source-node": "urn:node:wt-1", "source-tp": "urn:if:wt-1:f1-c-south" },
+            "destination": { "dest-node": "urn:node:o-cu-cp-2", "dest-tp": "urn:if:o-cu-cp-2:f1-c" }
           },
           {
             "link-id": "urn:link:f1-u-o-cu-up-2-wt-1",
-            "source": { "source-node": "urn:node:o-cu-up-2", "source-tp": "urn:tp:o-cu-up-2:f1-u" },
-            "destination": { "dest-node": "urn:node:wt-1", "dest-tp": "urn:tp:wt-1:f1-u-south" }
+            "source": { "source-node": "urn:node:o-cu-up-2", "source-tp": "urn:if:o-cu-up-2:f1-u" },
+            "destination": { "dest-node": "urn:node:wt-1", "dest-tp": "urn:if:wt-1:f1-u-south" }
           },
           {
             "link-id": "urn:link:f1-u-wt-1-o-cu-up-2",
-            "source": { "source-node": "urn:node:wt-1", "source-tp": "urn:tp:wt-1:f1-u-south" },
-            "destination": { "dest-node": "urn:node:o-cu-up-2", "dest-tp": "urn:tp:o-cu-up-2:f1-u" }
+            "source": { "source-node": "urn:node:wt-1", "source-tp": "urn:if:wt-1:f1-u-south" },
+            "destination": { "dest-node": "urn:node:o-cu-up-2", "dest-tp": "urn:if:o-cu-up-2:f1-u" }
           },
           {
             "link-id": "urn:link:wireless-wt-1-wt-2",
-            "source": { "source-node": "urn:node:wt-1", "source-tp": "urn:tp:wt-1:wireless" },
-            "destination": { "dest-node": "urn:node:wt-2", "dest-tp": "urn:tp:wt-2:wireless" }
+            "source": { "source-node": "urn:node:wt-1", "source-tp": "urn:if:wt-1:wireless" },
+            "destination": { "dest-node": "urn:node:wt-2", "dest-tp": "urn:if:wt-2:wireless" }
           },
           {
             "link-id": "urn:link:wireless-wt-2-wt-1",
-            "source": { "source-node": "urn:node:wt-2", "source-tp": "urn:tp:wt-2:wireless" },
-            "destination": { "dest-node": "urn:node:wt-1", "dest-tp": "urn:tp:wt-1:wireless" }
+            "source": { "source-node": "urn:node:wt-2", "source-tp": "urn:if:wt-2:wireless" },
+            "destination": { "dest-node": "urn:node:wt-1", "dest-tp": "urn:if:wt-1:wireless" }
           },
           {
             "link-id": "urn:link:f1-c-wt-2-o-du-2",
-            "source": { "source-node": "urn:node:wt-2", "source-tp": "urn:tp:wt-2:f1-c-north" },
-            "destination": { "dest-node": "urn:node:o-du-2", "dest-tp": "urn:tp:o-du-2:f1-c" }
+            "source": { "source-node": "urn:node:wt-2", "source-tp": "urn:if:wt-2:f1-c-north" },
+            "destination": { "dest-node": "urn:node:o-du-2", "dest-tp": "urn:if:o-du-2:f1-c" }
           },
           {
             "link-id": "urn:link:f1-c-o-du-2-wt-2",
-            "source": { "source-node": "urn:node:o-du-2", "source-tp": "urn:tp:o-du-2:f1-c" },
-            "destination": { "dest-node": "urn:node:wt-2", "dest-tp": "urn:tp:wt-2:f1-c-north" }
+            "source": { "source-node": "urn:node:o-du-2", "source-tp": "urn:if:o-du-2:f1-c" },
+            "destination": { "dest-node": "urn:node:wt-2", "dest-tp": "urn:if:wt-2:f1-c-north" }
           },
           {
             "link-id": "urn:link:f1-u-wt-2-o-du-2",
-            "source": { "source-node": "urn:node:wt-2", "source-tp": "urn:tp:wt-2:f1-u-north" },
-            "destination": { "dest-node": "urn:node:o-du-2", "dest-tp": "urn:tp:o-du-2:f1-u" }
+            "source": { "source-node": "urn:node:wt-2", "source-tp": "urn:if:wt-2:f1-u-north" },
+            "destination": { "dest-node": "urn:node:o-du-2", "dest-tp": "urn:if:o-du-2:f1-u" }
           },
           {
             "link-id": "urn:link:f1-u-o-du-2-wt-2",
-            "source": { "source-node": "urn:node:o-du-2", "source-tp": "urn:tp:o-du-2:f1-u" },
-            "destination": { "dest-node": "urn:node:wt-2", "dest-tp": "urn:tp:wt-2:f1-u-north" }
+            "source": { "source-node": "urn:node:o-du-2", "source-tp": "urn:if:o-du-2:f1-u" },
+            "destination": { "dest-node": "urn:node:wt-2", "dest-tp": "urn:if:wt-2:f1-u-north" }
           },
           {
             "link-id": "urn:link:fronthaul-o-du-2-ofh-sw-1",
-            "source": { "source-node": "urn:node:o-du-2", "source-tp": "urn:tp:o-du-2:fronthaul" },
-            "destination": { "dest-node": "urn:node:ofh-sw-1", "dest-tp": "urn:tp:ofh-sw-1:uplink" }
+            "source": { "source-node": "urn:node:o-du-2", "source-tp": "urn:if:o-du-2:fiber-port-1" },
+            "destination": { "dest-node": "urn:node:ofh-sw-1", "dest-tp": "urn:if:ofh-sw-1:uplink-1" }
           },
           {
             "link-id": "urn:link:fronthaul-ofh-sw-1-o-du-2",
-            "source": { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:tp:ofh-sw-1:uplink" },
-            "destination": { "dest-node": "urn:node:o-du-2", "dest-tp": "urn:tp:o-du-2:fronthaul" }
+            "source": { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:if:ofh-sw-1:uplink-1" },
+            "destination": { "dest-node": "urn:node:o-du-2", "dest-tp": "urn:if:o-du-2:fiber-port-1" }
           },
           {
             "link-id": "urn:link:fronthaul-ofh-sw-1-o-ru-2",
-            "source": { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:tp:ofh-sw-1:port-o-ru-2" },
-            "destination": { "dest-node": "urn:node:o-ru-2", "dest-tp": "urn:tp:o-ru-2:fronthaul" }
+            "source": { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:if:ofh-sw-1:port-2" },
+            "destination": { "dest-node": "urn:node:o-ru-2", "dest-tp": "urn:if:o-ru-2:fiber-port-1" }
           },
           {
             "link-id": "urn:link:fronthaul-o-ru-2-ofh-sw-1",
-            "source": { "source-node": "urn:node:o-ru-2", "source-tp": "urn:tp:o-ru-2:fronthaul" },
-            "destination": { "dest-node": "urn:node:ofh-sw-1", "dest-tp": "urn:tp:ofh-sw-1:port-o-ru-2" }
+            "source": { "source-node": "urn:node:o-ru-2", "source-tp": "urn:if:o-ru-2:fiber-port-1" },
+            "destination": { "dest-node": "urn:node:ofh-sw-1", "dest-tp": "urn:if:ofh-sw-1:port-2" }
           },
           {
             "link-id": "urn:link:fronthaul-ofh-sw-1-o-ru-3",
-            "source": { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:tp:ofh-sw-1:port-o-ru-3" },
-            "destination": { "dest-node": "urn:node:o-ru-3", "dest-tp": "urn:tp:o-ru-3:fronthaul" }
+            "source": { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:if:ofh-sw-1:port-3" },
+            "destination": { "dest-node": "urn:node:o-ru-3", "dest-tp": "urn:if:o-ru-3:fiber-port-1" }
           },
           {
             "link-id": "urn:link:fronthaul-o-ru-3-ofh-sw-1",
-            "source": { "source-node": "urn:node:o-ru-3", "source-tp": "urn:tp:o-ru-3:fronthaul" },
-            "destination": { "dest-node": "urn:node:ofh-sw-1", "dest-tp": "urn:tp:ofh-sw-1:port-o-ru-3" }
+            "source": { "source-node": "urn:node:o-ru-3", "source-tp": "urn:if:o-ru-3:fiber-port-1" },
+            "destination": { "dest-node": "urn:node:ofh-sw-1", "dest-tp": "urn:if:ofh-sw-1:port-3" }
           },
           {
             "link-id": "urn:link:fronthaul-ofh-sw-1-o-ru-4",
-            "source": { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:tp:ofh-sw-1:port-o-ru-4" },
-            "destination": { "dest-node": "urn:node:o-ru-4", "dest-tp": "urn:tp:o-ru-4:fronthaul" }
+            "source": { "source-node": "urn:node:ofh-sw-1", "source-tp": "urn:if:ofh-sw-1:port-4" },
+            "destination": { "dest-node": "urn:node:o-ru-4", "dest-tp": "urn:if:o-ru-4:fiber-port-1" }
           },
           {
             "link-id": "urn:link:fronthaul-o-ru-4-ofh-sw-1",
-            "source": { "source-node": "urn:node:o-ru-4", "source-tp": "urn:tp:o-ru-4:fronthaul" },
-            "destination": { "dest-node": "urn:node:ofh-sw-1", "dest-tp": "urn:tp:ofh-sw-1:port-o-ru-4" }
+            "source": { "source-node": "urn:node:o-ru-4", "source-tp": "urn:if:o-ru-4:fiber-port-1" },
+            "destination": { "dest-node": "urn:node:ofh-sw-1", "dest-tp": "urn:if:ofh-sw-1:port-4" }
           },
           {
             "link-id": "urn:link:air-o-ru-2-ue-3",
-            "source": { "source-node": "urn:node:o-ru-2", "source-tp": "urn:tp:o-ru-2:air-ue-3" },
-            "destination": { "dest-node": "urn:node:ue-3", "dest-tp": "urn:tp:ue-3:air" }
+            "source": { "source-node": "urn:node:o-ru-2", "source-tp": "urn:if:o-ru-2:air-ue-3" },
+            "destination": { "dest-node": "urn:node:ue-3", "dest-tp": "urn:if:ue-3:air" }
           },
           {
             "link-id": "urn:link:air-o-ru-2-ue-4",
-            "source": { "source-node": "urn:node:o-ru-2", "source-tp": "urn:tp:o-ru-2:air-ue-4" },
-            "destination": { "dest-node": "urn:node:ue-4", "dest-tp": "urn:tp:ue-4:air" }
+            "source": { "source-node": "urn:node:o-ru-2", "source-tp": "urn:if:o-ru-2:air-ue-4" },
+            "destination": { "dest-node": "urn:node:ue-4", "dest-tp": "urn:if:ue-4:air" }
           },
           {
             "link-id": "urn:link:air-o-ru-3-ue-5",
-            "source": { "source-node": "urn:node:o-ru-3", "source-tp": "urn:tp:o-ru-3:air-ue-5" },
-            "destination": { "dest-node": "urn:node:ue-5", "dest-tp": "urn:tp:ue-5:air" }
+            "source": { "source-node": "urn:node:o-ru-3", "source-tp": "urn:if:o-ru-3:air-ue-5" },
+            "destination": { "dest-node": "urn:node:ue-5", "dest-tp": "urn:if:ue-5:air" }
           },
           {
             "link-id": "urn:link:air-o-ru-3-ue-6",
-            "source": { "source-node": "urn:node:o-ru-3", "source-tp": "urn:tp:o-ru-3:air-ue-6" },
-            "destination": { "dest-node": "urn:node:ue-6", "dest-tp": "urn:tp:ue-6:air" }
+            "source": { "source-node": "urn:node:o-ru-3", "source-tp": "urn:if:o-ru-3:air-ue-6" },
+            "destination": { "dest-node": "urn:node:ue-6", "dest-tp": "urn:if:ue-6:air" }
           },
           {
             "link-id": "urn:link:air-o-ru-4-ue-7",
-            "source": { "source-node": "urn:node:o-ru-4", "source-tp": "urn:tp:o-ru-4:air-ue-7" },
-            "destination": { "dest-node": "urn:node:ue-7", "dest-tp": "urn:tp:ue-7:air" }
+            "source": { "source-node": "urn:node:o-ru-4", "source-tp": "urn:if:o-ru-4:air-ue-7" },
+            "destination": { "dest-node": "urn:node:ue-7", "dest-tp": "urn:if:ue-7:air" }
           },
           {
             "link-id": "urn:link:air-o-ru-4-ue-8",
-            "source": { "source-node": "urn:node:o-ru-4", "source-tp": "urn:tp:o-ru-4:air-ue-8" },
-            "destination": { "dest-node": "urn:node:ue-8", "dest-tp": "urn:tp:ue-8:air" }
+            "source": { "source-node": "urn:node:o-ru-4", "source-tp": "urn:if:o-ru-4:air-ue-8" },
+            "destination": { "dest-node": "urn:node:ue-8", "dest-tp": "urn:if:ue-8:air" }
           }
         ]
       },
@@ -1085,7 +1257,7 @@
                   {
                     "sap-id": "sap:txp-1:o-cu-cp-1",
                     "description": "Backhaul SAP for O-CU-CP-1 control plane (Branch 1)",
-                    "parent-termination-point": "urn:tp:txp-1:client-cp",
+                    "parent-termination-point": "urn:if:txp-1:client-cp",
                     "interface-type": "ietf-sap-ntw:phy",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -1094,7 +1266,7 @@
                   {
                     "sap-id": "sap:txp-1:o-cu-up-1",
                     "description": "Backhaul SAP for O-CU-UP-1 user plane (Branch 1)",
-                    "parent-termination-point": "urn:tp:txp-1:client-up",
+                    "parent-termination-point": "urn:if:txp-1:client-up",
                     "interface-type": "ietf-sap-ntw:phy",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -1116,7 +1288,7 @@
                   {
                     "sap-id": "sap:txp-3:o-cu-cp-2",
                     "description": "Backhaul SAP for O-CU-CP-2 control plane (Branch 2)",
-                    "parent-termination-point": "urn:tp:txp-3:client-cp",
+                    "parent-termination-point": "urn:if:txp-3:client-cp",
                     "interface-type": "ietf-sap-ntw:phy",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -1125,7 +1297,7 @@
                   {
                     "sap-id": "sap:txp-3:o-cu-up-2",
                     "description": "Backhaul SAP for O-CU-UP-2 user plane (Branch 2)",
-                    "parent-termination-point": "urn:tp:txp-3:client-up",
+                    "parent-termination-point": "urn:if:txp-3:client-up",
                     "interface-type": "ietf-sap-ntw:phy",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -1147,7 +1319,7 @@
                   {
                     "sap-id": "sap:ip-rtr-1:to-5gc",
                     "description": "SAP at transport-to-core boundary for N2/N3 traffic (network slice)",
-                    "parent-termination-point": "urn:tp:ip-rtr-1:to-5gc-1",
+                    "parent-termination-point": "urn:if:ip-rtr-1:to-5gc-1",
                     "interface-type": "ietf-sap-ntw:phy",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": true,
@@ -1161,7 +1333,7 @@
                   {
                     "sap-id": "sap:ip-rtr-1:to-5gc-basic",
                     "description": "Basic IP connectivity SAP toward 5G Core",
-                    "parent-termination-point": "urn:tp:ip-rtr-1:to-5gc-1",
+                    "parent-termination-point": "urn:if:ip-rtr-1:to-5gc-1",
                     "interface-type": "ietf-sap-ntw:phy",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -1183,7 +1355,7 @@
                   {
                     "sap-id": "sap:5gc-1:to-internet",
                     "description": "Internet breakout SAP at the N6 interface toward NET-1",
-                    "parent-termination-point": "urn:tp:5gc-1:to-net-1",
+                    "parent-termination-point": "urn:if:5gc-1:to-net-1",
                     "interface-type": "ietf-sap-ntw:phy",
                     "role": "ietf-sap-ntw:uni",
                     "allows-child-saps": false,
