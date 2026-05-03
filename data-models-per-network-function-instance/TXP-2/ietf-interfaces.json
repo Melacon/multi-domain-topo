@@ -1,0 +1,8 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      { "name": "line",   "type": "iana-if-type:opticalTransport", "enabled": true },
+      { "name": "client", "type": "iana-if-type:ethernetCsmacd",   "enabled": true }
+    ]
+  }
+}

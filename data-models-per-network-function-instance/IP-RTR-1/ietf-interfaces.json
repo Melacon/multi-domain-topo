@@ -1,0 +1,8 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      { "name": "to-txp-2",  "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "to-5gc-1",  "type": "iana-if-type:ethernetCsmacd", "enabled": true }
+    ]
+  }
+}

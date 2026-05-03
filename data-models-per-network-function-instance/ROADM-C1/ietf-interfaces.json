@@ -1,0 +1,9 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      { "name": "line-north", "type": "iana-if-type:opticalTransport", "enabled": true },
+      { "name": "line-east",  "type": "iana-if-type:opticalTransport", "enabled": true },
+      { "name": "client",     "type": "iana-if-type:opticalTransport", "enabled": true }
+    ]
+  }
+}

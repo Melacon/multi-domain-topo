@@ -1,0 +1,9 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      { "name": "wireless", "type": "iana-if-type:ieee80211", "enabled": true },
+      { "name": "f1-c",     "type": "iana-if-type:l2vlan",   "enabled": true },
+      { "name": "f1-u",     "type": "iana-if-type:l2vlan",   "enabled": true }
+    ]
+  }
+}

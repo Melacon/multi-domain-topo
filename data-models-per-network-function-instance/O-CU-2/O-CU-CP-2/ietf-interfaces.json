@@ -1,0 +1,9 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      { "name": "backhaul", "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "f1-c",     "type": "iana-if-type:l2vlan",         "enabled": true },
+      { "name": "e1",       "type": "iana-if-type:l2vlan",         "enabled": true }
+    ]
+  }
+}
