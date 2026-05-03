@@ -167,6 +167,8 @@ RFC 8345 structures.
    │                ietf-network (RFC 8345)                    │
    │       ietf-network-topology (RFC 8345)                    │
    ├───────────────────────────────────────────────────────────┤
+   │  ietf-sap-ntw (RFC 9408)       – Service Attachment Points│
+   ├───────────────────────────────────────────────────────────┤
    │  ietf-te-topology (RFC 8795)   – TE extensions            │
    │  ietf-l3-unicast-topology      – IP layer                 │
    │  ietf-l2-topology              – Ethernet layer           │

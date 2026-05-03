@@ -1,0 +1,83 @@
+diff --git a/topology/roadm-topology/openroadm-topology.xml b/topology/roadm-topology/openroadm-topology.xml
+index 6635f3f..8b39dfc 100644
+--- a/topology/roadm-topology/openroadm-topology.xml
++++ b/topology/roadm-topology/openroadm-topology.xml
+@@ -320,17 +320,17 @@
+     <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+   </link>
+   <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+-    <link-id>ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-A1-DEG1-DEG1-TTP-TXRX</link-id>
++    <link-id>ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-A1-DEG2-DEG2-TTP-TXRX</link-id>
+     <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+     <source>
+       <source-node>ROADM-C1-DEG1</source-node>
+       <source-tp>DEG1-TTP-TXRX</source-tp>
+     </source>
+     <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+-    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</opposite-link>
++    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-A1-DEG2-DEG2-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</opposite-link>
+     <destination>
+-      <dest-tp>DEG1-TTP-TXRX</dest-tp>
+-      <dest-node>ROADM-A1-DEG1</dest-node>
++      <dest-tp>DEG2-TTP-TXRX</dest-tp>
++      <dest-node>ROADM-A1-DEG2</dest-node>
+     </destination>
+     <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+   </link>
+@@ -395,29 +395,29 @@
+     <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+   </link>
+   <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+-    <link-id>ROADM-B1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</link-id>
++    <link-id>ROADM-B1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG2-DEG2-TTP-TXRX</link-id>
+     <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+     <source>
+       <source-node>ROADM-B1-DEG1</source-node>
+       <source-tp>DEG1-TTP-TXRX</source-tp>
+     </source>
+     <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+-    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-B1-DEG1-DEG1-TTP-TXRX</opposite-link>
++    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG2-DEG2-TTP-TXRXtoROADM-B1-DEG1-DEG1-TTP-TXRX</opposite-link>
+     <destination>
+-      <dest-tp>DEG1-TTP-TXRX</dest-tp>
+-      <dest-node>ROADM-C1-DEG1</dest-node>
++      <dest-tp>DEG2-TTP-TXRX</dest-tp>
++      <dest-node>ROADM-C1-DEG2</dest-node>
+     </destination>
+     <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+   </link>
+   <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+-    <link-id>ROADM-A1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</link-id>
++    <link-id>ROADM-A1-DEG2-DEG2-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</link-id>
+     <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+     <source>
+-      <source-node>ROADM-A1-DEG1</source-node>
+-      <source-tp>DEG1-TTP-TXRX</source-tp>
++      <source-node>ROADM-A1-DEG2</source-node>
++      <source-tp>DEG2-TTP-TXRX</source-tp>
+     </source>
+     <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+-    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-A1-DEG1-DEG1-TTP-TXRX</opposite-link>
++    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-A1-DEG2-DEG2-TTP-TXRX</opposite-link>
+     <destination>
+       <dest-tp>DEG1-TTP-TXRX</dest-tp>
+       <dest-node>ROADM-C1-DEG1</dest-node>
+@@ -500,14 +500,14 @@
+     <administrative-state xmlns="http://org/openroadm/common/network">inService</administrative-state>
+   </link>
+   <link xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+-    <link-id>ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-B1-DEG1-DEG1-TTP-TXRX</link-id>
++    <link-id>ROADM-C1-DEG2-DEG2-TTP-TXRXtoROADM-B1-DEG1-DEG1-TTP-TXRX</link-id>
+     <link-type xmlns="http://org/openroadm/common/network">ROADM-TO-ROADM</link-type>
+     <source>
+-      <source-node>ROADM-C1-DEG1</source-node>
+-      <source-tp>DEG1-TTP-TXRX</source-tp>
++      <source-node>ROADM-C1-DEG2</source-node>
++      <source-tp>DEG2-TTP-TXRX</source-tp>
+     </source>
+     <operational-state xmlns="http://org/openroadm/common/network">inService</operational-state>
+-    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX</opposite-link>
++    <opposite-link xmlns="http://org/openroadm/common/network">ROADM-B1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG2-DEG2-TTP-TXRX</opposite-link>
+     <destination>
+       <dest-tp>DEG1-TTP-TXRX</dest-tp>
+       <dest-node>ROADM-B1-DEG1</dest-node>

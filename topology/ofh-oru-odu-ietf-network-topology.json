@@ -43,7 +43,7 @@
         ]
       },
       {
-        "network-id": "fronthaul-ethernet-transport-topology",
+        "network-id": "ethernet-topology",
         "supporting-network": [
           { "network-ref": "physical-topology" }
         ],

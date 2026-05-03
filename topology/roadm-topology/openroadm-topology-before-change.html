@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenROADM Topology — openroadm-topology</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://unpkg.com/cytoscape-svg/cytoscape-svg.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f8fafc; }
+    #cy { width: 100vw; height: 100vh; display: block; }
+    #toolbar {
+      position: absolute; top: 12px; left: 12px; z-index: 100;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    button {
+      padding: 6px 14px; border: 1px solid #9ca3af; background: white;
+      border-radius: 6px; cursor: pointer; font-size: 13px; color: #111827;
+    }
+    button:hover { background: #f3f4f6; }
+    #legend {
+      position: absolute; bottom: 16px; left: 16px;
+      background: white; border: 1px solid #d1d5db; border-radius: 10px;
+      padding: 14px 18px; font-size: 12px; line-height: 2;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    }
+    #legend strong { display: block; margin-bottom: 4px; font-size: 13px; }
+    .li  { display: flex; align-items: center; gap: 8px; }
+    .sw  { width: 22px; height: 14px; border-radius: 3px; border: 2px solid; flex-shrink: 0; }
+    .lsw { width: 30px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<div id="toolbar">
+  <button onclick="cy.fit(undefined, 40)">Fit to view</button>
+  <button onclick="reLayout()">Re-layout</button>
+  <button onclick="exportSVG()">Export SVG</button>
+</div>
+
+<div id="legend">
+  <strong>openroadm-topology</strong>
+  <div class="li"><span class="sw"  style="background:#dbeafe;border-color:#2563eb"></span>ROADM node</div>
+  <div class="li"><span class="sw"  style="background:#fef3c7;border-color:#d97706"></span>DEGREE sub-node</div>
+  <div class="li"><span class="sw"  style="background:#dcfce7;border-color:#16a34a"></span>SRG sub-node</div>
+  <div class="li"><span class="lsw" style="background:#2563eb"></span>ROADM-to-ROADM span</div>
+  <div class="li"><span class="lsw" style="background:#9ca3af"></span>Express link</div>
+  <div class="li"><span class="lsw" style="background:#16a34a"></span>Add / Drop link</div>
+</div>
+
+<div id="cy"></div>
+
+<script>
+// Auto-generated from openroadm-topology.xml — do not edit by hand.
+const elements = [
+  { data: {"id": "ROADM-C1", "label": "ROADM-C1", "type": "ROADM"} },
+  { data: {"id": "ROADM-B1", "label": "ROADM-B1", "type": "ROADM"} },
+  { data: {"id": "ROADM-A1", "label": "ROADM-A1", "type": "ROADM"} },
+  { data: {"id": "ROADM-B1-DEG1", "type": "DEGREE", "parent": "ROADM-B1", "label": "DEG1"}, position: {"x": 743.2, "y": 486.0} },
+  { data: {"id": "ROADM-A1-SRG3", "type": "SRG", "parent": "ROADM-A1", "label": "SRG3"}, position: {"x": 442.0, "y": 144.0} },
+  { data: {"id": "ROADM-B1-DEG2", "type": "DEGREE", "parent": "ROADM-B1", "label": "DEG2"}, position: {"x": 667.2, "y": 486.0} },
+  { data: {"id": "ROADM-C1-SRG3", "type": "SRG", "parent": "ROADM-C1", "label": "SRG3"}, position: {"x": 216.8, "y": 534.0} },
+  { data: {"id": "ROADM-C1-SRG1", "type": "SRG", "parent": "ROADM-C1", "label": "SRG1"}, position: {"x": 292.8, "y": 534.0} },
+  { data: {"id": "ROADM-A1-SRG1", "type": "SRG", "parent": "ROADM-A1", "label": "SRG1"}, position: {"x": 518.0, "y": 144.0} },
+  { data: {"id": "ROADM-B1-SRG3", "type": "SRG", "parent": "ROADM-B1", "label": "SRG3"}, position: {"x": 667.2, "y": 534.0} },
+  { data: {"id": "ROADM-A1-DEG1", "type": "DEGREE", "parent": "ROADM-A1", "label": "DEG1"}, position: {"x": 518.0, "y": 96.0} },
+  { data: {"id": "ROADM-A1-DEG2", "type": "DEGREE", "parent": "ROADM-A1", "label": "DEG2"}, position: {"x": 442.0, "y": 96.0} },
+  { data: {"id": "ROADM-C1-DEG2", "type": "DEGREE", "parent": "ROADM-C1", "label": "DEG2"}, position: {"x": 216.8, "y": 486.0} },
+  { data: {"id": "ROADM-C1-DEG1", "type": "DEGREE", "parent": "ROADM-C1", "label": "DEG1"}, position: {"x": 292.8, "y": 486.0} },
+  { data: {"id": "ROADM-B1-SRG1", "type": "SRG", "parent": "ROADM-B1", "label": "SRG1"}, position: {"x": 743.2, "y": 534.0} },
+
+  { data: {"id": "ROADM-A1-SRG3-SRG3-CP-TXRXtoROADM-A1-DEG2-DEG2-CTP-TXRX", "source": "ROADM-A1-SRG3", "target": "ROADM-A1-DEG2", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-C1-SRG3-SRG3-CP-TXRXtoROADM-C1-DEG2-DEG2-CTP-TXRX", "source": "ROADM-C1-SRG3", "target": "ROADM-C1-DEG2", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-C1-SRG3-SRG3-CP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-C1-SRG3", "target": "ROADM-C1-DEG1", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-C1-DEG2-DEG2-CTP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-C1-DEG2", "target": "ROADM-C1-DEG1", "type": "EXPRESS-LINK"} },
+  { data: {"id": "ROADM-A1-DEG1-DEG1-TTP-TXRXtoROADM-B1-DEG2-DEG2-TTP-TXRX", "source": "ROADM-A1-DEG1", "target": "ROADM-B1-DEG2", "type": "ROADM-TO-ROADM", "label": "A1\u2013B1"} },
+  { data: {"id": "ROADM-A1-DEG2-DEG2-CTP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-A1-DEG2", "target": "ROADM-A1-DEG1", "type": "EXPRESS-LINK"} },
+  { data: {"id": "ROADM-A1-SRG1-SRG1-CP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-A1-SRG1", "target": "ROADM-A1-DEG1", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-A1-SRG1-SRG1-CP-TXRXtoROADM-A1-DEG2-DEG2-CTP-TXRX", "source": "ROADM-A1-SRG1", "target": "ROADM-A1-DEG2", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-C1-SRG1-SRG1-CP-TXRXtoROADM-C1-DEG2-DEG2-CTP-TXRX", "source": "ROADM-C1-SRG1", "target": "ROADM-C1-DEG2", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-C1-SRG1-SRG1-CP-TXRXtoROADM-C1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-C1-SRG1", "target": "ROADM-C1-DEG1", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-C1-DEG1-DEG1-TTP-TXRXtoROADM-A1-DEG1-DEG1-TTP-TXRX", "source": "ROADM-C1-DEG1", "target": "ROADM-A1-DEG1", "type": "ROADM-TO-ROADM", "label": "C1\u2013A1"} },
+  { data: {"id": "ROADM-B1-SRG3-SRG3-CP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-B1-SRG3", "target": "ROADM-B1-DEG1", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-B1-SRG3-SRG3-CP-TXRXtoROADM-B1-DEG2-DEG2-CTP-TXRX", "source": "ROADM-B1-SRG3", "target": "ROADM-B1-DEG2", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-B1-DEG1-DEG1-TTP-TXRXtoROADM-C1-DEG1-DEG1-TTP-TXRX", "source": "ROADM-B1-DEG1", "target": "ROADM-C1-DEG1", "type": "ROADM-TO-ROADM", "label": "B1\u2013C1"} },
+  { data: {"id": "ROADM-B1-SRG1-SRG1-CP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-B1-SRG1", "target": "ROADM-B1-DEG1", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-B1-DEG2-DEG2-CTP-TXRXtoROADM-B1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-B1-DEG2", "target": "ROADM-B1-DEG1", "type": "EXPRESS-LINK"} },
+  { data: {"id": "ROADM-B1-SRG1-SRG1-CP-TXRXtoROADM-B1-DEG2-DEG2-CTP-TXRX", "source": "ROADM-B1-SRG1", "target": "ROADM-B1-DEG2", "type": "ADD-LINK"} },
+  { data: {"id": "ROADM-A1-SRG3-SRG3-CP-TXRXtoROADM-A1-DEG1-DEG1-CTP-TXRX", "source": "ROADM-A1-SRG3", "target": "ROADM-A1-DEG1", "type": "ADD-LINK"} },
+];
+
+const cy = cytoscape({
+  container: document.getElementById('cy'),
+  elements,
+  style: [
+    {
+      selector: 'node[type = "ROADM"]',
+      style: {
+        content: 'data(label)',
+        'text-valign': 'top', 'text-halign': 'center',
+        'font-weight': 'bold', 'font-size': 15, color: '#1e3a8a',
+        'background-color': '#dbeafe', 'border-color': '#2563eb', 'border-width': 2.5,
+        padding: '22px', shape: 'roundrectangle',
+      }
+    },
+    {
+      selector: 'node[type = "DEGREE"]',
+      style: {
+        content: 'data(label)',
+        'text-valign': 'center', 'font-size': 11, 'font-weight': 'bold', color: '#78350f',
+        width: 56, height: 28,
+        'background-color': '#fef3c7', 'border-color': '#d97706', 'border-width': 2,
+        shape: 'roundrectangle',
+      }
+    },
+    {
+      selector: 'node[type = "SRG"]',
+      style: {
+        content: 'data(label)',
+        'text-valign': 'center', 'font-size': 11, color: '#14532d',
+        width: 56, height: 28,
+        'background-color': '#dcfce7', 'border-color': '#16a34a', 'border-width': 2,
+        shape: 'roundrectangle',
+      }
+    },
+    {
+      selector: 'edge[type = "ROADM-TO-ROADM"]',
+      style: {
+        width: 4, 'line-color': '#2563eb',
+        'curve-style': 'unbundled-bezier',
+        'control-point-distances': [120], 'control-point-weights': [0.5],
+        label: 'data(label)', 'font-size': 11, color: '#1d4ed8',
+        'text-background-color': '#eff6ff', 'text-background-opacity': 1,
+        'text-background-padding': '3px', 'text-rotation': 'autorotate',
+      }
+    },
+    {
+      selector: 'edge[type = "EXPRESS-LINK"]',
+      style: {
+        width: 1.5, 'line-color': '#9ca3af', 'line-style': 'dashed', 'curve-style': 'bezier',
+      }
+    },
+    {
+      selector: 'edge[type = "ADD-LINK"]',
+      style: {
+        width: 1.5, 'line-color': '#16a34a',
+        'target-arrow-shape': 'triangle', 'target-arrow-color': '#16a34a',
+        'curve-style': 'bezier', 'arrow-scale': 0.7,
+      }
+    },
+    { selector: ':selected', style: { 'overlay-color': '#f59e0b', 'overlay-opacity': 0.25 } },
+  ],
+  layout: { name: 'preset' },
+});
+
+cy.fit(undefined, 40);
+
+function reLayout() {
+  cy.layout({ name: 'cose', animate: true, animationDuration: 700,
+               padding: 60, nodeRepulsion: 8000 }).run();
+}
+
+function exportSVG() {
+  const svg  = cy.svg({ scale: 1.5, full: true, bg: '#ffffff' });
+  const blob = new Blob([svg], { type: 'image/svg+xml' });
+  const url  = URL.createObjectURL(blob);
+  const a    = Object.assign(document.createElement('a'), { href: url, download: 'openroadm-topology.svg' });
+  a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

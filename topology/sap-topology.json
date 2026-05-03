@@ -1,0 +1,154 @@
+{
+  "ietf-network:networks": {
+    "network": [
+      {
+        "network-id": "sap-network",
+        "network-types": {
+          "ietf-sap-ntw:sap-network": {
+            "service-type": [
+              "ietf-sap-ntw:network-slice",
+              "ietf-sap-ntw:basic-connectivity"
+            ]
+          }
+        },
+        "supporting-network": [
+          { "network-ref": "transport-inclusion-reference" }
+        ],
+        "node": [
+          {
+            "node-id": "urn:node:txp-1",
+            "supporting-node": [
+              {
+                "network-ref": "transport-inclusion-reference",
+                "node-ref": "urn:node:txp-1"
+              }
+            ],
+            "ietf-sap-ntw:service": [
+              {
+                "service-type": "ietf-sap-ntw:network-slice",
+                "sap": [
+                  {
+                    "sap-id": "sap:txp-1:o-cu-cp-1",
+                    "description": "Backhaul SAP for O-CU-CP-1 control plane (Branch 1)",
+                    "parent-termination-point": "urn:tp:txp-1:client-cp",
+                    "interface-type": "ietf-sap-ntw:phy",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": ["sap:o-cu-cp-1:backhaul"]
+                  },
+                  {
+                    "sap-id": "sap:txp-1:o-cu-up-1",
+                    "description": "Backhaul SAP for O-CU-UP-1 user plane (Branch 1)",
+                    "parent-termination-point": "urn:tp:txp-1:client-up",
+                    "interface-type": "ietf-sap-ntw:phy",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": ["sap:o-cu-up-1:backhaul"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:txp-3",
+            "supporting-node": [
+              {
+                "network-ref": "transport-inclusion-reference",
+                "node-ref": "urn:node:txp-3"
+              }
+            ],
+            "ietf-sap-ntw:service": [
+              {
+                "service-type": "ietf-sap-ntw:network-slice",
+                "sap": [
+                  {
+                    "sap-id": "sap:txp-3:o-cu-cp-2",
+                    "description": "Backhaul SAP for O-CU-CP-2 control plane (Branch 2)",
+                    "parent-termination-point": "urn:tp:txp-3:client-cp",
+                    "interface-type": "ietf-sap-ntw:phy",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": ["sap:o-cu-cp-2:backhaul"]
+                  },
+                  {
+                    "sap-id": "sap:txp-3:o-cu-up-2",
+                    "description": "Backhaul SAP for O-CU-UP-2 user plane (Branch 2)",
+                    "parent-termination-point": "urn:tp:txp-3:client-up",
+                    "interface-type": "ietf-sap-ntw:phy",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": ["sap:o-cu-up-2:backhaul"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:ip-rtr-1",
+            "supporting-node": [
+              {
+                "network-ref": "transport-inclusion-reference",
+                "node-ref": "urn:node:ip-rtr-1"
+              }
+            ],
+            "ietf-sap-ntw:service": [
+              {
+                "service-type": "ietf-sap-ntw:network-slice",
+                "sap": [
+                  {
+                    "sap-id": "sap:ip-rtr-1:to-5gc",
+                    "description": "SAP at transport-to-core boundary for N2/N3 traffic (network slice)",
+                    "parent-termination-point": "urn:tp:ip-rtr-1:to-5gc-1",
+                    "interface-type": "ietf-sap-ntw:phy",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": true,
+                    "peer-sap-id": ["sap:5gc-1:to-ip-rtr"]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:ip-rtr-1:to-5gc-basic",
+                    "description": "Basic IP connectivity SAP toward 5G Core",
+                    "parent-termination-point": "urn:tp:ip-rtr-1:to-5gc-1",
+                    "interface-type": "ietf-sap-ntw:phy",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": ["sap:5gc-1:to-ip-rtr"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:5gc-1",
+            "supporting-node": [
+              {
+                "network-ref": "transport-inclusion-reference",
+                "node-ref": "urn:node:5gc-1"
+              }
+            ],
+            "ietf-sap-ntw:service": [
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:5gc-1:to-internet",
+                    "description": "Internet breakout SAP at the N6 interface toward NET-1",
+                    "parent-termination-point": "urn:tp:5gc-1:to-net-1",
+                    "interface-type": "ietf-sap-ntw:phy",
+                    "role": "ietf-sap-ntw:uni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": ["sap:net-1:to-5gc"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

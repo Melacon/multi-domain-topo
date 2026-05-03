@@ -1,0 +1,115 @@
+{
+  "ietf-network:networks": {
+    "network": [
+      {
+        "network-id": "phyical-topology",
+        "network-types": {
+          "ietf-network-topology:network-topology": {}
+        },
+        "node": [
+          {
+            "node-id": "urn:node:ofh-sw-1",
+            "ietf-network-topology:termination-point": [
+              { "tp-id": "urn:if:ofh-sw-1:port-1" },
+              { "tp-id": "urn:if:ofh-sw-1:port-2" },
+              { "tp-id": "urn:if:ofh-sw-1:port-3" },
+              { "tp-id": "urn:if:ofh-sw-1:port-4" },
+              { "tp-id": "urn:if:ofh-sw-1:port-5" },
+              { "tp-id": "urn:if:ofh-sw-1:port-6" },
+              { "tp-id": "urn:if:ofh-sw-1:port-7" },
+              { "tp-id": "urn:if:ofh-sw-1:port-8" },
+              { "tp-id": "urn:if:ofh-sw-1:uplink-1" },
+              { "tp-id": "urn:if:ofh-sw-1:uplink-2" },
+              { "tp-id": "urn:if:ofh-sw-1:mgmt-1" }
+            ]
+          }
+        ]
+      },
+      {
+        "network-id": "ethernet-topology",
+        "network-types": {
+          "ietf-network-topology:network-topology": {}
+        },
+        "supporting-network": [
+          { "network-ref": "phyical-topology" }
+        ],
+        "node": [
+          {
+            "node-id": "urn:node:ofh-sw-1",
+            "supporting-node": [
+              { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1" }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-port-1",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-1" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-port-2",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-2" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-port-3",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-3" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-port-4",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-4" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-port-5",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-5" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-port-6",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-6" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-port-7",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-7" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-port-8",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:port-8" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-uplink-1",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:uplink-1" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-uplink-2",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:uplink-2" }
+                ]
+              },
+              {
+                "tp-id": "urn:if:ofh-sw-1:eth-mgmt-1",
+                "supporting-termination-point": [
+                  { "network-ref": "phyical-topology", "node-ref": "urn:node:ofh-sw-1", "tp-ref": "urn:if:ofh-sw-1:mgmt-1" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
