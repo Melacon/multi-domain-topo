@@ -1,0 +1,29 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      { "name": "urn:if:ofh-sw-1:port-1",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:port-2",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:port-3",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:port-4",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:port-5",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:port-6",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:port-7",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:port-8",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:uplink-1",   "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:uplink-2",   "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:ofh-sw-1:mgmt-1",     "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+
+      { "name": "urn:if:ofh-sw-1:eth-port-1",   "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:port-1"] },
+      { "name": "urn:if:ofh-sw-1:eth-port-2",   "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:port-2"] },
+      { "name": "urn:if:ofh-sw-1:eth-port-3",   "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:port-3"] },
+      { "name": "urn:if:ofh-sw-1:eth-port-4",   "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:port-4"] },
+      { "name": "urn:if:ofh-sw-1:eth-port-5",   "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:port-5"] },
+      { "name": "urn:if:ofh-sw-1:eth-port-6",   "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:port-6"] },
+      { "name": "urn:if:ofh-sw-1:eth-port-7",   "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:port-7"] },
+      { "name": "urn:if:ofh-sw-1:eth-port-8",   "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:port-8"] },
+      { "name": "urn:if:ofh-sw-1:eth-uplink-1", "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:uplink-1"] },
+      { "name": "urn:if:ofh-sw-1:eth-uplink-2", "type": "iana-if-type:l2vlan", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:uplink-2"] },
+      { "name": "urn:if:ofh-sw-1:eth-mgmt-1",   "type": "iana-if-type:ethernetCsmacd", "enabled": true, "lower-layer-if": ["urn:if:ofh-sw-1:mgmt-1"] }
+    ]
+  }
+}

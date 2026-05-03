@@ -2,34 +2,38 @@
   "ietf-interfaces:interfaces": {
     "interface": [
       {
-        "name": "fiber-port-1",
+        "name": "urn:if:o-ru-1:fiber-port-1",
         "type": "iana-if-type:ethernetCsmacd",
         "enabled": true
       },
       {
-        "name": "eth0",
+        "name": "urn:if:o-ru-1:eth0",
         "type": "iana-if-type:ethernetCsmacd",
         "enabled": true
       },
       {
-        "name": "ofh-cplane-sep",
+        "name": "urn:if:o-ru-1:ofh-cplane-sep",
         "type": "iana-if-type:l2vlan",
-        "enabled": true
+        "enabled": true,
+        "lower-layer-if": ["urn:if:o-ru-1:fiber-port-1"]
       },
       {
-        "name": "ofh-uplane-sep",
+        "name": "urn:if:o-ru-1:ofh-uplane-sep",
         "type": "iana-if-type:l2vlan",
-        "enabled": true
+        "enabled": true,
+        "lower-layer-if": ["urn:if:o-ru-1:fiber-port-1"]
       },
       {
-        "name": "ofh-splane-sep",
+        "name": "urn:if:o-ru-1:ofh-splane-sep",
         "type": "iana-if-type:ethernetCsmacd",
-        "enabled": true
+        "enabled": true,
+        "lower-layer-if": ["urn:if:o-ru-1:fiber-port-1"]
       },
       {
-        "name": "ofh-mplane-sep",
+        "name": "urn:if:o-ru-1:ofh-mplane-sep",
         "type": "iana-if-type:l2vlan",
-        "enabled": true
+        "enabled": true,
+        "lower-layer-if": ["urn:if:o-ru-1:fiber-port-1"]
       }
     ]
   }

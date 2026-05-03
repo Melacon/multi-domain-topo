@@ -1,0 +1,12 @@
+{
+  "ietf-interfaces:interfaces": {
+    "interface": [
+      { "name": "urn:if:o-ru-4:fiber-port-1",    "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:o-ru-4:eth0",            "type": "iana-if-type:ethernetCsmacd", "enabled": true },
+      { "name": "urn:if:o-ru-4:ofh-cplane-sep",  "type": "iana-if-type:l2vlan",         "enabled": true, "lower-layer-if": ["urn:if:o-ru-4:fiber-port-1"] },
+      { "name": "urn:if:o-ru-4:ofh-uplane-sep",  "type": "iana-if-type:l2vlan",         "enabled": true, "lower-layer-if": ["urn:if:o-ru-4:fiber-port-1"] },
+      { "name": "urn:if:o-ru-4:ofh-splane-sep",  "type": "iana-if-type:ethernetCsmacd", "enabled": true, "lower-layer-if": ["urn:if:o-ru-4:fiber-port-1"] },
+      { "name": "urn:if:o-ru-4:ofh-mplane-sep",  "type": "iana-if-type:l2vlan",         "enabled": true, "lower-layer-if": ["urn:if:o-ru-4:fiber-port-1"] }
+    ]
+  }
+}
