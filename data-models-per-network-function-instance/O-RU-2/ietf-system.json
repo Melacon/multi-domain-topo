@@ -1,7 +1,7 @@
 {
   "ietf-system:system": {
     "contact": "network-functions@hqiq.utdallas.edu",
-    "hostname": "o-ru-2",
+    "hostname": "O-RU-2",
     "location": "Richardson Innovation Quarter Headquarters (IQ HQ), 1302 E Collins Blvd, Richardson, TX 75081",
     "clock": {
       "timezone-name": "UTC"
@@ -19,7 +19,9 @@
       ]
     },
     "dns-resolver": {
-      "search": ["hqiq.udallas.edu"],
+      "search": [
+        "hqiq.udallas.edu"
+      ],
       "server": [
         {
           "name": "Public DNS Server",
@@ -31,4 +33,3 @@
     }
   }
 }
-

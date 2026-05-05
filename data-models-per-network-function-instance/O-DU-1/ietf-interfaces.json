@@ -2,50 +2,62 @@
   "ietf-interfaces:interfaces": {
     "interface": [
       {
-        "name": "urn:if:o-du-1:fiber-port-1",
+        "name": "urn:if:O-DU-1:FIBER-PORT-1",
         "type": "iana-if-type:ethernetCsmacd",
         "enabled": true
       },
       {
-        "name": "urn:if:o-du-1:eth0",
+        "name": "urn:if:O-DU-1:ETH0",
         "type": "iana-if-type:ethernetCsmacd",
         "enabled": true
       },
       {
-        "name": "urn:if:o-du-1:ofh-cplane-sep",
+        "name": "urn:if:O-DU-1:OFH-CPLANE-SAP",
         "type": "iana-if-type:l2vlan",
         "enabled": true,
-        "lower-layer-if": ["urn:if:o-du-1:fiber-port-1"]
+        "lower-layer-if": [
+          "urn:if:O-DU-1:FIBER-PORT-1"
+        ]
       },
       {
-        "name": "urn:if:o-du-1:ofh-uplane-sep",
+        "name": "urn:if:O-DU-1:OFH-UPLANE-SAP",
         "type": "iana-if-type:l2vlan",
         "enabled": true,
-        "lower-layer-if": ["urn:if:o-du-1:fiber-port-1"]
+        "lower-layer-if": [
+          "urn:if:O-DU-1:FIBER-PORT-1"
+        ]
       },
       {
-        "name": "urn:if:o-du-1:ofh-splane-sep",
+        "name": "urn:if:O-DU-1:OFH-SPLANE-SAP",
         "type": "iana-if-type:ethernetCsmacd",
         "enabled": true,
-        "lower-layer-if": ["urn:if:o-du-1:fiber-port-1"]
+        "lower-layer-if": [
+          "urn:if:O-DU-1:FIBER-PORT-1"
+        ]
       },
       {
-        "name": "urn:if:o-du-1:ofh-mplane-sep",
+        "name": "urn:if:O-DU-1:OFH-MPLANE-SAP",
         "type": "iana-if-type:l2vlan",
         "enabled": true,
-        "lower-layer-if": ["urn:if:o-du-1:fiber-port-1"]
+        "lower-layer-if": [
+          "urn:if:O-DU-1:FIBER-PORT-1"
+        ]
       },
       {
-        "name": "urn:if:o-du-1:f1-c",
+        "name": "urn:if:O-DU-1:F1-C",
         "type": "iana-if-type:l2vlan",
         "enabled": true,
-        "lower-layer-if": ["urn:if:o-du-1:eth0"]
+        "lower-layer-if": [
+          "urn:if:O-DU-1:ETH0"
+        ]
       },
       {
-        "name": "urn:if:o-du-1:f1-u",
+        "name": "urn:if:O-DU-1:F1-U",
         "type": "iana-if-type:l2vlan",
         "enabled": true,
-        "lower-layer-if": ["urn:if:o-du-1:eth0"]
+        "lower-layer-if": [
+          "urn:if:O-DU-1:ETH0"
+        ]
       }
     ]
   }

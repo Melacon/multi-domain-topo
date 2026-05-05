@@ -1,9 +1,21 @@
 {
   "ietf-interfaces:interfaces": {
     "interface": [
-      { "name": "line-north", "type": "iana-if-type:opticalTransport", "enabled": true },
-      { "name": "line-south", "type": "iana-if-type:opticalTransport", "enabled": true },
-      { "name": "client",     "type": "iana-if-type:opticalTransport", "enabled": true }
+      {
+        "name": "line-north",
+        "type": "iana-if-type:opticalTransport",
+        "enabled": true
+      },
+      {
+        "name": "line-south",
+        "type": "iana-if-type:opticalTransport",
+        "enabled": true
+      },
+      {
+        "name": "client",
+        "type": "iana-if-type:opticalTransport",
+        "enabled": true
+      }
     ]
   }
 }

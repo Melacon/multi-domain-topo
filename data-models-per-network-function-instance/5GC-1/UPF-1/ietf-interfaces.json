@@ -1,8 +1,16 @@
 {
   "ietf-interfaces:interfaces": {
     "interface": [
-      { "name": "to-ip-rtr-1", "type": "iana-if-type:ethernetCsmacd", "enabled": true },
-      { "name": "to-net-1",    "type": "iana-if-type:ethernetCsmacd", "enabled": true }
+      {
+        "name": "to-ip-rtr-1",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "to-net-1",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      }
     ]
   }
 }

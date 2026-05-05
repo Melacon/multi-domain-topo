@@ -1,14 +1,64 @@
 {
   "ietf-interfaces:interfaces": {
     "interface": [
-      { "name": "urn:if:o-du-2:fiber-port-1",    "type": "iana-if-type:ethernetCsmacd", "enabled": true },
-      { "name": "urn:if:o-du-2:eth0",            "type": "iana-if-type:ethernetCsmacd", "enabled": true },
-      { "name": "urn:if:o-du-2:ofh-cplane-sep",  "type": "iana-if-type:l2vlan",         "enabled": true, "lower-layer-if": ["urn:if:o-du-2:fiber-port-1"] },
-      { "name": "urn:if:o-du-2:ofh-uplane-sep",  "type": "iana-if-type:l2vlan",         "enabled": true, "lower-layer-if": ["urn:if:o-du-2:fiber-port-1"] },
-      { "name": "urn:if:o-du-2:ofh-splane-sep",  "type": "iana-if-type:ethernetCsmacd", "enabled": true, "lower-layer-if": ["urn:if:o-du-2:fiber-port-1"] },
-      { "name": "urn:if:o-du-2:ofh-mplane-sep",  "type": "iana-if-type:l2vlan",         "enabled": true, "lower-layer-if": ["urn:if:o-du-2:fiber-port-1"] },
-      { "name": "urn:if:o-du-2:f1-c",            "type": "iana-if-type:l2vlan",         "enabled": true, "lower-layer-if": ["urn:if:o-du-2:eth0"] },
-      { "name": "urn:if:o-du-2:f1-u",            "type": "iana-if-type:l2vlan",         "enabled": true, "lower-layer-if": ["urn:if:o-du-2:eth0"] }
+      {
+        "name": "urn:if:O-DU-2:FIBER-PORT-1",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "urn:if:O-DU-2:ETH0",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "urn:if:O-DU-2:OFH-CPLANE-SAP",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": [
+          "urn:if:O-DU-2:FIBER-PORT-1"
+        ]
+      },
+      {
+        "name": "urn:if:O-DU-2:OFH-UPLANE-SAP",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": [
+          "urn:if:O-DU-2:FIBER-PORT-1"
+        ]
+      },
+      {
+        "name": "urn:if:O-DU-2:OFH-SPLANE-SAP",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true,
+        "lower-layer-if": [
+          "urn:if:O-DU-2:FIBER-PORT-1"
+        ]
+      },
+      {
+        "name": "urn:if:O-DU-2:OFH-MPLANE-SAP",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": [
+          "urn:if:O-DU-2:FIBER-PORT-1"
+        ]
+      },
+      {
+        "name": "urn:if:O-DU-2:F1-C",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": [
+          "urn:if:O-DU-2:ETH0"
+        ]
+      },
+      {
+        "name": "urn:if:O-DU-2:F1-U",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": [
+          "urn:if:O-DU-2:ETH0"
+        ]
+      }
     ]
   }
 }

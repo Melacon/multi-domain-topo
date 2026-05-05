@@ -1,9 +1,21 @@
 {
   "ietf-interfaces:interfaces": {
     "interface": [
-      { "name": "line",      "type": "iana-if-type:opticalTransport", "enabled": true },
-      { "name": "client-cp", "type": "iana-if-type:ethernetCsmacd",   "enabled": true },
-      { "name": "client-up", "type": "iana-if-type:ethernetCsmacd",   "enabled": true }
+      {
+        "name": "line",
+        "type": "iana-if-type:opticalTransport",
+        "enabled": true
+      },
+      {
+        "name": "client-cp",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "client-up",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      }
     ]
   }
 }
