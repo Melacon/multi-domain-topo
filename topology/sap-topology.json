@@ -13,7 +13,7 @@
         },
         "supporting-network": [
           {
-            "network-ref": "transport-inclusion-reference"
+            "network-ref": "ethernet-topology"
           }
         ],
         "node": [
@@ -21,7 +21,7 @@
             "node-id": "urn:node:TXP-1",
             "supporting-node": [
               {
-                "network-ref": "transport-inclusion-reference",
+                "network-ref": "ethernet-topology",
                 "node-ref": "urn:node:TXP-1"
               }
             ],
@@ -59,7 +59,7 @@
             "node-id": "urn:node:TXP-3",
             "supporting-node": [
               {
-                "network-ref": "transport-inclusion-reference",
+                "network-ref": "ethernet-topology",
                 "node-ref": "urn:node:TXP-3"
               }
             ],
@@ -97,7 +97,7 @@
             "node-id": "urn:node:IP-RTR-1",
             "supporting-node": [
               {
-                "network-ref": "transport-inclusion-reference",
+                "network-ref": "ethernet-topology",
                 "node-ref": "urn:node:IP-RTR-1"
               }
             ],
@@ -140,7 +140,7 @@
             "node-id": "urn:node:5GC-1",
             "supporting-node": [
               {
-                "network-ref": "transport-inclusion-reference",
+                "network-ref": "ethernet-topology",
                 "node-ref": "urn:node:5GC-1"
               }
             ],
