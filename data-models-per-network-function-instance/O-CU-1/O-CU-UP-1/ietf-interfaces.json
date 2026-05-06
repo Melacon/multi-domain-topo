@@ -4,17 +4,20 @@
       {
         "name": "backhaul",
         "type": "iana-if-type:ethernetCsmacd",
-        "enabled": true
+        "enabled": true,
+        "ietf-sap-ntw:sap-id": "sap:O-CU-UP-1:BACKHAUL"
       },
       {
         "name": "f1-u",
         "type": "iana-if-type:l2vlan",
-        "enabled": true
+        "enabled": true,
+        "ietf-sap-ntw:sap-id": "sap:O-CU-UP-1:F1-U"
       },
       {
         "name": "e1",
         "type": "iana-if-type:l2vlan",
-        "enabled": true
+        "enabled": true,
+        "ietf-sap-ntw:sap-id": "sap:O-CU-UP-1:E1"
       }
     ]
   }

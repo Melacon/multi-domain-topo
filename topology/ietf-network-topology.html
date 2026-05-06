@@ -1803,10 +1803,12 @@ const ALL_NETWORKS = [
           }
         ],
         "tps": [
-          "urn:if:O-DU-1:OFH-CPLANE-SEP",
-          "urn:if:O-DU-1:OFH-UPLANE-SEP",
-          "urn:if:O-DU-1:OFH-SPLANE-SEP",
-          "urn:if:O-DU-1:OFH-MPLANE-SEP"
+          "urn:if:O-DU-1:OFH-CPLANE-SAP",
+          "urn:if:O-DU-1:OFH-UPLANE-SAP",
+          "urn:if:O-DU-1:OFH-SPLANE-SAP",
+          "urn:if:O-DU-1:OFH-MPLANE-SAP",
+          "urn:if:O-DU-1:F1-C",
+          "urn:if:O-DU-1:F1-U"
         ]
       },
       {
@@ -1820,10 +1822,10 @@ const ALL_NETWORKS = [
           }
         ],
         "tps": [
-          "urn:if:O-RU-1:OFH-CPLANE-SEP",
-          "urn:if:O-RU-1:OFH-UPLANE-SEP",
-          "urn:if:O-RU-1:OFH-SPLANE-SEP",
-          "urn:if:O-RU-1:OFH-MPLANE-SEP"
+          "urn:if:O-RU-1:OFH-CPLANE-SAP",
+          "urn:if:O-RU-1:OFH-UPLANE-SAP",
+          "urn:if:O-RU-1:OFH-SPLANE-SAP",
+          "urn:if:O-RU-1:OFH-MPLANE-SAP"
         ]
       },
       {
@@ -1837,10 +1839,12 @@ const ALL_NETWORKS = [
           }
         ],
         "tps": [
-          "urn:if:O-DU-2:OFH-CPLANE-SEP",
-          "urn:if:O-DU-2:OFH-UPLANE-SEP",
-          "urn:if:O-DU-2:OFH-SPLANE-SEP",
-          "urn:if:O-DU-2:OFH-MPLANE-SEP"
+          "urn:if:O-DU-2:OFH-CPLANE-SAP",
+          "urn:if:O-DU-2:OFH-UPLANE-SAP",
+          "urn:if:O-DU-2:OFH-SPLANE-SAP",
+          "urn:if:O-DU-2:OFH-MPLANE-SAP",
+          "urn:if:O-DU-2:F1-C",
+          "urn:if:O-DU-2:F1-U"
         ]
       },
       {
@@ -1854,10 +1858,10 @@ const ALL_NETWORKS = [
           }
         ],
         "tps": [
-          "urn:if:O-RU-2:OFH-CPLANE-SEP",
-          "urn:if:O-RU-2:OFH-UPLANE-SEP",
-          "urn:if:O-RU-2:OFH-SPLANE-SEP",
-          "urn:if:O-RU-2:OFH-MPLANE-SEP"
+          "urn:if:O-RU-2:OFH-CPLANE-SAP",
+          "urn:if:O-RU-2:OFH-UPLANE-SAP",
+          "urn:if:O-RU-2:OFH-SPLANE-SAP",
+          "urn:if:O-RU-2:OFH-MPLANE-SAP"
         ]
       },
       {
@@ -1871,10 +1875,10 @@ const ALL_NETWORKS = [
           }
         ],
         "tps": [
-          "urn:if:O-RU-3:OFH-CPLANE-SEP",
-          "urn:if:O-RU-3:OFH-UPLANE-SEP",
-          "urn:if:O-RU-3:OFH-SPLANE-SEP",
-          "urn:if:O-RU-3:OFH-MPLANE-SEP"
+          "urn:if:O-RU-3:OFH-CPLANE-SAP",
+          "urn:if:O-RU-3:OFH-UPLANE-SAP",
+          "urn:if:O-RU-3:OFH-SPLANE-SAP",
+          "urn:if:O-RU-3:OFH-MPLANE-SAP"
         ]
       },
       {
@@ -1888,10 +1892,74 @@ const ALL_NETWORKS = [
           }
         ],
         "tps": [
-          "urn:if:O-RU-4:OFH-CPLANE-SEP",
-          "urn:if:O-RU-4:OFH-UPLANE-SEP",
-          "urn:if:O-RU-4:OFH-SPLANE-SEP",
-          "urn:if:O-RU-4:OFH-MPLANE-SEP"
+          "urn:if:O-RU-4:OFH-CPLANE-SAP",
+          "urn:if:O-RU-4:OFH-UPLANE-SAP",
+          "urn:if:O-RU-4:OFH-SPLANE-SAP",
+          "urn:if:O-RU-4:OFH-MPLANE-SAP"
+        ]
+      },
+      {
+        "node-id": "urn:node:O-CU-CP-1",
+        "type": "O-CU-CP",
+        "label": "O-CU-CP-1",
+        "supporting-nodes": [
+          {
+            "network-ref": "ethernet-topology",
+            "node-ref": "urn:node:O-CU-CP-1"
+          }
+        ],
+        "tps": [
+          "urn:if:O-CU-CP-1:BACKHAUL",
+          "urn:if:O-CU-CP-1:F1-C",
+          "urn:if:O-CU-CP-1:E1"
+        ]
+      },
+      {
+        "node-id": "urn:node:O-CU-UP-1",
+        "type": "O-CU-UP",
+        "label": "O-CU-UP-1",
+        "supporting-nodes": [
+          {
+            "network-ref": "ethernet-topology",
+            "node-ref": "urn:node:O-CU-UP-1"
+          }
+        ],
+        "tps": [
+          "urn:if:O-CU-UP-1:BACKHAUL",
+          "urn:if:O-CU-UP-1:F1-U",
+          "urn:if:O-CU-UP-1:E1"
+        ]
+      },
+      {
+        "node-id": "urn:node:O-CU-CP-2",
+        "type": "O-CU-CP",
+        "label": "O-CU-CP-2",
+        "supporting-nodes": [
+          {
+            "network-ref": "ethernet-topology",
+            "node-ref": "urn:node:O-CU-CP-2"
+          }
+        ],
+        "tps": [
+          "urn:if:O-CU-CP-2:BACKHAUL",
+          "urn:if:O-CU-CP-2:F1-C",
+          "urn:if:O-CU-CP-2:E1"
+        ]
+      },
+      {
+        "node-id": "urn:node:O-CU-UP-2",
+        "type": "O-CU-UP",
+        "label": "O-CU-UP-2",
+        "supporting-nodes": [
+          {
+            "network-ref": "ethernet-topology",
+            "node-ref": "urn:node:O-CU-UP-2"
+          }
+        ],
+        "tps": [
+          "urn:if:O-CU-UP-2:BACKHAUL",
+          "urn:if:O-CU-UP-2:F1-U",
+          "urn:if:O-CU-UP-2:E1"
         ]
       }
     ],
@@ -1900,257 +1968,353 @@ const ALL_NETWORKS = [
         "link-id": "urn:link:OFH-CPLANE-O-DU-1-O-RU-1",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-1",
-        "source-tp": "urn:if:O-DU-1:OFH-CPLANE-SEP",
+        "source-tp": "urn:if:O-DU-1:OFH-CPLANE-SAP",
         "dest-node": "urn:node:O-RU-1",
-        "dest-tp": "urn:if:O-RU-1:OFH-CPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-1:OFH-CPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-CPLANE-O-RU-1-O-DU-1",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-1",
-        "source-tp": "urn:if:O-RU-1:OFH-CPLANE-SEP",
+        "source-tp": "urn:if:O-RU-1:OFH-CPLANE-SAP",
         "dest-node": "urn:node:O-DU-1",
-        "dest-tp": "urn:if:O-DU-1:OFH-CPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-1:OFH-CPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-CPLANE-O-DU-2-O-RU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP",
         "dest-node": "urn:node:O-RU-2",
-        "dest-tp": "urn:if:O-RU-2:OFH-CPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-2:OFH-CPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-CPLANE-O-RU-2-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-2",
-        "source-tp": "urn:if:O-RU-2:OFH-CPLANE-SEP",
+        "source-tp": "urn:if:O-RU-2:OFH-CPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-CPLANE-O-DU-2-O-RU-3",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP",
         "dest-node": "urn:node:O-RU-3",
-        "dest-tp": "urn:if:O-RU-3:OFH-CPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-3:OFH-CPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-CPLANE-O-RU-3-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-3",
-        "source-tp": "urn:if:O-RU-3:OFH-CPLANE-SEP",
+        "source-tp": "urn:if:O-RU-3:OFH-CPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-CPLANE-O-DU-2-O-RU-4",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP",
         "dest-node": "urn:node:O-RU-4",
-        "dest-tp": "urn:if:O-RU-4:OFH-CPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-4:OFH-CPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-CPLANE-O-RU-4-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-4",
-        "source-tp": "urn:if:O-RU-4:OFH-CPLANE-SEP",
+        "source-tp": "urn:if:O-RU-4:OFH-CPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-UPLANE-O-DU-1-O-RU-1",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-1",
-        "source-tp": "urn:if:O-DU-1:OFH-UPLANE-SEP",
+        "source-tp": "urn:if:O-DU-1:OFH-UPLANE-SAP",
         "dest-node": "urn:node:O-RU-1",
-        "dest-tp": "urn:if:O-RU-1:OFH-UPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-1:OFH-UPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-UPLANE-O-RU-1-O-DU-1",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-1",
-        "source-tp": "urn:if:O-RU-1:OFH-UPLANE-SEP",
+        "source-tp": "urn:if:O-RU-1:OFH-UPLANE-SAP",
         "dest-node": "urn:node:O-DU-1",
-        "dest-tp": "urn:if:O-DU-1:OFH-UPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-1:OFH-UPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-UPLANE-O-DU-2-O-RU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP",
         "dest-node": "urn:node:O-RU-2",
-        "dest-tp": "urn:if:O-RU-2:OFH-UPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-2:OFH-UPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-UPLANE-O-RU-2-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-2",
-        "source-tp": "urn:if:O-RU-2:OFH-UPLANE-SEP",
+        "source-tp": "urn:if:O-RU-2:OFH-UPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-UPLANE-O-DU-2-O-RU-3",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP",
         "dest-node": "urn:node:O-RU-3",
-        "dest-tp": "urn:if:O-RU-3:OFH-UPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-3:OFH-UPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-UPLANE-O-RU-3-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-3",
-        "source-tp": "urn:if:O-RU-3:OFH-UPLANE-SEP",
+        "source-tp": "urn:if:O-RU-3:OFH-UPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-UPLANE-O-DU-2-O-RU-4",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP",
         "dest-node": "urn:node:O-RU-4",
-        "dest-tp": "urn:if:O-RU-4:OFH-UPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-4:OFH-UPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-UPLANE-O-RU-4-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-4",
-        "source-tp": "urn:if:O-RU-4:OFH-UPLANE-SEP",
+        "source-tp": "urn:if:O-RU-4:OFH-UPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-SPLANE-O-DU-1-O-RU-1",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-1",
-        "source-tp": "urn:if:O-DU-1:OFH-SPLANE-SEP",
+        "source-tp": "urn:if:O-DU-1:OFH-SPLANE-SAP",
         "dest-node": "urn:node:O-RU-1",
-        "dest-tp": "urn:if:O-RU-1:OFH-SPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-1:OFH-SPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-SPLANE-O-RU-1-O-DU-1",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-1",
-        "source-tp": "urn:if:O-RU-1:OFH-SPLANE-SEP",
+        "source-tp": "urn:if:O-RU-1:OFH-SPLANE-SAP",
         "dest-node": "urn:node:O-DU-1",
-        "dest-tp": "urn:if:O-DU-1:OFH-SPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-1:OFH-SPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-SPLANE-O-DU-2-O-RU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP",
         "dest-node": "urn:node:O-RU-2",
-        "dest-tp": "urn:if:O-RU-2:OFH-SPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-2:OFH-SPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-SPLANE-O-RU-2-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-2",
-        "source-tp": "urn:if:O-RU-2:OFH-SPLANE-SEP",
+        "source-tp": "urn:if:O-RU-2:OFH-SPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-SPLANE-O-DU-2-O-RU-3",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP",
         "dest-node": "urn:node:O-RU-3",
-        "dest-tp": "urn:if:O-RU-3:OFH-SPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-3:OFH-SPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-SPLANE-O-RU-3-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-3",
-        "source-tp": "urn:if:O-RU-3:OFH-SPLANE-SEP",
+        "source-tp": "urn:if:O-RU-3:OFH-SPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-SPLANE-O-DU-2-O-RU-4",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP",
         "dest-node": "urn:node:O-RU-4",
-        "dest-tp": "urn:if:O-RU-4:OFH-SPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-4:OFH-SPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-SPLANE-O-RU-4-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-4",
-        "source-tp": "urn:if:O-RU-4:OFH-SPLANE-SEP",
+        "source-tp": "urn:if:O-RU-4:OFH-SPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-MPLANE-O-DU-1-O-RU-1",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-1",
-        "source-tp": "urn:if:O-DU-1:OFH-MPLANE-SEP",
+        "source-tp": "urn:if:O-DU-1:OFH-MPLANE-SAP",
         "dest-node": "urn:node:O-RU-1",
-        "dest-tp": "urn:if:O-RU-1:OFH-MPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-1:OFH-MPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-MPLANE-O-RU-1-O-DU-1",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-1",
-        "source-tp": "urn:if:O-RU-1:OFH-MPLANE-SEP",
+        "source-tp": "urn:if:O-RU-1:OFH-MPLANE-SAP",
         "dest-node": "urn:node:O-DU-1",
-        "dest-tp": "urn:if:O-DU-1:OFH-MPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-1:OFH-MPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-MPLANE-O-DU-2-O-RU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP",
         "dest-node": "urn:node:O-RU-2",
-        "dest-tp": "urn:if:O-RU-2:OFH-MPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-2:OFH-MPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-MPLANE-O-RU-2-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-2",
-        "source-tp": "urn:if:O-RU-2:OFH-MPLANE-SEP",
+        "source-tp": "urn:if:O-RU-2:OFH-MPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-MPLANE-O-DU-2-O-RU-3",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP",
         "dest-node": "urn:node:O-RU-3",
-        "dest-tp": "urn:if:O-RU-3:OFH-MPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-3:OFH-MPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-MPLANE-O-RU-3-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-3",
-        "source-tp": "urn:if:O-RU-3:OFH-MPLANE-SEP",
+        "source-tp": "urn:if:O-RU-3:OFH-MPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-MPLANE-O-DU-2-O-RU-4",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-DU-2",
-        "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP",
+        "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP",
         "dest-node": "urn:node:O-RU-4",
-        "dest-tp": "urn:if:O-RU-4:OFH-MPLANE-SEP"
+        "dest-tp": "urn:if:O-RU-4:OFH-MPLANE-SAP"
       },
       {
         "link-id": "urn:link:OFH-MPLANE-O-RU-4-O-DU-2",
         "type": "UNKNOWN",
         "source-node": "urn:node:O-RU-4",
-        "source-tp": "urn:if:O-RU-4:OFH-MPLANE-SEP",
+        "source-tp": "urn:if:O-RU-4:OFH-MPLANE-SAP",
         "dest-node": "urn:node:O-DU-2",
-        "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+        "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
+      },
+      {
+        "link-id": "urn:link:SAP-E1-O-CU-CP-1-O-CU-UP-1",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-CU-CP-1",
+        "source-tp": "urn:if:O-CU-CP-1:E1",
+        "dest-node": "urn:node:O-CU-UP-1",
+        "dest-tp": "urn:if:O-CU-UP-1:E1"
+      },
+      {
+        "link-id": "urn:link:SAP-E1-O-CU-UP-1-O-CU-CP-1",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-CU-UP-1",
+        "source-tp": "urn:if:O-CU-UP-1:E1",
+        "dest-node": "urn:node:O-CU-CP-1",
+        "dest-tp": "urn:if:O-CU-CP-1:E1"
+      },
+      {
+        "link-id": "urn:link:SAP-F1-C-O-CU-CP-1-O-DU-1",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-CU-CP-1",
+        "source-tp": "urn:if:O-CU-CP-1:F1-C",
+        "dest-node": "urn:node:O-DU-1",
+        "dest-tp": "urn:if:O-DU-1:F1-C"
+      },
+      {
+        "link-id": "urn:link:SAP-F1-C-O-DU-1-O-CU-CP-1",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-DU-1",
+        "source-tp": "urn:if:O-DU-1:F1-C",
+        "dest-node": "urn:node:O-CU-CP-1",
+        "dest-tp": "urn:if:O-CU-CP-1:F1-C"
+      },
+      {
+        "link-id": "urn:link:SAP-F1-U-O-CU-UP-1-O-DU-1",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-CU-UP-1",
+        "source-tp": "urn:if:O-CU-UP-1:F1-U",
+        "dest-node": "urn:node:O-DU-1",
+        "dest-tp": "urn:if:O-DU-1:F1-U"
+      },
+      {
+        "link-id": "urn:link:SAP-F1-U-O-DU-1-O-CU-UP-1",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-DU-1",
+        "source-tp": "urn:if:O-DU-1:F1-U",
+        "dest-node": "urn:node:O-CU-UP-1",
+        "dest-tp": "urn:if:O-CU-UP-1:F1-U"
+      },
+      {
+        "link-id": "urn:link:SAP-E1-O-CU-CP-2-O-CU-UP-2",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-CU-CP-2",
+        "source-tp": "urn:if:O-CU-CP-2:E1",
+        "dest-node": "urn:node:O-CU-UP-2",
+        "dest-tp": "urn:if:O-CU-UP-2:E1"
+      },
+      {
+        "link-id": "urn:link:SAP-E1-O-CU-UP-2-O-CU-CP-2",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-CU-UP-2",
+        "source-tp": "urn:if:O-CU-UP-2:E1",
+        "dest-node": "urn:node:O-CU-CP-2",
+        "dest-tp": "urn:if:O-CU-CP-2:E1"
+      },
+      {
+        "link-id": "urn:link:SAP-F1-C-O-CU-CP-2-O-DU-2",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-CU-CP-2",
+        "source-tp": "urn:if:O-CU-CP-2:F1-C",
+        "dest-node": "urn:node:O-DU-2",
+        "dest-tp": "urn:if:O-DU-2:F1-C"
+      },
+      {
+        "link-id": "urn:link:SAP-F1-C-O-DU-2-O-CU-CP-2",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-DU-2",
+        "source-tp": "urn:if:O-DU-2:F1-C",
+        "dest-node": "urn:node:O-CU-CP-2",
+        "dest-tp": "urn:if:O-CU-CP-2:F1-C"
+      },
+      {
+        "link-id": "urn:link:SAP-F1-U-O-CU-UP-2-O-DU-2",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-CU-UP-2",
+        "source-tp": "urn:if:O-CU-UP-2:F1-U",
+        "dest-node": "urn:node:O-DU-2",
+        "dest-tp": "urn:if:O-DU-2:F1-U"
+      },
+      {
+        "link-id": "urn:link:SAP-F1-U-O-DU-2-O-CU-UP-2",
+        "type": "UNKNOWN",
+        "source-node": "urn:node:O-DU-2",
+        "source-tp": "urn:if:O-DU-2:F1-U",
+        "dest-node": "urn:node:O-CU-UP-2",
+        "dest-tp": "urn:if:O-CU-UP-2:F1-U"
       }
     ]
   }

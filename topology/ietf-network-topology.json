@@ -2954,42 +2954,62 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:if:O-DU-1:OFH-CPLANE-SEP",
+                "tp-id": "urn:if:O-DU-1:OFH-CPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-DU-1",
-                    "tp-ref": "urn:if:O-DU-1:OFH-CPLANE-SEP"
+                    "tp-ref": "urn:if:O-DU-1:OFH-CPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-DU-1:OFH-UPLANE-SEP",
+                "tp-id": "urn:if:O-DU-1:OFH-UPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-DU-1",
-                    "tp-ref": "urn:if:O-DU-1:OFH-UPLANE-SEP"
+                    "tp-ref": "urn:if:O-DU-1:OFH-UPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-DU-1:OFH-SPLANE-SEP",
+                "tp-id": "urn:if:O-DU-1:OFH-SPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-DU-1",
-                    "tp-ref": "urn:if:O-DU-1:OFH-SPLANE-SEP"
+                    "tp-ref": "urn:if:O-DU-1:OFH-SPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-DU-1:OFH-MPLANE-SEP",
+                "tp-id": "urn:if:O-DU-1:OFH-MPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-DU-1",
-                    "tp-ref": "urn:if:O-DU-1:OFH-MPLANE-SEP"
+                    "tp-ref": "urn:if:O-DU-1:OFH-MPLANE-SAP"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-DU-1:F1-C",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-DU-1",
+                    "tp-ref": "urn:if:O-DU-1:F1-C"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-DU-1:F1-U",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-DU-1",
+                    "tp-ref": "urn:if:O-DU-1:F1-U"
                   }
                 ]
               }
@@ -3001,7 +3021,7 @@
                   {
                     "sap-id": "sap:O-DU-1:OFH-CPLANE",
                     "description": "Open Fronthaul C-Plane (Control) SAP on O-DU-1",
-                    "parent-termination-point": "urn:if:O-DU-1:OFH-CPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-DU-1:OFH-CPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3017,7 +3037,7 @@
                   {
                     "sap-id": "sap:O-DU-1:OFH-UPLANE",
                     "description": "Open Fronthaul U-Plane (User) SAP on O-DU-1",
-                    "parent-termination-point": "urn:if:O-DU-1:OFH-UPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-DU-1:OFH-UPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3033,7 +3053,7 @@
                   {
                     "sap-id": "sap:O-DU-1:OFH-SPLANE",
                     "description": "Open Fronthaul S-Plane (Sync) SAP on O-DU-1",
-                    "parent-termination-point": "urn:if:O-DU-1:OFH-SPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-DU-1:OFH-SPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3049,12 +3069,44 @@
                   {
                     "sap-id": "sap:O-DU-1:OFH-MPLANE",
                     "description": "Open Fronthaul M-Plane (Management) SAP on O-DU-1",
-                    "parent-termination-point": "urn:if:O-DU-1:OFH-MPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-DU-1:OFH-MPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
                     "peer-sap-id": [
                       "sap:O-RU-1:OFH-MPLANE"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-DU-1:F1-C",
+                    "description": "F1-C SAP on O-DU-1 toward O-CU-CP-1",
+                    "parent-termination-point": "urn:if:O-DU-1:F1-C",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-CU-CP-1:F1-C"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-DU-1:F1-U",
+                    "description": "F1-U SAP on O-DU-1 toward O-CU-UP-1",
+                    "parent-termination-point": "urn:if:O-DU-1:F1-U",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-CU-UP-1:F1-U"
                     ]
                   }
                 ]
@@ -3071,42 +3123,42 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:if:O-RU-1:OFH-CPLANE-SEP",
+                "tp-id": "urn:if:O-RU-1:OFH-CPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-1",
-                    "tp-ref": "urn:if:O-RU-1:OFH-CPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-1:OFH-CPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-1:OFH-UPLANE-SEP",
+                "tp-id": "urn:if:O-RU-1:OFH-UPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-1",
-                    "tp-ref": "urn:if:O-RU-1:OFH-UPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-1:OFH-UPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-1:OFH-SPLANE-SEP",
+                "tp-id": "urn:if:O-RU-1:OFH-SPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-1",
-                    "tp-ref": "urn:if:O-RU-1:OFH-SPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-1:OFH-SPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-1:OFH-MPLANE-SEP",
+                "tp-id": "urn:if:O-RU-1:OFH-MPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-1",
-                    "tp-ref": "urn:if:O-RU-1:OFH-MPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-1:OFH-MPLANE-SAP"
                   }
                 ]
               }
@@ -3118,7 +3170,7 @@
                   {
                     "sap-id": "sap:O-RU-1:OFH-CPLANE",
                     "description": "Open Fronthaul C-Plane (Control) SAP on O-RU-1",
-                    "parent-termination-point": "urn:if:O-RU-1:OFH-CPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-1:OFH-CPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3134,7 +3186,7 @@
                   {
                     "sap-id": "sap:O-RU-1:OFH-UPLANE",
                     "description": "Open Fronthaul U-Plane (User) SAP on O-RU-1",
-                    "parent-termination-point": "urn:if:O-RU-1:OFH-UPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-1:OFH-UPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3150,7 +3202,7 @@
                   {
                     "sap-id": "sap:O-RU-1:OFH-SPLANE",
                     "description": "Open Fronthaul S-Plane (Sync) SAP on O-RU-1",
-                    "parent-termination-point": "urn:if:O-RU-1:OFH-SPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-1:OFH-SPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3166,7 +3218,7 @@
                   {
                     "sap-id": "sap:O-RU-1:OFH-MPLANE",
                     "description": "Open Fronthaul M-Plane (Management) SAP on O-RU-1",
-                    "parent-termination-point": "urn:if:O-RU-1:OFH-MPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-1:OFH-MPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3188,42 +3240,62 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:if:O-DU-2:OFH-CPLANE-SEP",
+                "tp-id": "urn:if:O-DU-2:OFH-CPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-DU-2",
-                    "tp-ref": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+                    "tp-ref": "urn:if:O-DU-2:OFH-CPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-DU-2:OFH-UPLANE-SEP",
+                "tp-id": "urn:if:O-DU-2:OFH-UPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-DU-2",
-                    "tp-ref": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+                    "tp-ref": "urn:if:O-DU-2:OFH-UPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-DU-2:OFH-SPLANE-SEP",
+                "tp-id": "urn:if:O-DU-2:OFH-SPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-DU-2",
-                    "tp-ref": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+                    "tp-ref": "urn:if:O-DU-2:OFH-SPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-DU-2:OFH-MPLANE-SEP",
+                "tp-id": "urn:if:O-DU-2:OFH-MPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-DU-2",
-                    "tp-ref": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+                    "tp-ref": "urn:if:O-DU-2:OFH-MPLANE-SAP"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-DU-2:F1-C",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-DU-2",
+                    "tp-ref": "urn:if:O-DU-2:F1-C"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-DU-2:F1-U",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-DU-2",
+                    "tp-ref": "urn:if:O-DU-2:F1-U"
                   }
                 ]
               }
@@ -3235,7 +3307,7 @@
                   {
                     "sap-id": "sap:O-DU-2:OFH-CPLANE",
                     "description": "Open Fronthaul C-Plane (Control) SAP on O-DU-2",
-                    "parent-termination-point": "urn:if:O-DU-2:OFH-CPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-DU-2:OFH-CPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3253,7 +3325,7 @@
                   {
                     "sap-id": "sap:O-DU-2:OFH-UPLANE",
                     "description": "Open Fronthaul U-Plane (User) SAP on O-DU-2",
-                    "parent-termination-point": "urn:if:O-DU-2:OFH-UPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-DU-2:OFH-UPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3271,7 +3343,7 @@
                   {
                     "sap-id": "sap:O-DU-2:OFH-SPLANE",
                     "description": "Open Fronthaul S-Plane (Sync) SAP on O-DU-2",
-                    "parent-termination-point": "urn:if:O-DU-2:OFH-SPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-DU-2:OFH-SPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3289,7 +3361,7 @@
                   {
                     "sap-id": "sap:O-DU-2:OFH-MPLANE",
                     "description": "Open Fronthaul M-Plane (Management) SAP on O-DU-2",
-                    "parent-termination-point": "urn:if:O-DU-2:OFH-MPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-DU-2:OFH-MPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3297,6 +3369,38 @@
                       "sap:O-RU-2:OFH-MPLANE",
                       "sap:O-RU-3:OFH-MPLANE",
                       "sap:O-RU-4:OFH-MPLANE"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-DU-2:F1-C",
+                    "description": "F1-C SAP on O-DU-2 toward O-CU-CP-2 (via WT)",
+                    "parent-termination-point": "urn:if:O-DU-2:F1-C",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-CU-CP-2:F1-C"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-DU-2:F1-U",
+                    "description": "F1-U SAP on O-DU-2 toward O-CU-UP-2 (via WT)",
+                    "parent-termination-point": "urn:if:O-DU-2:F1-U",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-CU-UP-2:F1-U"
                     ]
                   }
                 ]
@@ -3313,42 +3417,42 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:if:O-RU-2:OFH-CPLANE-SEP",
+                "tp-id": "urn:if:O-RU-2:OFH-CPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-2",
-                    "tp-ref": "urn:if:O-RU-2:OFH-CPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-2:OFH-CPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-2:OFH-UPLANE-SEP",
+                "tp-id": "urn:if:O-RU-2:OFH-UPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-2",
-                    "tp-ref": "urn:if:O-RU-2:OFH-UPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-2:OFH-UPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-2:OFH-SPLANE-SEP",
+                "tp-id": "urn:if:O-RU-2:OFH-SPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-2",
-                    "tp-ref": "urn:if:O-RU-2:OFH-SPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-2:OFH-SPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-2:OFH-MPLANE-SEP",
+                "tp-id": "urn:if:O-RU-2:OFH-MPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-2",
-                    "tp-ref": "urn:if:O-RU-2:OFH-MPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-2:OFH-MPLANE-SAP"
                   }
                 ]
               }
@@ -3360,7 +3464,7 @@
                   {
                     "sap-id": "sap:O-RU-2:OFH-CPLANE",
                     "description": "Open Fronthaul C-Plane (Control) SAP on O-RU-2",
-                    "parent-termination-point": "urn:if:O-RU-2:OFH-CPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-2:OFH-CPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3376,7 +3480,7 @@
                   {
                     "sap-id": "sap:O-RU-2:OFH-UPLANE",
                     "description": "Open Fronthaul U-Plane (User) SAP on O-RU-2",
-                    "parent-termination-point": "urn:if:O-RU-2:OFH-UPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-2:OFH-UPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3392,7 +3496,7 @@
                   {
                     "sap-id": "sap:O-RU-2:OFH-SPLANE",
                     "description": "Open Fronthaul S-Plane (Sync) SAP on O-RU-2",
-                    "parent-termination-point": "urn:if:O-RU-2:OFH-SPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-2:OFH-SPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3408,7 +3512,7 @@
                   {
                     "sap-id": "sap:O-RU-2:OFH-MPLANE",
                     "description": "Open Fronthaul M-Plane (Management) SAP on O-RU-2",
-                    "parent-termination-point": "urn:if:O-RU-2:OFH-MPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-2:OFH-MPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3430,42 +3534,42 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:if:O-RU-3:OFH-CPLANE-SEP",
+                "tp-id": "urn:if:O-RU-3:OFH-CPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-3",
-                    "tp-ref": "urn:if:O-RU-3:OFH-CPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-3:OFH-CPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-3:OFH-UPLANE-SEP",
+                "tp-id": "urn:if:O-RU-3:OFH-UPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-3",
-                    "tp-ref": "urn:if:O-RU-3:OFH-UPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-3:OFH-UPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-3:OFH-SPLANE-SEP",
+                "tp-id": "urn:if:O-RU-3:OFH-SPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-3",
-                    "tp-ref": "urn:if:O-RU-3:OFH-SPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-3:OFH-SPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-3:OFH-MPLANE-SEP",
+                "tp-id": "urn:if:O-RU-3:OFH-MPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-3",
-                    "tp-ref": "urn:if:O-RU-3:OFH-MPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-3:OFH-MPLANE-SAP"
                   }
                 ]
               }
@@ -3477,7 +3581,7 @@
                   {
                     "sap-id": "sap:O-RU-3:OFH-CPLANE",
                     "description": "Open Fronthaul C-Plane (Control) SAP on O-RU-3",
-                    "parent-termination-point": "urn:if:O-RU-3:OFH-CPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-3:OFH-CPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3493,7 +3597,7 @@
                   {
                     "sap-id": "sap:O-RU-3:OFH-UPLANE",
                     "description": "Open Fronthaul U-Plane (User) SAP on O-RU-3",
-                    "parent-termination-point": "urn:if:O-RU-3:OFH-UPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-3:OFH-UPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3509,7 +3613,7 @@
                   {
                     "sap-id": "sap:O-RU-3:OFH-SPLANE",
                     "description": "Open Fronthaul S-Plane (Sync) SAP on O-RU-3",
-                    "parent-termination-point": "urn:if:O-RU-3:OFH-SPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-3:OFH-SPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3525,7 +3629,7 @@
                   {
                     "sap-id": "sap:O-RU-3:OFH-MPLANE",
                     "description": "Open Fronthaul M-Plane (Management) SAP on O-RU-3",
-                    "parent-termination-point": "urn:if:O-RU-3:OFH-MPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-3:OFH-MPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3547,42 +3651,42 @@
             ],
             "ietf-network-topology:termination-point": [
               {
-                "tp-id": "urn:if:O-RU-4:OFH-CPLANE-SEP",
+                "tp-id": "urn:if:O-RU-4:OFH-CPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-4",
-                    "tp-ref": "urn:if:O-RU-4:OFH-CPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-4:OFH-CPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-4:OFH-UPLANE-SEP",
+                "tp-id": "urn:if:O-RU-4:OFH-UPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-4",
-                    "tp-ref": "urn:if:O-RU-4:OFH-UPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-4:OFH-UPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-4:OFH-SPLANE-SEP",
+                "tp-id": "urn:if:O-RU-4:OFH-SPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-4",
-                    "tp-ref": "urn:if:O-RU-4:OFH-SPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-4:OFH-SPLANE-SAP"
                   }
                 ]
               },
               {
-                "tp-id": "urn:if:O-RU-4:OFH-MPLANE-SEP",
+                "tp-id": "urn:if:O-RU-4:OFH-MPLANE-SAP",
                 "supporting-termination-point": [
                   {
                     "network-ref": "ethernet-topology",
                     "node-ref": "urn:node:O-RU-4",
-                    "tp-ref": "urn:if:O-RU-4:OFH-MPLANE-SEP"
+                    "tp-ref": "urn:if:O-RU-4:OFH-MPLANE-SAP"
                   }
                 ]
               }
@@ -3594,7 +3698,7 @@
                   {
                     "sap-id": "sap:O-RU-4:OFH-CPLANE",
                     "description": "Open Fronthaul C-Plane (Control) SAP on O-RU-4",
-                    "parent-termination-point": "urn:if:O-RU-4:OFH-CPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-4:OFH-CPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3610,7 +3714,7 @@
                   {
                     "sap-id": "sap:O-RU-4:OFH-UPLANE",
                     "description": "Open Fronthaul U-Plane (User) SAP on O-RU-4",
-                    "parent-termination-point": "urn:if:O-RU-4:OFH-UPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-4:OFH-UPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3626,7 +3730,7 @@
                   {
                     "sap-id": "sap:O-RU-4:OFH-SPLANE",
                     "description": "Open Fronthaul S-Plane (Sync) SAP on O-RU-4",
-                    "parent-termination-point": "urn:if:O-RU-4:OFH-SPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-4:OFH-SPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
@@ -3642,12 +3746,376 @@
                   {
                     "sap-id": "sap:O-RU-4:OFH-MPLANE",
                     "description": "Open Fronthaul M-Plane (Management) SAP on O-RU-4",
-                    "parent-termination-point": "urn:if:O-RU-4:OFH-MPLANE-SEP",
+                    "parent-termination-point": "urn:if:O-RU-4:OFH-MPLANE-SAP",
                     "interface-type": "ietf-sap-ntw:eth",
                     "role": "ietf-sap-ntw:nni",
                     "allows-child-saps": false,
                     "peer-sap-id": [
                       "sap:O-DU-2:OFH-MPLANE"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:O-CU-CP-1",
+            "supporting-node": [
+              {
+                "network-ref": "ethernet-topology",
+                "node-ref": "urn:node:O-CU-CP-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-CU-CP-1:BACKHAUL",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-CP-1",
+                    "tp-ref": "urn:if:O-CU-CP-1:BACKHAUL"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-CU-CP-1:F1-C",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-CP-1",
+                    "tp-ref": "urn:if:O-CU-CP-1:F1-C"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-CU-CP-1:E1",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-CP-1",
+                    "tp-ref": "urn:if:O-CU-CP-1:E1"
+                  }
+                ]
+              }
+            ],
+            "ietf-sap-ntw:service": [
+              {
+                "service-type": "ietf-sap-ntw:network-slice",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-CP-1:BACKHAUL",
+                    "description": "Backhaul SAP on O-CU-CP-1 toward TXP-1",
+                    "parent-termination-point": "urn:if:O-CU-CP-1:BACKHAUL",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:txp-1:o-cu-cp-1"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-CP-1:F1-C",
+                    "description": "F1-C control-plane SAP on O-CU-CP-1 toward O-DU-1",
+                    "parent-termination-point": "urn:if:O-CU-CP-1:F1-C",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-DU-1:F1-C"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-CP-1:E1",
+                    "description": "E1 interface SAP on O-CU-CP-1 toward O-CU-UP-1",
+                    "parent-termination-point": "urn:if:O-CU-CP-1:E1",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-CU-UP-1:E1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:O-CU-UP-1",
+            "supporting-node": [
+              {
+                "network-ref": "ethernet-topology",
+                "node-ref": "urn:node:O-CU-UP-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-CU-UP-1:BACKHAUL",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-UP-1",
+                    "tp-ref": "urn:if:O-CU-UP-1:BACKHAUL"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-CU-UP-1:F1-U",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-UP-1",
+                    "tp-ref": "urn:if:O-CU-UP-1:F1-U"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-CU-UP-1:E1",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-UP-1",
+                    "tp-ref": "urn:if:O-CU-UP-1:E1"
+                  }
+                ]
+              }
+            ],
+            "ietf-sap-ntw:service": [
+              {
+                "service-type": "ietf-sap-ntw:network-slice",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-UP-1:BACKHAUL",
+                    "description": "Backhaul SAP on O-CU-UP-1 toward TXP-1",
+                    "parent-termination-point": "urn:if:O-CU-UP-1:BACKHAUL",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:txp-1:o-cu-up-1"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-UP-1:F1-U",
+                    "description": "F1-U user-plane SAP on O-CU-UP-1 toward O-DU-1",
+                    "parent-termination-point": "urn:if:O-CU-UP-1:F1-U",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-DU-1:F1-U"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-UP-1:E1",
+                    "description": "E1 interface SAP on O-CU-UP-1 toward O-CU-CP-1",
+                    "parent-termination-point": "urn:if:O-CU-UP-1:E1",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-CU-CP-1:E1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:O-CU-CP-2",
+            "supporting-node": [
+              {
+                "network-ref": "ethernet-topology",
+                "node-ref": "urn:node:O-CU-CP-2"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-CU-CP-2:BACKHAUL",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-CP-2",
+                    "tp-ref": "urn:if:O-CU-CP-2:BACKHAUL"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-CU-CP-2:F1-C",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-CP-2",
+                    "tp-ref": "urn:if:O-CU-CP-2:F1-C"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-CU-CP-2:E1",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-CP-2",
+                    "tp-ref": "urn:if:O-CU-CP-2:E1"
+                  }
+                ]
+              }
+            ],
+            "ietf-sap-ntw:service": [
+              {
+                "service-type": "ietf-sap-ntw:network-slice",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-CP-2:BACKHAUL",
+                    "description": "Backhaul SAP on O-CU-CP-2 toward TXP-3",
+                    "parent-termination-point": "urn:if:O-CU-CP-2:BACKHAUL",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:txp-3:o-cu-cp-2"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-CP-2:F1-C",
+                    "description": "F1-C control-plane SAP on O-CU-CP-2 toward O-DU-2 (via WT)",
+                    "parent-termination-point": "urn:if:O-CU-CP-2:F1-C",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-DU-2:F1-C"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-CP-2:E1",
+                    "description": "E1 interface SAP on O-CU-CP-2 toward O-CU-UP-2",
+                    "parent-termination-point": "urn:if:O-CU-CP-2:E1",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-CU-UP-2:E1"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:O-CU-UP-2",
+            "supporting-node": [
+              {
+                "network-ref": "ethernet-topology",
+                "node-ref": "urn:node:O-CU-UP-2"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-CU-UP-2:BACKHAUL",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-UP-2",
+                    "tp-ref": "urn:if:O-CU-UP-2:BACKHAUL"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-CU-UP-2:F1-U",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-UP-2",
+                    "tp-ref": "urn:if:O-CU-UP-2:F1-U"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-CU-UP-2:E1",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "ethernet-topology",
+                    "node-ref": "urn:node:O-CU-UP-2",
+                    "tp-ref": "urn:if:O-CU-UP-2:E1"
+                  }
+                ]
+              }
+            ],
+            "ietf-sap-ntw:service": [
+              {
+                "service-type": "ietf-sap-ntw:network-slice",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-UP-2:BACKHAUL",
+                    "description": "Backhaul SAP on O-CU-UP-2 toward TXP-3",
+                    "parent-termination-point": "urn:if:O-CU-UP-2:BACKHAUL",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:txp-3:o-cu-up-2"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-UP-2:F1-U",
+                    "description": "F1-U user-plane SAP on O-CU-UP-2 toward O-DU-2 (via WT)",
+                    "parent-termination-point": "urn:if:O-CU-UP-2:F1-U",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-DU-2:F1-U"
+                    ]
+                  }
+                ]
+              },
+              {
+                "service-type": "ietf-sap-ntw:basic-connectivity",
+                "sap": [
+                  {
+                    "sap-id": "sap:O-CU-UP-2:E1",
+                    "description": "E1 interface SAP on O-CU-UP-2 toward O-CU-CP-2",
+                    "parent-termination-point": "urn:if:O-CU-UP-2:E1",
+                    "interface-type": "ietf-sap-ntw:eth",
+                    "role": "ietf-sap-ntw:nni",
+                    "allows-child-saps": false,
+                    "peer-sap-id": [
+                      "sap:O-CU-CP-2:E1"
                     ]
                   }
                 ]
@@ -3660,11 +4128,11 @@
             "link-id": "urn:link:OFH-CPLANE-O-DU-1-O-RU-1",
             "source": {
               "source-node": "urn:node:O-DU-1",
-              "source-tp": "urn:if:O-DU-1:OFH-CPLANE-SEP"
+              "source-tp": "urn:if:O-DU-1:OFH-CPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-1",
-              "dest-tp": "urn:if:O-RU-1:OFH-CPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-1:OFH-CPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3677,11 +4145,11 @@
             "link-id": "urn:link:OFH-CPLANE-O-RU-1-O-DU-1",
             "source": {
               "source-node": "urn:node:O-RU-1",
-              "source-tp": "urn:if:O-RU-1:OFH-CPLANE-SEP"
+              "source-tp": "urn:if:O-RU-1:OFH-CPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-1",
-              "dest-tp": "urn:if:O-DU-1:OFH-CPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-1:OFH-CPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3694,11 +4162,11 @@
             "link-id": "urn:link:OFH-CPLANE-O-DU-2-O-RU-2",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-2",
-              "dest-tp": "urn:if:O-RU-2:OFH-CPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-2:OFH-CPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3711,11 +4179,11 @@
             "link-id": "urn:link:OFH-CPLANE-O-RU-2-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-2",
-              "source-tp": "urn:if:O-RU-2:OFH-CPLANE-SEP"
+              "source-tp": "urn:if:O-RU-2:OFH-CPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3728,11 +4196,11 @@
             "link-id": "urn:link:OFH-CPLANE-O-DU-2-O-RU-3",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-3",
-              "dest-tp": "urn:if:O-RU-3:OFH-CPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-3:OFH-CPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3745,11 +4213,11 @@
             "link-id": "urn:link:OFH-CPLANE-O-RU-3-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-3",
-              "source-tp": "urn:if:O-RU-3:OFH-CPLANE-SEP"
+              "source-tp": "urn:if:O-RU-3:OFH-CPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3762,11 +4230,11 @@
             "link-id": "urn:link:OFH-CPLANE-O-DU-2-O-RU-4",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-4",
-              "dest-tp": "urn:if:O-RU-4:OFH-CPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-4:OFH-CPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3779,11 +4247,11 @@
             "link-id": "urn:link:OFH-CPLANE-O-RU-4-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-4",
-              "source-tp": "urn:if:O-RU-4:OFH-CPLANE-SEP"
+              "source-tp": "urn:if:O-RU-4:OFH-CPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-CPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3796,11 +4264,11 @@
             "link-id": "urn:link:OFH-UPLANE-O-DU-1-O-RU-1",
             "source": {
               "source-node": "urn:node:O-DU-1",
-              "source-tp": "urn:if:O-DU-1:OFH-UPLANE-SEP"
+              "source-tp": "urn:if:O-DU-1:OFH-UPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-1",
-              "dest-tp": "urn:if:O-RU-1:OFH-UPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-1:OFH-UPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3813,11 +4281,11 @@
             "link-id": "urn:link:OFH-UPLANE-O-RU-1-O-DU-1",
             "source": {
               "source-node": "urn:node:O-RU-1",
-              "source-tp": "urn:if:O-RU-1:OFH-UPLANE-SEP"
+              "source-tp": "urn:if:O-RU-1:OFH-UPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-1",
-              "dest-tp": "urn:if:O-DU-1:OFH-UPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-1:OFH-UPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3830,11 +4298,11 @@
             "link-id": "urn:link:OFH-UPLANE-O-DU-2-O-RU-2",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-2",
-              "dest-tp": "urn:if:O-RU-2:OFH-UPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-2:OFH-UPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3847,11 +4315,11 @@
             "link-id": "urn:link:OFH-UPLANE-O-RU-2-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-2",
-              "source-tp": "urn:if:O-RU-2:OFH-UPLANE-SEP"
+              "source-tp": "urn:if:O-RU-2:OFH-UPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3864,11 +4332,11 @@
             "link-id": "urn:link:OFH-UPLANE-O-DU-2-O-RU-3",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-3",
-              "dest-tp": "urn:if:O-RU-3:OFH-UPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-3:OFH-UPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3881,11 +4349,11 @@
             "link-id": "urn:link:OFH-UPLANE-O-RU-3-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-3",
-              "source-tp": "urn:if:O-RU-3:OFH-UPLANE-SEP"
+              "source-tp": "urn:if:O-RU-3:OFH-UPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3898,11 +4366,11 @@
             "link-id": "urn:link:OFH-UPLANE-O-DU-2-O-RU-4",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-4",
-              "dest-tp": "urn:if:O-RU-4:OFH-UPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-4:OFH-UPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3915,11 +4383,11 @@
             "link-id": "urn:link:OFH-UPLANE-O-RU-4-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-4",
-              "source-tp": "urn:if:O-RU-4:OFH-UPLANE-SEP"
+              "source-tp": "urn:if:O-RU-4:OFH-UPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-UPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3932,11 +4400,11 @@
             "link-id": "urn:link:OFH-SPLANE-O-DU-1-O-RU-1",
             "source": {
               "source-node": "urn:node:O-DU-1",
-              "source-tp": "urn:if:O-DU-1:OFH-SPLANE-SEP"
+              "source-tp": "urn:if:O-DU-1:OFH-SPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-1",
-              "dest-tp": "urn:if:O-RU-1:OFH-SPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-1:OFH-SPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3949,11 +4417,11 @@
             "link-id": "urn:link:OFH-SPLANE-O-RU-1-O-DU-1",
             "source": {
               "source-node": "urn:node:O-RU-1",
-              "source-tp": "urn:if:O-RU-1:OFH-SPLANE-SEP"
+              "source-tp": "urn:if:O-RU-1:OFH-SPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-1",
-              "dest-tp": "urn:if:O-DU-1:OFH-SPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-1:OFH-SPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3966,11 +4434,11 @@
             "link-id": "urn:link:OFH-SPLANE-O-DU-2-O-RU-2",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-2",
-              "dest-tp": "urn:if:O-RU-2:OFH-SPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-2:OFH-SPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -3983,11 +4451,11 @@
             "link-id": "urn:link:OFH-SPLANE-O-RU-2-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-2",
-              "source-tp": "urn:if:O-RU-2:OFH-SPLANE-SEP"
+              "source-tp": "urn:if:O-RU-2:OFH-SPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4000,11 +4468,11 @@
             "link-id": "urn:link:OFH-SPLANE-O-DU-2-O-RU-3",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-3",
-              "dest-tp": "urn:if:O-RU-3:OFH-SPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-3:OFH-SPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4017,11 +4485,11 @@
             "link-id": "urn:link:OFH-SPLANE-O-RU-3-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-3",
-              "source-tp": "urn:if:O-RU-3:OFH-SPLANE-SEP"
+              "source-tp": "urn:if:O-RU-3:OFH-SPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4034,11 +4502,11 @@
             "link-id": "urn:link:OFH-SPLANE-O-DU-2-O-RU-4",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-4",
-              "dest-tp": "urn:if:O-RU-4:OFH-SPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-4:OFH-SPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4051,11 +4519,11 @@
             "link-id": "urn:link:OFH-SPLANE-O-RU-4-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-4",
-              "source-tp": "urn:if:O-RU-4:OFH-SPLANE-SEP"
+              "source-tp": "urn:if:O-RU-4:OFH-SPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-SPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4068,11 +4536,11 @@
             "link-id": "urn:link:OFH-MPLANE-O-DU-1-O-RU-1",
             "source": {
               "source-node": "urn:node:O-DU-1",
-              "source-tp": "urn:if:O-DU-1:OFH-MPLANE-SEP"
+              "source-tp": "urn:if:O-DU-1:OFH-MPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-1",
-              "dest-tp": "urn:if:O-RU-1:OFH-MPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-1:OFH-MPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4085,11 +4553,11 @@
             "link-id": "urn:link:OFH-MPLANE-O-RU-1-O-DU-1",
             "source": {
               "source-node": "urn:node:O-RU-1",
-              "source-tp": "urn:if:O-RU-1:OFH-MPLANE-SEP"
+              "source-tp": "urn:if:O-RU-1:OFH-MPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-1",
-              "dest-tp": "urn:if:O-DU-1:OFH-MPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-1:OFH-MPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4102,11 +4570,11 @@
             "link-id": "urn:link:OFH-MPLANE-O-DU-2-O-RU-2",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-2",
-              "dest-tp": "urn:if:O-RU-2:OFH-MPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-2:OFH-MPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4119,11 +4587,11 @@
             "link-id": "urn:link:OFH-MPLANE-O-RU-2-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-2",
-              "source-tp": "urn:if:O-RU-2:OFH-MPLANE-SEP"
+              "source-tp": "urn:if:O-RU-2:OFH-MPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4136,11 +4604,11 @@
             "link-id": "urn:link:OFH-MPLANE-O-DU-2-O-RU-3",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-3",
-              "dest-tp": "urn:if:O-RU-3:OFH-MPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-3:OFH-MPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4153,11 +4621,11 @@
             "link-id": "urn:link:OFH-MPLANE-O-RU-3-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-3",
-              "source-tp": "urn:if:O-RU-3:OFH-MPLANE-SEP"
+              "source-tp": "urn:if:O-RU-3:OFH-MPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4170,11 +4638,11 @@
             "link-id": "urn:link:OFH-MPLANE-O-DU-2-O-RU-4",
             "source": {
               "source-node": "urn:node:O-DU-2",
-              "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+              "source-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-RU-4",
-              "dest-tp": "urn:if:O-RU-4:OFH-MPLANE-SEP"
+              "dest-tp": "urn:if:O-RU-4:OFH-MPLANE-SAP"
             },
             "supporting-link": [
               {
@@ -4187,16 +4655,220 @@
             "link-id": "urn:link:OFH-MPLANE-O-RU-4-O-DU-2",
             "source": {
               "source-node": "urn:node:O-RU-4",
-              "source-tp": "urn:if:O-RU-4:OFH-MPLANE-SEP"
+              "source-tp": "urn:if:O-RU-4:OFH-MPLANE-SAP"
             },
             "destination": {
               "dest-node": "urn:node:O-DU-2",
-              "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SEP"
+              "dest-tp": "urn:if:O-DU-2:OFH-MPLANE-SAP"
             },
             "supporting-link": [
               {
                 "network-ref": "ethernet-topology",
                 "link-ref": "urn:link:ETH-OFH-MPLANE-O-RU-4-O-DU-2"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-E1-O-CU-CP-1-O-CU-UP-1",
+            "source": {
+              "source-node": "urn:node:O-CU-CP-1",
+              "source-tp": "urn:if:O-CU-CP-1:E1"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-CU-UP-1",
+              "dest-tp": "urn:if:O-CU-UP-1:E1"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:E1-O-CU-CP-1-O-CU-UP-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-E1-O-CU-UP-1-O-CU-CP-1",
+            "source": {
+              "source-node": "urn:node:O-CU-UP-1",
+              "source-tp": "urn:if:O-CU-UP-1:E1"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-CU-CP-1",
+              "dest-tp": "urn:if:O-CU-CP-1:E1"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:E1-O-CU-UP-1-O-CU-CP-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-F1-C-O-CU-CP-1-O-DU-1",
+            "source": {
+              "source-node": "urn:node:O-CU-CP-1",
+              "source-tp": "urn:if:O-CU-CP-1:F1-C"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-1",
+              "dest-tp": "urn:if:O-DU-1:F1-C"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:F1-C-O-CU-CP-1-O-DU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-F1-C-O-DU-1-O-CU-CP-1",
+            "source": {
+              "source-node": "urn:node:O-DU-1",
+              "source-tp": "urn:if:O-DU-1:F1-C"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-CU-CP-1",
+              "dest-tp": "urn:if:O-CU-CP-1:F1-C"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:F1-C-O-DU-1-O-CU-CP-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-F1-U-O-CU-UP-1-O-DU-1",
+            "source": {
+              "source-node": "urn:node:O-CU-UP-1",
+              "source-tp": "urn:if:O-CU-UP-1:F1-U"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-1",
+              "dest-tp": "urn:if:O-DU-1:F1-U"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:F1-U-O-CU-UP-1-O-DU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-F1-U-O-DU-1-O-CU-UP-1",
+            "source": {
+              "source-node": "urn:node:O-DU-1",
+              "source-tp": "urn:if:O-DU-1:F1-U"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-CU-UP-1",
+              "dest-tp": "urn:if:O-CU-UP-1:F1-U"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:F1-U-O-DU-1-O-CU-UP-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-E1-O-CU-CP-2-O-CU-UP-2",
+            "source": {
+              "source-node": "urn:node:O-CU-CP-2",
+              "source-tp": "urn:if:O-CU-CP-2:E1"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-CU-UP-2",
+              "dest-tp": "urn:if:O-CU-UP-2:E1"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:E1-O-CU-CP-2-O-CU-UP-2"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-E1-O-CU-UP-2-O-CU-CP-2",
+            "source": {
+              "source-node": "urn:node:O-CU-UP-2",
+              "source-tp": "urn:if:O-CU-UP-2:E1"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-CU-CP-2",
+              "dest-tp": "urn:if:O-CU-CP-2:E1"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:E1-O-CU-UP-2-O-CU-CP-2"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-F1-C-O-CU-CP-2-O-DU-2",
+            "source": {
+              "source-node": "urn:node:O-CU-CP-2",
+              "source-tp": "urn:if:O-CU-CP-2:F1-C"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-2",
+              "dest-tp": "urn:if:O-DU-2:F1-C"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:F1-C-O-CU-CP-2-WT-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-F1-C-O-DU-2-O-CU-CP-2",
+            "source": {
+              "source-node": "urn:node:O-DU-2",
+              "source-tp": "urn:if:O-DU-2:F1-C"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-CU-CP-2",
+              "dest-tp": "urn:if:O-CU-CP-2:F1-C"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:F1-C-O-DU-2-WT-2"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-F1-U-O-CU-UP-2-O-DU-2",
+            "source": {
+              "source-node": "urn:node:O-CU-UP-2",
+              "source-tp": "urn:if:O-CU-UP-2:F1-U"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-2",
+              "dest-tp": "urn:if:O-DU-2:F1-U"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:F1-U-O-CU-UP-2-WT-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:SAP-F1-U-O-DU-2-O-CU-UP-2",
+            "source": {
+              "source-node": "urn:node:O-DU-2",
+              "source-tp": "urn:if:O-DU-2:F1-U"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-CU-UP-2",
+              "dest-tp": "urn:if:O-CU-UP-2:F1-U"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "ethernet-topology",
+                "link-ref": "urn:link:F1-U-O-DU-2-WT-2"
               }
             ]
           }

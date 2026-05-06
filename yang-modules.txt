@@ -1,668 +1,681 @@
 yang-per-network-function/
 ├── 5GCore (for all 5GCore NetworkFunctions)
-│    ├── _3gpp-5g-common-yang-types.yang
-│    ├── _3gpp-5gc-nrm-affunction.yang
-│    ├── _3gpp-5gc-nrm-amffunction.yang
-│    ├── _3gpp-5gc-nrm-ausffunction.yang
-│    ├── _3gpp-5gc-nrm-configurable5qiset.yang
-│    ├── _3gpp-5gc-nrm-dnfunction.yang
-│    ├── _3gpp-5gc-nrm-ecmconnectioninfo.yang
-│    ├── _3gpp-5gc-nrm-ep.yang
-│    ├── _3gpp-5gc-nrm-lmffunction.yang
-│    ├── _3gpp-5gc-nrm-managed-nfprofile.yang
-│    ├── _3gpp-5gc-nrm-n3iwffunction.yang
-│    ├── _3gpp-5gc-nrm-neffunction.yang
-│    ├── _3gpp-5gc-nrm-nfprofile.yang
-│    ├── _3gpp-5gc-nrm-nfservice.yang
-│    ├── _3gpp-5gc-nrm-ngeirfunction.yang
-│    ├── _3gpp-5gc-nrm-nrffunction.yang
-│    ├── _3gpp-5gc-nrm-nssffunction.yang
-│    ├── _3gpp-5gc-nrm-pcffunction.yang
-│    ├── _3gpp-5gc-nrm-seppfunction.yang
-│    ├── _3gpp-5gc-nrm-smffunction.yang
-│    ├── _3gpp-5gc-nrm-smsffunction.yang
-│    ├── _3gpp-5gc-nrm-udmfunction.yang
-│    ├── _3gpp-5gc-nrm-udsffunction.yang
-│    ├── _3gpp-5gc-nrm-upffunction.yang
-│    ├── _3gpp-common-ep-rp.yang
-│    ├── _3gpp-common-files.yang
-│    ├── _3gpp-common-fm.yang
-│    ├── _3gpp-common-managed-element.yang
-│    ├── _3gpp-common-managed-function.yang
-│    ├── _3gpp-common-measurements.yang
-│    ├── _3gpp-common-subnetwork.yang
-│    ├── _3gpp-common-subscription-control.yang
-│    ├── _3gpp-common-top.yang
-│    ├── _3gpp-common-trace.yang
-│    ├── _3gpp-common-yang-extensions.yang
-│    ├── _3gpp-common-yang-types.yang
-│    ├── _3gpp-nr-nrm-ecmappingrule.yang
-│    ├── _3gpp-nr-nrm-gnbcuupfunction.yang
-│    ├── ietf-crypto-types.yang
-│    ├── ietf-datastores.yang
-│    ├── ietf-factory-default.yang
-│    ├── ietf-inet-types.yang
-│    ├── ietf-keystore.yang
-│    ├── ietf-netconf-acm.yang
-│    ├── ietf-netconf-client.yang
-│    ├── ietf-netconf-monitoring.yang
-│    ├── ietf-netconf-nmda.yang
-│    ├── ietf-netconf-server.yang
-│    ├── ietf-netconf.yang
-│    ├── ietf-origin.yang
-│    ├── ietf-ssh-common.yang
-│    ├── ietf-ssh-server.yang
-│    ├── ietf-subscribed-notifications.yang
-│    ├── ietf-system.yang
-│    ├── ietf-tcp-common.yang
-│    ├── ietf-tcp-server.yang
-│    ├── ietf-tls-common.yang
-│    ├── ietf-tls-server.yang
-│    ├── ietf-truststore.yang
-│    ├── ietf-yang-library.yang
-│    ├── ietf-yang-metadata.yang
-│    ├── ietf-yang-patch.yang
-│    ├── ietf-yang-push.yang
-│    ├── ietf-yang-schema-mount.yang
-│    └── ietf-yang-types.yang
+│    ├── _3gpp-5g-common-yang-types@2025-08-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5g-common-yang-types.yang
+│    ├── _3gpp-5gc-nrm-affunction@2023-09-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-affunction.yang
+│    ├── _3gpp-5gc-nrm-amffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-amffunction.yang
+│    ├── _3gpp-5gc-nrm-ausffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-ausffunction.yang
+│    ├── _3gpp-5gc-nrm-configurable5qiset@2023-09-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-configurable5qiset.yang
+│    ├── _3gpp-5gc-nrm-dnfunction@2023-09-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-dnfunction.yang
+│    ├── _3gpp-5gc-nrm-ecmconnectioninfo@2024-01-29.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-ecmconnectioninfo.yang
+│    ├── _3gpp-5gc-nrm-ep@2023-09-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-ep.yang
+│    ├── _3gpp-5gc-nrm-lmffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-lmffunction.yang
+│    ├── _3gpp-5gc-nrm-managed-nfprofile@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-managed-nfprofile.yang
+│    ├── _3gpp-5gc-nrm-n3iwffunction@2023-09-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-n3iwffunction.yang
+│    ├── _3gpp-5gc-nrm-neffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-neffunction.yang
+│    ├── _3gpp-5gc-nrm-nfprofile@2025-08-25.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-nfprofile.yang
+│    ├── _3gpp-5gc-nrm-nfservice@2025-08-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-nfservice.yang
+│    ├── _3gpp-5gc-nrm-ngeirfunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-ngeirfunction.yang
+│    ├── _3gpp-5gc-nrm-nrffunction@2025-08-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-nrffunction.yang
+│    ├── _3gpp-5gc-nrm-nssffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-nssffunction.yang
+│    ├── _3gpp-5gc-nrm-pcffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-pcffunction.yang
+│    ├── _3gpp-5gc-nrm-seppfunction@2023-09-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-seppfunction.yang
+│    ├── _3gpp-5gc-nrm-smffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-smffunction.yang
+│    ├── _3gpp-5gc-nrm-smsffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-smsffunction.yang
+│    ├── _3gpp-5gc-nrm-udmfunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-udmfunction.yang
+│    ├── _3gpp-5gc-nrm-udsffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-udsffunction.yang
+│    ├── _3gpp-5gc-nrm-upffunction@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-upffunction.yang
+│    ├── _3gpp-common-ep-rp@2023-09-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-ep-rp.yang
+│    ├── _3gpp-common-files@2025-07-01.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-files.yang
+│    ├── _3gpp-common-fm@2026-01-24.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-fm.yang
+│    ├── _3gpp-common-managed-element@2025-03-24.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-managed-element.yang
+│    ├── _3gpp-common-managed-function@2025-08-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-managed-function.yang
+│    ├── _3gpp-common-measurements@2025-08-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-measurements.yang
+│    ├── _3gpp-common-subnetwork@2025-03-24.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-subnetwork.yang
+│    ├── _3gpp-common-subscription-control@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-subscription-control.yang
+│    ├── _3gpp-common-top@2023-09-18.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-top.yang
+│    ├── _3gpp-common-trace@2025-08-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-trace.yang
+│    ├── _3gpp-common-yang-extensions@2025-02-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-yang-extensions.yang
+│    ├── _3gpp-common-yang-types@2025-11-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-common-yang-types.yang
+│    ├── _3gpp-nr-nrm-ecmappingrule@2025-05-06.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-ecmappingrule.yang
+│    ├── _3gpp-nr-nrm-gnbcuupfunction@2024-05-24.yang -> ../../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbcuupfunction.yang
+│    ├── ietf-crypto-types@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│    ├── ietf-datastores@2018-02-14.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│    ├── ietf-factory-default@2020-08-31.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│    ├── ietf-inet-types@2025-12-22.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+│    ├── ietf-keystore@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│    ├── ietf-netconf-acm@2018-02-14.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│    ├── ietf-netconf-client@2024-08-14.yang -> ../../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│    ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│    ├── ietf-netconf-nmda@2019-01-07.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│    ├── ietf-netconf-server@2024-08-14.yang -> ../../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│    ├── ietf-netconf@2011-06-01.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│    ├── ietf-origin@2018-02-14.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│    ├── ietf-ssh-common@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│    ├── ietf-ssh-server@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│    ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│    ├── ietf-system@2014-08-06.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│    ├── ietf-tcp-common@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│    ├── ietf-tcp-server@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│    ├── ietf-tls-common@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│    ├── ietf-tls-server@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│    ├── ietf-truststore@2024-10-10.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│    ├── ietf-yang-library@2019-01-04.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│    ├── ietf-yang-metadata@2016-08-05.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│    ├── ietf-yang-patch@2017-02-22.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│    ├── ietf-yang-push@2019-09-09.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│    ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│    ├── ietf-yang-types@2025-12-22.yang -> ../../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│    └── yang-tree.txt
 ├── IP-Router
-│   ├── iana-hardware.yang
-│   ├── iana-if-type.yang
-│   ├── ietf-bfd-ip-mh.yang
-│   ├── ietf-bfd-ip-sh.yang
-│   ├── ietf-bfd-types.yang
-│   ├── ietf-bfd.yang
-│   ├── ietf-crypto-types.yang
-│   ├── ietf-datastores.yang
-│   ├── ietf-factory-default.yang
-│   ├── ietf-hardware.yang
-│   ├── ietf-inet-types.yang
-│   ├── ietf-interfaces.yang
-│   ├── ietf-ip.yang
-│   ├── ietf-ipv4-unicast-routing.yang
-│   ├── ietf-ipv6-router-advertisements.yang
-│   ├── ietf-ipv6-unicast-routing.yang
-│   ├── ietf-isis.yang
-│   ├── ietf-keystore.yang
-│   ├── ietf-mpls.yang
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-netconf-client.yang
-│   ├── ietf-netconf-monitoring.yang
-│   ├── ietf-netconf-nmda.yang
-│   ├── ietf-netconf-server.yang
-│   ├── ietf-netconf.yang
-│   ├── ietf-origin.yang
-│   ├── ietf-ospf.yang
-│   ├── ietf-routing-policy.yang
-│   ├── ietf-routing-types.yang
-│   ├── ietf-routing.yang
-│   ├── ietf-segment-routing-common.yang
-│   ├── ietf-segment-routing-mpls.yang
-│   ├── ietf-segment-routing.yang
-│   ├── ietf-ssh-common.yang
-│   ├── ietf-ssh-server.yang
-│   ├── ietf-subscribed-notifications.yang
-│   ├── ietf-system.yang
-│   ├── ietf-tcp-common.yang
-│   ├── ietf-tcp-server.yang
-│   ├── ietf-tls-common.yang
-│   ├── ietf-tls-server.yang
-│   ├── ietf-truststore.yang
-│   ├── ietf-yang-library.yang
-│   ├── ietf-yang-metadata.yang
-│   ├── ietf-yang-patch.yang
-│   ├── ietf-yang-push.yang
-│   ├── ietf-yang-schema-mount.yang
-│   └── ietf-yang-types.yang
+│   ├── iana-hardware@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-hardware.yang
+│   ├── iana-if-type@2014-05-08.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-if-type@2014-05-08.yang
+│   ├── ietf-bfd-ip-mh@2022-09-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-bfd-ip-mh.yang
+│   ├── ietf-bfd-ip-sh@2022-09-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-bfd-ip-sh.yang
+│   ├── ietf-bfd-types@2022-09-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-bfd-types.yang
+│   ├── ietf-bfd@2022-09-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-bfd.yang
+│   ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│   ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│   ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│   ├── ietf-hardware@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-hardware.yang
+│   ├── ietf-inet-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+│   ├── ietf-interfaces@2018-02-20.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-interfaces.yang
+│   ├── ietf-ip@2018-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ip.yang
+│   ├── ietf-ipv4-unicast-routing@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ipv4-unicast-routing.yang
+│   ├── ietf-ipv6-router-advertisements@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ipv6-router-advertisements.yang
+│   ├── ietf-ipv6-unicast-routing@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ipv6-unicast-routing.yang
+│   ├── ietf-isis@2022-10-19.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-isis.yang
+│   ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│   ├── ietf-mpls@2020-12-18.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-mpls.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│   ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│   ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│   ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│   ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│   ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│   ├── ietf-ospf@2022-10-19.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ospf.yang
+│   ├── ietf-routing-policy@2021-10-11.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-routing-policy.yang
+│   ├── ietf-routing-types@2017-12-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-routing-types.yang
+│   ├── ietf-routing@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-routing.yang
+│   ├── ietf-segment-routing-common@2021-05-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-segment-routing-common.yang
+│   ├── ietf-segment-routing-mpls@2021-05-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-segment-routing-mpls.yang
+│   ├── ietf-segment-routing@2021-05-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-segment-routing.yang
+│   ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│   ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│   ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│   ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│   ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│   ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│   ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│   ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│   ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│   ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│   ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│   ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│   ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│   ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│   └── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
 ├── O-CU-CP
-│   ├── _3gpp-5g-common-yang-types.yang
-│   ├── _3gpp-5gc-nrm-configurable5qiset.yang
-│   ├── _3gpp-5gc-nrm-ecmconnectioninfo.yang
-│   ├── _3gpp-common-ep-rp.yang
-│   ├── _3gpp-common-files.yang
-│   ├── _3gpp-common-fm.yang
-│   ├── _3gpp-common-managed-element.yang
-│   ├── _3gpp-common-managed-function.yang
-│   ├── _3gpp-common-measurements.yang
-│   ├── _3gpp-common-subnetwork.yang
-│   ├── _3gpp-common-subscription-control.yang
-│   ├── _3gpp-common-top.yang
-│   ├── _3gpp-common-trace.yang
-│   ├── _3gpp-common-yang-extensions.yang
-│   ├── _3gpp-common-yang-types.yang
-│   ├── _3gpp-nr-nrm-ecmappingrule.yang
-│   ├── _3gpp-nr-nrm-ep.yang
-│   ├── _3gpp-nr-nrm-externalgnbcucpfunction.yang
-│   ├── _3gpp-nr-nrm-externalgnbcuupfunction.yang
-│   ├── _3gpp-nr-nrm-externalnrcellcu.yang
-│   ├── _3gpp-nr-nrm-gnbcucpfunction.yang
-│   ├── _3gpp-nr-nrm-gnbcuupfunction.yang
-│   ├── _3gpp-nr-nrm-gnbdufunction.yang
-│   ├── _3gpp-nr-nrm-nrcellcu.yang
-│   ├── _3gpp-nr-nrm-nrcelldu.yang
-│   ├── _3gpp-nr-nrm-nrnetwork.yang
-│   ├── _3gpp-nr-nrm-rrmpolicy.yang
-│   ├── ietf-crypto-types.yang
-│   ├── ietf-datastores.yang
-│   ├── ietf-factory-default.yang
-│   ├── ietf-inet-types.yang
-│   ├── ietf-keystore.yang
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-netconf-client.yang
-│   ├── ietf-netconf-monitoring.yang
-│   ├── ietf-netconf-nmda.yang
-│   ├── ietf-netconf-server.yang
-│   ├── ietf-netconf.yang
-│   ├── ietf-origin.yang
-│   ├── ietf-ssh-common.yang
-│   ├── ietf-ssh-server.yang
-│   ├── ietf-subscribed-notifications.yang
-│   ├── ietf-system.yang
-│   ├── ietf-tcp-common.yang
-│   ├── ietf-tcp-server.yang
-│   ├── ietf-tls-common.yang
-│   ├── ietf-tls-server.yang
-│   ├── ietf-truststore.yang
-│   ├── ietf-yang-library.yang
-│   ├── ietf-yang-metadata.yang
-│   ├── ietf-yang-patch.yang
-│   ├── ietf-yang-push.yang
-│   ├── ietf-yang-schema-mount.yang
-│   ├── ietf-yang-types.yang
-│   ├── o-ran-cu-security-handling.yang
-│   ├── o-ran-cucountgroup.yang
-│   ├── o-ran-o1-EPE2.yang
-│   ├── o-ran-o1-NearRTRIC.yang
-│   ├── o-ran-o1-managed-application.yang
-│   ├── o-ran-o1-subscription-control-me.yang
-│   ├── o-ran-o1-subscription-control-subnetwork.yang
-│   ├── o-ran-o1-subscription-control.yang
-│   └── o-ran-pdcp.yang
+│   ├── _3gpp-5g-common-yang-types@2025-08-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5g-common-yang-types.yang
+│   ├── _3gpp-5gc-nrm-configurable5qiset@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-configurable5qiset.yang
+│   ├── _3gpp-5gc-nrm-ecmconnectioninfo@2024-01-29.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-ecmconnectioninfo.yang
+│   ├── _3gpp-common-ep-rp@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-ep-rp.yang
+│   ├── _3gpp-common-files@2025-07-01.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-files.yang
+│   ├── _3gpp-common-fm@2026-01-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-fm.yang
+│   ├── _3gpp-common-managed-element@2025-03-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-managed-element.yang
+│   ├── _3gpp-common-managed-function@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-managed-function.yang
+│   ├── _3gpp-common-measurements@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-measurements.yang
+│   ├── _3gpp-common-subnetwork@2025-03-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-subnetwork.yang
+│   ├── _3gpp-common-subscription-control@2025-11-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-subscription-control.yang
+│   ├── _3gpp-common-top@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-top.yang
+│   ├── _3gpp-common-trace@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-trace.yang
+│   ├── _3gpp-common-yang-extensions@2025-02-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-yang-extensions.yang
+│   ├── _3gpp-common-yang-types@2025-11-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-yang-types.yang
+│   ├── _3gpp-nr-nrm-ecmappingrule@2025-05-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-ecmappingrule.yang
+│   ├── _3gpp-nr-nrm-ep@2025-05-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-ep.yang
+│   ├── _3gpp-nr-nrm-externalgnbcucpfunction@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-externalgnbcucpfunction.yang
+│   ├── _3gpp-nr-nrm-externalgnbcuupfunction@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-externalgnbcuupfunction.yang
+│   ├── _3gpp-nr-nrm-externalnrcellcu@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-externalnrcellcu.yang
+│   ├── _3gpp-nr-nrm-gnbcucpfunction@2024-08-12.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbcucpfunction.yang
+│   ├── _3gpp-nr-nrm-gnbcuupfunction@2024-05-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbcuupfunction.yang
+│   ├── _3gpp-nr-nrm-gnbdufunction@2024-02-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbdufunction.yang
+│   ├── _3gpp-nr-nrm-nrcellcu@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrcellcu.yang
+│   ├── _3gpp-nr-nrm-nrcelldu@2024-05-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrcelldu.yang
+│   ├── _3gpp-nr-nrm-nrnetwork@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrnetwork.yang
+│   ├── _3gpp-nr-nrm-rrmpolicy@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-rrmpolicy.yang
+│   ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│   ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│   ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│   ├── ietf-inet-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+│   ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│   ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│   ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│   ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│   ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│   ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│   ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│   ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│   ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│   ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│   ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│   ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│   ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│   ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│   ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│   ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│   ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│   ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│   ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│   ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│   ├── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│   ├── o-ran-cu-security-handling@2021-07-04.yang -> ../../yang-repos/O-RAN.WG5.O-CU-O1.1-R003-v07.00/o-ran-cu-security-handling.yang
+│   ├── o-ran-cucountgroup@2023-03-17.yang -> ../../yang-repos/O-RAN.WG5.O-CU-O1.1-R003-v07.00/o-ran-cucountgroup.yang
+│   ├── o-ran-o1-EPE2@2024-07-11.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-EPE2.yang
+│   ├── o-ran-o1-NearRTRIC@2024-07-11.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-NearRTRIC.yang
+│   ├── o-ran-o1-managed-application@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-managed-application.yang
+│   ├── o-ran-o1-subscription-control-me@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control-me.yang
+│   ├── o-ran-o1-subscription-control-subnetwork@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control-subnetwork.yang
+│   ├── o-ran-o1-subscription-control@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control.yang
+│   ├── o-ran-pdcp@2023-11-14.yang -> ../../yang-repos/O-RAN.WG5.O-CU-O1.1-R003-v07.00/o-ran-pdcp.yang
+│   └── yang-tree.txt
 ├── O-CU-UP
-│   ├── _3gpp-5g-common-yang-types.yang
-│   ├── _3gpp-5gc-nrm-configurable5qiset.yang
-│   ├── _3gpp-5gc-nrm-ecmconnectioninfo.yang
-│   ├── _3gpp-common-ep-rp.yang
-│   ├── _3gpp-common-files.yang
-│   ├── _3gpp-common-fm.yang
-│   ├── _3gpp-common-managed-element.yang
-│   ├── _3gpp-common-managed-function.yang
-│   ├── _3gpp-common-measurements.yang
-│   ├── _3gpp-common-subnetwork.yang
-│   ├── _3gpp-common-subscription-control.yang
-│   ├── _3gpp-common-top.yang
-│   ├── _3gpp-common-trace.yang
-│   ├── _3gpp-common-yang-extensions.yang
-│   ├── _3gpp-common-yang-types.yang
-│   ├── _3gpp-nr-nrm-ecmappingrule.yang
-│   ├── _3gpp-nr-nrm-ep.yang
-│   ├── _3gpp-nr-nrm-externalgnbcuupfunction.yang
-│   ├── _3gpp-nr-nrm-gnbcucpfunction.yang
-│   ├── _3gpp-nr-nrm-gnbcuupfunction.yang
-│   ├── _3gpp-nr-nrm-gnbdufunction.yang
-│   ├── _3gpp-nr-nrm-nrcellcu.yang
-│   ├── _3gpp-nr-nrm-nrcelldu.yang
-│   ├── _3gpp-nr-nrm-nrnetwork.yang
-│   ├── _3gpp-nr-nrm-rrmpolicy.yang
-│   ├── ietf-crypto-types.yang
-│   ├── ietf-datastores.yang
-│   ├── ietf-factory-default.yang
-│   ├── ietf-inet-types.yang
-│   ├── ietf-keystore.yang
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-netconf-client.yang
-│   ├── ietf-netconf-monitoring.yang
-│   ├── ietf-netconf-nmda.yang
-│   ├── ietf-netconf-server.yang
-│   ├── ietf-netconf.yang
-│   ├── ietf-origin.yang
-│   ├── ietf-ssh-common.yang
-│   ├── ietf-ssh-server.yang
-│   ├── ietf-subscribed-notifications.yang
-│   ├── ietf-system.yang
-│   ├── ietf-tcp-common.yang
-│   ├── ietf-tcp-server.yang
-│   ├── ietf-tls-common.yang
-│   ├── ietf-tls-server.yang
-│   ├── ietf-truststore.yang
-│   ├── ietf-yang-library.yang
-│   ├── ietf-yang-metadata.yang
-│   ├── ietf-yang-patch.yang
-│   ├── ietf-yang-push.yang
-│   ├── ietf-yang-schema-mount.yang
-│   ├── ietf-yang-types.yang
-│   ├── o-ran-o1-EPE2.yang
-│   ├── o-ran-o1-NearRTRIC.yang
-│   ├── o-ran-o1-managed-application.yang
-│   ├── o-ran-o1-subscription-control-me.yang
-│   ├── o-ran-o1-subscription-control-subnetwork.yang
-│   └── o-ran-o1-subscription-control.yang
+│   ├── _3gpp-5g-common-yang-types@2025-08-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5g-common-yang-types.yang
+│   ├── _3gpp-5gc-nrm-configurable5qiset@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-configurable5qiset.yang
+│   ├── _3gpp-5gc-nrm-ecmconnectioninfo@2024-01-29.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-ecmconnectioninfo.yang
+│   ├── _3gpp-common-ep-rp@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-ep-rp.yang
+│   ├── _3gpp-common-files@2025-07-01.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-files.yang
+│   ├── _3gpp-common-fm@2026-01-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-fm.yang
+│   ├── _3gpp-common-managed-element@2025-03-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-managed-element.yang
+│   ├── _3gpp-common-managed-function@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-managed-function.yang
+│   ├── _3gpp-common-measurements@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-measurements.yang
+│   ├── _3gpp-common-subnetwork@2025-03-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-subnetwork.yang
+│   ├── _3gpp-common-subscription-control@2025-11-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-subscription-control.yang
+│   ├── _3gpp-common-top@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-top.yang
+│   ├── _3gpp-common-trace@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-trace.yang
+│   ├── _3gpp-common-yang-extensions@2025-02-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-yang-extensions.yang
+│   ├── _3gpp-common-yang-types@2025-11-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-yang-types.yang
+│   ├── _3gpp-nr-nrm-ecmappingrule@2025-05-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-ecmappingrule.yang
+│   ├── _3gpp-nr-nrm-ep@2025-05-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-ep.yang
+│   ├── _3gpp-nr-nrm-externalgnbcuupfunction@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-externalgnbcuupfunction.yang
+│   ├── _3gpp-nr-nrm-gnbcucpfunction@2024-08-12.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbcucpfunction.yang
+│   ├── _3gpp-nr-nrm-gnbcuupfunction@2024-05-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbcuupfunction.yang
+│   ├── _3gpp-nr-nrm-gnbdufunction@2024-02-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbdufunction.yang
+│   ├── _3gpp-nr-nrm-nrcellcu@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrcellcu.yang
+│   ├── _3gpp-nr-nrm-nrcelldu@2024-05-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrcelldu.yang
+│   ├── _3gpp-nr-nrm-nrnetwork@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrnetwork.yang
+│   ├── _3gpp-nr-nrm-rrmpolicy@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-rrmpolicy.yang
+│   ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│   ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│   ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│   ├── ietf-inet-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+│   ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│   ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│   ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│   ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│   ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│   ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│   ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│   ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│   ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│   ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│   ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│   ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│   ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│   ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│   ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│   ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│   ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│   ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│   ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│   ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│   ├── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│   ├── o-ran-o1-EPE2@2024-07-11.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-EPE2.yang
+│   ├── o-ran-o1-NearRTRIC@2024-07-11.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-NearRTRIC.yang
+│   ├── o-ran-o1-managed-application@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-managed-application.yang
+│   ├── o-ran-o1-subscription-control-me@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control-me.yang
+│   ├── o-ran-o1-subscription-control-subnetwork@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control-subnetwork.yang
+│   ├── o-ran-o1-subscription-control@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control.yang
+│   └── yang-tree.txt
 ├── O-DU
-│   ├── _3gpp-5g-common-yang-types.yang
-│   ├── _3gpp-5gc-nrm-configurable5qiset.yang
-│   ├── _3gpp-5gc-nrm-ecmconnectioninfo.yang
-│   ├── _3gpp-common-ep-rp.yang
-│   ├── _3gpp-common-files.yang
-│   ├── _3gpp-common-fm.yang
-│   ├── _3gpp-common-managed-element.yang
-│   ├── _3gpp-common-managed-function.yang
-│   ├── _3gpp-common-measurements.yang
-│   ├── _3gpp-common-subnetwork.yang
-│   ├── _3gpp-common-subscription-control.yang
-│   ├── _3gpp-common-top.yang
-│   ├── _3gpp-common-trace.yang
-│   ├── _3gpp-common-yang-extensions.yang
-│   ├── _3gpp-common-yang-types.yang
-│   ├── _3gpp-nr-nrm-ecmappingrule.yang
-│   ├── _3gpp-nr-nrm-ep.yang
-│   ├── _3gpp-nr-nrm-externalgnbcucpfunction.yang
-│   ├── _3gpp-nr-nrm-externalgnbdufunction.yang
-│   ├── _3gpp-nr-nrm-externalnrcellcu.yang
-│   ├── _3gpp-nr-nrm-gnbcucpfunction.yang
-│   ├── _3gpp-nr-nrm-gnbcuupfunction.yang
-│   ├── _3gpp-nr-nrm-gnbdufunction.yang
-│   ├── _3gpp-nr-nrm-nrcellcu.yang
-│   ├── _3gpp-nr-nrm-nrcelldu.yang
-│   ├── _3gpp-nr-nrm-nrnetwork.yang
-│   ├── _3gpp-nr-nrm-rrmpolicy.yang
-│   ├── iana-hardware.yang
-│   ├── iana-if-type.yang
-│   ├── ietf-crypto-types.yang
-│   ├── ietf-datastores.yang
-│   ├── ietf-dhcpv6-types.yang
-│   ├── ietf-factory-default.yang
-│   ├── ietf-hardware.yang
-│   ├── ietf-inet-types.yang
-│   ├── ietf-interfaces.yang
-│   ├── ietf-ip.yang
-│   ├── ietf-keystore.yang
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-netconf-client.yang
-│   ├── ietf-netconf-monitoring.yang
-│   ├── ietf-netconf-nmda.yang
-│   ├── ietf-netconf-server.yang
-│   ├── ietf-netconf.yang
-│   ├── ietf-origin.yang
-│   ├── ietf-ssh-common.yang
-│   ├── ietf-ssh-server.yang
-│   ├── ietf-subscribed-notifications.yang
-│   ├── ietf-system.yang
-│   ├── ietf-tcp-common.yang
-│   ├── ietf-tcp-server.yang
-│   ├── ietf-tls-common.yang
-│   ├── ietf-tls-server.yang
-│   ├── ietf-truststore.yang
-│   ├── ietf-yang-library.yang
-│   ├── ietf-yang-metadata.yang
-│   ├── ietf-yang-patch.yang
-│   ├── ietf-yang-push.yang
-│   ├── ietf-yang-schema-mount.yang
-│   ├── ietf-yang-types.yang
-│   ├── o-ran-agg-ald-port.yang
-│   ├── o-ran-agg-ald.yang
-│   ├── o-ran-agg-antenna-calibration.yang
-│   ├── o-ran-agg-beamforming.yang
-│   ├── o-ran-agg-dhcp.yang
-│   ├── o-ran-agg-ecpri-delay.yang
-│   ├── o-ran-agg-ethernet-forwarding.yang
-│   ├── o-ran-agg-externalio.yang
-│   ├── o-ran-agg-fan.yang
-│   ├── o-ran-agg-hardware.yang
-│   ├── o-ran-agg-ietf-hardware.yang
-│   ├── o-ran-agg-ietf-interfaces.yang
-│   ├── o-ran-agg-ietf-ip.yang
-│   ├── o-ran-agg-ietf-netconf-acm.yang
-│   ├── o-ran-agg-interfaces.yang
-│   ├── o-ran-agg-laa-operations.yang
-│   ├── o-ran-agg-laa.yang
-│   ├── o-ran-agg-lbm.yang
-│   ├── o-ran-agg-module-cap.yang
-│   ├── o-ran-agg-mplane-int.yang
-│   ├── o-ran-agg-operations.yang
-│   ├── o-ran-agg-performance-management.yang
-│   ├── o-ran-agg-processing-element.yang
-│   ├── o-ran-agg-shared-cell.yang
-│   ├── o-ran-agg-software-management.yang
-│   ├── o-ran-agg-supervision.yang
-│   ├── o-ran-agg-transceiver.yang
-│   ├── o-ran-agg-udp-echo.yang
-│   ├── o-ran-agg-uplane-conf.yang
-│   ├── o-ran-agg-usermgmt.yang
-│   ├── o-ran-aggregation-base.yang
-│   ├── o-ran-c-plane-tnl.yang
-│   ├── o-ran-common-identity-refs.yang
-│   ├── o-ran-common-yang-types.yang
-│   ├── o-ran-cti-common.yang
-│   ├── o-ran-dhcp.yang
-│   ├── o-ran-du-f1-tnl.yang
-│   ├── o-ran-du-performance-management.yang
-│   ├── o-ran-hardware.yang
-│   ├── o-ran-interfaces.yang
-│   ├── o-ran-nr-u.yang
-│   ├── o-ran-o-du-shared-o-ru.yang
-│   ├── o-ran-o1-EPE2.yang
-│   ├── o-ran-o1-NearRTRIC.yang
-│   ├── o-ran-o1-ctiOdu.yang
-│   ├── o-ran-o1-managed-application.yang
-│   ├── o-ran-o1-odu-nespolicy.yang
-│   ├── o-ran-o1-odu-nespolicyrelation.yang
-│   ├── o-ran-o1-odu-rballoc.yang
-│   ├── o-ran-o1-subscription-control-me.yang
-│   ├── o-ran-o1-subscription-control-subnetwork.yang
-│   ├── o-ran-o1-subscription-control.yang
-│   ├── o-ran-operations.yang
-│   ├── o-ran-qos.yang
-│   ├── o-ran-rlc.yang
-│   ├── o-ran-synchronization.yang
-│   ├── o-ran-u-plane-tnl.yang
-│   ├── o-ran-usermgmt.yang
-│   ├── o-ran-wg4-features.yang
-│   ├── o-ran-wg5-delay-management.yang
-│   ├── o-ran-wg5-features.yang
-│   ├── o-ran_3gpp-nr-nrm-gnbdufunction.yang
-│   ├── o-ran_3gpp-nr-nrm-nrcelldu.yang
-│   └── o-ran_3gpp-nr-nrm-rrmpolicy.yang
+│   ├── _3gpp-5g-common-yang-types@2025-08-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5g-common-yang-types.yang
+│   ├── _3gpp-5gc-nrm-configurable5qiset@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-configurable5qiset.yang
+│   ├── _3gpp-5gc-nrm-ecmconnectioninfo@2024-01-29.yang -> ../../yang-repos/MnS/yang-models/_3gpp-5gc-nrm-ecmconnectioninfo.yang
+│   ├── _3gpp-common-ep-rp@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-ep-rp.yang
+│   ├── _3gpp-common-files@2025-07-01.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-files.yang
+│   ├── _3gpp-common-fm@2026-01-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-fm.yang
+│   ├── _3gpp-common-managed-element@2025-03-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-managed-element.yang
+│   ├── _3gpp-common-managed-function@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-managed-function.yang
+│   ├── _3gpp-common-measurements@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-measurements.yang
+│   ├── _3gpp-common-subnetwork@2025-03-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-subnetwork.yang
+│   ├── _3gpp-common-subscription-control@2025-11-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-subscription-control.yang
+│   ├── _3gpp-common-top@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-top.yang
+│   ├── _3gpp-common-trace@2025-08-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-trace.yang
+│   ├── _3gpp-common-yang-extensions@2025-02-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-yang-extensions.yang
+│   ├── _3gpp-common-yang-types@2025-11-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-common-yang-types.yang
+│   ├── _3gpp-nr-nrm-ecmappingrule@2025-05-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-ecmappingrule.yang
+│   ├── _3gpp-nr-nrm-ep@2025-05-06.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-ep.yang
+│   ├── _3gpp-nr-nrm-externalgnbcucpfunction@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-externalgnbcucpfunction.yang
+│   ├── _3gpp-nr-nrm-externalgnbdufunction@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-externalgnbdufunction.yang
+│   ├── _3gpp-nr-nrm-externalnrcellcu@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-externalnrcellcu.yang
+│   ├── _3gpp-nr-nrm-gnbcucpfunction@2024-08-12.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbcucpfunction.yang
+│   ├── _3gpp-nr-nrm-gnbcuupfunction@2024-05-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbcuupfunction.yang
+│   ├── _3gpp-nr-nrm-gnbdufunction@2024-02-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-gnbdufunction.yang
+│   ├── _3gpp-nr-nrm-nrcellcu@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrcellcu.yang
+│   ├── _3gpp-nr-nrm-nrcelldu@2024-05-24.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrcelldu.yang
+│   ├── _3gpp-nr-nrm-nrnetwork@2025-04-25.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-nrnetwork.yang
+│   ├── _3gpp-nr-nrm-rrmpolicy@2023-09-18.yang -> ../../yang-repos/MnS/yang-models/_3gpp-nr-nrm-rrmpolicy.yang
+│   ├── iana-hardware@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-hardware.yang
+│   ├── iana-if-type@2014-05-08.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-if-type@2014-05-08.yang
+│   ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│   ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│   ├── ietf-dhcpv6-types@2018-09-04.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-dhcpv6-types@2018-09-04.yang
+│   ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│   ├── ietf-hardware@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-hardware.yang
+│   ├── ietf-inet-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+│   ├── ietf-interfaces@2018-02-20.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-interfaces.yang
+│   ├── ietf-ip@2018-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ip.yang
+│   ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│   ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│   ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│   ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│   ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│   ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│   ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│   ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│   ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│   ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│   ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│   ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│   ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│   ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│   ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│   ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│   ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│   ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│   ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│   ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│   ├── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│   ├── o-ran-agg-ald-port@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-ald-port.yang
+│   ├── o-ran-agg-ald@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-ald.yang
+│   ├── o-ran-agg-antenna-calibration@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-antenna-calibration.yang
+│   ├── o-ran-agg-beamforming@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-beamforming.yang
+│   ├── o-ran-agg-dhcp@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-dhcp.yang
+│   ├── o-ran-agg-ecpri-delay@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-ecpri-delay.yang
+│   ├── o-ran-agg-ethernet-forwarding@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-ethernet-forwarding.yang
+│   ├── o-ran-agg-externalio@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-externalio.yang
+│   ├── o-ran-agg-fan@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-fan.yang
+│   ├── o-ran-agg-hardware@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-hardware.yang
+│   ├── o-ran-agg-ietf-hardware@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-ietf-hardware.yang
+│   ├── o-ran-agg-ietf-interfaces@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-ietf-interfaces.yang
+│   ├── o-ran-agg-ietf-ip@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-ietf-ip.yang
+│   ├── o-ran-agg-ietf-netconf-acm@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-ietf-netconf-acm.yang
+│   ├── o-ran-agg-interfaces@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-interfaces.yang
+│   ├── o-ran-agg-laa-operations@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-laa-operations.yang
+│   ├── o-ran-agg-laa@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-laa.yang
+│   ├── o-ran-agg-lbm@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-lbm.yang
+│   ├── o-ran-agg-module-cap@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-module-cap.yang
+│   ├── o-ran-agg-mplane-int@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-mplane-int.yang
+│   ├── o-ran-agg-operations@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/DU Specific Models/o-ran-agg-operations.yang
+│   ├── o-ran-agg-performance-management@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/DU Specific Models/o-ran-agg-performance-management.yang
+│   ├── o-ran-agg-processing-element@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-processing-element.yang
+│   ├── o-ran-agg-shared-cell@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-shared-cell.yang
+│   ├── o-ran-agg-software-management@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/DU Specific Models/o-ran-agg-software-management.yang
+│   ├── o-ran-agg-supervision@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-supervision.yang
+│   ├── o-ran-agg-transceiver@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-transceiver.yang
+│   ├── o-ran-agg-udp-echo@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-udp-echo.yang
+│   ├── o-ran-agg-uplane-conf@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-uplane-conf.yang
+│   ├── o-ran-agg-usermgmt@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Provisioning/o-ran-agg-usermgmt.yang
+│   ├── o-ran-aggregation-base@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/DU Specific Models/o-ran-aggregation-base.yang
+│   ├── o-ran-c-plane-tnl@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran-c-plane-tnl.yang
+│   ├── o-ran-common-identity-refs@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/Types Identites Features/o-ran-common-identity-refs.yang
+│   ├── o-ran-common-yang-types@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/Types Identites Features/o-ran-common-yang-types.yang
+│   ├── o-ran-cti-common@2023-03-17.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/CTI/o-ran-cti-common.yang
+│   ├── o-ran-dhcp@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Common Models/o-ran-dhcp.yang
+│   ├── o-ran-du-f1-tnl@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran-du-f1-tnl.yang
+│   ├── o-ran-du-performance-management@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/DU Specific Models/o-ran-du-performance-management.yang
+│   ├── o-ran-hardware@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-hardware.yang
+│   ├── o-ran-interfaces@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Interfaces/o-ran-interfaces.yang
+│   ├── o-ran-nr-u@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran-nr-u.yang
+│   ├── o-ran-o-du-shared-o-ru@2023-03-17.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/DU Specific Models/o-ran-o-du-shared-o-ru.yang
+│   ├── o-ran-o1-EPE2@2024-07-11.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-EPE2.yang
+│   ├── o-ran-o1-NearRTRIC@2024-07-11.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-NearRTRIC.yang
+│   ├── o-ran-o1-ctiOdu@2023-03-17.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/DU Specific Models/o-ran-o1-ctiOdu.yang
+│   ├── o-ran-o1-managed-application@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-managed-application.yang
+│   ├── o-ran-o1-odu-nespolicy@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-odu-nespolicy.yang
+│   ├── o-ran-o1-odu-nespolicyrelation@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-odu-nespolicyrelation.yang
+│   ├── o-ran-o1-odu-rballoc@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-odu-rballoc.yang
+│   ├── o-ran-o1-subscription-control-me@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control-me.yang
+│   ├── o-ran-o1-subscription-control-subnetwork@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control-subnetwork.yang
+│   ├── o-ran-o1-subscription-control@2025-07-02.yang -> ../../yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/O1NRM v04 Jul 2025/data-model/O1 Data Models/o-ran-o1-subscription-control.yang
+│   ├── o-ran-operations@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Operations/o-ran-operations.yang
+│   ├── o-ran-qos@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran-qos.yang
+│   ├── o-ran-rlc@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran-rlc.yang
+│   ├── o-ran-synchronization@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Common Models/o-ran-synchronization.yang
+│   ├── o-ran-u-plane-tnl@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran-u-plane-tnl.yang
+│   ├── o-ran-usermgmt@2024-08-12.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-usermgmt.yang
+│   ├── o-ran-wg4-features@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-wg4-features.yang
+│   ├── o-ran-wg5-delay-management@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Common Models/o-ran-wg5-delay-management.yang
+│   ├── o-ran-wg5-features@2022-03-14.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/Common Models/o-ran-wg5-features.yang
+│   ├── o-ran_3gpp-nr-nrm-gnbdufunction@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran_3gpp-nr-nrm-gnbdufunction.yang
+│   ├── o-ran_3gpp-nr-nrm-nrcelldu@2020-09-25.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran_3gpp-nr-nrm-nrcelldu.yang
+│   ├── o-ran_3gpp-nr-nrm-rrmpolicy@2021-10-31.yang -> ../../yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/additional-configuration/o-ran_3gpp-nr-nrm-rrmpolicy.yang
+│   └── yang-tree.txt
 ├── O-RU
-│   ├── iana-crypt-hash.yang
-│   ├── iana-hardware.yang
-│   ├── iana-if-type.yang
-│   ├── iana-ssh-encryption-algs.yang
-│   ├── iana-ssh-key-exchange-algs.yang
-│   ├── iana-ssh-mac-algs.yang
-│   ├── iana-ssh-public-key-algs.yang
-│   ├── iana-tls-cipher-suite-algs.yang
-│   ├── ieee802-dot1q-cfm-types.yang
-│   ├── ieee802-dot1q-cfm.yang
-│   ├── ieee802-dot1q-types.yang
-│   ├── ieee802-dot1x-types.yang
-│   ├── ieee802-dot1x.yang
-│   ├── ieee802-types.yang
-│   ├── ietf-crypto-types.yang
-│   ├── ietf-datastores.yang
-│   ├── ietf-dhcpv6-common.yang
-│   ├── ietf-dhcpv6-types.yang
-│   ├── ietf-factory-default.yang
-│   ├── ietf-hardware.yang
-│   ├── ietf-inet-types.yang
-│   ├── ietf-interfaces.yang
-│   ├── ietf-ip.yang
-│   ├── ietf-keystore.yang
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-netconf-client.yang
-│   ├── ietf-netconf-monitoring.yang
-│   ├── ietf-netconf-nmda.yang
-│   ├── ietf-netconf-server.yang
-│   ├── ietf-netconf.yang
-│   ├── ietf-network-instance.yang
-│   ├── ietf-origin.yang
-│   ├── ietf-restconf.yang
-│   ├── ietf-ssh-common.yang
-│   ├── ietf-ssh-server.yang
-│   ├── ietf-subscribed-notifications.yang
-│   ├── ietf-system.yang
-│   ├── ietf-tcp-common.yang
-│   ├── ietf-tcp-server.yang
-│   ├── ietf-tls-common.yang
-│   ├── ietf-tls-server.yang
-│   ├── ietf-truststore.yang
-│   ├── ietf-x509-cert-to-name.yang
-│   ├── ietf-yang-library.yang
-│   ├── ietf-yang-metadata.yang
-│   ├── ietf-yang-patch.yang
-│   ├── ietf-yang-push.yang
-│   ├── ietf-yang-schema-mount.yang
-│   ├── ietf-yang-types.yang
-│   ├── o-ran-ald-port.yang
-│   ├── o-ran-ald.yang
-│   ├── o-ran-antenna-calibration.yang
-│   ├── o-ran-beamforming.yang
-│   ├── o-ran-certificates.yang
-│   ├── o-ran-common-identity-refs.yang
-│   ├── o-ran-common-yang-types.yang
-│   ├── o-ran-compression-factors.yang
-│   ├── o-ran-delay-management.yang
-│   ├── o-ran-dhcp.yang
-│   ├── o-ran-ecpri-delay.yang
-│   ├── o-ran-ethernet-forwarding.yang
-│   ├── o-ran-externalio.yang
-│   ├── o-ran-fan.yang
-│   ├── o-ran-file-management.yang
-│   ├── o-ran-fm.yang
-│   ├── o-ran-frequency-band-measurement.yang
-│   ├── o-ran-hardware.yang
-│   ├── o-ran-ieee802-dot1q-cfm.yang
-│   ├── o-ran-interfaces.yang
-│   ├── o-ran-laa-operations.yang
-│   ├── o-ran-laa.yang
-│   ├── o-ran-lbm.yang
-│   ├── o-ran-module-cap.yang
-│   ├── o-ran-mplane-int.yang
-│   ├── o-ran-operations.yang
-│   ├── o-ran-performance-management.yang
-│   ├── o-ran-pm-epe-statistics.yang
-│   ├── o-ran-pm-ethernet-stats.yang
-│   ├── o-ran-pm-general.yang
-│   ├── o-ran-pm-rssi-stats.yang
-│   ├── o-ran-pm-rx-windows-stats.yang
-│   ├── o-ran-pm-shared-cell-stats.yang
-│   ├── o-ran-pm-symbol-rssi-stats.yang
-│   ├── o-ran-pm-transceiver-stats.yang
-│   ├── o-ran-pm-tssi-stats.yang
-│   ├── o-ran-pm-tx-antenna-stats.yang
-│   ├── o-ran-pm-tx-output-power-stats.yang
-│   ├── o-ran-pm-tx-stats.yang
-│   ├── o-ran-processing-element.yang
-│   ├── o-ran-shared-cell.yang
-│   ├── o-ran-software-management.yang
-│   ├── o-ran-supervision.yang
-│   ├── o-ran-sync.yang
-│   ├── o-ran-trace.yang
-│   ├── o-ran-transceiver.yang
-│   ├── o-ran-troubleshooting.yang
-│   ├── o-ran-udp-echo.yang
-│   ├── o-ran-uplane-conf.yang
-│   ├── o-ran-usermgmt.yang
-│   ├── o-ran-ves-subscribed-notifications.yang
-│   └── o-ran-wg4-features.yang
+│   ├── iana-crypt-hash@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-crypt-hash.yang
+│   ├── iana-hardware@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-hardware.yang
+│   ├── iana-if-type@2014-05-08.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-if-type@2014-05-08.yang
+│   ├── iana-ssh-encryption-algs@2024-10-16.yang -> ../../yang-repos/yang/standard/iana/iana-ssh-encryption-algs@2024-10-16.yang
+│   ├── iana-ssh-key-exchange-algs@2024-10-16.yang -> ../../yang-repos/yang/standard/iana/iana-ssh-key-exchange-algs@2024-10-16.yang
+│   ├── iana-ssh-mac-algs@2024-10-16.yang -> ../../yang-repos/yang/standard/iana/iana-ssh-mac-algs@2024-10-16.yang
+│   ├── iana-ssh-public-key-algs@2024-10-16.yang -> ../../yang-repos/yang/standard/iana/iana-ssh-public-key-algs@2024-10-16.yang
+│   ├── iana-tls-cipher-suite-algs@2024-10-16.yang -> ../../yang-repos/yang/standard/iana/iana-tls-cipher-suite-algs@2024-10-16.yang
+│   ├── ieee802-dot1q-cfm-types@2022-10-29.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1q-cfm-types.yang
+│   ├── ieee802-dot1q-cfm@2022-01-19.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1q-cfm.yang
+│   ├── ieee802-dot1q-types@2023-10-26.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1q-types.yang
+│   ├── ieee802-dot1x-types@2020-02-18.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1x-types.yang
+│   ├── ieee802-dot1x@2020-02-18.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1x.yang
+│   ├── ieee802-types@2023-10-22.yang -> ../../yang-repos/yang/standard/ieee/published/802/ieee802-types.yang
+│   ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│   ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│   ├── ietf-dhcpv6-common@2022-06-20.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-dhcpv6-common.yang
+│   ├── ietf-dhcpv6-types@2018-09-04.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-dhcpv6-types@2018-09-04.yang
+│   ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│   ├── ietf-hardware@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-hardware.yang
+│   ├── ietf-inet-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+│   ├── ietf-interfaces@2018-02-20.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-interfaces.yang
+│   ├── ietf-ip@2018-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ip.yang
+│   ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│   ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│   ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│   ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│   ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│   ├── ietf-network-instance@2019-01-21.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network-instance.yang
+│   ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│   ├── ietf-restconf@2017-01-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-restconf.yang
+│   ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│   ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│   ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│   ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│   ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│   ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│   ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│   ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│   ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│   ├── ietf-x509-cert-to-name@2014-12-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-x509-cert-to-name.yang
+│   ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│   ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│   ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│   ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│   ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│   ├── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│   ├── o-ran-ald-port@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Interfaces/o-ran-ald-port.yang
+│   ├── o-ran-ald@2021-12-01.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Operations/o-ran-ald.yang
+│   ├── o-ran-antenna-calibration@2024-04-15.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-antenna-calibration.yang
+│   ├── o-ran-beamforming@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-beamforming.yang
+│   ├── o-ran-certificates@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-certificates.yang
+│   ├── o-ran-common-identity-refs@2022-08-15.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Cross-WG Common Models/o-ran-common-identity-refs.yang
+│   ├── o-ran-common-yang-types@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Cross-WG Common Models/o-ran-common-yang-types.yang
+│   ├── o-ran-compression-factors@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-compression-factors.yang
+│   ├── o-ran-delay-management@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-delay-management.yang
+│   ├── o-ran-dhcp@2024-08-12.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Interfaces/o-ran-dhcp.yang
+│   ├── o-ran-ecpri-delay@2023-12-23.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-ecpri-delay.yang
+│   ├── o-ran-ethernet-forwarding@2021-12-01.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Interfaces/o-ran-ethernet-forwarding.yang
+│   ├── o-ran-externalio@2023-08-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Interfaces/o-ran-externalio.yang
+│   ├── o-ran-fan@2025-08-11.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-fan.yang
+│   ├── o-ran-file-management@2024-12-23.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Operations/o-ran-file-management.yang
+│   ├── o-ran-fm@2024-08-12.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-fm.yang
+│   ├── o-ran-frequency-band-measurement@2024-08-12.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-frequency-band-measurement.yang
+│   ├── o-ran-hardware@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-hardware.yang
+│   ├── o-ran-ieee802-dot1q-cfm@2023-04-10.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-ieee802-dot1q-cfm.yang
+│   ├── o-ran-interfaces@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Interfaces/o-ran-interfaces.yang
+│   ├── o-ran-laa-operations@2021-12-01.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-laa-operations.yang
+│   ├── o-ran-laa@2022-08-15.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-laa.yang
+│   ├── o-ran-lbm@2024-08-12.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-lbm.yang
+│   ├── o-ran-module-cap@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-module-cap.yang
+│   ├── o-ran-mplane-int@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Interfaces/o-ran-mplane-int.yang
+│   ├── o-ran-operations@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Operations/o-ran-operations.yang
+│   ├── o-ran-performance-management@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-performance-management.yang
+│   ├── o-ran-pm-epe-statistics@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-epe-statistics.yang
+│   ├── o-ran-pm-ethernet-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-ethernet-stats.yang
+│   ├── o-ran-pm-general@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-general.yang
+│   ├── o-ran-pm-rssi-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-rssi-stats.yang
+│   ├── o-ran-pm-rx-windows-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-rx-windows-stats.yang
+│   ├── o-ran-pm-shared-cell-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-shared-cell-stats.yang
+│   ├── o-ran-pm-symbol-rssi-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-symbol-rssi-stats.yang
+│   ├── o-ran-pm-transceiver-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-transceiver-stats.yang
+│   ├── o-ran-pm-tssi-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-tssi-stats.yang
+│   ├── o-ran-pm-tx-antenna-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-tx-antenna-stats.yang
+│   ├── o-ran-pm-tx-output-power-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-tx-output-power-stats.yang
+│   ├── o-ran-pm-tx-stats@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-pm-tx-stats.yang
+│   ├── o-ran-processing-element@2024-12-23.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Interfaces/o-ran-processing-element.yang
+│   ├── o-ran-shared-cell@2024-12-23.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Radio/o-ran-shared-cell.yang
+│   ├── o-ran-software-management@2025-08-11.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Operations/o-ran-software-management.yang
+│   ├── o-ran-supervision@2022-12-05.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-supervision.yang
+│   ├── o-ran-sync@2025-08-11.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Sync/o-ran-sync.yang
+│   ├── o-ran-trace@2022-08-15.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Operations/o-ran-trace.yang
+│   ├── o-ran-transceiver@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Interfaces/o-ran-transceiver.yang
+│   ├── o-ran-troubleshooting@2025-04-14.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/Operations/o-ran-troubleshooting.yang
+│   ├── o-ran-udp-echo@2019-02-04.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-udp-echo.yang
+│   ├── o-ran-uplane-conf@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/RU Specific Models/Operations/o-ran-uplane-conf.yang
+│   ├── o-ran-usermgmt@2024-08-12.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-usermgmt.yang
+│   ├── o-ran-ves-subscribed-notifications@2020-12-10.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-ves-subscribed-notifications.yang
+│   ├── o-ran-wg4-features@2025-12-22.yang -> ../../yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/Common Models/System/o-ran-wg4-features.yang
+│   └── yang-tree.txt
 ├── OpenFronthaul-Switch
-│   ├── iana-if-type.yang
-│   ├── ieee802-dot1ab-lldp.yang
-│   ├── ieee802-dot1ab-types.yang
-│   ├── ieee802-dot1q-bridge.yang
-│   ├── ieee802-dot1q-types.yang
-│   ├── ieee802-dot1q-vlan-bridge.yang
-│   ├── ieee802-types.yang
-│   ├── ietf-crypto-types.yang
-│   ├── ietf-datastores.yang
-│   ├── ietf-factory-default.yang
-│   ├── ietf-interfaces.yang
-│   ├── ietf-keystore.yang
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-netconf-client.yang
-│   ├── ietf-netconf-monitoring.yang
-│   ├── ietf-netconf-nmda.yang
-│   ├── ietf-netconf-server.yang
-│   ├── ietf-netconf.yang
-│   ├── ietf-origin.yang
-│   ├── ietf-routing.yang
-│   ├── ietf-ssh-common.yang
-│   ├── ietf-ssh-server.yang
-│   ├── ietf-subscribed-notifications.yang
-│   ├── ietf-system.yang
-│   ├── ietf-tcp-common.yang
-│   ├── ietf-tcp-server.yang
-│   ├── ietf-tls-common.yang
-│   ├── ietf-tls-server.yang
-│   ├── ietf-truststore.yang
-│   ├── ietf-yang-library.yang
-│   ├── ietf-yang-metadata.yang
-│   ├── ietf-yang-patch.yang
-│   ├── ietf-yang-push.yang
-│   ├── ietf-yang-schema-mount.yang
-│   └── ietf-yang-types.yang
+│   ├── iana-if-type@2014-05-08.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-if-type@2014-05-08.yang
+│   ├── ieee802-dot1ab-lldp@2022-03-15.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1ab-lldp.yang
+│   ├── ieee802-dot1ab-types@2022-03-15.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1ab-types.yang
+│   ├── ieee802-dot1q-bridge@2023-10-26.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1q-bridge.yang
+│   ├── ieee802-dot1q-types@2023-10-26.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1q-types.yang
+│   ├── ieee802-dot1q-vlan-bridge@2018-03-07.yang -> ../../yang-repos/yang/standard/ieee/published/802.1/ieee802-dot1q-vlan-bridge.yang
+│   ├── ieee802-types@2023-10-22.yang -> ../../yang-repos/yang/standard/ieee/published/802/ieee802-types.yang
+│   ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│   ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│   ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│   ├── ietf-interfaces@2018-02-20.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-interfaces.yang
+│   ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│   ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│   ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│   ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│   ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│   ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│   ├── ietf-routing@2018-03-13.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-routing.yang
+│   ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│   ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│   ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│   ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│   ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│   ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│   ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│   ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│   ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│   ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│   ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│   ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│   ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│   ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│   ├── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│   └── yang-tree.txt
 ├── ROADM
-│   ├── ietf-crypto-types.yang
-│   ├── ietf-datastores.yang
-│   ├── ietf-factory-default.yang
-│   ├── ietf-inet-types.yang
-│   ├── ietf-keystore.yang
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-netconf-client.yang
-│   ├── ietf-netconf-monitoring.yang
-│   ├── ietf-netconf-nmda.yang
-│   ├── ietf-netconf-server.yang
-│   ├── ietf-netconf.yang
-│   ├── ietf-network-topology.yang
-│   ├── ietf-network.yang
-│   ├── ietf-origin.yang
-│   ├── ietf-routing-types.yang
-│   ├── ietf-ssh-common.yang
-│   ├── ietf-ssh-server.yang
-│   ├── ietf-subscribed-notifications.yang
-│   ├── ietf-system.yang
-│   ├── ietf-tcp-common.yang
-│   ├── ietf-tcp-server.yang
-│   ├── ietf-te-topology.yang
-│   ├── ietf-te-types.yang
-│   ├── ietf-tls-common.yang
-│   ├── ietf-tls-server.yang
-│   ├── ietf-truststore.yang
-│   ├── ietf-yang-library.yang
-│   ├── ietf-yang-metadata.yang
-│   ├── ietf-yang-patch.yang
-│   ├── ietf-yang-push.yang
-│   ├── ietf-yang-schema-mount.yang
-│   ├── ietf-yang-types.yang
-│   ├── org-openroadm-amplifier.yang
-│   ├── org-openroadm-clli-network.yang
-│   ├── org-openroadm-common-amplifier-types.yang
-│   ├── org-openroadm-common-equipment-types.yang
-│   ├── org-openroadm-common-link-types.yang
-│   ├── org-openroadm-common-network.yang
-│   ├── org-openroadm-common-node-types.yang
-│   ├── org-openroadm-common-optical-channel-types.yang
-│   ├── org-openroadm-common-state-types.yang
-│   ├── org-openroadm-common-types.yang
-│   ├── org-openroadm-degree.yang
-│   ├── org-openroadm-equipment-states-types.yang
-│   ├── org-openroadm-external-pluggable.yang
-│   ├── org-openroadm-link.yang
-│   ├── org-openroadm-network-resource.yang
-│   ├── org-openroadm-network-topology-types.yang
-│   ├── org-openroadm-network-topology.yang
-│   ├── org-openroadm-network-types.yang
-│   ├── org-openroadm-network.yang
-│   ├── org-openroadm-otn-common-types.yang
-│   ├── org-openroadm-otn-network-topology.yang
-│   ├── org-openroadm-port-types.yang
-│   ├── org-openroadm-roadm.yang
-│   ├── org-openroadm-service-format.yang
-│   ├── org-openroadm-srg.yang
-│   └── org-openroadm-switching-pool-types.yang
+│   ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│   ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│   ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│   ├── ietf-inet-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+│   ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│   ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│   ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│   ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│   ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│   ├── ietf-network-topology@2018-02-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network-topology@2018-02-26.yang
+│   ├── ietf-network@2018-02-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network@2018-02-26.yang
+│   ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│   ├── ietf-routing-types@2017-12-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-routing-types@2017-12-04.yang
+│   ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│   ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│   ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│   ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│   ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│   ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│   ├── ietf-te-topology@2020-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-te-topology@2020-08-06.yang
+│   ├── ietf-te-types@2020-06-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-te-types.yang
+│   ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│   ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│   ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│   ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│   ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│   ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│   ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│   ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│   ├── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│   ├── org-openroadm-amplifier@2025-03-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-amplifier.yang
+│   ├── org-openroadm-clli-network@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-clli-network.yang
+│   ├── org-openroadm-common-amplifier-types@2025-03-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-amplifier-types.yang
+│   ├── org-openroadm-common-equipment-types@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-equipment-types.yang
+│   ├── org-openroadm-common-link-types@2024-12-13.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-link-types.yang
+│   ├── org-openroadm-common-network@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-common-network.yang
+│   ├── org-openroadm-common-node-types@2021-05-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-node-types.yang
+│   ├── org-openroadm-common-optical-channel-types@2025-03-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-optical-channel-types.yang
+│   ├── org-openroadm-common-state-types@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-state-types.yang
+│   ├── org-openroadm-common-types@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-types.yang
+│   ├── org-openroadm-degree@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-degree.yang
+│   ├── org-openroadm-equipment-states-types@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-equipment-states-types.yang
+│   ├── org-openroadm-external-pluggable@2025-03-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-external-pluggable.yang
+│   ├── org-openroadm-link@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-link.yang
+│   ├── org-openroadm-network-resource@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-network-resource.yang
+│   ├── org-openroadm-network-topology-types@2025-05-30.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-network-topology-types.yang
+│   ├── org-openroadm-network-topology@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-network-topology.yang
+│   ├── org-openroadm-network-types@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-network-types.yang
+│   ├── org-openroadm-network@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-network.yang
+│   ├── org-openroadm-otn-common-types@2021-09-24.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-otn-common-types.yang
+│   ├── org-openroadm-otn-network-topology@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-otn-network-topology.yang
+│   ├── org-openroadm-port-types@2025-05-30.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-port-types.yang
+│   ├── org-openroadm-roadm@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-roadm.yang
+│   ├── org-openroadm-service-format@2025-05-30.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-service-format.yang
+│   ├── org-openroadm-srg@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-srg.yang
+│   ├── org-openroadm-switching-pool-types@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-switching-pool-types.yang
+│   └── yang-tree.txt
 ├── SMO-Topology
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-network-topology.yang
-│   ├── ietf-network.yang
-│   ├── ietf-packet-fields.yang
-│   ├── ietf-routing-types.yang
-│   ├── ietf-sap-ntw.yang
-│   ├── ietf-vpn-common.yang
-│   └── ietf-yang-types.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-network-topology@2018-02-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network-topology.yang
+│   ├── ietf-network@2018-02-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network.yang
+│   ├── ietf-packet-fields@2019-03-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-packet-fields.yang
+│   ├── ietf-routing-types@2017-12-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-routing-types@2017-12-04.yang
+│   ├── ietf-sap-ntw@2023-06-20.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-sap-ntw.yang
+│   ├── ietf-vpn-common@2022-02-11.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-vpn-common.yang
+│   ├── ietf-yang-types@2013-07-15.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│   └── yang-tree.txt
 ├── WirelessTransport
-│   ├── iana-if-type.yang
-│   ├── ietf-crypto-types.yang
-│   ├── ietf-datastores.yang
-│   ├── ietf-factory-default.yang
-│   ├── ietf-inet-types.yang
-│   ├── ietf-interface-protection.yang
-│   ├── ietf-interfaces.yang
-│   ├── ietf-keystore.yang
-│   ├── ietf-microwave-radio-link.yang
-│   ├── ietf-microwave-topology.yang
-│   ├── ietf-microwave-types.yang
-│   ├── ietf-netconf-acm.yang
-│   ├── ietf-netconf-client.yang
-│   ├── ietf-netconf-monitoring.yang
-│   ├── ietf-netconf-nmda.yang
-│   ├── ietf-netconf-server.yang
-│   ├── ietf-netconf.yang
-│   ├── ietf-network-topology.yang
-│   ├── ietf-network.yang
-│   ├── ietf-origin.yang
-│   ├── ietf-routing-types.yang
-│   ├── ietf-ssh-common.yang
-│   ├── ietf-ssh-server.yang
-│   ├── ietf-subscribed-notifications.yang
-│   ├── ietf-system.yang
-│   ├── ietf-tcp-common.yang
-│   ├── ietf-tcp-server.yang
-│   ├── ietf-te-topology.yang
-│   ├── ietf-te-types.yang
-│   ├── ietf-tls-common.yang
-│   ├── ietf-tls-server.yang
-│   ├── ietf-truststore.yang
-│   ├── ietf-yang-library.yang
-│   ├── ietf-yang-metadata.yang
-│   ├── ietf-yang-patch.yang
-│   ├── ietf-yang-push.yang
-│   ├── ietf-yang-schema-mount.yang
-│   └── ietf-yang-types.yang
+│   ├── iana-if-type@2014-05-08.yang -> ../../yang-repos/yang/standard/ietf/RFC/iana-if-type@2014-05-08.yang
+│   ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+│   ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+│   ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+│   ├── ietf-inet-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+│   ├── ietf-interface-protection@2019-06-19.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-interface-protection.yang
+│   ├── ietf-interfaces@2018-02-20.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-interfaces.yang
+│   ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+│   ├── ietf-microwave-radio-link@2019-06-19.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-microwave-radio-link.yang
+│   ├── ietf-microwave-topology@2024-09-30.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-microwave-topology.yang
+│   ├── ietf-microwave-types@2019-06-19.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-microwave-types.yang
+│   ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+│   ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+│   ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+│   ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+│   ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+│   ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+│   ├── ietf-network-topology@2018-02-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network-topology.yang
+│   ├── ietf-network@2018-02-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network.yang
+│   ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+│   ├── ietf-routing-types@2017-12-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-routing-types.yang
+│   ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+│   ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+│   ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+│   ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+│   ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+│   ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+│   ├── ietf-te-topology@2020-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-te-topology.yang
+│   ├── ietf-te-types@2020-06-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-te-types.yang
+│   ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+│   ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+│   ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+│   ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+│   ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+│   ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+│   ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+│   ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+│   ├── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+│   └── yang-tree.txt
 └── Xponder
-    ├── ietf-crypto-types.yang
-    ├── ietf-datastores.yang
-    ├── ietf-factory-default.yang
-    ├── ietf-inet-types.yang
-    ├── ietf-keystore.yang
-    ├── ietf-netconf-acm.yang
-    ├── ietf-netconf-client.yang
-    ├── ietf-netconf-monitoring.yang
-    ├── ietf-netconf-nmda.yang
-    ├── ietf-netconf-server.yang
-    ├── ietf-netconf.yang
-    ├── ietf-network-topology.yang
-    ├── ietf-network.yang
-    ├── ietf-origin.yang
-    ├── ietf-routing-types.yang
-    ├── ietf-ssh-common.yang
-    ├── ietf-ssh-server.yang
-    ├── ietf-subscribed-notifications.yang
-    ├── ietf-system.yang
-    ├── ietf-tcp-common.yang
-    ├── ietf-tcp-server.yang
-    ├── ietf-te-topology.yang
-    ├── ietf-te-types.yang
-    ├── ietf-tls-common.yang
-    ├── ietf-tls-server.yang
-    ├── ietf-truststore.yang
-    ├── ietf-yang-library.yang
-    ├── ietf-yang-metadata.yang
-    ├── ietf-yang-patch.yang
-    ├── ietf-yang-push.yang
-    ├── ietf-yang-schema-mount.yang
-    ├── ietf-yang-types.yang
-    ├── org-openroadm-amplifier.yang
-    ├── org-openroadm-clli-network.yang
-    ├── org-openroadm-common-amplifier-types.yang
-    ├── org-openroadm-common-equipment-types.yang
-    ├── org-openroadm-common-link-types.yang
-    ├── org-openroadm-common-network.yang
-    ├── org-openroadm-common-node-types.yang
-    ├── org-openroadm-common-optical-channel-types.yang
-    ├── org-openroadm-common-state-types.yang
-    ├── org-openroadm-common-types.yang
-    ├── org-openroadm-degree.yang
-    ├── org-openroadm-equipment-states-types.yang
-    ├── org-openroadm-external-pluggable.yang
-    ├── org-openroadm-link.yang
-    ├── org-openroadm-network-resource.yang
-    ├── org-openroadm-network-topology-types.yang
-    ├── org-openroadm-network-topology.yang
-    ├── org-openroadm-network-types.yang
-    ├── org-openroadm-network.yang
-    ├── org-openroadm-otn-common-types.yang
-    ├── org-openroadm-otn-network-topology.yang
-    ├── org-openroadm-port-types.yang
-    ├── org-openroadm-service-format.yang
-    ├── org-openroadm-srg.yang
-    ├── org-openroadm-switching-pool-types.yang
-    └── org-openroadm-xponder.yang
+    ├── YANG-MODELS.md
+    ├── ietf-crypto-types@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-crypto-types.yang
+    ├── ietf-datastores@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang
+    ├── ietf-factory-default@2020-08-31.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-factory-default.yang
+    ├── ietf-inet-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-inet-types.yang
+    ├── ietf-keystore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-keystore.yang
+    ├── ietf-netconf-acm@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-acm.yang
+    ├── ietf-netconf-client@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-client@2024-08-14.yang
+    ├── ietf-netconf-monitoring@2010-10-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-monitoring.yang
+    ├── ietf-netconf-nmda@2019-01-07.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf-nmda.yang
+    ├── ietf-netconf-server@2024-08-14.yang -> ../../yang-repos/yang/experimental/ietf-extracted-YANG-modules/ietf-netconf-server@2024-08-14.yang
+    ├── ietf-netconf@2011-06-01.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-netconf.yang
+    ├── ietf-network-topology@2018-02-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network-topology@2018-02-26.yang
+    ├── ietf-network@2018-02-26.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-network@2018-02-26.yang
+    ├── ietf-origin@2018-02-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-origin.yang
+    ├── ietf-routing-types@2017-12-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-routing-types@2017-12-04.yang
+    ├── ietf-ssh-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-common.yang
+    ├── ietf-ssh-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-ssh-server.yang
+    ├── ietf-subscribed-notifications@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-subscribed-notifications.yang
+    ├── ietf-system@2014-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-system.yang
+    ├── ietf-tcp-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-common.yang
+    ├── ietf-tcp-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tcp-server.yang
+    ├── ietf-te-topology@2020-08-06.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-te-topology@2020-08-06.yang
+    ├── ietf-te-types@2020-06-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-te-types.yang
+    ├── ietf-tls-common@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-common.yang
+    ├── ietf-tls-server@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-tls-server.yang
+    ├── ietf-truststore@2024-10-10.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-truststore.yang
+    ├── ietf-yang-library@2019-01-04.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-library.yang
+    ├── ietf-yang-metadata@2016-08-05.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-metadata.yang
+    ├── ietf-yang-patch@2017-02-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-patch.yang
+    ├── ietf-yang-push@2019-09-09.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-push.yang
+    ├── ietf-yang-schema-mount@2019-01-14.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-schema-mount.yang
+    ├── ietf-yang-types@2025-12-22.yang -> ../../yang-repos/yang/standard/ietf/RFC/ietf-yang-types.yang
+    ├── org-openroadm-amplifier@2025-03-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-amplifier.yang
+    ├── org-openroadm-clli-network@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-clli-network.yang
+    ├── org-openroadm-common-amplifier-types@2025-03-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-amplifier-types.yang
+    ├── org-openroadm-common-equipment-types@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-equipment-types.yang
+    ├── org-openroadm-common-link-types@2024-12-13.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-link-types.yang
+    ├── org-openroadm-common-network@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-common-network.yang
+    ├── org-openroadm-common-node-types@2021-05-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-node-types.yang
+    ├── org-openroadm-common-optical-channel-types@2025-03-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-optical-channel-types.yang
+    ├── org-openroadm-common-state-types@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-state-types.yang
+    ├── org-openroadm-common-types@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-common-types.yang
+    ├── org-openroadm-degree@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-degree.yang
+    ├── org-openroadm-equipment-states-types@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-equipment-states-types.yang
+    ├── org-openroadm-external-pluggable@2025-03-28.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-external-pluggable.yang
+    ├── org-openroadm-link@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-link.yang
+    ├── org-openroadm-network-resource@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-network-resource.yang
+    ├── org-openroadm-network-topology-types@2025-05-30.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-network-topology-types.yang
+    ├── org-openroadm-network-topology@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-network-topology.yang
+    ├── org-openroadm-network-types@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-network-types.yang
+    ├── org-openroadm-network@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-network.yang
+    ├── org-openroadm-otn-common-types@2021-09-24.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-otn-common-types.yang
+    ├── org-openroadm-otn-network-topology@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-otn-network-topology.yang
+    ├── org-openroadm-port-types@2025-05-30.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-port-types.yang
+    ├── org-openroadm-service-format@2025-05-30.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-service-format.yang
+    ├── org-openroadm-srg@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-srg.yang
+    ├── org-openroadm-switching-pool-types@2019-11-29.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Common/org-openroadm-switching-pool-types.yang
+    ├── org-openroadm-xponder@2025-12-12.yang -> ../../yang-repos/OpenROADM_MSA_Public/model/Network/org-openroadm-xponder.yang
+    └── yang-tree.txt
+
+28 directories, 676 files
