@@ -12,6 +12,13 @@
 # container or list) are reported as "root modules" — these are the canonical
 # entry points for the YANG data tree of this NF.
 #
+# Works equally well with SMOS-Topology subfolders, e.g.:
+#   ./generate-yang-tree.sh yang-per-network-function/SMOS-Topology/End-to-End-Topology
+#   ./generate-yang-tree.sh yang-per-network-function/SMOS-Topology/Microwave-Topology
+#   ./generate-yang-tree.sh yang-per-network-function/SMOS-Topology/Service-Topology
+#   ./generate-yang-tree.sh yang-per-network-function/SMOS-Topology/ROADM-Topology
+# Each subfolder must be self-contained (all transitive deps present as symlinks).
+#
 # Output: yang-tree.txt written into the NF folder.
 
 set -euo pipefail

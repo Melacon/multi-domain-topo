@@ -2,19 +2,111 @@
   "ietf-interfaces:interfaces": {
     "interface": [
       {
-        "name": "f1-c",
-        "type": "iana-if-type:l2vlan",
+        "name": "urn:if:WT-1:PORT-1",
+        "type": "iana-if-type:ethernetCsmacd",
         "enabled": true
       },
       {
-        "name": "f1-u",
-        "type": "iana-if-type:l2vlan",
+        "name": "urn:if:WT-1:PORT-2",
+        "type": "iana-if-type:ethernetCsmacd",
         "enabled": true
       },
       {
-        "name": "wireless",
-        "type": "iana-if-type:ieee80211",
+        "name": "urn:if:WT-1:PORT-3",
+        "type": "iana-if-type:ethernetCsmacd",
         "enabled": true
+      },
+      {
+        "name": "urn:if:WT-1:PORT-4",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "urn:if:WT-1:MGMT-1",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true
+      },
+      {
+        "name": "urn:if:WT-1:ETH-PORT-1",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": ["urn:if:WT-1:PORT-1"]
+      },
+      {
+        "name": "urn:if:WT-1:ETH-PORT-2",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": ["urn:if:WT-1:PORT-2"]
+      },
+      {
+        "name": "urn:if:WT-1:ETH-PORT-3",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": ["urn:if:WT-1:PORT-3"]
+      },
+      {
+        "name": "urn:if:WT-1:ETH-PORT-4",
+        "type": "iana-if-type:l2vlan",
+        "enabled": true,
+        "lower-layer-if": ["urn:if:WT-1:PORT-4"]
+      },
+      {
+        "name": "urn:if:WT-1:ETH-MGMT-1",
+        "type": "iana-if-type:ethernetCsmacd",
+        "enabled": true,
+        "lower-layer-if": ["urn:if:WT-1:MGMT-1"]
+      },
+      {
+        "name": "urn:if:WT-1:RLT-1",
+        "description": "Radio Link Terminal A",
+        "type": "iana-if-type:microwaveRadioLinkTerminal",
+        "ietf-microwave-radio-link:id": "urn:if:WT-1:RLT-1",
+        "ietf-microwave-radio-link:mode": "ietf-microwave-types:two-plus-zero",
+        "ietf-microwave-radio-link:carrier-terminations": [
+          "urn:if:WT-1:RLT-1:CT-1",
+          "urn:if:WT-1:RLT-1:CT-2"
+        ],
+        "ietf-microwave-radio-link:tdm-connections": [
+          {
+            "tdm-type": "ietf-microwave-types:E1",
+            "tdm-connections": 4
+          }
+        ]
+      },
+      {
+        "name": "urn:if:WT-1:RLT-1:CT-1",
+        "description": "Carrier Termination 1",
+        "type": "iana-if-type:microwaveCarrierTermination",
+        "ietf-microwave-radio-link:carrier-id": "A",
+        "ietf-microwave-radio-link:tx-enabled": true,
+        "ietf-microwave-radio-link:tx-frequency": 10728000,
+        "ietf-microwave-radio-link:duplex-distance": 644000,
+        "ietf-microwave-radio-link:channel-SAParation": 28000,
+        "ietf-microwave-radio-link:polarization": "horizontal",
+        "ietf-microwave-radio-link:rtpc": {
+          "maximum-nominal-power": "20.0"
+        },
+        "ietf-microwave-radio-link:single": {
+          "selected-cm": "ietf-microwave-types:qam-512"
+        }
+      },
+      {
+        "name": "urn:if:WT-1:RLT-1:CT-2",
+        "description": "Carrier Termination 2",
+        "type": "iana-if-type:microwaveCarrierTermination",
+        "ietf-microwave-radio-link:carrier-id": "B",
+        "ietf-microwave-radio-link:tx-enabled": true,
+        "ietf-microwave-radio-link:tx-oper-status": "on",
+        "ietf-microwave-radio-link:tx-frequency": 10618000,
+        "ietf-microwave-radio-link:duplex-distance": 644000,
+        "ietf-microwave-radio-link:channel-SAParation": 28000,
+        "ietf-microwave-radio-link:polarization": "vertical",
+        "ietf-microwave-radio-link:rtpc": {
+          "maximum-nominal-power": "20.0"
+        },
+        "ietf-microwave-radio-link:single": {
+          "selected-cm": "ietf-microwave-types:qam-512"
+        }
       }
     ]
   }
