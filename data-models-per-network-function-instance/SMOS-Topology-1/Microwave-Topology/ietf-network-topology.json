@@ -1,0 +1,571 @@
+{
+  "ietf-network:networks": {
+    "network": [
+      {
+        "network-id": "urn:network:MW-1-PHYSICAL",
+        "network-types": {
+          "ietf-te-topology:te-topology": {
+            "ietf-microwave-topology:mw-topology": {}
+          }
+        },
+        "node": [
+          {
+            "node-id": "urn:node:WT-1",
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:WT-1:PORT-1"
+              },
+              {
+                "tp-id": "urn:if:WT-1:PORT-2"
+              },
+              {
+                "tp-id": "urn:if:WT-1:PORT-3"
+              },
+              {
+                "tp-id": "urn:if:WT-1:PORT-4"
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:WT-2",
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:WT-2:PORT-1"
+              },
+              {
+                "tp-id": "urn:if:WT-2:PORT-2"
+              },
+              {
+                "tp-id": "urn:if:WT-2:PORT-3"
+              },
+              {
+                "tp-id": "urn:if:WT-2:PORT-4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "network-id": "urn:network:MW-1-ETHERNET",
+        "network-types": {
+          "ietf-te-topology:te-topology": {
+            "ietf-microwave-topology:mw-topology": {}
+          }
+        },
+        "supporting-network": [
+          {
+            "network-ref": "urn:network:MW-1-PHYSICAL"
+          },
+          {
+            "network-ref": "urn:network:MW-1"
+          }
+        ],
+        "node": [
+          {
+            "node-id": "urn:node:WT-1",
+            "supporting-node": [
+              {
+                "network-ref": "urn:network:MW-1-PHYSICAL",
+                "node-ref": "urn:node:WT-1"
+              },
+              {
+                "network-ref": "urn:network:MW-1",
+                "node-ref": "urn:node:WT-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:WT-1:ETH-PORT-1",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-PHYSICAL",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:PORT-1"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:RLT-1"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:WT-1:ETH-PORT-2",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-PHYSICAL",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:PORT-2"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:RLT-1"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:WT-1:ETH-PORT-3",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-PHYSICAL",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:PORT-3"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:RLT-1"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:WT-1:ETH-PORT-4",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-PHYSICAL",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:PORT-4"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:RLT-1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:WT-2",
+            "supporting-node": [
+              {
+                "network-ref": "urn:network:MW-1-PHYSICAL",
+                "node-ref": "urn:node:WT-2"
+              },
+              {
+                "network-ref": "urn:network:MW-1",
+                "node-ref": "urn:node:WT-2"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:WT-2:ETH-PORT-1",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-PHYSICAL",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:PORT-1"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:RLT-1"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:WT-2:ETH-PORT-2",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-PHYSICAL",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:PORT-2"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:RLT-1"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:WT-2:ETH-PORT-3",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-PHYSICAL",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:PORT-3"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:RLT-1"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:WT-2:ETH-PORT-4",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-PHYSICAL",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:PORT-4"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:RLT-1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "urn:link:WT-1:ETH-PORT-1:WT-2:ETH-PORT-1",
+            "source": {
+              "source-node": "urn:node:WT-1",
+              "source-tp": "urn:if:WT-1:ETH-PORT-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-2",
+              "dest-tp": "urn:if:WT-2:ETH-PORT-1"
+            }
+          },
+          {
+            "link-id": "urn:link:WT-2:ETH-PORT-1:WT-1:ETH-PORT-1",
+            "source": {
+              "source-node": "urn:node:WT-2",
+              "source-tp": "urn:if:WT-2:ETH-PORT-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-1",
+              "dest-tp": "urn:if:WT-1:ETH-PORT-1"
+            }
+          },
+          {
+            "link-id": "urn:link:WT-1:ETH-PORT-2:WT-2:ETH-PORT-2",
+            "source": {
+              "source-node": "urn:node:WT-1",
+              "source-tp": "urn:if:WT-1:ETH-PORT-2"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-2",
+              "dest-tp": "urn:if:WT-2:ETH-PORT-2"
+            }
+          },
+          {
+            "link-id": "urn:link:WT-2:ETH-PORT-2:WT-1:ETH-PORT-2",
+            "source": {
+              "source-node": "urn:node:WT-2",
+              "source-tp": "urn:if:WT-2:ETH-PORT-2"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-1",
+              "dest-tp": "urn:if:WT-1:ETH-PORT-2"
+            }
+          },
+          {
+            "link-id": "urn:link:WT-1:ETH-PORT-3:WT-2:ETH-PORT-3",
+            "source": {
+              "source-node": "urn:node:WT-1",
+              "source-tp": "urn:if:WT-1:ETH-PORT-3"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-2",
+              "dest-tp": "urn:if:WT-2:ETH-PORT-3"
+            }
+          },
+          {
+            "link-id": "urn:link:WT-2:ETH-PORT-3:WT-1:ETH-PORT-3",
+            "source": {
+              "source-node": "urn:node:WT-2",
+              "source-tp": "urn:if:WT-2:ETH-PORT-3"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-1",
+              "dest-tp": "urn:if:WT-1:ETH-PORT-3"
+            }
+          },
+          {
+            "link-id": "urn:link:WT-1:ETH-PORT-4:WT-2:ETH-PORT-4",
+            "source": {
+              "source-node": "urn:node:WT-1",
+              "source-tp": "urn:if:WT-1:ETH-PORT-4"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-2",
+              "dest-tp": "urn:if:WT-2:ETH-PORT-4"
+            }
+          },
+          {
+            "link-id": "urn:link:WT-2:ETH-PORT-4:WT-1:ETH-PORT-4",
+            "source": {
+              "source-node": "urn:node:WT-2",
+              "source-tp": "urn:if:WT-2:ETH-PORT-4"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-1",
+              "dest-tp": "urn:if:WT-1:ETH-PORT-4"
+            }
+          }
+        ]
+      },
+      {
+        "network-id": "urn:network:MW-1-CARRIERS",
+        "network-types": {
+          "ietf-te-topology:te-topology": {
+            "ietf-microwave-topology:mw-topology": {}
+          }
+        },
+        "node": [
+          {
+            "node-id": "urn:node:WT-1",
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:WT-1:RLT-1:CT-1",
+                "ietf-te-topology:te": {
+                  "ietf-microwave-topology:mw-tp": {
+                    "microwave-ctp": {}
+                  }
+                }
+              },
+              {
+                "tp-id": "urn:if:WT-1:RLT-1:CT-2",
+                "ietf-te-topology:te": {
+                  "ietf-microwave-topology:mw-tp": {
+                    "microwave-ctp": {}
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:WT-2",
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:WT-2:RLT-1:CT-1",
+                "ietf-te-topology:te": {
+                  "ietf-microwave-topology:mw-tp": {
+                    "microwave-ctp": {}
+                  }
+                }
+              },
+              {
+                "tp-id": "urn:if:WT-2:RLT-1:CT-2",
+                "ietf-te-topology:te": {
+                  "ietf-microwave-topology:mw-tp": {
+                    "microwave-ctp": {}
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "urn:link:WT-1:RLT-1:CT-1:WT-2:RLT-1:CT-1",
+            "source": {
+              "source-node": "urn:node:WT-1",
+              "source-tp": "urn:if:WT-1:RLT-1:CT-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-2",
+              "dest-tp": "urn:if:WT-2:RLT-1:CT-1"
+            },
+            "ietf-te-topology:te": {
+              "te-link-attributes": {
+                "ietf-microwave-topology:mw-link": {
+                  "microwave-carrier": {
+                    "tx-frequency": 10728000,
+                    "channel-SAParation": 28000
+                  }
+                }
+              }
+            }
+          },
+          {
+            "link-id": "urn:link:WT-2:RLT-1:CT-1:WT-1:RLT-1:CT-1",
+            "source": {
+              "source-node": "urn:node:WT-2",
+              "source-tp": "urn:if:WT-2:RLT-1:CT-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-1",
+              "dest-tp": "urn:if:WT-1:RLT-1:CT-1"
+            },
+            "ietf-te-topology:te": {
+              "te-link-attributes": {
+                "ietf-microwave-topology:mw-link": {
+                  "microwave-carrier": {
+                    "tx-frequency": 10084000,
+                    "channel-SAParation": 28000
+                  }
+                }
+              }
+            }
+          },
+          {
+            "link-id": "urn:link:WT-1:RLT-1:CT-2:WT-2:RLT-1:CT-2",
+            "source": {
+              "source-node": "urn:node:WT-1",
+              "source-tp": "urn:if:WT-1:RLT-1:CT-2"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-2",
+              "dest-tp": "urn:if:WT-2:RLT-1:CT-2"
+            },
+            "ietf-te-topology:te": {
+              "te-link-attributes": {
+                "ietf-microwave-topology:mw-link": {
+                  "microwave-carrier": {
+                    "tx-frequency": 10618000,
+                    "channel-SAParation": 28000
+                  }
+                }
+              }
+            }
+          },
+          {
+            "link-id": "urn:link:WT-2:RLT-1:CT-2:WT-1:RLT-1:CT-2",
+            "source": {
+              "source-node": "urn:node:WT-2",
+              "source-tp": "urn:if:WT-2:RLT-1:CT-2"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-1",
+              "dest-tp": "urn:if:WT-1:RLT-1:CT-2"
+            },
+            "ietf-te-topology:te": {
+              "te-link-attributes": {
+                "ietf-microwave-topology:mw-link": {
+                  "microwave-carrier": {
+                    "tx-frequency": 9974000,
+                    "channel-SAParation": 28000
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "network-id": "urn:network:MW-1",
+        "network-types": {
+          "ietf-te-topology:te-topology": {
+            "ietf-microwave-topology:mw-topology": {}
+          }
+        },
+        "supporting-network": [
+          {
+            "network-ref": "urn:network:MW-1-CARRIERS"
+          }
+        ],
+        "node": [
+          {
+            "node-id": "urn:node:WT-1",
+            "supporting-node": [
+              {
+                "network-ref": "urn:network:MW-1-CARRIERS",
+                "node-ref": "urn:node:WT-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:WT-1:RLT-1",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-CARRIERS",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:RLT-1:CT-1"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1-CARRIERS",
+                    "node-ref": "urn:node:WT-1",
+                    "tp-ref": "urn:if:WT-1:RLT-1:CT-2"
+                  }
+                ],
+                "ietf-te-topology:te": {
+                  "ietf-microwave-topology:mw-tp": {
+                    "microwave-rltp": {}
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:WT-2",
+            "supporting-node": [
+              {
+                "network-ref": "urn:network:MW-1-CARRIERS",
+                "node-ref": "urn:node:WT-2"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:WT-2:RLT-1",
+                "ietf-network-topology:supporting-termination-point": [
+                  {
+                    "network-ref": "urn:network:MW-1-CARRIERS",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:RLT-1:CT-1"
+                  },
+                  {
+                    "network-ref": "urn:network:MW-1-CARRIERS",
+                    "node-ref": "urn:node:WT-2",
+                    "tp-ref": "urn:if:WT-2:RLT-1:CT-2"
+                  }
+                ],
+                "ietf-te-topology:te": {
+                  "ietf-microwave-topology:mw-tp": {
+                    "microwave-rltp": {}
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "urn:link:WT-1:RLT-1:WT-2:RLT-1",
+            "source": {
+              "source-node": "urn:node:WT-1",
+              "source-tp": "urn:if:WT-1:RLT-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-2",
+              "dest-tp": "urn:if:WT-2:RLT-1"
+            },
+            "ietf-te-topology:te": {
+              "te-link-attributes": {
+                "ietf-microwave-topology:mw-link": {
+                  "microwave-radio-link": {
+                    "rlt-mode": {
+                      "num-bonded-carriers": 2,
+                      "num-protecting-carriers": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "link-id": "urn:link:WT-2:RLT-1:WT-1:RLT-1",
+            "source": {
+              "source-node": "urn:node:WT-2",
+              "source-tp": "urn:if:WT-2:RLT-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:WT-1",
+              "dest-tp": "urn:if:WT-1:RLT-1"
+            },
+            "ietf-te-topology:te": {
+              "te-link-attributes": {
+                "ietf-microwave-topology:mw-link": {
+                  "microwave-radio-link": {
+                    "rlt-mode": {
+                      "num-bonded-carriers": 2,
+                      "num-protecting-carriers": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

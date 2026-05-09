@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microwave Topology — urn:network:MW-1</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
+  <script src="https://unpkg.com/cytoscape-svg/cytoscape-svg.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f8fafc; }
+    #cy { width: 100vw; height: 100vh; display: block; }
+    #toolbar {
+      position: absolute; top: 12px; left: 12px; z-index: 100;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    button {
+      padding: 6px 14px; border: 1px solid #9ca3af; background: white;
+      border-radius: 6px; cursor: pointer; font-size: 13px; color: #111827;
+    }
+    button:hover { background: #f3f4f6; }
+    #toolbar hr { border: none; border-top: 1px solid #e5e7eb; margin: 2px 0; }
+    #legend {
+      position: absolute; bottom: 16px; left: 16px;
+      background: white; border: 1px solid #d1d5db; border-radius: 10px;
+      padding: 14px 18px; font-size: 12px; line-height: 2;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    }
+    #legend strong { display: block; margin-bottom: 4px; font-size: 13px; }
+    .li  { display: flex; align-items: center; gap: 8px; }
+    .sw  { width: 22px; height: 14px; border-radius: 3px; border: 2px solid; flex-shrink: 0; }
+    .lsw { width: 30px; height: 3px; border-radius: 2px; flex-shrink: 0; }
+  </style>
+</head>
+<body>
+
+<div id="toolbar">
+  <button onclick="cy.fit(undefined, 60)">Fit to view</button>
+  <hr>
+  <button onclick="runLayout('preset')"  title="Fixed layered positions">Preset</button>
+  <button onclick="runLayout('fcose')"   title="Fast Compound Spring Embedder">fCoSE …</button>
+  <button onclick="runLayout('cose')"    title="Standard force-directed layout">CoSE</button>
+  <hr>
+  <button onclick="exportSVG()">Export SVG</button>
+</div>
+
+<div id="legend">
+  <strong>urn:network:MW-1</strong>
+  <div class="li"><span class="sw"  style="background:#dbeafe;border-color:#2563eb"></span>Wireless Transport device</div>
+  <div class="li"><span class="sw"  style="background:#fef3c7;border-color:#d97706"></span>Radio Link Termination Point (RLTP)</div>
+  <div class="li"><span class="sw"  style="background:#f3e8ff;border-color:#9333ea"></span>Carrier Termination Point (CTP)</div>
+  <div class="li"><span class="lsw" style="background:#1d4ed8"></span>Radio link (bonded carriers)</div>
+  <div class="li"><span class="lsw" style="background:#9333ea"></span>Carrier (TX frequency)</div>
+  <div class="li"><span class="sw"  style="background:#d1fae5;border-color:#059669"></span>Ethernet port (ETH-PORT, l2vlan)</div>
+  <div class="li"><span class="sw"  style="background:#f3f4f6;border-color:#6b7280"></span>Physical port (PORT, ethernetCsmacd)</div>
+  <div class="li"><span class="lsw" style="background:#059669"></span>Ethernet link (aggregated via RLT)</div>
+  <div class="li"><span class="lsw" style="background:#f59e0b;border-top:2px dashed #f59e0b;height:0"></span>Supporting link (carried-by relationship)</div>
+  <div class="li"><span class="lsw" style="background:#9ca3af;border-top:2px dotted #9ca3af;height:0"></span>Supporting termination point</div>
+</div>
+
+<div id="cy"></div>
+
+<script>
+// Auto-generated from ietf-network-topology.json — do not edit by hand.
+const elements = [
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:node:WT-1", "label": "WT-1", "type": "WT-DEVICE", "network": "MW-1-PHYSICAL", "node_uri": "urn:node:WT-1"} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-1", "label": "PORT-1", "type": "PHYSICAL-PORT", "network": "MW-1-PHYSICAL", "tp_uri": "urn:if:WT-1:PORT-1", "parent": "urn:network:MW-1-PHYSICAL::urn:node:WT-1"}, position: {"x": 220, "y": 862.5} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-2", "label": "PORT-2", "type": "PHYSICAL-PORT", "network": "MW-1-PHYSICAL", "tp_uri": "urn:if:WT-1:PORT-2", "parent": "urn:network:MW-1-PHYSICAL::urn:node:WT-1"}, position: {"x": 220, "y": 927.5} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-3", "label": "PORT-3", "type": "PHYSICAL-PORT", "network": "MW-1-PHYSICAL", "tp_uri": "urn:if:WT-1:PORT-3", "parent": "urn:network:MW-1-PHYSICAL::urn:node:WT-1"}, position: {"x": 220, "y": 992.5} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-4", "label": "PORT-4", "type": "PHYSICAL-PORT", "network": "MW-1-PHYSICAL", "tp_uri": "urn:if:WT-1:PORT-4", "parent": "urn:network:MW-1-PHYSICAL::urn:node:WT-1"}, position: {"x": 220, "y": 1057.5} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:node:WT-2", "label": "WT-2", "type": "WT-DEVICE", "network": "MW-1-PHYSICAL", "node_uri": "urn:node:WT-2"} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-1", "label": "PORT-1", "type": "PHYSICAL-PORT", "network": "MW-1-PHYSICAL", "tp_uri": "urn:if:WT-2:PORT-1", "parent": "urn:network:MW-1-PHYSICAL::urn:node:WT-2"}, position: {"x": 720, "y": 862.5} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-2", "label": "PORT-2", "type": "PHYSICAL-PORT", "network": "MW-1-PHYSICAL", "tp_uri": "urn:if:WT-2:PORT-2", "parent": "urn:network:MW-1-PHYSICAL::urn:node:WT-2"}, position: {"x": 720, "y": 927.5} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-3", "label": "PORT-3", "type": "PHYSICAL-PORT", "network": "MW-1-PHYSICAL", "tp_uri": "urn:if:WT-2:PORT-3", "parent": "urn:network:MW-1-PHYSICAL::urn:node:WT-2"}, position: {"x": 720, "y": 992.5} },
+  { data: {"id": "urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-4", "label": "PORT-4", "type": "PHYSICAL-PORT", "network": "MW-1-PHYSICAL", "tp_uri": "urn:if:WT-2:PORT-4", "parent": "urn:network:MW-1-PHYSICAL::urn:node:WT-2"}, position: {"x": 720, "y": 1057.5} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:node:WT-1", "label": "WT-1", "type": "WT-DEVICE", "network": "MW-1-ETHERNET", "node_uri": "urn:node:WT-1"} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-1", "label": "ETH-PORT-1", "type": "ETH-PORT", "network": "MW-1-ETHERNET", "tp_uri": "urn:if:WT-1:ETH-PORT-1", "parent": "urn:network:MW-1-ETHERNET::urn:node:WT-1"}, position: {"x": 220, "y": 602.5} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-2", "label": "ETH-PORT-2", "type": "ETH-PORT", "network": "MW-1-ETHERNET", "tp_uri": "urn:if:WT-1:ETH-PORT-2", "parent": "urn:network:MW-1-ETHERNET::urn:node:WT-1"}, position: {"x": 220, "y": 667.5} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-3", "label": "ETH-PORT-3", "type": "ETH-PORT", "network": "MW-1-ETHERNET", "tp_uri": "urn:if:WT-1:ETH-PORT-3", "parent": "urn:network:MW-1-ETHERNET::urn:node:WT-1"}, position: {"x": 220, "y": 732.5} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-4", "label": "ETH-PORT-4", "type": "ETH-PORT", "network": "MW-1-ETHERNET", "tp_uri": "urn:if:WT-1:ETH-PORT-4", "parent": "urn:network:MW-1-ETHERNET::urn:node:WT-1"}, position: {"x": 220, "y": 797.5} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:node:WT-2", "label": "WT-2", "type": "WT-DEVICE", "network": "MW-1-ETHERNET", "node_uri": "urn:node:WT-2"} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-1", "label": "ETH-PORT-1", "type": "ETH-PORT", "network": "MW-1-ETHERNET", "tp_uri": "urn:if:WT-2:ETH-PORT-1", "parent": "urn:network:MW-1-ETHERNET::urn:node:WT-2"}, position: {"x": 720, "y": 602.5} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-2", "label": "ETH-PORT-2", "type": "ETH-PORT", "network": "MW-1-ETHERNET", "tp_uri": "urn:if:WT-2:ETH-PORT-2", "parent": "urn:network:MW-1-ETHERNET::urn:node:WT-2"}, position: {"x": 720, "y": 667.5} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-3", "label": "ETH-PORT-3", "type": "ETH-PORT", "network": "MW-1-ETHERNET", "tp_uri": "urn:if:WT-2:ETH-PORT-3", "parent": "urn:network:MW-1-ETHERNET::urn:node:WT-2"}, position: {"x": 720, "y": 732.5} },
+  { data: {"id": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-4", "label": "ETH-PORT-4", "type": "ETH-PORT", "network": "MW-1-ETHERNET", "tp_uri": "urn:if:WT-2:ETH-PORT-4", "parent": "urn:network:MW-1-ETHERNET::urn:node:WT-2"}, position: {"x": 720, "y": 797.5} },
+  { data: {"id": "urn:network:MW-1-CARRIERS::urn:node:WT-1", "label": "WT-1", "type": "WT-DEVICE", "network": "MW-1-CARRIERS", "node_uri": "urn:node:WT-1"} },
+  { data: {"id": "urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-1", "label": "CT-1", "type": "CTP", "network": "MW-1-CARRIERS", "tp_uri": "urn:if:WT-1:RLT-1:CT-1", "parent": "urn:network:MW-1-CARRIERS::urn:node:WT-1"}, position: {"x": 220, "y": 407.5} },
+  { data: {"id": "urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-2", "label": "CT-2", "type": "CTP", "network": "MW-1-CARRIERS", "tp_uri": "urn:if:WT-1:RLT-1:CT-2", "parent": "urn:network:MW-1-CARRIERS::urn:node:WT-1"}, position: {"x": 220, "y": 472.5} },
+  { data: {"id": "urn:network:MW-1-CARRIERS::urn:node:WT-2", "label": "WT-2", "type": "WT-DEVICE", "network": "MW-1-CARRIERS", "node_uri": "urn:node:WT-2"} },
+  { data: {"id": "urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-1", "label": "CT-1", "type": "CTP", "network": "MW-1-CARRIERS", "tp_uri": "urn:if:WT-2:RLT-1:CT-1", "parent": "urn:network:MW-1-CARRIERS::urn:node:WT-2"}, position: {"x": 720, "y": 407.5} },
+  { data: {"id": "urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-2", "label": "CT-2", "type": "CTP", "network": "MW-1-CARRIERS", "tp_uri": "urn:if:WT-2:RLT-1:CT-2", "parent": "urn:network:MW-1-CARRIERS::urn:node:WT-2"}, position: {"x": 720, "y": 472.5} },
+  { data: {"id": "urn:network:MW-1::urn:node:WT-1", "label": "WT-1", "type": "WT-DEVICE", "network": "MW-1", "node_uri": "urn:node:WT-1"} },
+  { data: {"id": "urn:network:MW-1::urn:if:WT-1:RLT-1", "label": "RLT-1", "type": "RLTP", "network": "MW-1", "tp_uri": "urn:if:WT-1:RLT-1", "parent": "urn:network:MW-1::urn:node:WT-1"}, position: {"x": 220, "y": 180.0} },
+  { data: {"id": "urn:network:MW-1::urn:node:WT-2", "label": "WT-2", "type": "WT-DEVICE", "network": "MW-1", "node_uri": "urn:node:WT-2"} },
+  { data: {"id": "urn:network:MW-1::urn:if:WT-2:RLT-1", "label": "RLT-1", "type": "RLTP", "network": "MW-1", "tp_uri": "urn:if:WT-2:RLT-1", "parent": "urn:network:MW-1::urn:node:WT-2"}, position: {"x": 720, "y": 180.0} },
+
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-1\u2192urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-1", "target": "urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-1\u2192urn:network:MW-1::urn:if:WT-1:RLT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-1", "target": "urn:network:MW-1::urn:if:WT-1:RLT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-2\u2192urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-2", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-2", "target": "urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-2", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-2\u2192urn:network:MW-1::urn:if:WT-1:RLT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-2", "target": "urn:network:MW-1::urn:if:WT-1:RLT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-3\u2192urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-3", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-3", "target": "urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-3", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-3\u2192urn:network:MW-1::urn:if:WT-1:RLT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-3", "target": "urn:network:MW-1::urn:if:WT-1:RLT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-4\u2192urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-4", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-4", "target": "urn:network:MW-1-PHYSICAL::urn:if:WT-1:PORT-4", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-4\u2192urn:network:MW-1::urn:if:WT-1:RLT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-4", "target": "urn:network:MW-1::urn:if:WT-1:RLT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-1\u2192urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-1", "target": "urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-1\u2192urn:network:MW-1::urn:if:WT-2:RLT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-1", "target": "urn:network:MW-1::urn:if:WT-2:RLT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-2\u2192urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-2", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-2", "target": "urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-2", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-2\u2192urn:network:MW-1::urn:if:WT-2:RLT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-2", "target": "urn:network:MW-1::urn:if:WT-2:RLT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-3\u2192urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-3", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-3", "target": "urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-3", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-3\u2192urn:network:MW-1::urn:if:WT-2:RLT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-3", "target": "urn:network:MW-1::urn:if:WT-2:RLT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-4\u2192urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-4", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-4", "target": "urn:network:MW-1-PHYSICAL::urn:if:WT-2:PORT-4", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-4\u2192urn:network:MW-1::urn:if:WT-2:RLT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-4", "target": "urn:network:MW-1::urn:if:WT-2:RLT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "urn:link:WT-1:ETH-PORT-1:WT-2:ETH-PORT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-1", "target": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-1", "source_node": "WT-1", "target_node": "WT-2", "type": "ETH-LINK", "label": ""} },
+  { data: {"id": "urn:link:WT-2:ETH-PORT-1:WT-1:ETH-PORT-1", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-1", "target": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-1", "source_node": "WT-2", "target_node": "WT-1", "type": "ETH-LINK", "label": ""} },
+  { data: {"id": "urn:link:WT-1:ETH-PORT-2:WT-2:ETH-PORT-2", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-2", "target": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-2", "source_node": "WT-1", "target_node": "WT-2", "type": "ETH-LINK", "label": ""} },
+  { data: {"id": "urn:link:WT-2:ETH-PORT-2:WT-1:ETH-PORT-2", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-2", "target": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-2", "source_node": "WT-2", "target_node": "WT-1", "type": "ETH-LINK", "label": ""} },
+  { data: {"id": "urn:link:WT-1:ETH-PORT-3:WT-2:ETH-PORT-3", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-3", "target": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-3", "source_node": "WT-1", "target_node": "WT-2", "type": "ETH-LINK", "label": ""} },
+  { data: {"id": "urn:link:WT-2:ETH-PORT-3:WT-1:ETH-PORT-3", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-3", "target": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-3", "source_node": "WT-2", "target_node": "WT-1", "type": "ETH-LINK", "label": ""} },
+  { data: {"id": "urn:link:WT-1:ETH-PORT-4:WT-2:ETH-PORT-4", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-4", "target": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-4", "source_node": "WT-1", "target_node": "WT-2", "type": "ETH-LINK", "label": ""} },
+  { data: {"id": "urn:link:WT-2:ETH-PORT-4:WT-1:ETH-PORT-4", "source": "urn:network:MW-1-ETHERNET::urn:if:WT-2:ETH-PORT-4", "target": "urn:network:MW-1-ETHERNET::urn:if:WT-1:ETH-PORT-4", "source_node": "WT-2", "target_node": "WT-1", "type": "ETH-LINK", "label": ""} },
+  { data: {"id": "urn:link:WT-1:RLT-1:CT-1:WT-2:RLT-1:CT-1", "source": "urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-1", "target": "urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-1", "source_node": "WT-1", "target_node": "WT-2", "type": "CARRIER", "label": "10728 MHz", "tx_frequency": 10728000} },
+  { data: {"id": "urn:link:WT-2:RLT-1:CT-1:WT-1:RLT-1:CT-1", "source": "urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-1", "target": "urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-1", "source_node": "WT-2", "target_node": "WT-1", "type": "CARRIER", "label": "10084 MHz", "tx_frequency": 10084000} },
+  { data: {"id": "urn:link:WT-1:RLT-1:CT-2:WT-2:RLT-1:CT-2", "source": "urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-2", "target": "urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-2", "source_node": "WT-1", "target_node": "WT-2", "type": "CARRIER", "label": "10618 MHz", "tx_frequency": 10618000} },
+  { data: {"id": "urn:link:WT-2:RLT-1:CT-2:WT-1:RLT-1:CT-2", "source": "urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-2", "target": "urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-2", "source_node": "WT-2", "target_node": "WT-1", "type": "CARRIER", "label": "9974 MHz", "tx_frequency": 9974000} },
+  { data: {"id": "stp::urn:network:MW-1::urn:if:WT-1:RLT-1\u2192urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-1", "source": "urn:network:MW-1::urn:if:WT-1:RLT-1", "target": "urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1::urn:if:WT-1:RLT-1\u2192urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-2", "source": "urn:network:MW-1::urn:if:WT-1:RLT-1", "target": "urn:network:MW-1-CARRIERS::urn:if:WT-1:RLT-1:CT-2", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1::urn:if:WT-2:RLT-1\u2192urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-1", "source": "urn:network:MW-1::urn:if:WT-2:RLT-1", "target": "urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-1", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "stp::urn:network:MW-1::urn:if:WT-2:RLT-1\u2192urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-2", "source": "urn:network:MW-1::urn:if:WT-2:RLT-1", "target": "urn:network:MW-1-CARRIERS::urn:if:WT-2:RLT-1:CT-2", "type": "SUPPORTING-TP", "label": ""} },
+  { data: {"id": "urn:link:WT-1:RLT-1:WT-2:RLT-1", "source": "urn:network:MW-1::urn:if:WT-1:RLT-1", "target": "urn:network:MW-1::urn:if:WT-2:RLT-1", "source_node": "WT-1", "target_node": "WT-2", "type": "RADIO-LINK", "label": "2+0 mode", "bonded": 2, "protecting": 0} },
+  { data: {"id": "urn:link:WT-2:RLT-1:WT-1:RLT-1", "source": "urn:network:MW-1::urn:if:WT-2:RLT-1", "target": "urn:network:MW-1::urn:if:WT-1:RLT-1", "source_node": "WT-2", "target_node": "WT-1", "type": "RADIO-LINK", "label": "2+0 mode", "bonded": 2, "protecting": 0} },
+];
+
+const cy = cytoscape({
+  container: document.getElementById('cy'),
+  elements,
+  style: [
+    {
+      selector: 'node[type = "WT-DEVICE"]',
+      style: {
+        content: 'data(label)',
+        'text-valign': 'top', 'text-halign': 'center',
+        'font-weight': 'bold', 'font-size': 16, color: '#1e3a8a',
+        'background-color': '#dbeafe', 'border-color': '#2563eb', 'border-width': 2.5,
+        padding: '36px', shape: 'roundrectangle',
+      },
+    },
+    {
+      selector: 'node[type = "RLTP"]',
+      style: {
+        content: 'data(label)',
+        'text-valign': 'center', 'font-size': 11, 'font-weight': 'bold', color: '#78350f',
+        width: 70, height: 30,
+        'background-color': '#fef3c7', 'border-color': '#d97706', 'border-width': 2,
+        shape: 'roundrectangle',
+      },
+    },
+    {
+      selector: 'node[type = "CTP"]',
+      style: {
+        content: 'data(label)',
+        'text-valign': 'center', 'font-size': 11, color: '#581c87',
+        width: 70, height: 30,
+        'background-color': '#f3e8ff', 'border-color': '#9333ea', 'border-width': 2,
+        shape: 'roundrectangle',
+      },
+    },
+    {
+      selector: 'edge[type = "RADIO-LINK"]',
+      style: {
+        width: 4, 'line-color': '#1d4ed8',
+        'curve-style': 'bezier',
+        'target-arrow-shape': 'triangle', 'target-arrow-color': '#1d4ed8',
+        'arrow-scale': 1.2,
+        label: 'data(label)', 'font-size': 11, color: '#1e3a8a',
+        'font-weight': 'bold',
+        'text-background-color': '#eff6ff', 'text-background-opacity': 1,
+        'text-background-padding': '3px', 'text-rotation': 'autorotate',
+      },
+    },
+    {
+      selector: 'edge[type = "CARRIER"]',
+      style: {
+        width: 2, 'line-color': '#9333ea',
+        'curve-style': 'bezier',
+        'target-arrow-shape': 'triangle', 'target-arrow-color': '#9333ea',
+        'arrow-scale': 0.8,
+        label: 'data(label)', 'font-size': 10, color: '#6b21a8',
+        'text-background-color': '#faf5ff', 'text-background-opacity': 1,
+        'text-background-padding': '2px', 'text-rotation': 'autorotate',
+      },
+    },
+    {
+      selector: 'node[type = "ETH-PORT"]',
+      style: {
+        content: 'data(label)',
+        'text-valign': 'center', 'font-size': 10, color: '#065f46',
+        width: 70, height: 26,
+        'background-color': '#d1fae5', 'border-color': '#059669', 'border-width': 1.5,
+        shape: 'roundrectangle',
+      },
+    },
+    {
+      selector: 'node[type = "PHYSICAL-PORT"]',
+      style: {
+        content: 'data(label)',
+        'text-valign': 'center', 'font-size': 10, color: '#374151',
+        width: 70, height: 26,
+        'background-color': '#f3f4f6', 'border-color': '#6b7280', 'border-width': 1.5,
+        shape: 'roundrectangle',
+      },
+    },
+    {
+      selector: 'edge[type = "ETH-LINK"]',
+      style: {
+        width: 1.5, 'line-color': '#059669',
+        'curve-style': 'bezier',
+        'target-arrow-shape': 'triangle', 'target-arrow-color': '#059669',
+        'arrow-scale': 0.7,
+        opacity: 0.8,
+      },
+    },
+    {
+      selector: 'edge[type = "SUPPORTING-LINK"]',
+      style: {
+        width: 2, 'line-color': '#f59e0b', 'line-style': 'dashed',
+        'curve-style': 'bezier',
+        'target-arrow-shape': 'triangle', 'target-arrow-color': '#f59e0b',
+        'arrow-scale': 0.9,
+        opacity: 0.85,
+        label: 'data(label)', 'font-size': 9,
+      },
+    },
+    {
+      selector: 'edge[type = "SUPPORTING-TP"]',
+      style: {
+        width: 1.5, 'line-color': '#9ca3af', 'line-style': 'dotted',
+        'curve-style': 'bezier',
+        'target-arrow-shape': 'triangle', 'target-arrow-color': '#9ca3af',
+        'arrow-scale': 0.7,
+        opacity: 0.8,
+      },
+    },
+    { selector: ':selected', style: { 'overlay-color': '#f59e0b', 'overlay-opacity': 0.25 } },
+  ],
+  layout: { name: 'preset' },
+});
+
+cy.fit(undefined, 60);
+
+const layouts = {
+  preset: {
+    name: 'preset',
+    animate: true, animationDuration: 500, fit: true, padding: 60,
+  },
+  fcose: {
+    name: 'fcose',
+    animate: true, animationDuration: 700,
+    fit: true, padding: 60,
+    nodeRepulsion: 8000,
+    idealEdgeLength: 160,
+    edgeElasticity: 0.45,
+    numIter: 2500,
+    gravity: 0.25,
+    gravityRange: 3.8,
+    nestingFactor: 0.1,
+    randomize: true,
+    tile: true,
+  },
+  cose: {
+    name: 'cose',
+    animate: true, animationDuration: 700,
+    fit: true, padding: 60,
+    nodeRepulsion: 8000,
+    componentSpacing: 80,
+  },
+};
+
+function runLayout(name) {
+  cy.layout(layouts[name] || layouts.fcose).run();
+}
+
+function exportSVG() {
+  const svg  = cy.svg({ scale: 1.5, full: true, bg: '#ffffff' });
+  const blob = new Blob([svg], { type: 'image/svg+xml' });
+  const url  = URL.createObjectURL(blob);
+  const a    = Object.assign(document.createElement('a'),
+                 { href: url, download: 'ietf-network-topology.svg' });
+  a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>

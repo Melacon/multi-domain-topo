@@ -1,0 +1,423 @@
+{
+  "ietf-network:networks": {
+    "network": [
+      {
+        "network-id": "physical-topology",
+        "node": [
+          {
+            "node-id": "urn:node:O-RU-1",
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-RU-1:FIBER-PORT-1"
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:O-DU-1",
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-DU-1:FIBER-PORT-1"
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "urn:link:FIBER-O-RU-1-O-DU-1",
+            "source": {
+              "source-node": "urn:node:O-RU-1",
+              "source-tp": "urn:if:O-RU-1:FIBER-PORT-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-1",
+              "dest-tp": "urn:if:O-DU-1:FIBER-PORT-1"
+            }
+          },
+          {
+            "link-id": "urn:link:FIBER-O-DU-1-O-RU-1",
+            "source": {
+              "source-node": "urn:node:O-DU-1",
+              "source-tp": "urn:if:O-DU-1:FIBER-PORT-1"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-RU-1",
+              "dest-tp": "urn:if:O-RU-1:FIBER-PORT-1"
+            }
+          }
+        ]
+      },
+      {
+        "network-id": "ethernet-topology",
+        "supporting-network": [
+          {
+            "network-ref": "physical-topology"
+          }
+        ],
+        "node": [
+          {
+            "node-id": "urn:node:O-RU-1",
+            "supporting-node": [
+              {
+                "network-ref": "physical-topology",
+                "node-ref": "urn:node:O-RU-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-RU-1:ETH0",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "physical-topology",
+                    "node-ref": "urn:node:O-RU-1",
+                    "tp-ref": "urn:if:O-RU-1:FIBER-PORT-1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:O-DU-1",
+            "supporting-node": [
+              {
+                "network-ref": "physical-topology",
+                "node-ref": "urn:node:O-DU-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-DU-1:ETH0",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "physical-topology",
+                    "node-ref": "urn:node:O-DU-1",
+                    "tp-ref": "urn:if:O-DU-1:FIBER-PORT-1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "urn:link:ETH-FRONTHAUL-O-RU-1-O-DU-1",
+            "source": {
+              "source-node": "urn:node:O-RU-1",
+              "source-tp": "urn:if:O-RU-1:ETH0"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-1",
+              "dest-tp": "urn:if:O-DU-1:ETH0"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "physical-topology",
+                "link-ref": "urn:link:FIBER-O-RU-1-O-DU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:ETH-FRONTHAUL-O-DU-1-O-RU-1",
+            "source": {
+              "source-node": "urn:node:O-DU-1",
+              "source-tp": "urn:if:O-DU-1:ETH0"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-RU-1",
+              "dest-tp": "urn:if:O-RU-1:ETH0"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "physical-topology",
+                "link-ref": "urn:link:FIBER-O-DU-1-O-RU-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "network-id": "open-fronthaul-cus-topology",
+        "supporting-network": [
+          {
+            "network-ref": "fronthaul-ethernet-transport-topology"
+          }
+        ],
+        "node": [
+          {
+            "node-id": "urn:node:O-RU-1",
+            "supporting-node": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "node-ref": "urn:node:O-RU-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-RU-1:OFH-CPLANE-SAP",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "fronthaul-ethernet-transport-topology",
+                    "node-ref": "urn:node:O-RU-1",
+                    "tp-ref": "urn:if:O-RU-1:ETH0"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-RU-1:OFH-UPLANE-SAP",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "fronthaul-ethernet-transport-topology",
+                    "node-ref": "urn:node:O-RU-1",
+                    "tp-ref": "urn:if:O-RU-1:ETH0"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-RU-1:OFH-SPLANE-SAP",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "fronthaul-ethernet-transport-topology",
+                    "node-ref": "urn:node:O-RU-1",
+                    "tp-ref": "urn:if:O-RU-1:ETH0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:O-DU-1",
+            "supporting-node": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "node-ref": "urn:node:O-DU-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-DU-1:OFH-CPLANE-SAP",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "fronthaul-ethernet-transport-topology",
+                    "node-ref": "urn:node:O-DU-1",
+                    "tp-ref": "urn:if:O-DU-1:ETH0"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-DU-1:OFH-UPLANE-SAP",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "fronthaul-ethernet-transport-topology",
+                    "node-ref": "urn:node:O-DU-1",
+                    "tp-ref": "urn:if:O-DU-1:ETH0"
+                  }
+                ]
+              },
+              {
+                "tp-id": "urn:if:O-DU-1:OFH-SPLANE-SAP",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "fronthaul-ethernet-transport-topology",
+                    "node-ref": "urn:node:O-DU-1",
+                    "tp-ref": "urn:if:O-DU-1:ETH0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "urn:link:OFH-CPLANE-O-RU-1-O-DU-1",
+            "source": {
+              "source-node": "urn:node:O-RU-1",
+              "source-tp": "urn:if:O-RU-1:OFH-CPLANE-SAP"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-1",
+              "dest-tp": "urn:if:O-DU-1:OFH-CPLANE-SAP"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "link-ref": "urn:link:ETH-FRONTHAUL-O-RU-1-O-DU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:OFH-CPLANE-O-DU-1-O-RU-1",
+            "source": {
+              "source-node": "urn:node:O-DU-1",
+              "source-tp": "urn:if:O-DU-1:OFH-CPLANE-SAP"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-RU-1",
+              "dest-tp": "urn:if:O-RU-1:OFH-CPLANE-SAP"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "link-ref": "urn:link:ETH-FRONTHAUL-O-DU-1-O-RU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:OFH-UPLANE-O-RU-1-O-DU-1",
+            "source": {
+              "source-node": "urn:node:O-RU-1",
+              "source-tp": "urn:if:O-RU-1:OFH-UPLANE-SAP"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-1",
+              "dest-tp": "urn:if:O-DU-1:OFH-UPLANE-SAP"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "link-ref": "urn:link:ETH-FRONTHAUL-O-RU-1-O-DU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:OFH-UPLANE-O-DU-1-O-RU-1",
+            "source": {
+              "source-node": "urn:node:O-DU-1",
+              "source-tp": "urn:if:O-DU-1:OFH-UPLANE-SAP"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-RU-1",
+              "dest-tp": "urn:if:O-RU-1:OFH-UPLANE-SAP"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "link-ref": "urn:link:ETH-FRONTHAUL-O-DU-1-O-RU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:OFH-SPLANE-O-RU-1-O-DU-1",
+            "source": {
+              "source-node": "urn:node:O-RU-1",
+              "source-tp": "urn:if:O-RU-1:OFH-SPLANE-SAP"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-1",
+              "dest-tp": "urn:if:O-DU-1:OFH-SPLANE-SAP"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "link-ref": "urn:link:ETH-FRONTHAUL-O-RU-1-O-DU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:OFH-SPLANE-O-DU-1-O-RU-1",
+            "source": {
+              "source-node": "urn:node:O-DU-1",
+              "source-tp": "urn:if:O-DU-1:OFH-SPLANE-SAP"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-RU-1",
+              "dest-tp": "urn:if:O-RU-1:OFH-SPLANE-SAP"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "link-ref": "urn:link:ETH-FRONTHAUL-O-DU-1-O-RU-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "network-id": "open-fronthaul-mplane-topology",
+        "supporting-network": [
+          {
+            "network-ref": "fronthaul-ethernet-transport-topology"
+          }
+        ],
+        "node": [
+          {
+            "node-id": "urn:node:O-RU-1",
+            "supporting-node": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "node-ref": "urn:node:O-RU-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-RU-1:OFH-MPLANE-SAP",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "fronthaul-ethernet-transport-topology",
+                    "node-ref": "urn:node:O-RU-1",
+                    "tp-ref": "urn:if:O-RU-1:ETH0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node-id": "urn:node:O-DU-1",
+            "supporting-node": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "node-ref": "urn:node:O-DU-1"
+              }
+            ],
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "urn:if:O-DU-1:OFH-MPLANE-SAP",
+                "supporting-termination-point": [
+                  {
+                    "network-ref": "fronthaul-ethernet-transport-topology",
+                    "node-ref": "urn:node:O-DU-1",
+                    "tp-ref": "urn:if:O-DU-1:ETH0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "urn:link:OFH-MPLANE-O-DU-1-O-RU-1",
+            "source": {
+              "source-node": "urn:node:O-DU-1",
+              "source-tp": "urn:if:O-DU-1:OFH-MPLANE-SAP"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-RU-1",
+              "dest-tp": "urn:if:O-RU-1:OFH-MPLANE-SAP"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "link-ref": "urn:link:ETH-FRONTHAUL-O-DU-1-O-RU-1"
+              }
+            ]
+          },
+          {
+            "link-id": "urn:link:OFH-MPLANE-O-RU-1-O-DU-1",
+            "source": {
+              "source-node": "urn:node:O-RU-1",
+              "source-tp": "urn:if:O-RU-1:OFH-MPLANE-SAP"
+            },
+            "destination": {
+              "dest-node": "urn:node:O-DU-1",
+              "dest-tp": "urn:if:O-DU-1:OFH-MPLANE-SAP"
+            },
+            "supporting-link": [
+              {
+                "network-ref": "fronthaul-ethernet-transport-topology",
+                "link-ref": "urn:link:ETH-FRONTHAUL-O-RU-1-O-DU-1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

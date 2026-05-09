@@ -1,0 +1,139 @@
+==========================================================
+ NF folder      : /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/SMOS-Topology/Microwave-Topology
+ tree file      : yang-tree.txt
+ timestamp      : 2026-05-06T10:33:28Z
+ YANG files     : 9 total
+ root modules   : 1 (define top-level container/list)
+ pyang          : pyang 2.7.1
+==========================================================
+
+ Root modules (YANG tree entry points):
+   ietf-network
+
+--- YANG tree (pyang -f tree, line-length 120) ---
+
+module: ietf-network
+  +--rw networks
+     +--rw network* [network-id]
+     |  +--rw network-id                    network-id
+     |  +--rw network-types
+     |  |  +--rw tet:te-topology!
+     |  |     +--rw mwt:mw-topology!
+     |  +--rw supporting-network* [network-ref]
+     |  |  +--rw network-ref    -> /networks/network/network-id
+     |  +--rw node* [node-id]
+     |  |  +--rw node-id                 node-id
+     |  |  +--rw supporting-node* [network-ref node-ref]
+     |  |  |  +--rw network-ref    -> ../../../supporting-network/network-ref
+     |  |  |  +--rw node-ref       -> /networks/network/node/node-id
+     |  |  +--rw nt:termination-point* [tp-id]
+     |  |  |  +--rw nt:tp-id                           tp-id
+     |  |  |  +--rw nt:supporting-termination-point* [network-ref node-ref tp-ref]
+     |  |  |  |  +--rw nt:network-ref    -> ../../../nw:supporting-node/network-ref
+     |  |  |  |  +--rw nt:node-ref       -> ../../../nw:supporting-node/node-ref
+     |  |  |  |  +--rw nt:tp-ref         leafref
+     |  |  |  +--rw tet:te-tp-id?                      te-types:te-tp-id
+     |  |  |  +--rw tet:te!
+     |  |  |     +--rw tet:admin-status?                     te-types:te-admin-status
+     |  |  |     +--rw tet:name?                             string
+     |  |  |     +--rw tet:interface-switching-capability* [switching-capability encoding]
+     |  |  |     |  +--rw tet:switching-capability    identityref
+     |  |  |     |  +--rw tet:encoding                identityref
+     |  |  |     |  +--rw tet:max-lsp-bandwidth* [priority]
+     |  |  |     |     +--rw tet:priority        uint8
+     |  |  |     |     +--rw tet:te-bandwidth
+     |  |  |     |        +--rw (tet:technology)?
+     |  |  |     |           +--:(tet:generic)
+     |  |  |     |              +--rw tet:generic?   te-bandwidth
+     |  |  |     +--rw tet:inter-domain-plug-id?             binary
+     |  |  |     +--rw tet:inter-layer-lock-id*              uint32
+     |  |  |     +--ro tet:oper-status?                      te-types:te-oper-status
+     |  |  |     +--ro tet:geolocation
+     |  |  |     |  +--ro tet:altitude?    int64
+     |  |  |     |  +--ro tet:latitude?    geographic-coordinate-degree
+     |  |  |     |  +--ro tet:longitude?   geographic-coordinate-degree
+     |  |  |     +--rw mwt:mw-tp!
+     |  |  |        +--rw (mwt:mw-tp-option)?
+     |  |  |           +--:(mwt:microwave-rltp)
+     |  |  |           |  +--rw mwt:microwave-rltp!
+     |  |  |           +--:(mwt:microwave-ctp)
+     |  |  |              +--rw mwt:microwave-ctp!
+     |  |  +--rw tet:te-node-id?         te-types:te-node-id
+     |  |  +--rw tet:te!
+     |  |     +--rw tet:te-node-template*              -> ../../../../te/templates/node-template/name {template}?
+     |  |     +--rw tet:te-node-attributes
+     |  |     |  +--rw tet:admin-status?            te-types:te-admin-status
+     |  |     |  +--rw tet:connectivity-matrices
+     |  |     |  |  +--rw tet:number-of-entries?     uint16
+     |  |     |  |  +--rw tet:label-restrictions
+     |  |     |  |  |  +--rw tet:label-restriction* [index]
+     |  |     |  |  |     +--rw tet:restriction?    enumeration
+     |  |     |  |  |     +--rw tet:index           uint32
+     |  |     |  |  |     +--rw tet:label-start
+     |  |     |  |  |     |  +--rw tet:te-label
+     |  |     |  |  |     |     +--rw (tet:technology)?
+     |  |     |  |  |     |     |  +--:(tet:generic)
+     |  |     |  |  |     |     |     +--rw tet:generic?   rt-types:generalized-label
+     |  |     |  |  |     |     +--rw tet:direction?       te-label-direction
+     |  |     |  |  |     +--rw tet:label-end
+     |  |     |  |  |     |  +--rw tet:te-label
+     |  |     |  |  |     |     +--rw (tet:technology)?
+     |  |     |  |  |     |     |  +--:(tet:generic)
+     |  |     |  |  |     |     |     +--rw tet:generic?   rt-types:generalized-label
+     |  |     |  |  |     |     +--rw tet:direction?       te-label-direction
+     |  |     |  |  |     +--rw tet:label-step
+     |  |     |  |  |     |  +--rw (tet:technology)?
+     |  |     |  |  |     |     +--:(tet:generic)
+     |  |     |  |  |     |        +--rw tet:generic?   int32
+     |  |     |  |  |     +--rw tet:range-bitmap?   yang:hex-string
+     |  |     |  |  +--rw tet:is-allowed?            boolean
+     |  |     |  |  +--rw tet:underlay {te-topology-hierarchy}?
+     |  |     |  |  |  +--rw tet:enabled?                     boolean
+     |  |     |  |  |  +--rw tet:primary-path
+     |  |     |  |  |  |  +--rw tet:network-ref?    -> /nw:networks/network/network-id
+     |  |     |  |  |  |  +--rw tet:path-element* [path-element-id]
+     |  |     |  |  |  |     +--rw tet:path-element-id              uint32
+     |  |     |  |  |  |     +--rw (tet:type)?
+     |  |     |  |  |  |        +--:(tet:numbered-node-hop)
+     |  |     |  |  |  |        |  +--rw tet:numbered-node-hop
+     |  |     |  |  |  |        |     +--rw tet:node-id     te-node-id
+     |  |     |  |  |  |        |     +--rw tet:hop-type?   te-hop-type
+     |  |     |  |  |  |        +--:(tet:numbered-link-hop)
+     |  |     |  |  |  |        |  +--rw tet:numbered-link-hop
+     |  |     |  |  |  |        |     +--rw tet:link-tp-id    te-tp-id
+     |  |     |  |  |  |        |     +--rw tet:hop-type?     te-hop-type
+     |  |     |  |  |  |        |     +--rw tet:direction?    te-link-direction
+     |  |     |  |  |  |        +--:(tet:unnumbered-link-hop)
+     |  |     |  |  |  |        |  +--rw tet:unnumbered-link-hop
+     |  |     |  |  |  |        |     +--rw tet:link-tp-id    te-tp-id
+     |  |     |  |  |  |        |     +--rw tet:node-id       te-node-id
+     |  |     |  |  |  |        |     +--rw tet:hop-type?     te-hop-type
+     |  |     |  |  |  |        |     +--rw tet:direction?    te-link-direction
+     |  |     |  |  |  |        +--:(tet:as-number)
+     |  |     |  |  |  |        |  +--rw tet:as-number-hop
+     |  |     |  |  |  |        |     +--rw tet:as-number    inet:as-number
+     |  |     |  |  |  |        |     +--rw tet:hop-type?    te-hop-type
+     |  |     |  |  |  |        +--:(tet:label)
+     |  |     |  |  |  |           +--rw tet:label-hop
+     |  |     |  |  |  |              +--rw tet:te-label
+     |  |     |  |  |  |                 +--rw (tet:technology)?
+     |  |     |  |  |  |                 |  +--:(tet:generic)
+     |  |     |  |  |  |                 |     +--rw tet:generic?   rt-types:generalized-label
+     |  |     |  |  |  |                 +--rw tet:direction?       te-label-direction
+     |  |     |  |  |  +--rw tet:backup-path* [index]
+     |  |     |  |  |  |  +--rw tet:index           uint32
+     |  |     |  |  |  |  +--rw tet:network-ref?    -> /nw:networks/network/network-id
+     |  |     |  |  |  |  +--rw tet:path-element* [path-element-id]
+     |  |     |  |  |  |     +--rw tet:path-element-id              uint32
+     |  |     |  |  |  |     +--rw (tet:type)?
+     |  |     |  |  |  |        +--:(tet:numbered-node-hop)
+     |  |     |  |  |  |        |  +--rw tet:numbered-node-hop
+     |  |     |  |  |  |        |     +--rw tet:node-id     te-node-id
+     |  |     |  |  |  |        |     +--rw tet:hop-type?   te-hop-type
+     |  |     |  |  |  |        +--:(tet:numbered-link-hop)
+     |  |     |  |  |  |        |  +--rw tet:numbered-link-hop
+     |  |     |  |  |  |        |     +--rw tet:link-tp-id    te-tp-id
+     |  |     |  |  |  |        |     +--rw tet:hop-type?     te-hop-type
+     |  |     |  |  |  |        |     +--rw tet:direction?    te-link-direction
+     |  |     |  |  |  |        +--:(tet:unnumbered-link-hop)
+     |  |     |  |  |  |        |  +--rw tet:unnumbe

@@ -1,0 +1,88 @@
+==========================================================
+ NF folder      : /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/SMOS-Topology/Service-Topology
+ tree file      : yang-tree.txt
+ timestamp      : 2026-05-06T10:33:29Z
+ YANG files     : 10 total
+ root modules   : 2 (define top-level container/list)
+ pyang          : pyang 2.7.1
+==========================================================
+
+ Root modules (YANG tree entry points):
+   ietf-netconf-acm
+   ietf-network
+
+--- YANG tree (pyang -f tree, line-length 120) ---
+
+module: ietf-netconf-acm
+  +--rw nacm
+     +--rw enable-nacm?              boolean
+     +--rw read-default?             action-type
+     +--rw write-default?            action-type
+     +--rw exec-default?             action-type
+     +--rw enable-external-groups?   boolean
+     +--ro denied-operations         yang:zero-based-counter32
+     +--ro denied-data-writes        yang:zero-based-counter32
+     +--ro denied-notifications      yang:zero-based-counter32
+     +--rw groups
+     |  +--rw group* [name]
+     |     +--rw name         group-name-type
+     |     +--rw user-name*   user-name-type
+     +--rw rule-list* [name]
+        +--rw name     string
+        +--rw group*   union
+        +--rw rule* [name]
+           +--rw name                       string
+           +--rw module-name?               union
+           +--rw (rule-type)?
+           |  +--:(protocol-operation)
+           |  |  +--rw rpc-name?            union
+           |  +--:(notification)
+           |  |  +--rw notification-name?   union
+           |  +--:(data-node)
+           |     +--rw path                 node-instance-identifier
+           +--rw access-operations?         union
+           +--rw action                     action-type
+           +--rw comment?                   string
+
+module: ietf-network
+  +--rw networks
+     +--rw network* [network-id]
+        +--rw network-id            network-id
+        +--rw network-types
+        |  +--rw sap:sap-network!
+        |     +--rw sap:service-type*   identityref
+        +--rw supporting-network* [network-ref]
+        |  +--rw network-ref    -> /networks/network/network-id
+        +--rw node* [node-id]
+        |  +--rw node-id                 node-id
+        |  +--rw supporting-node* [network-ref node-ref]
+        |  |  +--rw network-ref    -> ../../../supporting-network/network-ref
+        |  |  +--rw node-ref       -> /networks/network/node/node-id
+        |  +--rw nt:termination-point* [tp-id]
+        |  |  +--rw nt:tp-id                           tp-id
+        |  |  +--rw nt:supporting-termination-point* [network-ref node-ref tp-ref]
+        |  |     +--rw nt:network-ref    -> ../../../nw:supporting-node/network-ref
+        |  |     +--rw nt:node-ref       -> ../../../nw:supporting-node/node-ref
+        |  |     +--rw nt:tp-ref         leafref
+        |  +--rw sap:service* [service-type]
+        |     +--rw sap:service-type    identityref
+        |     +--rw sap:sap* [sap-id]
+        |        +--rw sap:sap-id                      string
+        |        +--rw sap:description?                string
+        |        +--rw sap:parent-termination-point?   nt:tp-id
+        |        +--rw sap:attachment-interface?       string
+        |        +--rw sap:interface-type?             identityref
+        |        +--rw sap:encapsulation-type?         identityref
+        |        +--rw sap:role?                       identityref
+        |        +--rw sap:allows-child-saps?          boolean
+        |        +--rw sap:peer-sap-id*                string
+        |        +--ro sap:sap-status
+        |        |  +--ro sap:status?        identityref
+        |        |  +--ro sap:last-change?   yang:date-and-time
+        |        +--rw sap:service-status
+        |           +--rw sap:admin-status
+        |           |  +--rw sap:status?        identityref
+        |           |  +--rw sap:last-change?   yang:date-and-time
+        |           +--ro sap:oper-status
+        |              +--ro sap:status?        identityref
+        |              +--ro sap

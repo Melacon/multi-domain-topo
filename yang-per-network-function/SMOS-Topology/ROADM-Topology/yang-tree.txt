@@ -1,0 +1,127 @@
+==========================================================
+ NF folder      : /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/SMOS-Topology/ROADM-Topology
+ tree file      : yang-tree.txt
+ timestamp      : 2026-05-06T11:22:43Z
+ YANG files     : 33 total
+ root modules   : 1 (define top-level container/list)
+ pyang          : pyang 2.7.1
+==========================================================
+
+ Root modules (YANG tree entry points):
+   ietf-network
+
+--- YANG tree (pyang -f tree, line-length 120) ---
+
+module: ietf-network
+  +--rw networks
+     +--rw network* [network-id]
+     |  +--rw network-id                    network-id
+     |  +--rw network-types
+     |  |  +--rw tet:te-topology!
+     |  |  +--rw cn:clli-network!
+     |  |  +--rw cnet:openroadm-common-network!
+     |  |     +--rw topo:openroadm-topology!
+     |  |     +--rw net:openroadm-network!
+     |  |     +--rw otn-topo:otn-topology!
+     |  +--rw supporting-network* [network-ref]
+     |  |  +--rw network-ref    -> /networks/network/network-id
+     |  +--rw node* [node-id]
+     |  |  +--rw node-id                          node-id
+     |  |  +--rw supporting-node* [network-ref node-ref]
+     |  |  |  +--rw network-ref    -> ../../../supporting-network/network-ref
+     |  |  |  +--rw node-ref       -> /networks/network/node/node-id
+     |  |  +--rw nt:termination-point* [tp-id]
+     |  |  |  +--rw nt:tp-id                                       tp-id
+     |  |  |  +--rw nt:supporting-termination-point* [network-ref node-ref tp-ref]
+     |  |  |  |  +--rw nt:network-ref    -> ../../../nw:supporting-node/network-ref
+     |  |  |  |  +--rw nt:node-ref       -> ../../../nw:supporting-node/node-ref
+     |  |  |  |  +--rw nt:tp-ref         leafref
+     |  |  |  +--rw tet:te-tp-id?                                  te-types:te-tp-id
+     |  |  |  +--rw tet:te!
+     |  |  |  |  +--rw tet:admin-status?                     te-types:te-admin-status
+     |  |  |  |  +--rw tet:name?                             string
+     |  |  |  |  +--rw tet:interface-switching-capability* [switching-capability encoding]
+     |  |  |  |  |  +--rw tet:switching-capability    identityref
+     |  |  |  |  |  +--rw tet:encoding                identityref
+     |  |  |  |  |  +--rw tet:max-lsp-bandwidth* [priority]
+     |  |  |  |  |     +--rw tet:priority        uint8
+     |  |  |  |  |     +--rw tet:te-bandwidth
+     |  |  |  |  |        +--rw (tet:technology)?
+     |  |  |  |  |           +--:(tet:generic)
+     |  |  |  |  |              +--rw tet:generic?   te-bandwidth
+     |  |  |  |  +--rw tet:inter-domain-plug-id?             binary
+     |  |  |  |  +--rw tet:inter-layer-lock-id*              uint32
+     |  |  |  |  +--ro tet:oper-status?                      te-types:te-oper-status
+     |  |  |  |  +--ro tet:geolocation
+     |  |  |  |     +--ro tet:altitude?    int64
+     |  |  |  |     +--ro tet:latitude?    geographic-coordinate-degree
+     |  |  |  |     +--ro tet:longitude?   geographic-coordinate-degree
+     |  |  |  +--rw cnet:tp-type?                                  org-openroadm-network-types:openroadm-tp-type
+     |  |  |  +--rw cnet:physical-tp?                              boolean
+     |  |  |  +--rw cnet:associated-connection-map-tp*
+     |  |  |  |       -> /nd:networks/network/node/nwt:termination-point/tp-id
+     |  |  |  +--rw cnet:eqpt-srg-id?                              uint32
+     |  |  |  +--rw cnet:lifecycle-state?                          org-openroadm-common-state-types:lifecycle-state
+     |  |  |  +--rw cnet:operational-state?                        org-openroadm-common-state-types:state
+     |  |  |  +--rw cnet:operational-state-rx?                     org-openroadm-common-state-types:state
+     |  |  |  +--rw cnet:operational-state-tx?                     org-openroadm-common-state-types:state
+     |  |  |  +--rw cnet:administrative-state?                     org-openroadm-equipment-states-types:admin-states
+     |  |  |  +--rw topo:tx-ttp-attributes
+     |  |  |  |  +--rw topo:used-wavelengths* [index]
+     |  |  |  |  |  +--rw topo:index        int32
+     |  |  |  |  |  +--rw topo:frequency?   org-openroadm-common-optical-channel-types:frequency-THz
+     |  |  |  |  |  +--rw topo:width?       org-openroadm-common-optical-channel-types:frequency-GHz
+     |  |  |  |  +--rw topo:avail-freq-maps* [map-name]
+     |  |  |  |     +--rw topo:map-name                string
+     |  |  |  |     +--rw topo:start-edge-freq?        org-openroadm-common-optical-channel-types:frequency-THz
+     |  |  |  |     +--rw topo:freq-map-granularity?   org-openroadm-common-optical-channel-types:frequency-GHz
+     |  |  |  |     +--rw topo:effective-bits?         uint16
+     |  |  |  |     +--rw topo:freq-map?               binary
+     |  |  |  +--rw topo:rx-ttp-attributes
+     |  |  |  |  +--rw topo:used-wavelengths* [index]
+     |  |  |  |  |  +--rw topo:index        int32
+     |  |  |  |  |  +--rw topo:frequency?   org-openroadm-common-optical-channel-types:frequency-THz
+     |  |  |  |  |  +--rw topo:width?       org-openroadm-common-optical-channel-types:frequency-GHz
+     |  |  |  |  +--rw topo:avail-freq-maps* [map-name]
+     |  |  |  |     +--rw topo:map-name                string
+     |  |  |  |     +--rw topo:start-edge-freq?        org-openroadm-common-optical-channel-types:frequency-THz
+     |  |  |  |     +--rw topo:freq-map-granularity?   org-openroadm-common-optical-channel-types:frequency-GHz
+     |  |  |  |     +--rw topo:effective-bits?         uint16
+     |  |  |  |     +--rw topo:freq-map?               binary
+     |  |  |  +--rw topo:ctp-attributes
+     |  |  |  |  +--rw topo:avail-freq-maps* [map-name]
+     |  |  |  |     +--rw topo:map-name                string
+     |  |  |  |     +--rw topo:start-edge-freq?        org-openroadm-common-optical-channel-types:frequency-THz
+     |  |  |  |     +--rw topo:freq-map-granularity?   org-openroadm-common-optical-channel-types:frequency-GHz
+     |  |  |  |     +--rw topo:effective-bits?         uint16
+     |  |  |  |     +--rw topo:freq-map?               binary
+     |  |  |  +--rw topo:cp-attributes
+     |  |  |  |  +--rw topo:avail-freq-maps* [map-name]
+     |  |  |  |     +--rw topo:map-name                string
+     |  |  |  |     +--rw topo:start-edge-freq?        org-openroadm-common-optical-channel-types:frequency-THz
+     |  |  |  |     +--rw topo:freq-map-granularity?   org-openroadm-common-optical-channel-types:frequency-GHz
+     |  |  |  |     +--rw topo:effective-bits?         uint16
+     |  |  |  |     +--rw topo:freq-map?               binary
+     |  |  |  +--rw topo:pp-attributes
+     |  |  |  |  +--rw topo:used-wavelength* [index]
+     |  |  |  |  |  +--rw topo:index        int32
+     |  |  |  |  |  +--rw topo:frequency?   org-openroadm-common-optical-channel-types:frequency-THz
+     |  |  |  |  |  +--rw topo:width?       org-openroadm-common-optical-channel-types:frequency-GHz
+     |  |  |  |  +--rw topo:avail-freq-maps* [map-name]
+     |  |  |  |     +--rw topo:map-name                string
+     |  |  |  |     +--rw topo:start-edge-freq?        org-openroadm-common-optical-channel-types:frequency-THz
+     |  |  |  |     +--rw topo:freq-map-granularity?   org-openroadm-common-optical-channel-types:frequency-GHz
+     |  |  |  |     +--rw topo:effective-bits?         uint16
+     |  |  |  |     +--rw topo:freq-map?               binary
+     |  |  |  +--rw topo:xpdr-client-attributes
+     |  |  |  +--rw topo:xpdr-network-attributes
+     |  |  |  |  +--rw topo:recolor?        boolean
+     |  |  |  |  +--rw topo:type-variety?   string
+     |  |  |  +--rw topo:xpdr-port-attributes
+     |  |  |  |  +--rw topo:type-variety?   string
+     |  |  |  +--rw topo:ext-pluggable-attributes
+     |  |  |  |  +--rw topo:rate?                identityref
+     |  |  |  |  +--rw topo:modulation-format?   org-openroadm-common-optical-channel-types:modulation-format
+     |  |  |  |  +--rw topo:optic?               org-openroadm-common-equipment-types:optic-types
+     |  |  |  |  +--rw topo:state?               org-openroadm-common-state-types:state
+     |  |  |  |  +--rw topo:type-variety?        st
