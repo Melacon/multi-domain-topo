@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-# Validate all YANG-modeled JSON files in data-models-per-network-function-instance/.
+# Validate all YANG-modeled JSON files in data-models-per-network-function-instance/
+# and ietf-yang-library.json files in yang-per-network-function/.
+#
+# ietf-yang-library.json is a type-level artifact — it lives in
+# yang-per-network-function/<NF-type>/ because it depends only on the YANG
+# model set that defines the type, not on any specific NF instance.
 #
 # Usage:
 #   ./scripts/validate-yang-data.sh              # validate everything
@@ -12,6 +17,7 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DATA_DIR="$REPO_ROOT/data-models-per-network-function-instance"
+YANG_NF_DIR="$REPO_ROOT/yang-per-network-function"
 RFC="$REPO_ROOT/yang-repos/yang/standard/ietf/RFC"
 EXP="$REPO_ROOT/yang-repos/yang/experimental/ietf-extracted-YANG-modules"
 
@@ -36,9 +42,8 @@ SCHEMA["ietf-system.json"]="yang-repos/yang/standard/ietf/RFC/ietf-system.yang"
 TYPE["ietf-system.json"]="config"
 EXTRA["ietf-system.json"]=""
 
-SCHEMA["ietf-yang-library.json"]="yang-repos/yang/standard/ietf/RFC/ietf-yang-library@2019-01-04.yang"
-TYPE["ietf-yang-library.json"]="get"
-EXTRA["ietf-yang-library.json"]="yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang"
+# ietf-yang-library.json is validated separately below (it lives in
+# yang-per-network-function/, not in data-models-per-network-function-instance/).
 
 # ── Validation logic ──────────────────────────────────────────────────────────
 
@@ -112,6 +117,31 @@ printf "Validating %d JSON file(s)...\n\n" "${#json_files[@]}"
 for f in "${json_files[@]}"; do
     validate_file "$f"
 done
+
+# ── Validate ietf-yang-library.json in yang-per-network-function/ ─────────────
+# These are type-level artifacts, not instance data, so they are validated
+# separately from the DATA_DIR scan above.
+
+if [[ $# -eq 0 ]]; then
+    printf "\nValidating ietf-yang-library.json in yang-per-network-function/...\n\n"
+
+    yang_lib_schema="$REPO_ROOT/yang-repos/yang/standard/ietf/RFC/ietf-yang-library@2019-01-04.yang"
+    yang_lib_extra="$REPO_ROOT/yang-repos/yang/standard/ietf/RFC/ietf-datastores.yang"
+
+    while IFS= read -r -d '' yanglib_file; do
+        rel="$(realpath --relative-to="$REPO_ROOT" "$yanglib_file")"
+        stderr_output="$(yanglint -p "$RFC" -p "$EXP" -t get \
+            "$yang_lib_extra" "$yang_lib_schema" "$yanglib_file" 2>&1)" && rc=0 || rc=$?
+        if [[ $rc -eq 0 ]]; then
+            printf "  OK    %s\n" "$rel"
+            (( ok++ )) || true
+        else
+            printf "  FAIL  %s\n" "$rel"
+            while IFS= read -r line; do printf "        %s\n" "$line"; done <<< "$stderr_output"
+            (( fail++ )) || true
+        fi
+    done < <(find "$YANG_NF_DIR" -type f -name 'ietf-yang-library.json' -print0 | sort -z)
+fi
 
 # ── Summary ───────────────────────────────────────────────────────────────────
 

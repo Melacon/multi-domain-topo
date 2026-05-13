@@ -23,16 +23,19 @@ set -euo pipefail
 #
 # | File | NF types |
 #
+# ietf-yang-library.json files live in yang-per-network-function/ (one per NF
+# type) because the yang library depends only on the YANG model set that
+# defines the type, not on any specific NF instance.
+#
 # Prerequisite:
-#   The Python detector script from the previous step must be available,
-#   for example as ./detect_nf_types.py
+#   The Python detector script must be available, e.g. ./scripts/detect_nf_types.py
 #
 # Usage:
 #   ./scan-yang-libraries.sh
-#   ./scan-yang-libraries.sh -r ./data -d ./detect_nf_types.py -o nf-types.md
+#   ./scan-yang-libraries.sh -r ./yang-per-network-function -d ./scripts/detect_nf_types.py -o nf-types.md
 #   ./scan-yang-libraries.sh --include-import-only --min-confidence strong
 
-ROOT_DIR="./data-models-per-network-function-instance"
+ROOT_DIR="./yang-per-network-function"
 DETECTOR="./scripts/detect_nf_types.py"
 OUTPUT="network-function-types.md"
 MIN_CONFIDENCE="strong"
@@ -45,8 +48,8 @@ usage() {
 Usage: scan-yang-libraries.sh [OPTIONS]
 
 Options:
-  -r, --root DIR              Root directory to search. Default: .
-  -d, --detector FILE         Path to detect_nf_types.py. Default: ./detect_nf_types.py
+  -r, --root DIR              Root directory to search. Default: ./yang-per-network-function
+  -d, --detector FILE         Path to detect_nf_types.py. Default: ./scripts/detect_nf_types.py
   -o, --output FILE           Markdown output file. Default: network-function-types.md
       --min-confidence LEVEL  weak, medium, or strong. Default: weak
       --include-import-only   Also evaluate import-only-module entries
@@ -54,8 +57,8 @@ Options:
 
 Example:
   ./scan-yang-libraries.sh \
-    --root ./yang-library-dumps \
-    --detector ./detect_nf_types.py \
+    --root ./yang-per-network-function \
+    --detector ./scripts/detect_nf_types.py \
     --output nf-types.md \
     --min-confidence strong
 EOF

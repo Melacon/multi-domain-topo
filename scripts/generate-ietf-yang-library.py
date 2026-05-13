@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """
-Generate ietf-yang-library.json for NF instances (RFC 8525).
+Generate ietf-yang-library.json for NF types (RFC 8525).
+
+Files are written to yang-per-network-function/<NF-type>/ — one per NF type,
+not per NF instance.  The yang library depends only on the YANG model set that
+defines the type, so it lives beside the models in yang-per-network-function.
 
 Usage:
-  ./scripts/generate-ietf-yang-library.py                    # all instances
-  ./scripts/generate-ietf-yang-library.py 5GC-1/AF-1         # one 5GC instance
-  ./scripts/generate-ietf-yang-library.py O-CU-1/O-CU-CP-1   # one O-CU sub-NF
-  ./scripts/generate-ietf-yang-library.py O-DU-1 WT-1        # multiple flat instances
+  ./scripts/generate-ietf-yang-library.py                    # all NF types
+  ./scripts/generate-ietf-yang-library.py 5GCore/AF          # one 5GC NF type
+  ./scripts/generate-ietf-yang-library.py O-CU-CP            # one type directly
+  ./scripts/generate-ietf-yang-library.py O-DU ROADM         # multiple types
 
-NF instance path patterns:
-  <parent>/<sub-NF>   for nested NFs: 5GC-N/<NF>-N  and  O-CU-N/<O-CU-CP|O-CU-UP>-N
-  <inst>              for flat NFs: O-DU-N, O-RU-N, ROADM-N, WT-N, OFH-SW-N
+  # Instance paths are also accepted and resolved to their NF-type folder:
+  ./scripts/generate-ietf-yang-library.py 5GC-1/AF-1         # → yang-per-network-function/5GCore/AF
+  ./scripts/generate-ietf-yang-library.py O-CU-1/O-CU-CP-1   # → yang-per-network-function/O-CU-CP
+  ./scripts/generate-ietf-yang-library.py O-DU-1 WT-1        # → O-DU, WirelessTransport
 """
 
 import json
@@ -24,12 +29,12 @@ from pathlib import Path
 # ── Paths ─────────────────────────────────────────────────────────────────────
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR  = REPO_ROOT / "data-models-per-network-function-instance"
 YANG_NF   = REPO_ROOT / "yang-per-network-function"
 RFC       = REPO_ROOT / "yang-repos/yang/standard/ietf/RFC"
 EXP       = REPO_ROOT / "yang-repos/yang/experimental/ietf-extracted-YANG-modules"
 
 # ── NF instance folder → yang-per-network-function type folder ────────────────
+# Used when the caller passes an instance path such as "O-DU-1" or "ROADM-B1".
 
 INSTANCE_TO_YANG_TYPE: dict[str, str] = {
     "IP-RTR-1": "IP-Router",
@@ -49,29 +54,25 @@ O_CU_SUB_NF_TO_YANG_TYPE: dict[str, str] = {
 }
 
 # ── yang-per-network-function type → primary 3GPP NRM module ──────────────────
-# Needed for NF types that have a fixed NRM module (not derived from instance name)
 YANG_TYPE_TO_NRM: dict[str, str] = {
     "O-CU-CP": "_3gpp-nr-nrm-gnbcucpfunction",
     "O-CU-UP": "_3gpp-nr-nrm-gnbcuupfunction",
     "O-DU":    "_3gpp-nr-nrm-gnbdufunction",
 }
 
+# ── yang-per-network-function type → module-set / schema name token ───────────
+# Used to build the identifiers in the generated JSON.
+# Defaults to yang_dir.name.lower() when not listed here.
+YANG_TYPE_TO_TOKEN: dict[str, str] = {
+    "WirelessTransport": "wireless-transport",
+}
+
 # ── Per-primary-NRM additional name-token exclusions ─────────────────────────
-# A module is moved to import-only if its name contains ANY of these tokens
-# (in addition to the general is_ep_import_only rules).
-# Use this to exclude modules that reference foreign NF types via name tokens
-# but are NOT caught by the *function pattern (e.g. external*function modules).
 _NRM_EXCLUDE_NAME_TOKENS: dict[str, set[str]] = {
-    # O-DU: exclude all modules whose name contains "gnbcucp" or "gnbcuup"
-    # (they augment under GNBCUCPFunction or GNBCUUPFunction, not GNBDUFunction)
     "_3gpp-nr-nrm-gnbdufunction": {"gnbcucp", "gnbcuup"},
 }
 
 # ── Per-primary-NRM implemented overrides ────────────────────────────────────
-# Modules listed here are IMPLEMENTED for the given primary NRM module even if
-# they appear in the global IMPORT_ONLY set.
-# Example: nrcelldu is in IMPORT_ONLY to keep it out of O-CU-CP, but the O-DU
-# is the server that actually owns and exposes NRCellDU managed objects.
 _NRM_OVERRIDE_IMPLEMENTED: dict[str, set[str]] = {
     "_3gpp-nr-nrm-gnbdufunction": {"_3gpp-nr-nrm-nrcelldu"},
 }
@@ -97,10 +98,8 @@ NF_TO_NRM: dict[str, str] = {
 }
 
 # ── Modules that only define types / identities / extensions ──────────────────
-# These have no top-level protocol-accessible data nodes → always import-only.
 
 IMPORT_ONLY: set[str] = {
-    # IETF typedef / identity / extension-only modules
     "ietf-yang-types",
     "ietf-inet-types",
     "ietf-datastores",
@@ -115,67 +114,36 @@ IMPORT_ONLY: set[str] = {
     "ietf-dhcpv6-types",
     "ietf-dhcpv6-common",
     "ietf-x509-cert-to-name",
-    # IETF grouping-only modules (no top-level data, only reusable groupings)
     "ietf-crypto-types",
     "ietf-ssh-common",
     "ietf-tls-common",
     "ietf-tcp-common",
     "ietf-bfd-types",
     "ietf-segment-routing-common",
-    # 3GPP typedef / extension / grouping-only modules
     "_3gpp-common-yang-types",
     "_3gpp-common-yang-extensions",
     "_3gpp-5g-common-yang-types",
     "_3gpp-common-ep-rp",
-    # 3GPP NF-specific modules that only appear as EP-import dependencies
-    # (O-DU uses O-RAN YANG, not 3GPP NRM, so these are import-only in this repo)
     "_3gpp-nr-nrm-nrcelldu",
     "_3gpp-5gc-nrm-ecmconnectioninfo",
 }
 
 # ── EP import-only classification ─────────────────────────────────────────────
-# Modules matching these patterns have no top-level data of their own; they are
-# only present because they define endpoint (EP) groupings referenced by the
-# primary NF module.
 
 _EP_ALWAYS_PATTERNS = [
-    # ECM mapping rule: pure helper groupings, no top-level managed objects
     re.compile(r"_3gpp-\w+-nrm-ecmappingrule"),
-    # NOTE: external* and nrm-ep$ are intentionally NOT here.
-    # _3gpp-nr-nrm-ep augments EP_E1/EP_XnC/… directly into GNBCUCPFunction →
-    # those are protocol-accessible managed objects → implemented.
-    # _3gpp-nr-nrm-external* augments ExternalGNBCUCP/ExternalNRCellCU/… into
-    # GNBCUCPFunction for neighbor management → implemented.
 ]
 
 
 def is_ep_import_only(name: str, primary_nrm: str | None) -> bool:
-    """
-    Return True if the module should be import-only because it represents a
-    different NF type or is only imported for endpoint (EP) definitions.
-
-    Rules applied in order:
-      1. Matches a known always-import-only helper pattern (ecmappingrule, …)
-      2. Is an NRM *function module AND is not the primary NRM module for this NF
-         (covers all _3gpp-*-nrm-*function the server does not itself implement,
-          e.g. gnbcuupfunction / gnbdufunction when primary is gnbcucpfunction,
-          or amffunction / smffunction when primary is affunction)
-    """
     for pat in _EP_ALWAYS_PATTERNS:
         if pat.fullmatch(name):
             return True
 
-    # Any NRM *function module that differs from the primary is EP-import-only —
-    # EXCEPT external*function modules: those define neighbor managed objects
-    # (ExternalGNBCUCPFunction, ExternalGNBCUUPFunction, …) that ARE accessible
-    # protocol data on the primary NF, so they stay in the implemented section.
     if primary_nrm and name != primary_nrm:
         if re.fullmatch(r"_3gpp-\w+-nrm-(?!external)\w+function", name):
             return True
 
-    # Name-token exclusions: modules whose name contains a token associated with
-    # a foreign NF type (e.g. "gnbcucp" or "gnbcuup" when primary is gnbdufunction).
-    # This catches external*function modules that belong to a foreign NF type.
     if primary_nrm:
         for token in _NRM_EXCLUDE_NAME_TOKENS.get(primary_nrm, set()):
             if token in name:
@@ -185,13 +153,6 @@ def is_ep_import_only(name: str, primary_nrm: str | None) -> bool:
 
 
 def filter_ep_features(features: list[str], primary_nrm: str | None) -> list[str]:
-    """
-    Remove EPClassesUnder<X>Function features that reference other NF types.
-
-    Example: for O-CU-CP (primary = gnbcucpfunction) keep
-    EPClassesUnderGNBCUCPFunction but drop EPClassesUnderGNBCUUPFunction
-    and EPClassesUnderGNBDUFunction.
-    """
     if not primary_nrm or not features:
         return features
 
@@ -199,24 +160,21 @@ def filter_ep_features(features: list[str], primary_nrm: str | None) -> list[str
     if not m:
         return features
 
-    primary_func = m.group(1).upper()   # e.g. "GNBCUCPFUNCTION" or "AFFUNCTION"
+    primary_func = m.group(1).upper()
 
     result = []
     for feat in features:
         ep_m = re.fullmatch(r"EPClassesUnder(\w+)", feat, re.IGNORECASE)
         if ep_m and ep_m.group(1).upper() != primary_func:
-            continue   # drop EP-class feature for a different NF type
+            continue
         result.append(feat)
     return result
+
 
 # ── YANG file parsing ─────────────────────────────────────────────────────────
 
 def module_info(symlink: Path) -> dict | None:
-    """
-    Return name, revision, namespace, features from a .yang file.
-    Returns None if the file is a submodule (no standalone namespace).
-    """
-    filename = symlink.name                            # e.g. ietf-system@2014-08-06.yang
+    filename = symlink.name
     name = re.sub(r"@[\d-]+\.yang$|\.yang$", "", filename)
 
     m = re.search(r"@(\d{4}-\d{2}-\d{2})\.yang$", filename)
@@ -228,18 +186,15 @@ def module_info(symlink: Path) -> dict | None:
     except OSError:
         return {"name": name, "revision": revision_from_name or "", "namespace": "", "features": []}
 
-    # Detect submodule: the very first module/submodule keyword in the file
     decl = re.search(r"^\s*(module|submodule)\s+\S", text, re.MULTILINE)
     if decl and decl.group(1) == "submodule":
-        return None   # submodules have no namespace; skip them
+        return None
 
-    # namespace: quoted ("urn:...") or unquoted (urn:...;)
     ns_m = re.search(r'^\s*namespace\s+"([^"]+)"', text, re.MULTILINE)
     if not ns_m:
         ns_m = re.search(r"^\s*namespace\s+(\S+?)\s*;", text, re.MULTILINE)
     namespace = ns_m.group(1) if ns_m else ""
 
-    # revision: prefer file name, fall back to first revision stmt in file
     if revision_from_name:
         revision = revision_from_name
     else:
@@ -250,52 +205,63 @@ def module_info(symlink: Path) -> dict | None:
     return {"name": name, "revision": revision, "namespace": namespace, "features": features}
 
 
-# ── Instance → yang directory resolution ─────────────────────────────────────
+# ── Target resolution ─────────────────────────────────────────────────────────
 
-def yang_dir_for(instance_rel: str) -> tuple[Path | None, str | None, bool]:
+def resolve_target(arg: str) -> tuple[Path, str | None, str] | None:
     """
-    Return (yang_dir, nrm_module_name_or_None, is_5gc).
+    Resolve a CLI argument to (yang_dir, nrm_module, label).
 
-    For 5GC instances (e.g. '5GC-1/AF-1') the nrm_module is the one
-    specific 3GPP NRM module that this NF type implements.
+    Accepts:
+      - NF type paths:     "O-DU", "5GCore/AF", "O-CU-CP"
+      - NF instance paths: "O-DU-1", "5GC-1/AF-1", "O-CU-1/O-CU-CP-1"
     """
-    parts = instance_rel.replace("\\", "/").split("/")
+    parts = arg.replace("\\", "/").split("/")
 
+    # ── Direct type path: "5GCore/AF" ──
+    if len(parts) == 2 and parts[0] == "5GCore":
+        nf_prefix = parts[1]
+        yang_dir = YANG_NF / "5GCore" / nf_prefix
+        if yang_dir.is_dir():
+            return yang_dir, NF_TO_NRM.get(nf_prefix), arg
+        return None
+
+    # ── Direct type path: "O-DU", "O-CU-CP", "ROADM", … ──
+    if len(parts) == 1:
+        yang_dir = YANG_NF / arg
+        if yang_dir.is_dir() and yang_dir.name != "5GCore":
+            nrm = YANG_TYPE_TO_NRM.get(arg)
+            return yang_dir, nrm, arg
+
+    # ── Instance path: "5GC-1/AF-1" ──
     if len(parts) == 2 and parts[0].startswith("5GC"):
-        yang_dir = YANG_NF / "5GCore" / "yang-models"
         nf_prefix = re.sub(r"-\d+$", "", parts[1])   # "AF-1" → "AF"
-        return yang_dir, NF_TO_NRM.get(nf_prefix), True
+        yang_dir = YANG_NF / "5GCore" / nf_prefix
+        if yang_dir.is_dir():
+            return yang_dir, NF_TO_NRM.get(nf_prefix), f"5GCore/{nf_prefix}"
+        return None
 
-    # O-CU is split into O-CU-CP and O-CU-UP sub-NFs under each O-CU-N parent.
-    # path: "O-CU-1/O-CU-CP-1" → strip trailing -N from parts[1] → "O-CU-CP"
+    # ── Instance path: "O-CU-1/O-CU-CP-1" ──
     if len(parts) == 2 and parts[0].startswith("O-CU"):
         sub_type = re.sub(r"-\d+$", "", parts[1])   # "O-CU-CP-1" → "O-CU-CP"
         yang_type = O_CU_SUB_NF_TO_YANG_TYPE.get(sub_type)
-        if not yang_type:
-            return None, None, False
-        nrm = YANG_TYPE_TO_NRM.get(yang_type)
-        return YANG_NF / yang_type, nrm, False
+        if yang_type:
+            yang_dir = YANG_NF / yang_type
+            return yang_dir, YANG_TYPE_TO_NRM.get(yang_type), yang_type
+        return None
 
-    inst_name = parts[0]
-    yang_type = INSTANCE_TO_YANG_TYPE.get(inst_name)
-    if not yang_type:
-        return None, None, False
-    nrm = YANG_TYPE_TO_NRM.get(yang_type)
-    return YANG_NF / yang_type, nrm, False
+    # ── Flat instance path: "O-DU-1", "ROADM-A1", … ──
+    if len(parts) == 1:
+        yang_type = INSTANCE_TO_YANG_TYPE.get(arg)
+        if yang_type:
+            yang_dir = YANG_NF / yang_type
+            return yang_dir, YANG_TYPE_TO_NRM.get(yang_type), yang_type
+
+    return None
 
 
 # ── Module set builder ────────────────────────────────────────────────────────
 
 def build_module_sets(yang_dir: Path, nrm_module: str | None):
-    """
-    Return (implemented, import_only) as lists of dicts ready for JSON.
-
-    Classification priority (first match wins):
-      1. In IMPORT_ONLY set → import-only-module
-      2. is_ep_import_only() → import-only-module (different NF type / EP-only)
-      3. Otherwise → module (implemented), with EP features stripped via
-         filter_ep_features()
-    """
     implemented: list[dict] = []
     import_only_list: list[dict] = []
 
@@ -304,7 +270,7 @@ def build_module_sets(yang_dir: Path, nrm_module: str | None):
     for sym in sorted(yang_dir.glob("*.yang")):
         info = module_info(sym)
         if info is None:
-            continue   # skip submodules
+            continue
         name = info["name"]
 
         entry: dict = {"name": name}
@@ -312,15 +278,12 @@ def build_module_sets(yang_dir: Path, nrm_module: str | None):
             entry["revision"] = info["revision"]
         entry["namespace"] = info["namespace"]
 
-        # Override check first: some modules are always implemented for this NF
-        # even if they appear in the global IMPORT_ONLY set (e.g. nrcelldu for O-DU).
         if name in override_implemented:
             features = filter_ep_features(info["features"], nrm_module)
             if features:
                 entry["feature"] = features
             implemented.append(entry)
         elif name in IMPORT_ONLY or is_ep_import_only(name, nrm_module):
-            # import-only: no features advertised
             import_only_list.append(entry)
         else:
             features = filter_ep_features(info["features"], nrm_module)
@@ -333,17 +296,15 @@ def build_module_sets(yang_dir: Path, nrm_module: str | None):
 
 # ── JSON generation ───────────────────────────────────────────────────────────
 
-def generate(inst_dir: Path, inst_rel: str) -> bool:
-    yang_dir, nrm_module, _is_5gc = yang_dir_for(inst_rel)
+def generate(yang_dir: Path, nrm_module: str | None, label: str) -> bool:
+    if not yang_dir.exists():
+        print(f"  SKIP  {label} — yang folder not found")
+        return True
 
-    if yang_dir is None or not yang_dir.exists():
-        print(f"  SKIP  {inst_rel} — yang folder not found")
-        return True   # not a failure
-
-    hostname        = inst_dir.name.lower()           # "af-1"
-    module_set_name = f"{hostname}-modules"
-    schema_name     = f"{hostname}-schema"
-    content_id      = f"{hostname}-yanglib-{date.today().isoformat()}"
+    type_token      = YANG_TYPE_TO_TOKEN.get(yang_dir.name, yang_dir.name.lower())
+    module_set_name = f"{type_token}-modules"
+    schema_name     = f"{type_token}-schema"
+    content_id      = f"{type_token}-yanglib-{date.today().isoformat()}"
 
     implemented, import_only_list = build_module_sets(yang_dir, nrm_module)
 
@@ -369,10 +330,9 @@ def generate(inst_dir: Path, inst_rel: str) -> bool:
         }
     }
 
-    out = inst_dir / "ietf-yang-library.json"
+    out = yang_dir / "ietf-yang-library.json"
     out.write_text(json.dumps(doc, indent=2) + "\n")
 
-    # Validate with yanglint
     result = subprocess.run(
         [
             "yanglint", "-t", "get",
@@ -386,47 +346,61 @@ def generate(inst_dir: Path, inst_rel: str) -> bool:
     )
 
     if result.returncode == 0:
-        print(f"  OK    {inst_rel}  "
+        print(f"  OK    {label}  "
               f"({len(implemented)} implemented, {len(import_only_list)} import-only)")
         return True
 
-    print(f"  FAIL  {inst_rel}")
+    print(f"  FAIL  {label}")
     for line in (result.stderr or result.stdout).strip().splitlines():
         print(f"        {line}")
     return False
 
 
-# ── Instance discovery ────────────────────────────────────────────────────────
+# ── NF type discovery ─────────────────────────────────────────────────────────
 
-def all_instances() -> list[tuple[Path, str]]:
-    """Find all leaf NF instance directories (those containing ietf-system.json)."""
-    found = []
-    for p in sorted(DATA_DIR.rglob("ietf-system.json")):
-        inst_dir = p.parent
-        inst_rel = str(inst_dir.relative_to(DATA_DIR))
-        found.append((inst_dir, inst_rel))
-    return found
+def all_nf_types() -> list[tuple[Path, str | None, str]]:
+    """Enumerate all NF type directories as (yang_dir, nrm_module, label) tuples."""
+    results = []
+
+    skip = {"5GCore", "SMOS-Topology"}
+    for d in sorted(YANG_NF.iterdir()):
+        if not d.is_dir() or d.name in skip:
+            continue
+        nrm = YANG_TYPE_TO_NRM.get(d.name)
+        results.append((d, nrm, d.name))
+
+    fgcore = YANG_NF / "5GCore"
+    if fgcore.is_dir():
+        for d in sorted(fgcore.iterdir()):
+            if d.is_dir() and d.name != "yang-models":
+                nrm = NF_TO_NRM.get(d.name)
+                results.append((d, nrm, f"5GCore/{d.name}"))
+
+    return results
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main() -> None:
     if sys.argv[1:]:
-        targets = [(DATA_DIR / t, t) for t in sys.argv[1:]]
+        targets: list[tuple[Path, str | None, str]] = []
+        for arg in sys.argv[1:]:
+            resolved = resolve_target(arg)
+            if resolved:
+                targets.append(resolved)
+            else:
+                print(f"  SKIP  {arg} — unknown NF type or instance path")
     else:
-        targets = all_instances()
+        targets = all_nf_types()
 
     if not targets:
-        print("No instances found.")
+        print("No NF types found.")
         sys.exit(0)
 
-    print(f"Generating ietf-yang-library.json for {len(targets)} instance(s)...\n")
+    print(f"Generating ietf-yang-library.json for {len(targets)} NF type(s)...\n")
     ok = fail = 0
-    for inst_dir, inst_rel in targets:
-        if not inst_dir.is_dir():
-            print(f"  SKIP  {inst_rel} — directory does not exist")
-            continue
-        if generate(inst_dir, inst_rel):
+    for yang_dir, nrm_module, label in targets:
+        if generate(yang_dir, nrm_module, label):
             ok += 1
         else:
             fail += 1
