@@ -1,0 +1,5 @@
+# Validation errors — 2026-05-19T16:23:03Z
+# NF: /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/SMOS-Topology/Service-Topology
+
+ietf-inet-types@2013-07-15.yang:1: error: unexpected latest revision "2025-12-22" in ietf-inet-types@2013-07-15.yang, should be "2013-07-15"
+ietf-yang-types@2013-07-15.yang:1: error: unexpected latest revision "2025-12-22" in ietf-yang-types@2013-07-15.yang, should be "2013-07-15"

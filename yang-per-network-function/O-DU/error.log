@@ -1,0 +1,5 @@
+# Validation errors — 2026-05-19T16:22:45Z
+# NF: /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/O-DU
+
+YANGLINT[E]: Parsing schema module "o-ran-agg-performance-management@2020-09-25.yang" failed.
+libyang err : Grouping "meas3gpp:Measurements" referenced by a uses statement not found. (/o-ran-agg-performance-management:{augment='/agg:aggregated-o-ru/agg:aggregation'}/{uses='meas3gpp:Measurements'})

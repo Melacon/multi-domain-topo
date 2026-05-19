@@ -1,0 +1,4 @@
+# Validation errors — 2026-05-19T16:21:12Z
+# NF: /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/5GCore/AF
+
+_3gpp-common-yang-types@2025-11-06.yang:98: error: type "time-with-zone-offset" not found in module "ietf-yang-types"

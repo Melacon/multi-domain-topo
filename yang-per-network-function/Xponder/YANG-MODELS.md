@@ -21,7 +21,7 @@ pyang folds them into the `ietf-network` tree automatically when all modules are
 
 | Module | Revision | Role | Description |
 |--------|----------|------|-------------|
-| `org-openroadm-network` | 2025-12-12 | 🔀 Augment | Adds ROADM node types (ROADM, transponder, regen, extplug) to `ietf-network` network and node objects |
+| `org-openroadm-network` | 2025-12-12 | 🔀 Augment ⚠️ | Adds ROADM node types (ROADM, transponder, regen, extplug) to `ietf-network` network and node objects |
 | `org-openroadm-network-topology` | 2025-12-12 | 🔀 Augment | Adds link properties (amplified links, OMS/OTS span data), port mappings, and ROADM-specific termination points |
 | `org-openroadm-common-network` | 2025-12-12 | 🔀 Augment | Adds shared attributes to nodes and links (operational mode, planning information) |
 | `org-openroadm-clli-network` | 2019-11-29 | 🔀 Augment | Adds Common Language Location Identifiers (CLLI) to network sites for operator OSS correlation |

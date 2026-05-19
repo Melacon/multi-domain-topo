@@ -94,7 +94,7 @@ entry points for the YANG tree:
 | Module | Revision | Role | Description |
 |--------|----------|------|-------------|
 | `o-ran-mplane-int` | 2025-12-22 | 🌳 Root | M-Plane interface: NETCONF call-home configuration, access control, VLAN/interface bindings |
-| `o-ran-dhcp` | 2024-08-12 | 🌳 Root | DHCP client configuration and obtained lease data for O-RU management addressing |
+| `o-ran-dhcp` | 2024-08-12 | 🌳 Root ⚠️ | DHCP client configuration and obtained lease data for O-RU management addressing |
 | `o-ran-ethernet-forwarding` | 2021-12-01 | 🌳 Root | Ethernet forwarding and VLAN configuration for the internal O-RU management bridge |
 | `o-ran-interfaces` | 2025-12-22 | 🔀 Augment | Augments `ietf-interfaces` with O-RAN fronthaul port attributes (MAC learning, M-Plane VLAN) |
 | `o-ran-udp-echo` | 2019-02-04 | 🌳 Root | UDP echo server configuration for one-way delay measurement |

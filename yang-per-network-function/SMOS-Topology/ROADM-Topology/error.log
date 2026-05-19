@@ -1,0 +1,8 @@
+# Validation errors — 2026-05-19T16:23:02Z
+# NF: /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/SMOS-Topology/ROADM-Topology
+
+YANGLINT[E]: Parsing schema module "org-openroadm-network-topology@2025-12-12.yang" failed.
+libyang err : Data model "org-openroadm-xponder@2025-12-12" not found in local searchdirs.
+libyang err : Loading "org-openroadm-xponder" module failed.
+libyang err : Parsing module "org-openroadm-network-topology" failed.
+org-openroadm-network-topology@2025-12-12.yang:26: error: module "org-openroadm-xponder" not found in search path

@@ -83,6 +83,7 @@ exec > >(sed "s|$NF_DIR/||g" | tee "$LOG_FILE") 2>&1
 echo "=========================================================="
 echo " NF folder      : $NF_DIR"
 echo " log file       : $LOG_FILE"
+echo " error log      : $NF_DIR/error.log"
 echo " timestamp      : $(date -u '+%Y-%m-%dT%H:%M:%SZ')"
 echo " YANG files     : ${#YANG_FILES[@]} total, ${#toplevel_files[@]} top-level"
 echo " pyang          : $PYANG_VER"
@@ -93,6 +94,9 @@ echo ""
 STEP1_OK=0
 STEP2_OK=0
 STEP3_OK=0
+STRUCT_ERRORS=""
+LINT_ERRORS=""
+YANGLINT_ERRORS=""
 
 # ---------------------------------------------------------------------------
 # Step 1 — pyang structural validation (no --lint)
@@ -260,6 +264,70 @@ echo " Step 1 pyang structural : $([ $STEP1_OK -eq 1 ] && echo PASS || echo FAIL
 echo " Step 2 pyang --lint     : $([ $STEP2_OK -eq 1 ] && echo PASS || echo FAIL)"
 echo " Step 3 yanglint         : $([ $STEP3_OK -eq 1 ] && echo PASS || echo FAIL/SKIP)"
 echo "=========================================================="
+
+# ---------------------------------------------------------------------------
+# error.log — filtered error lines for developer analysis
+# ---------------------------------------------------------------------------
+ERROR_LOG="$NF_DIR/error.log"
+{
+  printf '# Validation errors — %s\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+  printf '# NF: %s\n\n' "$NF_DIR"
+  STEP_ERRS="$(
+    {
+      [[ -n "$STRUCT_ERRORS"   ]] && printf '%s\n' "$STRUCT_ERRORS"
+      [[ -n "$YANGLINT_ERRORS" ]] && printf '%s\n' "$YANGLINT_ERRORS"
+      true
+    } | sed "s|$NF_DIR/||g" | grep -v '^$' | sort -u || true
+  )"
+  if [[ -z "$STEP_ERRS" ]]; then
+    printf 'No validation errors found.\n'
+  else
+    printf '%s\n' "$STEP_ERRS"
+  fi
+} > "$ERROR_LOG"
+
+# ---------------------------------------------------------------------------
+# YANG-MODELS.md — annotate erroring modules with ⚠️
+# ---------------------------------------------------------------------------
+MD_FILE="$NF_DIR/YANG-MODELS.md"
+if [[ -f "$MD_FILE" ]]; then
+  ERRORING_MODS_CSV="$(
+    {
+      [[ -n "$STRUCT_ERRORS" ]] && printf '%s\n' "$STRUCT_ERRORS"
+      true
+    } | grep ': error:' \
+      | sed 's|.*/||; s|@[0-9-]*\.yang:[0-9]*:.*||' \
+      | sort -u | tr '\n' ',' | sed 's/,$//' \
+    || true
+  )"
+  python3 - "$MD_FILE" "$ERRORING_MODS_CSV" <<'PYEOF'
+import sys, re
+
+md_file, mods_csv = sys.argv[1], sys.argv[2]
+erroring = set(mods_csv.split(',')) if mods_csv else set()
+TAG = '⚠️'
+
+with open(md_file) as f:
+    lines = f.readlines()
+
+out = []
+for line in lines:
+    if line.startswith('|') and '`' in line:
+        cols = line.rstrip('\n').split('|')
+        if len(cols) >= 5:
+            m = re.match(r'\s*`([^`]+)`', cols[1])
+            if m:
+                mod = m.group(1)
+                role = cols[3].replace(' ' + TAG, '').replace(TAG, '').rstrip()
+                tag_str = ' ' + TAG if mod in erroring else ''
+                cols[3] = ' ' + role.lstrip() + tag_str + ' '
+                line = '|'.join(cols) + '\n'
+    out.append(line)
+
+with open(md_file, 'w') as f:
+    f.writelines(out)
+PYEOF
+fi
 
 if [ "$STEP1_OK" -eq 0 ] || [ "$STEP3_OK" -eq 0 ]; then
   exit 1

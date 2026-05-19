@@ -1,0 +1,4 @@
+# Validation errors — 2026-05-19T16:22:39Z
+# NF: /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/O-CU-CP
+
+YANGLINT[E]: Unable to use input filepath (o-ran-o1-EPE2@2024-07-11.yang) - No such file or directory.

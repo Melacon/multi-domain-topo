@@ -1,0 +1,6 @@
+# Validation errors — 2026-05-19T16:23:00Z
+# NF: /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/SMOS-Topology/Microwave-Topology
+
+ietf-inet-types@2013-07-15.yang:1: error: unexpected latest revision "2025-12-22" in ietf-inet-types@2013-07-15.yang, should be "2013-07-15"
+ietf-te-types@2020-06-10.yang:3212: error: the value "" does not match its base type at ietf-te-types@2020-06-10.yang:98 - no member type matched for the default value
+ietf-yang-types@2013-07-15.yang:1: error: unexpected latest revision "2025-12-22" in ietf-yang-types@2013-07-15.yang, should be "2013-07-15"

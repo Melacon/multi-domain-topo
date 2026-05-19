@@ -1,0 +1,8 @@
+# Validation errors — 2026-05-19T16:22:51Z
+# NF: /home/demx8as6/workspace/highstreet-technologies/multi-domain-topo/yang-per-network-function/O-RU
+
+YANGLINT[E]: Parsing schema module "o-ran-dhcp@2024-08-12.yang" failed.
+libyang err : Grouping "dhcpv6-type2:duid" referenced by a uses statement not found. (/o-ran-dhcp:dhcp/{uses='dhcp-group'}/interfaces/dhcpv4/{uses='dhcpv6-type2:duid'})
+o-ran-dhcp@2024-08-12.yang:308: error: grouping "duid" not found in module "ietf-dhcpv6-common"
+o-ran-dhcp@2024-08-12.yang:341: error: grouping "duid" not found in module "ietf-dhcpv6-common"
+o-ran-dhcp@2024-08-12.yang:366: error: grouping "duid" not found in module "ietf-dhcpv6-common"
