@@ -29,7 +29,8 @@ The O-CU internal architecture (O-CU-CP and O-CU-UP) with reference points is sh
 `yang-repos/` is **not in git** (size + license restrictions). Populate it before doing any YANG work:
 
 ```bash
-./setup-yang-repos.sh        # auto-clones YangModels/yang, OpenROADM_MSA_Public, 3GPP MnS
+./setup-yang-repos.sh        # clones and checks out pinned Git-backed YANG sources
+./scripts/check-yang-repos.sh  # verifies the local Git-backed source refs
 # Then manually download O-RAN Alliance ZIPs from https://specifications.o-ran.org
 # and extract into the corresponding yang-repos/ subfolders (see README.md for the list)
 ```
@@ -87,13 +88,13 @@ Run the setup script to populate the folder:
 ./setup-yang-repos.sh
 ```
 
-The script will:
+The script will clone the Git-backed YANG repositories and check out the pinned refs from `yang-repos.lock`:
 
-| Folder | Source | Method |
+| Folder | Source | Required ref |
 |---|---|---|
-| `yang-repos/yang/` | [YangModels/yang](https://github.com/YangModels/yang) | `git clone` (automatic) |
-| `yang-repos/OpenROADM_MSA_Public/` | [OpenROADM/OpenROADM_MSA_Public](https://github.com/OpenROADM/OpenROADM_MSA_Public) | `git clone` (automatic) |
-| `yang-repos/MnS/` | [3GPP SA5 forge](https://forge.3gpp.org/rep/sa5/MnS) | `git clone` (automatic) |
+| `yang-repos/yang/` | [YangModels/yang](https://github.com/YangModels/yang) | `8be95f275a7377828f5a6b34432d4ae1c816e53f` |
+| `yang-repos/OpenROADM_MSA_Public/` | [OpenROADM/OpenROADM_MSA_Public](https://github.com/OpenROADM/OpenROADM_MSA_Public) | `011eec29711c46278aebc3c8a0583fc0f35f7395` |
+| `yang-repos/MnS/` | [3GPP SA5 forge](https://forge.3gpp.org/rep/sa5/MnS) | `YANG-stage3-Corrections-Rel18-SA5-166` at `cb7960b625231af2bce35632fcbc89e21883efc2` |
 | `yang-repos/O-RAN.WG4.TS.MP-YANGs-R005-v20.00/` | O-RAN Alliance | manual download (see below) |
 | `yang-repos/O-RAN.WG4.CTI-TMP-YANG-v03.00/` | O-RAN Alliance | manual download (see below) |
 | `yang-repos/O-RAN.WG5.O-DU-O1.1-R003-v09.00/` | O-RAN Alliance | manual download (see below) |
@@ -101,6 +102,8 @@ The script will:
 | `yang-repos/O-RAN.WG9.XTRP-SYN.1-R004-v06.00_YANG/` | O-RAN Alliance | manual download (see below) |
 | `yang-repos/O-RAN.WG10.TS.Information Model and Data Models.1-R005-v13.00/` | O-RAN Alliance | manual download (see below) |
 | `yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/` | O-RAN Alliance | manual download (see below) |
+
+After setup, run `./scripts/check-yang-repos.sh` before validation or simulation runs. It fails if a Git-backed YANG repository is dirty, missing the pinned ref, if the 3GPP branch no longer resolves to the locked commit, or if a repository is checked out at a different commit. This is intentional: RAN simulation inputs should not silently advance when upstream standards repositories change.
 
 ### Manual download — O-RAN Alliance spec packages
 

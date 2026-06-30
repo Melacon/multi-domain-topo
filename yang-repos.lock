@@ -1,0 +1,12 @@
+# Pinned external Git sources for reproducible YANG validation and RAN simulation.
+# This file is sourced by setup-yang-repos.sh and scripts/check-yang-repos.sh.
+
+YANG_MODELS_URL="https://github.com/YangModels/yang.git"
+YANG_MODELS_REF="8be95f275a7377828f5a6b34432d4ae1c816e53f"
+
+OPENROADM_URL="https://github.com/OpenROADM/OpenROADM_MSA_Public.git"
+OPENROADM_REF="011eec29711c46278aebc3c8a0583fc0f35f7395"
+
+MNS_URL="https://forge.3gpp.org/rep/sa5/MnS.git"
+MNS_REF="YANG-stage3-Corrections-Rel18-SA5-166"
+MNS_COMMIT="cb7960b625231af2bce35632fcbc89e21883efc2"

@@ -7,41 +7,109 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 YANG_REPOS="$SCRIPT_DIR/yang-repos"
+LOCK_FILE="${YANG_REPOS_LOCK:-$SCRIPT_DIR/yang-repos.lock}"
 
 mkdir -p "$YANG_REPOS"
+
+if [ -f "$LOCK_FILE" ]; then
+  # shellcheck source=/dev/null
+  . "$LOCK_FILE"
+fi
+
+YANG_MODELS_URL="${YANG_MODELS_URL:-https://github.com/YangModels/yang.git}"
+YANG_MODELS_REF="${YANG_MODELS_REF:-8be95f275a7377828f5a6b34432d4ae1c816e53f}"
+OPENROADM_URL="${OPENROADM_URL:-https://github.com/OpenROADM/OpenROADM_MSA_Public.git}"
+OPENROADM_REF="${OPENROADM_REF:-011eec29711c46278aebc3c8a0583fc0f35f7395}"
+MNS_URL="${MNS_URL:-https://forge.3gpp.org/rep/sa5/MnS.git}"
+MNS_REF="${MNS_REF:-YANG-stage3-Corrections-Rel18-SA5-166}"
+MNS_COMMIT="${MNS_COMMIT:-cb7960b625231af2bce35632fcbc89e21883efc2}"
+
+resolve_ref() {
+  local repo_dir="$1"
+  local ref="$2"
+  local candidate
+
+  if [[ "$ref" =~ ^[0-9a-fA-F]{40}$ ]] && git -C "$repo_dir" cat-file -e "$ref^{commit}" 2>/dev/null; then
+    echo "$ref"
+    return 0
+  fi
+
+  for candidate in "refs/tags/$ref" "refs/remotes/origin/$ref" "refs/heads/$ref" "$ref"; do
+    if git -C "$repo_dir" rev-parse --verify --quiet "$candidate^{commit}" >/dev/null; then
+      echo "$candidate"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+checkout_ref() {
+  local name="$1"
+  local repo_dir="$2"
+  local ref="$3"
+  local override_var="$4"
+  local expected_commit="${5:-}"
+  local resolved_ref
+  local resolved_commit
+
+  if [ -n "$(git -C "$repo_dir" status --porcelain)" ]; then
+    echo "[$name] ERROR: working tree has local changes. Commit, stash, or discard them before changing refs."
+    exit 1
+  fi
+
+  echo "[$name] Fetching refs..."
+  git -C "$repo_dir" fetch --tags --prune
+
+  if ! resolved_ref="$(resolve_ref "$repo_dir" "$ref")"; then
+    echo "[$name] ERROR: required ref '$ref' was not found."
+    echo "[$name] Check the spelling or set $override_var to an available tag, branch, or commit."
+    exit 1
+  fi
+
+  resolved_commit="$(git -C "$repo_dir" rev-parse "$resolved_ref^{commit}")"
+  if [ -n "$expected_commit" ] && [ "$resolved_commit" != "$expected_commit" ]; then
+    echo "[$name] ERROR: $ref resolves to $resolved_commit, expected $expected_commit."
+    echo "[$name] Update yang-repos.lock only after confirming the new standards source is intended."
+    exit 1
+  fi
+
+  echo "[$name] Checking out $ref ($resolved_ref -> $resolved_commit)..."
+  git -C "$repo_dir" checkout --detach "${expected_commit:-$resolved_ref}"
+}
 
 # ---------------------------------------------------------------------------
 # 1. YangModels/yang — comprehensive IETF/IEEE/vendor YANG model collection
 # ---------------------------------------------------------------------------
 if [ -d "$YANG_REPOS/yang/.git" ]; then
-  echo "[yang] Already cloned, pulling latest..."
-  git -C "$YANG_REPOS/yang" pull --ff-only
+  echo "[yang] Already cloned."
 else
   echo "[yang] Cloning YangModels/yang (this is ~4 GB, may take a while)..."
-  git clone https://github.com/YangModels/yang.git "$YANG_REPOS/yang"
+  git clone "$YANG_MODELS_URL" "$YANG_REPOS/yang"
 fi
+checkout_ref "yang" "$YANG_REPOS/yang" "$YANG_MODELS_REF" "YANG_MODELS_REF"
 
 # ---------------------------------------------------------------------------
 # 2. OpenROADM MSA Public — open DWDM/ROADM device and network models
 # ---------------------------------------------------------------------------
 if [ -d "$YANG_REPOS/OpenROADM_MSA_Public/.git" ]; then
-  echo "[OpenROADM] Already cloned, pulling latest..."
-  git -C "$YANG_REPOS/OpenROADM_MSA_Public" pull --ff-only
+  echo "[OpenROADM] Already cloned."
 else
   echo "[OpenROADM] Cloning OpenROADM/OpenROADM_MSA_Public..."
-  git clone https://github.com/OpenROADM/OpenROADM_MSA_Public.git "$YANG_REPOS/OpenROADM_MSA_Public"
+  git clone "$OPENROADM_URL" "$YANG_REPOS/OpenROADM_MSA_Public"
 fi
+checkout_ref "OpenROADM" "$YANG_REPOS/OpenROADM_MSA_Public" "$OPENROADM_REF" "OPENROADM_REF"
 
 # ---------------------------------------------------------------------------
 # 3. 3GPP SA5 MnS — Management and Orchestration YANG models (Rel-16/17/18)
 # ---------------------------------------------------------------------------
 if [ -d "$YANG_REPOS/MnS/.git" ]; then
-  echo "[MnS] Already cloned, pulling latest..."
-  git -C "$YANG_REPOS/MnS" pull --ff-only
+  echo "[MnS] Already cloned."
 else
   echo "[MnS] Cloning 3GPP SA5 MnS repository..."
-  git clone https://forge.3gpp.org/rep/sa5/MnS.git "$YANG_REPOS/MnS"
+  git clone "$MNS_URL" "$YANG_REPOS/MnS"
 fi
+checkout_ref "MnS" "$YANG_REPOS/MnS" "$MNS_REF" "MNS_REF" "$MNS_COMMIT"
 
 # ---------------------------------------------------------------------------
 # 4. O-RAN Alliance spec packages — MANUAL DOWNLOAD REQUIRED
