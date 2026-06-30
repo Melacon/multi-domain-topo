@@ -17,3 +17,29 @@ yang-repos/O-RAN.WG10.TS.O1NRM.1-R004-v04.00/
 # Generated validation output
 validation.log
 network-function-types.md
+
+# AI agent / assistant tooling directories and files
+.claude/
+.codex/
+.codeium/
+.cursor/
+.cursorrules
+.aider*
+.continue/
+.perplexity/
+.gemini/
+.copilot/
+.github/copilot/
+.tabnine/
+.windsurf/
+.sourcegraph/
+.cody/
+.amazonq/
+.qodo/
+.sweep/
+.devin/
+.cline/
+.roo/
+CLAUDE.local.md
+AGENTS.local.md
+.mcp.local.json
